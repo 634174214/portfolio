@@ -1,0 +1,41 @@
+# 后端项目（不上传到 GitHub）
+works/infinityfreeapp/
+# 新增：排除 local/未收录 全部内容
+works/local/未收录/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE 配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 依赖目录
+node_modules/
+vendor/
+
+# 环境变量（敏感信息）
+.env
+.env.local
+.env.*.local
+
+# 数据库文件
+*.sql
+*.sqlite
+*.db
+
+# PHP 敏感配置（仅排除 PHP 文件，不影响 config.js / setting.js 等前端文件）
+config.php
+database.php
+*config*.local.php
