@@ -1,0 +1,78 @@
+﻿<krpano version="1.19" title="青岛">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="start/start.xml" /><!--启动画面-->
+<include url="loading/loadingpercenttext.xml" /><!--加载2-->
+<include url="music/music.xml" /><!--音乐控制-->
+<include url="erweima/erma.xml" /><!--二维码-->
+<include url="iframe/iframe.xml"/><!--iframe-->
+<include url="introduce/index.xml"/><!--介绍弹窗-->
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		
+		
+		<!--插入编辑:加载背景音乐 -->		
+        playsound(bggsnd1, music/gangqin2.mp3, 0);
+		
+		
+	</action>
+
+
+	
+	<scene name="scene____________________________" title="东方影都影视产业园" onstart="" havevrimage="true" thumburl="panos/___________________________.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="268.027" vlookat="29.647" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/___________________________.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="3200" tiledimageheight="3200">
+				<cube url="panos/___________________________.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/___________________________.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/___________________________.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/___________________________.tiles/vr/pano_%s.jpg" />
+		</image>
+
+				<!-- 帮助图片消失层5秒消失 -->
+<layer name="test" url="skin/touchalert.png" align="center"  keep="true"  scale="0.5"
+alpha="0" visible="false"
+onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+onloaded="picture_resize(get(name));" />
+
+<events name="picture_period"
+ onpreviewcomplete="
+ set(layer[test].visible,true);
+ tween(layer[test].alpha,1);
+ delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+"/>
+
+<!-- end 弹窗消失层5秒消失 --> 
+
+	</scene>
+
+
+</krpano>

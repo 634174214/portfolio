@@ -1,0 +1,22 @@
+﻿<krpano>
+	
+	<plugin name="mapnav" keep="true" device="html5"
+	        url="panomap.js"
+	        lat="36.061510"
+	        lng="120.385260"
+	        title="五月的风"
+	        desc="山东省青岛市市南区海滨风景区(澳门路北50米)"
+	        />
+
+	
+	
+	<!-- 
+		 lat和lng为目标点的经纬度。位置的经纬度可通过腾讯地图的位置拾取器获得。
+         http://lbs.qq.com/tool/getpoint/index.html
+         title为目标点的名称，desc为目标点的描述，该项可以为空或者不写；但是lat,lng和title为必须要填写的，否则无法正确导航
+     -->
+
+<layer name="nav_btn" keep="true" style="skin_base|skin_glow" crop="0|840|120|120" scale="0.5" align="righttop" x="0" y="190"  onclick="plugin[mapnav].showmap()" />
+
+
+</krpano>

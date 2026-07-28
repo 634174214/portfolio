@@ -1,0 +1,5 @@
+<krpano>
+
+
+ <layer name="video" style="skin_base|skin_glow" crop="0|1080|120|120" align="rightbottom"  keep="true" x="0" y="180"  scale="0.5"   zoom="true"  onclick="call_iframe('iframe/introduce/index.html')" />	
+</krpano>
