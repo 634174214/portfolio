@@ -1,0 +1,164 @@
+﻿<krpano version="1.19" title="青岛">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="start/start.xml" /><!--启动画面-->
+<include url="loading/loadingpercenttext.xml" /><!--加载2-->
+<include url="tuwen/textbox.xml" /><!--tuwen1-->
+<include url="tuwen/textboxsetting.xml?t=12388" /><!--tuwen2-->
+<include url="music/music.xml" /><!--音乐控制-->
+<include url="erweima/erma.xml" /><!--二维码-->
+
+
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		
+		
+		<!--插入编辑:加载背景音乐 -->		
+        playsound(bggsnd1, '%SWFPATH%/music/3.mp3', 0);
+		
+		
+	</action>
+
+	
+	<scene name="scene_1" title="浮山湾全景" onstart="" havevrimage="true" thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.523" vlookat="28.391" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/1.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<!-- 对话的显示时间 -->
+		<layer name="talkbox1" type="container" align="center" y="-21" x="-120" visible="flase" >
+		    <layer name="talk1" style="buttonstyle"  html="青岛奥林匹克帆船中心青岛市东部新区浮山湾畔。" zorder="10" />
+			<layer name="talkimg1" url="images/face4.png" align="lefttop" zorder="20"  scale="0.5"  />
+	   </layer>
+	   <layer name="talkbox2" type="container" align="center" y="-21" x="-120" visible="flase" >
+		    <layer name="talk2" style="buttonstyle"  html="2008年第29届奥运会和13届残奥会帆船比赛就是在这里举行的。" zorder="10" />
+			<layer name="talkimg2" url="images/face5.png" align="lefttop" zorder="20"  scale="0.5"  />
+	   </layer>
+	   <layer name="talkbox3" type="container" align="center" y="-21" x="-120" visible="flase" >
+		    <layer name="talk3" style="buttonstyle"  html="以“欢舞·海纳百川”为主题，寓意开放的青岛向世界敞开大门。" zorder="10" />
+			<layer name="talkimg3" url="images/face6.png" align="lefttop" zorder="20"  scale="0.5"  />
+	   </layer>
+
+
+
+		<style name="buttonstyle"  keep="true" url="%SWFPATH%/plugins/textfield.swf" children="false" enabled="true"  width="240" height="42" vcenter="true" 
+		           border="false" background="true"  backgroundcolor="0x000000" backgroundalpha="0.7" roundedge="4" 
+			       css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:12px; padding:5px 5px 5px 50px;" zorder="1" 
+		/>	
+		
+		
+		<events name="picture_talk1"
+ onpreviewcomplete="
+ delayedcall(5,set(layer[talkbox1].visible,true));
+ delayedcall(10,set(layer[talkbox1].visible,flase));
+"/>
+
+		<events name="picture_talk2"
+ onpreviewcomplete="
+ delayedcall(10,set(layer[talkbox2].visible,true));
+ delayedcall(15,set(layer[talkbox2].visible,flase));
+"/>
+
+		<events name="picture_talk3"
+ onpreviewcomplete="
+ delayedcall(15,set(layer[talkbox3].visible,true));
+ delayedcall(20,set(layer[talkbox3].visible,flase));
+"/>
+		
+		
+		<!-- end 对话的显示时间 -->
+		
+		
+	
+	<!--插入编辑:自定义热点 -->		
+		<hotspot name="spot1" style="hotspot_ani_hangpai_white" ath="-22.722" atv="37.507" ondown="draghotspot();" linkedscene="scene_2" />  <!-- ondown="draghotspot();" 设置热点的位置-->						
+
+		<!--end 插入编辑:热点 -->	
+		
+		
+		<!--语言介绍1-->
+            <events name="currentpano"
+	        onnewpano="playsound(bgsndnan, 'music/2.mp3', 10);" 
+	        onremovepano="stopsound(bgsndnan);"
+			volume="10"
+	        />
+		
+		
+<!-- 帮助图片消失层5秒消失 -->
+<layer name="test" url="skin/touchalert.png" align="center"  keep="true"  scale="0.5"
+alpha="0" visible="false"
+onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+onloaded="picture_resize(get(name));" />
+
+<events name="picture_period"
+ onpreviewcomplete="
+ set(layer[test].visible,true);
+ tween(layer[test].alpha,1);
+ delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+"/>
+
+<!-- end 弹窗消失层5秒消失 -->
+
+
+
+	</scene>
+
+	<scene name="scene_2" title="五四广场" onstart="" havevrimage="true" thumburl="panos/2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-5.998" vlookat="25.857" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/2.tiles/vr/pano_%s.jpg" />
+		</image>
+			<!--插入编辑:自定义热点 -->		
+		<hotspot name="spot1" style="hotspot_ani_hangpai_white" ath="-53.111" atv="39.441" ondown="draghotspot();" linkedscene="scene_1" />  <!-- ondown="draghotspot();" 设置热点的位置-->						
+		<!--end 插入编辑:热点 -->	
+
+
+	        <hotspot name="hs8" ath="-9.055" atv="25.989" style="tuwen-dian"  text="五四广场介绍" onloaded="add_all_the_time_tooltip_for_VR" ondown="draghotspot();" onclick="open_textbox(0,gallery_3,null,null,true,false);"/>   
+
+	</scene>
+
+
+</krpano>

@@ -1,0 +1,83 @@
+
+<krpano>
+	
+
+	  <roll_settings  parent="pano"
+	   	               version="119"
+	                   default_skin="false"  
+	                   keep="true"
+	                   control_yourself="false"  
+	                   align="lefttop"                  
+                       speed="60" 
+                       speed_mobile="30" 
+	                   interval_time="2"   
+	                   interval_time_mobile="2"  
+	                   bgalpha="0.5"
+	                   bgalpha_mobile="0"
+	                   bgcolor="0x000000"   
+	                   bgcolor_mobile="0x000000" 
+	                   bgborder="10 0xAAAAAA 0" 
+	                   bgborder_mobile="10 0xAAAAAA 0" 
+	                   height="30"  
+	                   height_mobile="20"
+	                   y="10"    
+	                   y_mobile="0"  
+	                   x="10"
+	                   x_mobile="0"    
+	                   x_r="10"
+	                   x_r_mobile="0"             
+	                   css_normal="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;"
+	                   css_mobile="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:14px;"
+	                   skin_x="5"
+	                   skin_x_mobile="5"
+	                   first="true"
+					   
+	               />
+
+
+
+
+
+<!-- 
+parent=”stage” -> 选择字幕的父元素，默认为整个浏览器窗口，也就是stage
+default_skin=”true” -> 是否让字幕依附于默认皮肤滚动，如果是设置true，不依附则设置为false
+keep=”false” -> 是否根据场景变化设置不同的字幕内容，是的话设置为false，不是的话设置为true
+control_yourself=”false”  -> 自主控制字幕进入的时机，默认为false，则不控制。设置为true自行安排roll_title_start()的位置。需要有krpano代码知识
+align=”lefttop” -> 字幕对齐位置，默认为lefttop，可选leftcenter与leftbottom
+speed.normal=”90″  -> 电脑和平板端的滚动速度
+speed.mobile=”40″ -> 手机端的滚动速度
+interval_time.normal=”2″-> 电脑和平板端的循环之间的间歇时间
+interval_time.mobile=”2″  ->手机端的循环之间的间歇时间
+bgalpha.normal=”0″  -> 电脑和平板端的字幕背景层透明度
+bgalpha.mobile=”0″  -> 手机端的字幕背景层透明度
+bgcolor.normal=”0x000000″  -> 电脑和平板端的字幕背景层颜色
+bgcolor.mobile=”0x000000″  -> 手机端的字幕背景层颜色
+bgborder.normal=”10 0xAAAAAA 0″  -> 电脑和平板端的字幕背景层边框样式
+bgborder.mobile=”10 0xAAAAAA 0″  -> 手机端的字幕背景层边框样式
+height.normal=”30″  -> 电脑和平板端的字幕背景层高度
+height.mobile=”45″  -> 手机端的字幕背景层高度
+y.normal=”0″  -> 电脑和平板端的字幕背景层y偏移值
+y.mobile=”0″  -> 手机端的字幕背景层y偏移值
+x.normal=”0″  -> 字幕左侧离屏幕左边缘的距离
+x.mobile=”0″  -> 手机端的字幕左侧离屏幕左边缘的距离
+x_r.normal=”0″  -> 字幕右侧离屏幕右边缘的距离
+x_r.mobile=”0″  -> 手机端的字幕右侧离屏幕右边缘的距离
+css_normal=”text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:18px;” -> 电脑和平板端的字幕字体样式
+css_mobile=”text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;” -> 手机端的字幕字体样式
+skin_x.normal=”8″ -> 电脑和平板端的字幕与皮肤左上方标题之间的距离
+skin_x.mobile=”5″ -> 手机端的字幕与皮肤左上方标题之间的距离
+first=”true” -> 默认值，请勿设置
+/>-> 以info开头命名的data元素，存储滚动字幕内容。如果始终只显示一个内容，则只需要设置名为info_0的data元素
+-->
+
+       <data name="info_0">
+	   常州红梅公园坐落于江苏省常州市天宁寺北侧。原为天宁寺林园旧址，后来逐步扩建而成。园内有红梅春晓、曲池风荷、孤山松雪等八景。近些年还增加了娱乐设施、运动设施及美食餐饮行业，集旅游观光运动美食为一体。内设了飞禽馆有许多珍稀鸟类供游客参观。红梅公园东南部的红梅阁，始建于唐朝，现存建筑为清代重建。红梅阁在红梅的地位相当于现在的乡政府。红梅公园中文笔塔建于南朝齐梁年间，是常州现存最古老的建筑之一，塔顶有一只重达1500千克的铜葫芦。红梅阁和文笔塔是红梅公园中的标志性建筑。
+	   </data>
+
+
+
+
+
+	  
+
+</krpano>
