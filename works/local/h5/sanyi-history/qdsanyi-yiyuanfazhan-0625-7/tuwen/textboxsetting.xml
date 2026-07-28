@@ -1,0 +1,641 @@
+<krpano>
+
+
+	<textbox_settings 
+
+		pic_ratio="30%"
+		pic_ratio_portrait="84%"
+		pic_align="righttop"
+		pic_resize_min="1"
+		pic_resize_max="1"
+
+		linecolor="0xFFFFFF"
+		linealpha="0.3"
+		separation_line_visible="false"
+		scale_normal="0.8"
+		scale_mobile="0.6"
+		scale_normal_for_next_prev="75"
+		scale_mobile_for_next_prev="75"
+        next_prev_x_normal="-5" 
+		next_prev_x_normal_portrait="0"
+		next_prev_x_mobile="0" 
+		next_prev_x_mobile_portrait="0"
+		next_prev_portrait_bottom="false"
+		button_postion_x="16"
+		button_postion_y.normal="-10"
+		button_postion_y.mobile="0"
+		title_postion_y_mobile="-50"
+		title_postion_y_normal="-70"
+		index_postion_y_mobile="10"
+		index_postion_y_normal="10"
+		usebg="false"
+		bg_url="bg.png"
+		bg_scale9grid="28|30|662|340"
+
+		bgcolor="0x001122" 
+		bgalpha="0.98"
+		bgborder="0 0xFFFFFF 0"
+		bgroundedge="0"
+		bgshadow="0 0 0.5 0xFFFFFF 0"   
+		bgwidth="100%"
+		bgheight="100%"   
+
+		closebutton_color="true"
+		enlarge_button="flase"
+		enlarge_button_x="0"
+		enlarge_button_y="0"
+
+		next_and_prev_button_color="false"
+		next_and_prev_button_alpha="1"
+		next_and_prev_loop="true"
+		next_and_prev_button="false"
+
+
+		title_normal="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:24px;"
+		title_mobile="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;"
+		index_visible="true"  
+		index_normal="text-align:center; color:#FFFFFF; font-family:Arial;  font-size:26px;"
+		index_mobile="text-align:center; color:#FFFFFF; font-family:Arial;  font-size:22px;"  
+		index_color="#71b6ff"
+		text_normal="color:#FFFFFF; font-family:Arial; font-size:16px;"
+		text_mobile="color:#FFFFFF; font-family:Arial; font-size:14px;"
+
+		zoomtocursor="false"
+		autoplaysound="true"                
+		button="music|link"
+		linkbutton="2"
+
+		loadingtext=""
+		loadingtextcss="color:#FFFFFF; font-family:Arial; font-size:28px; text-align:center;"
+		loadingimgurl="loadanimation2.png"
+		loadingimgvalue="100|100|4"
+
+		imgurl="gallerybtns5.png"
+		
+		change_pic_ratio=""
+		change_pic_ratio_portrait=""
+		change_next_and_prev_loop="get:textbox_settings.next_and_prev_loop"
+		change_next_and_prev_button="get:textbox_settings.next_and_prev_button"		
+		change_pic_bg="get:textbox_settings.usebg"
+		skintextbox=""
+		iframe="false" 
+		bfl="http://localhost:8090/"
+                
+
+	/>
+
+
+<textbox_gallery_settings
+        name="gallery_1"
+        fileurl="1/" 
+        sfileurl="1/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="学科发展" 
+        text="scene_171"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+<textbox_gallery_settings
+        name="gallery_2"
+        fileurl="2/" 
+        sfileurl="2/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="心内科" 
+        text="scene_172"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+	<textbox_gallery_settings
+        name="gallery_3"
+        fileurl="3/" 
+        sfileurl="3/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="神经内科" 
+        text="scene_173"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+  		<textbox_gallery_settings
+        name="gallery_4"
+        fileurl="4/" 
+        sfileurl="4/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="消化内科" 
+        text="scene_174"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+    
+  		<textbox_gallery_settings
+        name="gallery_5"
+        fileurl="5/" 
+        sfileurl="5/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="急诊科" 
+        text="scene_175"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_6"
+        fileurl="6/" 
+        sfileurl="6/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="重症医学科" 
+        text="scene_176"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_7"
+        fileurl="7/" 
+        sfileurl="7/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="肝胆外科" 
+        text="scene_177"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_8"
+        fileurl="8/" 
+        sfileurl="8/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="泌尿外科" 
+        text="scene_178"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_9"
+        fileurl="9/" 
+        sfileurl="9/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="骨科" 
+        text="scene_179"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+
+<textbox_gallery_settings
+        name="gallery_21"
+        fileurl="21/" 
+        sfileurl="21/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="产科" 
+        text="scene_181"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+<textbox_gallery_settings
+        name="gallery_22"
+        fileurl="22/" 
+        sfileurl="22/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="耳鼻咽喉头颈外科" 
+        text="scene_182"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+    />
+
+    
+
+<textbox_gallery_settings
+        name="gallery_31"
+        fileurl="31/" 
+        sfileurl="31/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="科研教学" 
+        text="scene_183"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+    />
+
+<textbox_gallery_settings
+        name="gallery_32"
+        fileurl="32/" 
+        sfileurl="32/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="新诊疗模式" 
+        text="scene_184"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+    />
+    <textbox_gallery_settings
+        name="gallery_33"
+        fileurl="33/" 
+        sfileurl="33/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="护理精粹" 
+        text="scene_185"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+    />
+        <textbox_gallery_settings
+        name="gallery_34"
+        fileurl="34/" 
+        sfileurl="34/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="信息化建设" 
+        text="scene_186"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+    />
+    
+        <textbox_gallery_settings
+        name="gallery_35"
+        fileurl="35/" 
+        sfileurl="35/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="抗疫风采" 
+        text="scene_187"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+    />
+
+    
+                <textbox_gallery_settings
+        name="gallery_36"
+        fileurl="36/" 
+        sfileurl="36/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="后勤管理" 
+        text="scene_188"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+/>
+
+
+<!-- 设置用户点击关闭按钮后的自定义动作
+
+-->
+
+	<action name="useraction">  
+
+
+	</action>
+
+
+
+
+   
+  <!--tuwen tooltip 热点文本显示 -->
+<action name="add_all_the_time_tooltip_for_VR">
+	
+	 txtadd(tooltipname, 'vrtooltip_', get(name));
+	 addhotspot(get(tooltipname)); 
+	 set(hotspot[get(tooltipname)].type,text);
+	 copy(hotspot[get(tooltipname)].edge,hotspot[get(name)].edge);
+	 copy(hotspot[get(tooltipname)].distorted,hotspot[get(name)].distorted);
+	 copy(hotspot[get(tooltipname)].ath,hotspot[get(name)].ath);
+	 copy(hotspot[get(tooltipname)].atv,hotspot[get(name)].atv);
+	 set(hotspot[get(tooltipname)].oy,-25);
+	 set(hotspot[get(tooltipname)].ox,0);
+	 set(hotspot[get(tooltipname)].vcenter,true);
+	 set(hotspot[get(tooltipname)].padding,5);
+	 set(hotspot[get(tooltipname)].bg,true);
+	 set(hotspot[get(tooltipname)].bgcolor,0xf57c00);
+	 set(hotspot[get(tooltipname)].bgroundedge,3);
+	 set(hotspot[get(tooltipname)].bgalpha,0.8);
+	 set(hotspot[get(tooltipname)].bgborder,0);
+	 set(hotspot[get(tooltipname)].bgshadow,'0 0 0 0x000000 0');
+	 set(hotspot[get(tooltipname)].css,'text-align:left; color:#FFFFFF; font-family:MicrosoftYahei; font-size:12px;');
+	 if(device.mobile,set(hotspot[get(tooltipname)].css,'text-align:center; color:#FFFFFF; font-family:MicrosoftYahei; font-weight:bold; font-size:10px;');
+	 );
+	 set(hotspot[get(tooltipname)].txtshadow,'0 0 0 0x000000 0');
+ 
+	 if(text == '' OR text === null,
+ 
+		 copy(hotspot[get(tooltipname)].html,scene[get(linkedscene)].title),
+		 copy(hotspot[get(tooltipname)].html,text);
+ 
+	 ); 
+ 
+	 set(hotspot[get(tooltipname)].enabled,false); 
+ 
+	 if(lp_running == false,
+	 	set(hotspot[get(tooltipname)].visible,true); 
+	 	, 	
+	 	if(!webvr.isenabled,
+	 	  if(lp_running == true,
+		 	set(hotspot[get(tooltipname)].visible,false); 
+		 	set(hotspot[get(tooltipname)].mark2,true);
+	 	   );
+	 	  );
+	 	);
+ 
+	 if(hotspot[get(name)].normal == false, 
+ 
+		set(hotspot[get(tooltipname)].normal,false);
+		set(hotspot[get(tooltipname)].onloaded,
+			if(webvr.isenabled,
+				set(visible,false);
+				,	
+				if(lp_running == false OR lp_running == null,  
+					set(visible,true);
+					);
+				);
+	       );
+ 
+	 	);
+</action>
+
+<!--end tuwen tooltip --> 
+   
+   
+   
+   
+   
+   
+
+  <data name="scene_171"><![CDATA[
+
+       
+    <p align="left"></font><font color='#ffffff'>目前医院现设有临床医技科室40余个，按照三级综合医院建设标准，学科建设不断完善。迁建后新建耳鼻喉科病房、肿瘤科、内分泌科、泌尿外科、脑外科、重症医学科、急诊外科、日间手术中心、肾病老年医学科、中医科病房、神经康复科、静配中心等等，医疗服务水平日趋提高。</p>
+    <br>
+
+
+  
+
+      ]]>
+  </data>
+
+
+
+
+
+  <data name="scene_172"><![CDATA[
+
+           <p align="left"><font color='#b4520d'>心内科：</font>是中华医学会心血管病学分会合作基地、中国年轻高血压研究合作中心、中国高血压教育与管理计划科教基地。团队擅长继发性高血压、冠心病、心肌病、心衰、遗传性心律失常等心血管病的诊疗工作。在青岛率先开展单基因心血管疾病精准诊疗工作，科室可开展冠状动脉造影术、冠状动脉支架置入术、永久性心脏起搏器植入术、主动脉球囊反搏术等介入诊疗技术，全天候开展急性心肌梗死急诊介入治疗。</p>
+    <br>
+
+
+
+  
+
+      ]]>
+  </data>
+
+
+  
+  <data name="scene_173"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>神经内科：</font>是中国卒中联盟中心成员、国家神经系统疾病临床医学研究中心网络成员单位、国家溶栓地图医院、省级卒中防治中心、青岛市心脑血管病特色专科。在脑血管病、睡眠障碍、癫痫、帕金森病、头痛、头晕等神经系统疾病的诊治方面有着丰富经验。先后参加国家“十三五”脑血管病大数据国家重点课题，获市科技进步奖一等奖2项，三等奖2项。获实用专利10项，发明型专利4项。</p>
+    <br>
+
+
+
+      ]]>
+  </data>
+
+    <data name="scene_174"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>消化内科：</font>是全国危险性消化道出血救治基地，青岛市早癌防治联盟。可完成各种内镜微创治疗、中西医结合诊疗，如早癌的粘膜切除及粘膜剥离术，食管静脉曲张硬化术，晚期消化道肿瘤梗阻消化道支架植入术，曾多次举办全国性消化疾病及消化内镜的研讨会议。</p>
+    <br>
+
+
+      ]]>
+  </data>
+
+  <data name="scene_175"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>急诊科：</font>设院前急救、急诊抢救室、急诊门诊、急诊留观、急诊内科病房、急诊外关节外科病房六大功能区。是医院胸痛、卒中、创伤、危重孕产妇、消化道出血五大中心的核心科室。科室被评为中国急诊医学会急性上消化道出血救治快速通道救治基地、半岛急诊联盟单位、青岛市院前急救工作先进单位。</p>
+    <br>
+
+
+
+      ]]>
+  </data>
+
+      <data name="scene_176"><![CDATA[
+
+    <p align="left">&#12288;&#12288;重症医学科是青岛市医学会重症医学分会副主任委员单位，病房建设采用国际先进的“生命岛”设计理念，设6个抢救单元，共22张床位，可为各种疑难危重及复杂手术后病人及时提供系统的、高质量的医学监护和救治技术。</p>
+
+ 
+
+      ]]>
+  </data>
+  <data name="scene_177"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>肝胆外科：</font>肝胆外科是青岛市首批施行微创治疗胆道疾病的专科，是中国医师协会内镜保胆培训基地。开展微创腹腔镜、胆道镜、十二指肠镜三镜联合治疗各种胆石病、内镜微创保胆取石术，胆管、十二指肠、胰腺等疾病的手术治疗，形成了鲜明的医疗特色。</p>
+    <br>
+
+      ]]>
+
+
+  </data>
+   
+  <data name="scene_178"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>泌尿外科：</font>泌尿外科：在泌尿系肿瘤、泌尿系结石、前列腺增生等疾病的诊治方面，采用先进的技术设备全面开展微创化技术，倡导精准治疗，实行个体化治疗方案。尤其在微创（多镜联合）及中西医结合治疗泌尿系结石、预防结石复发方面具有丰富的经验。</p>
+    <br>
+
+      ]]>
+
+
+  </data>
+   
+     <data name="scene_179"><![CDATA[
+
+       
+    	 <p align="left"><font color='#b4520d'>骨科：</font>是北京积水潭医院骨科研究联盟团队成员，青岛市首批优质护理示范病房。采用微创接骨术治疗各种粉碎性、复杂性骨折；开展各类颈腰椎疾病的开放及微创手术治疗。目前承担青岛大学医学院五年制本科及其护理的临床教学任务。</p>
+    <br>
+  
+
+      ]]>
+
+        </data>
+
+
+             <data name="scene_181"><![CDATA[
+
+       
+         <p align="left"><font color='#b4520d'>产科：</font>设有产科门诊、产前病区、产后病区、盆底康复区，能承担前置胎盘、胎盘早剥、产后出血、羊水栓塞、妊娠期高血压疾病等各种妊娠合并内外科疾病危重症的抢救工作。联合介入科实行子宫动脉栓塞，以及术中各种缝合技术的应用，大大提高了抢救成功率。</p>
+    <br>
+  
+
+      ]]>
+
+        </data>
+
+       <data name="scene_182"><![CDATA[
+
+       
+         <p align="left"><font color='#b4520d'>耳鼻咽喉头颈外科：</font>耳鼻咽喉头颈外科特色专长为耳外科及耳源性眩晕疾病、呼吸睡眠障碍（鼾症）疾病的诊断及综合治疗。在青岛市率先开展了眩晕疾病的外科手术治疗、眩晕康复训练。可同步开展鼻腔、咽腔等多平面部位治疗鼾症的微创手术。</p>
+    <br>
+  
+
+      ]]>
+
+        </data>
+        <data name="scene_183"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>1、科技项目：</font>2019年7月至2021年5月，获得省市级科研立项项目共计25个，申报举办省市级继续医学教育项目50项，其中市级项目49项，省级项目1项。每年承办省市级学术专题会1-2次，专业学术沙龙3-4次。</p>
+    <br>
+
+     <p align="left"><font color='#b4520d'>2、科技成果：</font>2019年7月至2021年5月，全院申请发明专利5项，实用新型专利13项。发表论文共计56篇，发表SCI论文共计32篇；参与编写论著13篇。1项科研项目进行科研成果鉴定达国际先进水平。1项科研成果获得山东省医学科学奖三等奖。1名医生被评选青岛市优秀学科带头人，2名人员被评选为青岛市优秀医学青年人才。中华医学会专科分会省级委员5名，市级副主任委员12名，院级优秀青年医学人才8名。2019年7月至2021年5月，共派出28名医护人员到其专业排名全国前十的医院进修。</p>
+    <br>
+     <p align="left"><font color='#b4520d'>3、教学管理：</font>2020年10月9日我院正式成为青岛大学附属青岛市第三人民医院，纳入青岛大学直属附属医院管理体系，目前已承担青岛大临床医学专业的实习任务，出色的完成了医学院下达的各项教学任务。同时与齐鲁医药学院、青岛卫生学校、青岛第二卫生学校、山东英才职业学院、青岛滨海学院、山东现代学院等签订实习教学协议，共接收本科和专科层次的毕业实习生近500余人次。</p>
+    <br>
+      ]]>
+
+        </data>
+        <data name="scene_184"><![CDATA[
+
+
+    <p align="left"><font color='#b4520d'>1.推动学科群建设</font>以结石诊疗中心建设为试点，探索按疾病诊疗链构建内涵式可持续发展的学科群体系，为患者提供一站式、全面化、高质量诊疗服务。</p>
+    <br>
+         <p align="left"><font color='#b4520d'></font>发展建设老年病防治中心、危重症医疗救治中心（重症医学科、EICU、PCCM、CCU）、结石诊疗中心（泌尿外、肝胆外、超声医学科）、消化疾病防治中心（消化内、胃肠外、肝胆外、内镜室）、医学康复中心（神经康复、针灸科、运动医学、高压氧），同时持续推进胸痛中心、卒中中心等“六大中心”建设，为周边居民提供高质量诊疗服务。</p>
+    <br>
+    <p align="left"><font color='#b4520d'>2.探索新型多元化医疗服务模式</font>结合本地区人员分布特征及疾病谱情况，以群众就近就地解决大部分问题为重点，探索新型多元化医疗服务模式：创建老年友善医院，开展慢性病早期筛查干预与健康管理，提升孕产妇和新生儿急危重症救治能力，对接120院前急救网提升急危重症患者救治能力，满足重点人群需求。同时优化就诊流程、提高就诊效率，强化医院法制建设，优化投诉纠纷处置，加强温馨清廉医院建设，增强人民群众看病就医的获得感、幸福感、安全感。</p>
+    <br>
+
+    <p align="left"><font color='#b4520d'>3.加强紧密型医联体建设</font>我院始终坚持基本医疗卫生事业公益属性，深化医药卫生体制改革，加快优质医疗资源扩容和区域均衡布局，加快建设分级诊疗体系，推动紧密型医联体建设，逐步实现医联体网格化布局。我院已与李沧区中心医院、李沧东部医院签订紧密型医联体协议，逐步建立医疗机构间资源共享、错位发展、分工协作模式。</p>
+    <br>
+
+
+    <p align="left"><font color='#b4520d'>4.强化公共卫生服务能力</font>医院始终坚持把保障人民健康放在优先发展的战略位置，通过机制设计，健全医院应急体系和院感防控体系建设，坚持医防融合、平急结合，织牢公共卫生防护网，强化医院公共卫生服务能力建设。</p>
+    <br>
+
+    <p align="left"><font color='#b4520d'></font>为进一步做好常态化疫情防控工作，医院于院区内独立区域新建发热门诊，面积约1414.93㎡，备18个留观室（负压），候诊区可供不少于30人同时候诊，区域内设有独立CT室，配备生化仪、核酸快检设备，分别设有成人、儿科诊室，配备专职医疗、护理、检验人员24小时值班，切实做好发热患者“七个一律”管理。</p>
+    <br>
+
+
+      ]]>
+
+        </data>
+        <data name="scene_185"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>青岛市第三人民医院拥有一支560余人的护理队伍，35名护理管理者，专科护士 43名，在医院党委及护理部的领导下，坚持“以病人为中心，以质量为核心，以满意为标准”的宗旨，以爱心、奉献、慎独的精神，结合国内外先进的护理理念、运用新的临床护理和护理教育模式，在实践中不断完善、巩固和发展，在护理管理、临床专科护理、临床教学上形成了独具特色的模式，创建了一支技术精湛、服务优质、团结进取、凝神聚气的护理团队。</p>
+    <br>
+  <p align="left"><font color='#b4520d'></font>根据护理质控标准, 应用标准进行全院质量控制和同质化管理，使护理质量控制渗透到护理的每一个缝隙，实现护理质量的全面管理。医院还在护理管理中推广PDCA循环、品管圈等管理工具，普及SBAR沟通思维模式，促进护理管理更加科学化、精细化、规范化。</p>
+    <br>
+
+  <p align="left"><font color='#b4520d'></font>医院注重各专科专业护士技术的培养，2020年培养21名拥有“独门绝技”的专业护士，发挥专业技术和人才优势，不断满足人民群众的就医需求。</p>
+    <br>
+
+         <p align="left"><font color='#b4520d'></font>2017年起，医院开始向国家护理质量数据平台报送12项敏感指标的相关数据，目的在于将敏感指标与国内同级别医院进行横向对比，同时推动质量控制模式的转变：</p>
+    <br>
+
+<p align="left"><font color='#b4520d'></font>急诊科的护理人员都是身经百战的铁血战士。他们在积极履行本科室职责的同时还主动承担了全院的抢救工作，协助院内其他科室抢救了众多急危重患者。以强烈的责任感和过硬的技术在平凡的岗位上与时间赛跑，为生命护航。</p>
+    <br>
+<p align="left"><font color='#b4520d'></font>严防境外疫情输入，战斗在青岛第一战场的“守门”者，2020年3月17日晚间接到上级通知，立即从援鄂后备队员中组建一支6人的护理队伍，由副院长徐晟伟、护理部主任肖葵霞亲送至青岛抗疫最前线——青岛机场海关。在担负新冠肺炎救治定点医院工作的同时，还承担严防境外疫情输入的任务。至2021年5月份共输送了14名护士，守住“外防输入”的关口，确保从源头上切断传染链。保护人民的健康平安。</p>
+    <br>
+
+
+
+      ]]>
+
+  </data>
+
+          <data name="scene_186"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>医院以互联互通评级及电子病历应用水平评级为抓手，进行信息化改造，以评促建，提升了医院的整体信息化水平。</p>
+    <br>
+
+         <p align="left"><font color='#b4520d'></font>硬件方面建成了240平方米的现代化机房；核心业务均部署在EMC虚拟化环境中；数据存储采取双活机制；采用CDP进行持续性数据保护；通过木浪云将数据备份到异地机房。</p>
+    <br>
+<p align="left"><font color='#b4520d'></font>软件方面上线30余个系统，优化了患者就医流程，提升了临床工作质量，提高了医院的精细化管理水平；目前通过电子病历四级；在与市级区域互联互通平台数据对接上报中，数据上传质量位列所有医院第一；“一卡通”项目成为市卫健委第一批通过验收并观摩医院之一。</p>
+    <br>
+        <p align="left"><font color='#b4520d'></font>2019年成功上线电子健康卡。</p>
+    <br>
+
+        <p align="left"><font color='#b4520d'></font>2020年获得山东省智慧服务品牌-智慧门诊。</p>
+    <br>
+        <p align="left"><font color='#b4520d'></font>2020年通过了电子评级四级，实现患者就医全流程的信息在全院范围内安全共享，规范医疗行为、优化就医流程、提升临床诊疗质量和效率。</p>
+    <br>
+
+      ]]>
+
+  </data>
+          <data name="scene_187"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>2020年1月，医院被确定为青岛市新冠肺炎备用集中收治医院，历时8天完成隔离病区改造。</p>
+    <br>
+
+ <p align="left"><font color='#b4520d'></font>2020年10月11日，医院作为新冠肺炎患者集中收治定点医院启用，院党委立即启动“一指九组”战时指挥体系，紧急部署全院腾空工作，全院职工到岗到位，明确分工。迅速成立10支医护救治梯队，6支医技梯队，550余名医务人员投入疫情防控；历经13个小时，完成了医院全面停诊、475名住院患者分流、104名透析患者整体搬迁、2751名门诊大病患者处置，全院医患近2800人的核酸检测；医院由一所正在运行的三级综合医院迅速转型成为青岛市新冠肺炎患者定点收治专科医院。</p>
+    <br>
+ <p align="left"><font color='#b4520d'></font>截至3月30日，医院已收治新冠肺炎患者60人，治疗过程中，医院坚持“一人一策”“一人一案”，中医药全覆盖治疗、全过程参与，分类分型救治，治愈率达到了100%。同时，医院不断完善院感防控三级管理体系，层层压实责任，全面落实院感防控制度与流程。织密织实视频监控院感防控网，实现院感防控全覆盖。</p>
+    <br>
+ <p align="left"><font color='#b4520d'></font>2021年3月31日医院圆满完成定点医院救治工作，100余名医护人员转场至青岛市公共卫生应急备用医院继续坚守抗疫一线，为岛城人民保一方平安。</p>
+    <br>
+
+      ]]>
+
+  </data>
+       
+  <data name="scene_188"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>通过模块化集成软件对医院重点板块部位进行实时监测报警，极大的提升设备可靠度。</p>
+    <br>
+    <p align="left"><font color='#b4520d'></font>为提高突发事件处置能力，安保人员不间断在医院各入口处身着防刺服，手持探测仪配合安全门对进入医院人员进行安全检测，将隐患风险扼制到最低，并组织安保人员定期进行抓捕演练,为广大患者营造安全的就医环境。</p>
+    <br>
+
+      ]]>
+
+        </data>
+
+	
+</krpano>

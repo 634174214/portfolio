@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta http-equiv="cleartype" content="on">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <link rel="shortcut icon" href="http://www.qdxin.cn/favicon.ico"  type="image/x-icon">
+    <title>风雨九十载 - 三医90年发展足迹VR展</title>   
+    <meta name="keywords" content="三医,三医90年发展,VR展,三医风雨九十载"/>    
+    <meta name="description" content="青岛市第三人民医院始建于1931年，是青岛市卫生局直属综合性医院是青岛市卫生健康委员会直属的三级综合性医院。医院地处李沧区，位于青岛市“拥湾发展、环湾保护”战略核心圈的中心地带。医院占地88.78亩，一期建筑面积8.1万平方米，设有30余个临床医技科室。" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <style>.IE-show{display:block;}</style>   
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body ontouchstart>
+    <div class="IE-show">
+        <div class="IE-inner">
+            <img src="img/title-pc.png">
+            <img id="qrcode" class="qrcode" height="180">
+            <p>抱歉，系统检测到您的浏览器版本过低</p>
+            <p>请升级浏览器或使用手机扫码查看</p>
+        </div>
+    </div>
+
+    <div id="app">
+        <transition name="fade">
+            <section class="inload" v-show="showLoading">
+                <div class="pos_abs loading">
+                    <div class="circle"></div>
+                    <div class="circle1"></div>
+                    <p class="text first">三医90年发展足迹VR展</p>
+                    <p class="text">请稍后，精彩即将呈现</p>
+                </div>
+            </section>
+        </transition>
+
+        <section class="home-page">
+            <div class="home-inner">
+                <div class="top-logo">
+                    <img src="img/LOGO.png?T=33">
+                </div>
+                <div class="title-x">
+                    <img src="img/title-1.png" 
+                         alt="风雨九十载" 
+                         class="title-1 wow fadeInDown"
+                    >
+                    <img src="img/title-2.png" 
+                         alt="三医90年发展足迹VR展"
+                         class="wow fadeInUp"
+                         data-wow-delay="0.2s"
+                    >
+                </div>
+                <div class="vr-list">
+                    <ul>
+                        <li v-for="(item, index) in vrList"
+                            :key="index"
+                            class="wow fadeInLeft"
+                            data-wow-duration="0.8s"
+                            :data-wow-delay="getListDelay(index)"
+                            @click="openVR(index)"
+                        >
+                            <span>{{item.name}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <transition name="moveIn" @after-leave="afterLeave">
+            <section class="vr-iframe-x" id="vr-iframe-x" v-show="showVR">
+                <div class="vr-close" @click="closeVR"></div>
+                <transition name="fade">
+                <div class="vr-cover" v-show="showVrCover"></div>
+            </transition>
+            </section>
+        </transition>
+
+    </div>
+
+   
+    <script>
+        var t_pic = window.location.origin + window.location.pathname + 'img/share.jpg?t=333';
+        // true代表本地模式
+        var local = false;
+        // var baseVrUrl = 'http://vr.qdxin.cn/21/'
+        var baseVrUrl = '';
+        var vrData = [
+            {
+                name: '院史展',
+                src: 'qdsanyi-yuanshizhan-0625-23/',
+                show: false
+            },
+            {
+                name: '医院发展现状',
+                src: 'qdsanyi-yiyuanfazhan-0625-7/',
+                show: false
+            },
+            {
+                name: '党建',
+                src: 'qdsanyi-dangjian-0625-8/',
+                show: false
+            }
+        ];
+        vrData = vrData.map(function(item, index) {
+            item.src = local ? item.src : baseVrUrl + item.src;
+            return item;
+        });
+        document.getElementById('qrcode').src = 'http://api.tech.qdxin.cn/qrxin.php?data=' + window.location.href;
+    </script>
+    <script src="js/vue@2.6.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/run.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="js/wx_share.js?t=3"></script>
+</body>
+</html>
+    

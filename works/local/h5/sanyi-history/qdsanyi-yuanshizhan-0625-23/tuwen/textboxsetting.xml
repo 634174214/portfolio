@@ -1,0 +1,758 @@
+<krpano>
+
+
+	<textbox_settings 
+
+		pic_ratio="30%"
+		pic_ratio_portrait="84%"
+		pic_align="righttop"
+		pic_resize_min="1"
+		pic_resize_max="1"
+
+		linecolor="0xFFFFFF"
+		linealpha="0.3"
+		separation_line_visible="false"
+		scale_normal="0.8"
+		scale_mobile="0.6"
+		scale_normal_for_next_prev="75"
+		scale_mobile_for_next_prev="75"
+        next_prev_x_normal="-5" 
+		next_prev_x_normal_portrait="0"
+		next_prev_x_mobile="0" 
+		next_prev_x_mobile_portrait="0"
+		next_prev_portrait_bottom="false"
+		button_postion_x="16"
+		button_postion_y.normal="-10"
+		button_postion_y.mobile="0"
+		title_postion_y_mobile="-50"
+		title_postion_y_normal="-70"
+		index_postion_y_mobile="10"
+		index_postion_y_normal="10"
+		usebg="false"
+		bg_url="bg.png"
+		bg_scale9grid="28|30|662|340"
+
+		bgcolor="0x001122" 
+		bgalpha="0.98"
+		bgborder="0 0xFFFFFF 0"
+		bgroundedge="0"
+		bgshadow="0 0 0.5 0xFFFFFF 0"   
+		bgwidth="100%"
+		bgheight="100%"   
+
+		closebutton_color="true"
+		enlarge_button="flase"
+		enlarge_button_x="0"
+		enlarge_button_y="0"
+
+		next_and_prev_button_color="false"
+		next_and_prev_button_alpha="1"
+		next_and_prev_loop="true"
+		next_and_prev_button="false"
+
+
+		title_normal="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:24px;"
+		title_mobile="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;"
+		index_visible="true"  
+		index_normal="text-align:center; color:#FFFFFF; font-family:Arial;  font-size:26px;"
+		index_mobile="text-align:center; color:#FFFFFF; font-family:Arial;  font-size:22px;"  
+		index_color="#71b6ff"
+		text_normal="color:#FFFFFF; font-family:Arial; font-size:16px;"
+		text_mobile="color:#FFFFFF; font-family:Arial; font-size:14px;"
+
+		zoomtocursor="false"
+		autoplaysound="true"                
+		button="music|link"
+		linkbutton="2"
+
+		loadingtext=""
+		loadingtextcss="color:#FFFFFF; font-family:Arial; font-size:28px; text-align:center;"
+		loadingimgurl="loadanimation2.png"
+		loadingimgvalue="100|100|4"
+
+		imgurl="gallerybtns5.png"
+		
+		change_pic_ratio=""
+		change_pic_ratio_portrait=""
+		change_next_and_prev_loop="get:textbox_settings.next_and_prev_loop"
+		change_next_and_prev_button="get:textbox_settings.next_and_prev_button"		
+		change_pic_bg="get:textbox_settings.usebg"
+		skintextbox=""
+		iframe="false" 
+		bfl="http://localhost:8090/"
+                
+
+	/>
+
+
+<textbox_gallery_settings
+        name="gallery_1"
+        fileurl="1/" 
+        sfileurl="1/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="5" 
+        title="信义会医院时期（1931-1951）" 
+        text="scene_171"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+<textbox_gallery_settings
+        name="gallery_2"
+        fileurl="2/" 
+        sfileurl="2/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="2" 
+        title="" 
+        text="scene_172"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+	<textbox_gallery_settings
+        name="gallery_3"
+        fileurl="3/" 
+        sfileurl="3/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="医院蓬勃发展" 
+        text="scene_173"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+  		<textbox_gallery_settings
+        name="gallery_4"
+        fileurl="4/" 
+        sfileurl="4/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="2" 
+        title="名医荟萃 水平一流" 
+        text="scene_174"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+    
+  		<textbox_gallery_settings
+        name="gallery_5"
+        fileurl="5/" 
+        sfileurl="5/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="医院被迫停办（1941年底-1946年5月）" 
+        text="scene_175"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_6"
+        fileurl="6/" 
+        sfileurl="6/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="恢复时期的信义会医院（1946-1951）" 
+        text="scene_176"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_7"
+        fileurl="7/" 
+        sfileurl="7/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="护理摇篮——信义会高级护士职业学校" 
+        text="scene_177"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_8"
+        fileurl="8/" 
+        sfileurl="8/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_178"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+			<textbox_gallery_settings
+        name="gallery_9"
+        fileurl="9/" 
+        sfileurl="9/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="" 
+        text="scene_179"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+
+<textbox_gallery_settings
+        name="gallery_21"
+        fileurl="21/" 
+        sfileurl="21/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="转型之路—从私立到公立" 
+        text="scene_181"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+<textbox_gallery_settings
+        name="gallery_22"
+        fileurl="22/" 
+        sfileurl="22/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="整体医疗水平堪称当时岛城一流" 
+        text="scene_182"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+	<textbox_gallery_settings
+        name="gallery_23"
+        fileurl="23/" 
+        sfileurl="23/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="奉命执行流行性传染病救治任务" 
+        text="scene_183"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+  		<textbox_gallery_settings
+        name="gallery_24"
+        fileurl="24/" 
+        sfileurl="24/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="2" 
+        title="成立党支部、工会、团支部" 
+        text="scene_184"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+    
+  		<textbox_gallery_settings
+        name="gallery_25"
+        fileurl="25/" 
+        sfileurl="25/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="青岛医院附设护士学校" 
+        text="scene_185"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+<textbox_gallery_settings
+        name="gallery_31"
+        fileurl="31/" 
+        sfileurl="31/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_191"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+<textbox_gallery_settings
+        name="gallery_32"
+        fileurl="32/" 
+        sfileurl="32/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_192"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+	<textbox_gallery_settings
+        name="gallery_33"
+        fileurl="33/" 
+        sfileurl="33/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="化工中毒抢救方面优势明显" 
+        text="scene_193"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+  		<textbox_gallery_settings
+        name="gallery_34"
+        fileurl="34/" 
+        sfileurl="34/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="3" 
+        title="" 
+        text="scene_194"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+    
+<textbox_gallery_settings
+        name="gallery_41"
+        fileurl="41/" 
+        sfileurl="41/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_195"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+<textbox_gallery_settings
+        name="gallery_42"
+        fileurl="42/" 
+        sfileurl="42/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_196"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+	<textbox_gallery_settings
+        name="gallery_43"
+        fileurl="43/" 
+        sfileurl="43/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_197"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+  		<textbox_gallery_settings
+        name="gallery_44"
+        fileurl="44/" 
+        sfileurl="44/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="0" 
+        title="" 
+        text="scene_198"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+    
+
+<!-- 设置用户点击关闭按钮后的自定义动作
+
+-->
+
+	<action name="useraction">  
+
+
+	</action>
+
+
+
+
+   
+  <!--tuwen tooltip 热点文本显示 -->
+<action name="add_all_the_time_tooltip_for_VR">
+	
+	 txtadd(tooltipname, 'vrtooltip_', get(name));
+	 addhotspot(get(tooltipname)); 
+	 set(hotspot[get(tooltipname)].type,text);
+	 copy(hotspot[get(tooltipname)].edge,hotspot[get(name)].edge);
+	 copy(hotspot[get(tooltipname)].distorted,hotspot[get(name)].distorted);
+	 copy(hotspot[get(tooltipname)].ath,hotspot[get(name)].ath);
+	 copy(hotspot[get(tooltipname)].atv,hotspot[get(name)].atv);
+	 set(hotspot[get(tooltipname)].oy,-25);
+	 set(hotspot[get(tooltipname)].ox,0);
+	 set(hotspot[get(tooltipname)].vcenter,true);
+	 set(hotspot[get(tooltipname)].padding,5);
+	 set(hotspot[get(tooltipname)].bg,true);
+	 set(hotspot[get(tooltipname)].bgcolor,0xf57c00);
+	 set(hotspot[get(tooltipname)].bgroundedge,3);
+	 set(hotspot[get(tooltipname)].bgalpha,0.8);
+	 set(hotspot[get(tooltipname)].bgborder,0);
+	 set(hotspot[get(tooltipname)].bgshadow,'0 0 0 0x000000 0');
+	 set(hotspot[get(tooltipname)].css,'text-align:left; color:#FFFFFF; font-family:MicrosoftYahei; font-size:12px;');
+	 if(device.mobile,set(hotspot[get(tooltipname)].css,'text-align:center; color:#FFFFFF; font-family:MicrosoftYahei; font-weight:bold; font-size:10px;');
+	 );
+	 set(hotspot[get(tooltipname)].txtshadow,'0 0 0 0x000000 0');
+ 
+	 if(text == '' OR text === null,
+ 
+		 copy(hotspot[get(tooltipname)].html,scene[get(linkedscene)].title),
+		 copy(hotspot[get(tooltipname)].html,text);
+ 
+	 ); 
+ 
+	 set(hotspot[get(tooltipname)].enabled,false); 
+ 
+	 if(lp_running == false,
+	 	set(hotspot[get(tooltipname)].visible,true); 
+	 	, 	
+	 	if(!webvr.isenabled,
+	 	  if(lp_running == true,
+		 	set(hotspot[get(tooltipname)].visible,false); 
+		 	set(hotspot[get(tooltipname)].mark2,true);
+	 	   );
+	 	  );
+	 	);
+ 
+	 if(hotspot[get(name)].normal == false, 
+ 
+		set(hotspot[get(tooltipname)].normal,false);
+		set(hotspot[get(tooltipname)].onloaded,
+			if(webvr.isenabled,
+				set(visible,false);
+				,	
+				if(lp_running == false OR lp_running == null,  
+					set(visible,true);
+					);
+				);
+	       );
+ 
+	 	);
+</action>
+
+<!--end tuwen tooltip --> 
+   
+   
+   
+   
+   
+   
+
+  <data name="scene_171"><![CDATA[
+
+       
+    <p align="left"></font><font color='#ffffff'>鸦片战争以后，西方列强争相入侵，各国教会接踵而入。
+
+        </p>
+        <p align="left">&#12288;&#12288;1891年青岛建置（昔称胶澳），1897年，德国占领青岛。1898年，德国牧师昆祚来青创建柏林教会（信义宗），并任德国总督顾问。1898～1900年，由德国驻青总督府划给土地，于鲍岛南麓（今城阳路5号）修建柏林教会住宅楼一栋，占地9600平方米。</p>
+
+        <p align="left">&#12288;&#12288;1925年，美国信义会接管柏林教会教产，成立“鲁东信义会”，会址城阳路5号。</p>
+
+        <p align="left">&#12288;&#12288;1925年，美国信义会接管柏林教会教产，成立“鲁东信义会”，会址城阳路5号。</p>
+
+        <p align="left">&#12288;&#12288;1931年1月，美国鲁东信义会第二任监督安保罗在城阳路5号主持创办了信义会医院。</p>
+
+        <p align="left">&#12288;&#12288;医院创办之初有工作人员10余人，床位25张，一楼为门诊，二楼为病房，设有内科、外科诊室及化验室、药房、洗衣房、伙房等医技和辅助科室，大门口设有传达室。院内林木葱郁，幽静素雅。</p>
+
+        <p align="left">&#12288;&#12288;除总院外，还在东镇、即墨设有两处分院。图为原信义会医院东镇分院旧址，现位于台东雒口路14号。</p>
+
+
+
+    <br>
+
+    <br>
+      ]]>
+  </data>
+
+
+
+
+  <data name="scene_172"><![CDATA[
+
+       
+    <p align="left"></font><font color='#b4520d'>第一任院长：富利达</font>
+信义会医院创始人、第一任院长为美籍富利达女士，大家都称呼她富护士。富利达生于1896年，毕业于芝加哥护士学校。1927年来华，先后在即墨等地从事医务工作。1931年信义会医院创办后，她即来院主持工作。富利达女士作为信义会医院的主要创始人和领导者，为信义会医院的创立和早期发展做出了杰出的贡献，奠定了信义会医院文化的基石。
+   <p align="left"><font color='#b4520d'>第一位医生：张同信</font>
+张同信，山东潍县（今潍坊市）人，1895年生，1919年毕业于齐鲁大学医科，获齐鲁大学、加拿大多伦多大学医学博士。
+张同信幼年家境贫寒，求学之路全靠教会资助。所以他毕业后的第一份工作，便是在教会所办潍县乐道院医院从医，后任院长。1929年，风华正茂的他，毅然来青创业。先在济宁路教会诊所执医，1931年信义会医院成立时，他随同诊所一并合入医院，成为信义会医院的第一位医生。张同信医学造诣很高，医院成立初期，他内、外、眼、妇诸科兼任，群众称其为“神仙一把抓”。</p>
+
+<p align="left">&#12288;&#12288;1951年张同信任改制后的青岛医院院长。1958年医院北迁，任青岛市沧口医院院长，直至1965年退休。张同信经历了医院新旧两个不同历史时期的变迁，先后在我院任院长达19年之久，是我院第一位华人院长和任期最长的院长。</p>
+
+<p align="left"></font><font color='#b4520d'>第一位护士：曲慎仪</font>
+信义会医院第一位护士曲慎仪，1932年由黄县浸信会医院护校毕业分配来院从事护理工作，并在医院护校任教，为信义会医院早期护理工作奠定了基础。新中国成立后，1951年12月，私立信义高级护士职业学校改名为青岛医院附设护士学校，曲慎仪担任校长。。</p>
+
+
+    <br>
+
+    <br>
+      ]]>
+  </data>
+
+
+  
+  <data name="scene_173"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>1935年，首任院长富利达返回美国为医院募捐，第二年带回了一架300毫安小型X光机一架，一辆汽车和毛毯等其它物资。到1936年，主楼全部为医院所用，床位扩大到60余张，工作人员近40人，其中正式护士10余人，又建三棟小楼供院长、医生居住。1940年又建成1050平方米护士楼一棟，医院建筑面积扩大到4060平方米。</p>
+    <br>
+
+
+
+      ]]>
+  </data>
+
+    <data name="scene_174"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>1940年前后，医院床位达到70张，设内、外、妇产、化验、放射、药房及后勤辅助诸科室，医疗设备几近完善，医疗水平堪称岛城一流，时有岛城名医唐希尧、张众航、孙干卿等在院执医，医院发展达到鼎盛。</p>
+    <br>
+    	<p align="left">&#12288;&#12288;
+信义会医院经费主要由教会资助和教友捐助，也收取一定费用以补不足。挂号费五分、一角，住院费普通间每天五角，高级间每天三元（包括膳食）。医院下午二点半至四点开设免费门诊，还设有免费病房（主楼后平房内），收治无力交费病人。</p>
+
+<p align="left">&#12288;&#12288;唐希尧，字克浪，1904年生，河北省河间县人。1929年毕业于齐鲁大学，1934年获加拿大医学博士。毕业后先后在齐鲁大学附属医院、北京协和医院任职。1940年至1941年任信义会医院内科主任。</p>
+
+<p align="left">&#12288;&#12288;张众航，字英济，1901年生，山东潍县人，1927年毕业于齐鲁大学医学院，获加拿大医学博士学位。1929年到1942年先后在青岛惠东医院、济南惠东医院、潍县乐道院医院、青岛信义会医院、寿康医院执业。1946年信义会医院恢复后，来院兼职负责外科工作。1947年被聘为信义会医院附设护校董事会董事长。张众航擅长外科、妇科，医术精湛，医德高尚，为病人所尊崇。</p>
+
+<p align="left">&#12288;&#12288;孙干卿，1901年生，山东陵县人。1928年毕业于齐鲁大学医学院，同年获多伦多大学医学博士学位。1940年任信义会医院外科主任。</p>
+
+
+      ]]>
+  </data>
+
+  <data name="scene_175"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>1941年底，太平洋战争爆发，医院被日军封闭、强占而停办，改作日本同仁会东亚医科学院学生宿舍使用。</p>
+    <br>
+
+
+
+      ]]>
+  </data>
+
+      <data name="scene_176"><![CDATA[
+
+
+    <p align="left"><font color='#b4520d'><b>
+    </b></font></p>
+    <p align="left">&#12288;&#12288;抗战胜利后，医院于1946年5月20日重新恢复开业，由罗福士女士任院长主持工作。</p>
+
+    <p align="left">&#12288;&#12288;医院董事会又聘张同信为董事、院长（负责医院对外工作）。医院床位恢复到50张，一批信义会老职工也陆续回到医院工作，张众航、田珍等名医在院任职或兼职工作。</p>
+
+    <p align="left">&#12288;&#12288;1949年青岛解放前夕，美籍人员回国，行前将医院交张同信代管并留下部分经费。张受托后即搬到医院居住，全面行使院长职责。</p>
+
+<p align="left">&#12288;&#12288;青岛解放后，信义会医院院名及体制一直延续到1950年。</p>
+ <p align="left"><font color='#b4520d'>政府接管，医院更名<b>
+    </b></font></p>
+<p align="left">&#12288;&#12288;1951年7月，医院由政府接管，同年12月13日，改名为青岛医院。至此，信义会医院随着旧时代的结束，走过了长达20年的创业之路，由一所外国教会兴办的私立医院成为新中国的公立医院，进入了全新的发展时期。</p>
+
+
+    <br>
+
+
+      ]]>
+  </data>
+  <data name="scene_177"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>鲁东信义会于1932年9月创办信义会高级护士职业学校。第一任校长为美籍罗福士女士，学校采取院校一体、工学一体的办学体制，学制三年半，（三年学习，半年实习）。</p>
+    <br>
+
+      ]]>
+
+
+  </data>
+   
+  <data name="scene_178"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>办学经费由教会提供，学生免学费、食宿费，全部住校。学生每天先做护理工作再上课。学习期间第一年月薪1元，第二年月薪2元，第三年月薪3元。毕业后月薪20～25元不等。</p>
+    <br>
+
+      ]]>
+
+
+  </data>
+   
+     <data name="scene_179"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>1941年至1946年，护校与医院一起停办。</p>
+    <br>
+    	 <p align="left"><font color='#b4520d'></font>1946年秋，护校恢复招生。1947年，学校成立董事会，公推张众航为董事长，宋美恩为校长，杨淑美任教导主任，（后接任宋美恩任校长）。董事会通过章则，学校更名为私立信义高级护士职业学校。</p>
+    <br>
+    	 <p align="left"><font color='#b4520d'></font>信义会高级护士职业学校自1932年创办至1949年，共招收学员10期63人，其中部分留院工作，余者被分配到本市和省内其他医院工作。</p>
+    <br>
+
+      ]]>
+
+
+  </data>
+   
+  <data name="scene_181"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>青岛解放后，由于信义会医院仍享有部分美国津贴，故暂未由国家接管。1951年7月始由市卫生局接管，同年12月13日更名为青岛医院，并与其他医院联合组成董事会，实行院长负责制，原信义会医院院长张同信受聘出任青岛医院院长。至此，医院完成了从私立到公立的转型。</p>
+    <br>
+
+    <p align="left"><font color='#b4520d'></font>田珍，1909年生，山东临沂人，中共党员。1948年创立青岛市立医院耳鼻喉科，并自1948年至1957年应聘兼职信义会医院、青岛医院耳鼻喉科工作。他对耳鼻喉科有很深的造诣，享受国务院政府特殊津贴。</p>
+    <br>
+
+      ]]>
+        </data>
+
+  <data name="scene_182"><![CDATA[
+
+  
+    <p align="left"><font color='#b4520d'></font>1951年医院改名前，仅有职工39人，床位60张。到1957年，医院职工已达到106人，床位增至98张，设有内、外、妇产等临床科室以及五官、儿科、皮肤、针灸、推拿、按摩等门诊科室，医疗服务范围也不断扩大，张学俭、张汉三、林荣东、田珍、顾培恰、生明等资深名医都先后在院执医，整体医疗水平堪称当时岛城一流，深受广大群众欢迎，是当时全市少有的赢利医院。</p>
+    <br>
+
+                 <p align="left"><font color='#b4520d'></font>田珍，1909年生，山东临沂人，中共党员。1948年创立青岛市立医院耳鼻喉科，并自1948年至1957年应聘兼职信义会医院、青岛医院耳鼻喉科工作。他对耳鼻喉科有很深的造诣，享受国务院政府特殊津贴。</p>
+    <br>
+
+      ]]>
+
+        </data>
+        <data name="scene_183"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>上世纪五、六十年代，青岛市脊髓灰质炎等传染病爆发。1955～1957年，医院奉命执行流行性传染病救治任务，日常业务相继停止，主要接收流行性传染病患者。期间除了应用西医治疗外，还积极应用中药主治脊髓灰质炎等，并结合电疗、按摩、水疗、针灸等，取得显著疗效。</p>
+    <br>
+
+      ]]>
+
+        </data>
+        <data name="scene_184"><![CDATA[
+
+
+    <p align="left"><font color='#b4520d'></font>1951年10月医院建立工会组织，办公室文书王本初兼任工会主席。1952年12月成立党支部，市卫生局派党员干部于星三来院任副院长兼党支部书记。医院建立党支部后，共青团支部也随即建立，团支部书记由于希恩兼任。</p>
+    <br>
+
+
+      ]]>
+
+        </data>
+        <data name="scene_185"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>1951年12月，私立信义高级护士职业学校改名为青岛医院附设护士学校，校长为曲慎仪。学校为适应人民卫生事业快速发展的需要，学制改为三年，招生数量也快速增长。1950年至1952年，共招收护士专业学生三届38人，另培训护理员一期60人。  </p>
+    <br>
+
+      ]]>
+
+  </data>
+
+          <data name="scene_191"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>1958年，青岛医院整体北迁至沧口区，医院更名为青岛市沧口医院，院址在今升平路34号。青岛市沧口医院是解放后我市所建第一所市属医院，它的建成对改善青岛市北部工业区就医环境具有重要意义。  </p>
+    <br>
+
+      ]]>
+
+  </data>
+          <data name="scene_192"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>医院占地面积14710.7平方米，总建筑面积4374.38平方米，设计床位90张，主体建筑采用原苏联某加盟共和国医院图纸，内部设施完善先进，属当时全市一流水平，1958年初竣工交付使用。1958年3月17日，医院正式开诊，实际开放床位100张，当月增加到120张，职工135人，设有内科、外科、妇产科、小儿科等临床科室；急诊室、耳鼻喉科、眼科、牙科、针灸室等门诊科室、药房、放射、化验等医技科室。  </p>
+    <br>
+
+      ]]>
+
+  </data>
+          <data name="scene_193"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>沧口医院时期，医疗业务以常见病、多发病为主，医疗技术水平居全市上游，主要医师有张学俭、刘效先、高惕青、刘述福、王亚强、高衍裔、张洪圣、石湘荣等。  </p>
+    <br>
+    	  <p align="left"><font color='#b4520d'></font>心内专业作为重点学科发展较快，1976年医院成为市心血管疾病协作组早期成员单位，内科总体技术水平居全市先进行列，尤其在化工中毒抢救方面具有优势。   </p>
+    <br>
+
+      ]]>
+
+  </data>
+          <data name="scene_194"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'>无陪护护理</font>沧口医院时期，护理工作实行传统的无陪护护理。病人的生活护理，如喂饭、大小便、洗头洗脚、理发、抬送手术等，都由护士承担，除此以外，连搬运氧气、药品等后勤工作也都由护士承担，工作相当繁重。</p>
+    <br>
+    	  <p align="left"><font color='#b4520d'>职业病防治</font>由于沧口区化工企业众多，接触有毒有害作业工人达5万多人，急性中毒事故时有发生。20世纪70年代初，医院内科即开展了职业病临床研究治疗工作，1978年由医院创议并牵头成立了沧口区职业病防治协作组，经2年努力，形成了全区职业病防治网，相继全面开展了全区职业病健康查体、防治与科研工作，并取得了一批科研成果。1978年林立明医师代表出席首届青岛市科学大会并被授予先进奖。</p>
+    <br>
+
+    	 <p align="left"><font color='#b4520d'></font>1982年正式设立职业病科，设病床20张。1982年以后，年职业病体检约5000人次，年门诊量约1000余人次，年收治各类职业病患者100余人次。20世纪80年代，医院作为职业病重点收治单位，多次抢救厂企重大毒气泄漏达数百人，无一例死亡，受到青岛市市政府有关部门表彰。1990年经市批准，青岛市职业病临床研究所在医院成立，所长由刘志远兼任，1997年奉撤。</p>
+    <br>
+    	  <p align="left"><font color='#b4520d'>自办护校</font>根据青岛市卫生局统一安排，1958年成立了青岛沧口医院附设护校，校长由党支部书记王起义兼任。当年九月经考试录取辛玉凤、孙秀芝等50名学员。护校学制两年，学员住校，半天理论课、半天实习。毕业后，选留了10名学员留院工作，余者另行分配。</p>
+    <br>
+    	   <p align="left"><font color='#b4520d'></font>1972年，为使从社会招入的参加护理工作的人员尽快掌握岗位技能，医院成立了红卫班，进行了为期半年的护理基础业务培训，共培训护理员46名。另外，还吸收了部分厂企、学校的卫生人员参加培训。</p>
+    <br>
+    	   <p align="left"><font color='#b4520d'>勤俭办学</font>沧口医院时期，正值计划经济年代，医院经费困难，后勤人员比较少。院领导带领全院职工发扬自力更生、艰苦奋斗精神，用自己的双手建设医院，发展医院。仅1965年全院职工利用业余时间铺水泥路面、套围墙、建房舍等就出工3300人次，节省资金5628.95元。</p>
+    <br>
+      ]]>
+
+  </data>
+
+          <data name="scene_195"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>青岛市政府高度重视医院迁建这一民生工程，列入青岛市年度十件大事。该项目设计方案与国际接轨，占地88.78亩，总建筑面积80169.81平方米，总投资5.7995亿元，编制床位1000张（其中一期800张），设计停车位657个。医院于2014年7月落成启用，经有关部门验收评审获国家优质工程奖。</p>
+    <br>
+
+      ]]>
+
+  </data>
+            <data name="scene_196"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>2010年9月17日邢晓博院长在奠基仪式上致辞。</p>
+    <br>
+
+      ]]>
+
+  </data>
+            <data name="scene_197"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>2014年7月医院整体搬迁。经全院职工3天奋战，于7月21日正式开诊。</p>
+    <br>
+
+      ]]>
+
+  </data>
+            <data name="scene_198"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>医院以迁建为契机实现快速升级发展，现已成为青岛市卫生健康委直属的三级综合性医院。医院建筑面积、固定资产、医疗设备价值、医院床位快速增长，急救、重症医学和手术等硬件设施一举迈上了国内先进水平，极大缓解了青岛市北部居民长期以来存在的看病难、住院难问题。近几年来，医院的学科和人才队伍建设有了长足发展，目前拥有专业技术人员1118人，其中高级职称147人，硕士研究生204人，博士学历3人。医院信息化建设迈入全市先进行列，为医院长远发展打下了坚实基础，从此青岛市第三人民医院进入了一个全新发展时期。</p>
+    <br>
+
+      ]]>
+
+  </data>
+
+	
+</krpano>

@@ -1,0 +1,91 @@
+﻿<krpano version="1.19" title="三医">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="start/start.xml" />
+<include url="loading/loadingpercenttext.xml" />
+<include url="erweima/erma.xml" />
+
+<include url="iframe/iframe.xml"/>
+<include url="introduce/index.xml"/>
+<include url="tuwen/textbox.xml" />
+<include url="tuwen/textboxsetting.xml?t=12388" />
+<include url="music/music.xml" />
+<!--<include url="skin/dragable-hotspots.xml" />-->
+
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		
+		
+		<!--插入编辑:加载背景音乐 -->		
+        playsound(bggsnd1, music/gangqin1.mp3, 0);
+		
+		
+	</action>
+
+
+	
+	<scene name="scene_1" title="党建活动" onstart="" havevrimage="true" thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="361.589" vlookat="1.327" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/1.tiles/vr/pano_%s.jpg" />
+		</image>
+
+<!-- 帮助图片消失层5秒消失 -->
+<layer name="test" url="skin/touchalert.png" align="center"  keep="true"  scale="0.5"
+alpha="0" visible="false"
+onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+onloaded="picture_resize(get(name));" />
+
+<events name="picture_period"
+ onpreviewcomplete="
+ set(layer[test].visible,true);
+ tween(layer[test].alpha,1);
+ delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+"/>
+
+<!-- end 弹窗消失层5秒消失 --> 
+
+<hotspot name="hs1" ath="164.055" atv="8.51" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_1,null,null,true,false);" /> 
+
+<hotspot name="hs2" ath="-161.795" atv="8.51" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_2,null,null,true,false);" /> 
+
+<hotspot name="hs3" ath="-125.277" atv="8.5" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_3,null,null,true,false);" /> 
+
+<hotspot name="hs4" ath="-75.396" atv="8.5" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_4,null,null,true,false);" /> 
+
+<hotspot name="hs5" ath="-2.311" atv="8" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_5,null,null,true,false);" /> 
+
+	</scene>
+
+
+</krpano>

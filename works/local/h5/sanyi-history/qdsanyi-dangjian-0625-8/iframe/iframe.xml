@@ -1,0 +1,67 @@
+<krpano>
+		<control mousetype="drag2d" />
+		
+		
+	<layer name="closeiframe_button" url="%SWFPATH%/iframe/closeicon.png" scale="0.17" align="righttop"  keep="true"  visible="false" zorder="9999999" x="10" y="5" onclick="remove_iframe();set(layer[iframediv].visible,false);set(layer[closeiframe_button].visible,false);"/> 
+		
+		<layer   name="iframediv"
+			     type="container"
+                 align="lefttop"
+		         url="%SWFPATH%/iframe/black.png"
+		         width="100%"
+		         height="100%"
+		         zorder="999999"
+                 visible="false"
+	             keep="true"
+		         bgcolor="0xffffff"
+		         >
+			         
+			     
+			 <layer name="textbox" > </layer>    
+
+		</layer> 
+
+        
+		
+
+		<action name="call_iframe">
+          callwith(layer[iframediv],add_iframe(%1, 100%, 100%);set(visible,true));
+          set(layer[closeiframe_button].visible,true);
+		</action>	        
+
+	
+		<action name="add_iframe" type="Javascript"><![CDATA[
+				var iframe = document.createElement("iframe");
+				iframe.style.position = "absolute";
+				iframe.style.left = 0;
+				iframe.style.top = 0;
+				iframe.style.width = "100%";
+				iframe.style.height = "100%";
+				iframe.style.border = 0;
+				iframe.src = args[1];
+			    iframe.setAttribute('id',resolve(caller.name));
+				caller.registercontentsize(args[2], args[3]);
+				caller.sprite.appendChild(iframe);
+				caller.sprite.style.webkitOverflowScrolling = "touch";
+		        caller.sprite.style.overflowY = "auto";
+		        caller.sprite.style.overflowX = "auto";
+		]]></action>
+
+
+		<action name="remove_iframe" type="Javascript"><![CDATA[
+		 
+		 var lastIframe = document.getElementById('iframediv');
+		 lastIframe.parentNode.removeChild(lastIframe);
+
+		]]></action>
+
+		
+		
+		
+		
+	
+	
+
+
+	
+</krpano>

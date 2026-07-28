@@ -1,0 +1,204 @@
+﻿<krpano version="1.19" title="三医">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="start/start.xml" />
+<include url="loading/loadingpercenttext.xml" />
+<include url="erweima/erma.xml" />
+<include url="iframe/iframe.xml"/>
+<include url="introduce/index.xml"/>
+<include url="tuwen/textbox.xml" />
+<include url="tuwen/textboxsetting.xml?t=12388" />
+<include url="music/music.xml" />
+<!--<include url="skin/dragable-hotspots.xml" />-->
+
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		
+		
+		<!--插入编辑:加载背景音乐 -->		
+        playsound(bggsnd1, music/gangqin1.mp3, 0);
+		
+		
+	</action>
+
+	
+	<scene name="scene_1" title="院史展-创业" onstart="" havevrimage="true" thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-539.792" vlookat="2.398" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/1.tiles/vr/pano_%s.jpg" />
+		</image>
+
+								<!-- 帮助图片消失层5秒消失 -->
+<layer name="test" url="skin/touchalert.png" align="center"  keep="true"  scale="0.5"
+alpha="0" visible="false"
+onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+onloaded="picture_resize(get(name));" />
+
+<events name="picture_period"
+ onpreviewcomplete="
+ set(layer[test].visible,true);
+ tween(layer[test].alpha,1);
+ delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+"/>
+
+<!-- end 弹窗消失层5秒消失 --> 
+
+<hotspot name="spot1" style="hotspot_ani_dian_white" ath="111.71" atv="27.121" ondown="draghotspot();" linkedscene="scene_2" />  
+
+<hotspot name="hs1" ath="156.241" atv="6.77" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_1,null,null,true,false);" /> 
+
+<hotspot name="hs2" ath="-160.329" atv="7.77" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_2,null,null,true,false);" /> 
+
+<hotspot name="hs3" ath="-121.914" atv="7.77" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_3,null,null,true,false);" /> 
+
+<hotspot name="hs4" ath="-85.279" atv="7.77" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_4,null,null,true,false);" /> 
+
+<hotspot name="hs5" ath="-55.74" atv="6.77" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_5,null,null,true,false);" /> 
+
+<hotspot name="hs6" ath="-22.341" atv="8.61" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_6,null,null,true,false);" /> 
+
+<hotspot name="hs7" ath="17.886" atv="8.61" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_7,null,null,true,false);" /> 
+
+<hotspot name="hs8" ath="67.33" atv="5.961" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_8,null,null,true,false);" /> 
+
+<hotspot name="hs9" ath="105.956" atv="5.961" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_9,null,null,true,false);" /> 
+
+
+
+
+	</scene>
+
+	<scene name="scene_2" title="院史展-新生" onstart="" havevrimage="true" thumburl="panos/2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="270.134" vlookat="-0.011" fovtype="MFOV" fov="124.789" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/2.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="hs1" ath="-101.593" atv="12.527" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_21,null,null,true,false);" /> 
+
+<hotspot name="hs2" ath="-43.973" atv="8.713" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_22,null,null,true,false);" /> 
+
+<hotspot name="hs3" ath="25.617" atv="5.304" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_23,null,null,true,false);" /> 
+
+<hotspot name="hs4" ath="87.532" atv="8.42" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_24,null,null,true,false);" /> 
+
+<hotspot name="hs5" ath="172.677" atv="7.256" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_25,null,null,true,false);" /> 
+
+<hotspot name="spot1" style="hotspot_ani_dian_white" ath="19.32" atv="22.086" ondown="draghotspot();" linkedscene="scene_3" />  
+
+<hotspot name="spot2" style="hotspot_ani_go_white" ath="-152.46" atv="19.976" ondown="draghotspot();" linkedscene="scene_1" /> 
+
+	</scene>
+
+	<scene name="scene_3" title="院史展-北迁" onstart="" havevrimage="true" thumburl="panos/3.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="180.308" vlookat="2.002" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/3.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/3.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/3.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/3.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	<hotspot name="hs1" ath="176.439" atv="8.795" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_31,null,null,true,false);" /> 
+
+<hotspot name="hs2" ath="-87" atv="8.713" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_32,null,null,true,false);" /> 
+
+<hotspot name="hs3" ath="6" atv="5.649" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_33,null,null,true,false);" /> 
+
+<hotspot name="hs4" ath="102.195" atv="4.275" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_34,null,null,true,false);" /> 
+
+
+<hotspot name="spot1" style="hotspot_ani_dian_white" ath="120.876" atv="21.44" ondown="draghotspot();" linkedscene="scene_4" />  
+
+<hotspot name="spot2" style="hotspot_ani_right_white" ath="140.604" atv="9.052" ondown="draghotspot();" linkedscene="scene_2" /> 
+
+
+	</scene>
+
+	<scene name="scene_4" title="院史展-展翅" onstart="" havevrimage="true" thumburl="panos/4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-179.802" vlookat="-0.037" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/4.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/4.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/4.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/4.tiles/vr/pano_%s.jpg" />
+		</image>
+
+			<hotspot name="hs1" ath="176.439" atv="8.795" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_41,null,null,true,false);" /> 
+
+<hotspot name="hs2" ath="-113.153" atv="8.768" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_42,null,null,true,false);" /> 
+
+<hotspot name="hs3" ath="-63.894" atv="8.768" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_43,null,null,true,false);" /> 
+
+<hotspot name="hs4" ath="-2.778" atv="7.217" style="tuwen-dian" text="查看详情" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_44,null,null,true,false);" /> 
+
+<hotspot name="spot1" style="hotspot_ani_dian_white" ath="111.624" atv="29.136" ondown="draghotspot();" linkedscene="scene_1" />  
+
+<hotspot name="spot3" style="hotspot_ani_go_white" ath="44.44" atv="15.346" ondown="draghotspot();" linkedscene="scene_3" /> 
+	</scene>
+
+
+</krpano>
