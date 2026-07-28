@@ -1,0 +1,361 @@
+﻿<krpano version="1.19" title="崂山区">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="start/start.xml" /><!--启动画面-->
+	<include url="loading/loadingpercenttext.xml" /><!--加载2-->
+
+	<include url="erweima/erma.xml" /><!--二维码-->
+
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+
+		    <!--插入编辑:加载背景音乐整个VR的音乐 -->
+        playsound(bggsnd1, music/bgm111.mp3|12.ogg', 3);
+	</action>
+
+	
+	<scene name="scene_1" title="青岛市规划展览馆" onstart="" havevrimage="true" thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="732.516" vlookat="1.868" fovtype="MFOV" fov="132.107" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/1.tiles/vr/pano_%s.jpg" />
+		</image>
+
+
+		       <hotspot name="spot2" style="hotspot_ani_hangpai_white" ath="159.986" atv="-5.661"  ondown="draghotspot();" linkedscene="scene_3" />
+
+		       <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="-2.551" atv="2.477"  ondown="draghotspot();" linkedscene="scene_2" />
+		       <hotspot name="spot4" style="hotspot_ani_dian_white" ath="-52.185" atv="-8.04"  ondown="draghotspot();" linkedscene="scene_8" />
+
+ <!-- 对话的显示时间 -->
+        <layer name="talkbox1" type="container" align="center" y="-21" x="-120" visible="flase" >
+            <layer name="talk1" style="buttonstyle"  html="建设宜居宜业的现代化山海品质新城，是我们共同的奋斗目标！" zorder="10" />
+            <layer name="talkimg1" url="images/face1.png" align="lefttop" zorder="20"  scale="0.5"  />
+       </layer>
+       <layer name="talkbox2" type="container" align="center" y="-21" x="-120" visible="flase" >
+            <layer name="talk2" style="buttonstyle"  html="崂山区夜景霓虹闪烁，正印证了崂山经济的快速发展。" zorder="10" />
+            <layer name="talkimg2" url="images/face2.png" align="lefttop" zorder="20"  scale="0.5"  />
+       </layer>
+       <layer name="talkbox3" type="container" align="center" y="-21" x="-120" visible="flase" >
+            <layer name="talk3" style="buttonstyle"  html="想去崂山玩玩，看看我大美崂山！" zorder="10" />
+            <layer name="talkimg3" url="images/face3.png" align="lefttop" zorder="20"  scale="0.5"  />
+       </layer>
+
+
+        <style name="buttonstyle"  keep="true" url="plugins/textfield.swf" children="false" enabled="true"  width="240" height="42" vcenter="true"
+                   border="false" background="true"  backgroundcolor="0x000000" backgroundalpha="0.7" roundedge="4"
+                   css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:12px; padding:5px 5px 5px 50px;" zorder="1"
+        />
+
+
+        <events name="picture_talk1"
+ onpreviewcomplete="
+ delayedcall(5,set(layer[talkbox1].visible,true));
+ delayedcall(10,set(layer[talkbox1].visible,flase));
+"/>
+
+        <events name="picture_talk2"
+ onpreviewcomplete="
+ delayedcall(10,set(layer[talkbox2].visible,true));
+ delayedcall(15,set(layer[talkbox2].visible,flase));
+"/>
+
+        <events name="picture_talk3"
+ onpreviewcomplete="
+ delayedcall(15,set(layer[talkbox3].visible,true));
+ delayedcall(20,set(layer[talkbox3].visible,flase));
+"/>
+        <!-- end 对话的显示时间 -->
+
+
+
+
+<!-- 帮助图片消失层5秒消失 -->
+<layer name="test" url="skin/touchalert.png" align="center"  keep="true"  scale="0.5"
+alpha="0" visible="false"
+onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+onloaded="picture_resize(get(name));" />
+
+<events name="picture_period"
+ onpreviewcomplete="
+ set(layer[test].visible,true);
+ tween(layer[test].alpha,1);
+ delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+"/>
+
+<!-- end 弹窗消失层5秒消失 -->
+<!-- 互动对话部分 -->
+
+
+	</scene>
+
+
+
+	<scene name="scene_2" title="石老人海水浴场" onstart="" havevrimage="true" thumburl="panos/2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-2.358" vlookat="13.363" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/2.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		       <hotspot name="spot2" style="hotspot_ani_hangpai_white" ath="123.134" atv="-6.238"  ondown="draghotspot();" linkedscene="scene_7" />
+		               <!-- 互动对话部分 -->
+		<hotspot name="helps-1" url="images/help8.png" scale="0.5" ath="-68.715" atv="-4.85" distorted="flase" ondown="draghotspot();" />
+        <!-- end。互动对话部分 -->
+
+      <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="80.193" atv="-3.5"  ondown="draghotspot();" linkedscene="scene_1" />
+
+	</scene>
+
+	<scene name="scene_3" title="香港东路·东海路沿线俯瞰" onstart="" havevrimage="true" thumburl="panos/3.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="66.660" vlookat="3.301" fovtype="MFOV" fov="132.147" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/3.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/3.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/3.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/3.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	       <hotspot name="spot1" style="hotspot_ani_hangpai_white" ath="-26.856" atv="-3.47"  ondown="draghotspot();" linkedscene="scene_4" />
+     <hotspot name="spot6" style="hotspot_ani_hangpai_white" ath="131.934" atv="2.722"  ondown="draghotspot();" linkedscene="scene_2" />
+	       <hotspot name="spot2" style="hotspot_ani_dian_white" ath="-32.582" atv="32.921"  ondown="draghotspot();" linkedscene="scene_8" />
+	       <hotspot name="spot3" style="hotspot_ani_dian_white" ath="41.668" atv="-6.77"  ondown="draghotspot();" linkedscene="scene_9" />
+	       <hotspot name="spot4" style="hotspot_ani_hangpai_white" ath="-151.46" atv="-0.583"  ondown="draghotspot();" linkedscene="scene_1" />
+
+	</scene>
+
+	<scene name="scene_4" title="海尔路·银川路交叉口区域俯瞰" onstart="" havevrimage="true" thumburl="panos/4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-228.938" vlookat="-3.574" fovtype="MFOV" fov="136.214" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/4.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/4.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/4.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/4.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		   <hotspot name="spot2" style="hotspot_ani_dian_white" ath="-177.096" atv="17.338"  ondown="draghotspot();" linkedscene="scene_9" />
+		       <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="49.638" atv="-8.19"  ondown="draghotspot();" linkedscene="scene_5" />
+
+	</scene>
+
+	<scene name="scene_5" title="海尔路·同安路交叉口区域俯瞰" onstart="" havevrimage="true" thumburl="panos/5.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-246.098" vlookat="26.612" fovtype="MFOV" fov="90.613" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/5.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2560" tiledimageheight="2560">
+				<cube url="panos/5.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/5.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/5.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/5.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		   <hotspot name="spot2" style="hotspot_ani_hangpai_white" ath="-132.069" atv="13.471"  ondown="draghotspot();" linkedscene="scene_4" />
+
+		   		               <!-- 互动对话部分 -->
+		<hotspot name="helps-1" url="images/help10.png" scale="0.5" ath="129.218" atv="12.552" distorted="flase" ondown="draghotspot();" />
+        <!-- end。互动对话部分 -->
+
+	</scene>
+
+	<scene name="scene_6" title="丽达百货" onstart="" havevrimage="true" thumburl="panos/6.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="286.016" vlookat="8.777" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/6.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/6.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/6.tiles/vr/pano_%s.jpg" />
+		</image>
+   <hotspot name="spot2" style="hotspot_ani_dian_white" ath="-63.024" atv="-2.885"  ondown="draghotspot();" linkedscene="scene_9" />
+     <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="54.801" atv="8.607"  ondown="draghotspot();" linkedscene="scene_7" />
+          <hotspot name="spot4" style="hotspot_ani_hangpai_white" ath="85.513" atv="-9.313"  ondown="draghotspot();" linkedscene="scene_2" />
+		               
+		               <!-- 互动对话部分 -->
+		<hotspot name="helps-1" url="images/help11.png" scale="0.5" ath="-158.337" atv="-36.256" distorted="flase" ondown="draghotspot();" />
+        <!-- end。互动对话部分 -->
+	</scene>
+
+	<scene name="scene_7" title="青岛市博物馆·青岛大剧院" onstart="" havevrimage="true" thumburl="panos/7.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="1.132" vlookat="9.684" fovtype="MFOV" fov="136.214" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/7.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/7.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/7.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/7.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		   <hotspot name="spot2" style="hotspot_ani_hangpai_white" ath="-177.529" atv="-5.847"  ondown="draghotspot();" linkedscene="scene_2" />
+		      <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="6.527" atv="-1.142"  ondown="draghotspot();" linkedscene="scene_6" />
+		      <hotspot name="spot4" style="hotspot_ani_dian_white" ath="-92.876" atv="22.698"  ondown="draghotspot();" linkedscene="scene_10" />
+
+	</scene>
+
+	<scene name="scene_8" title="金鼎广场·金狮广场夜景" onstart="" havevrimage="true" thumburl="panos/8.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="25.762" vlookat="1.240" fovtype="MFOV" fov="136.214" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/8.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/8.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/8.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/8.tiles/vr/pano_%s.jpg" />
+		</image>
+
+   <hotspot name="spot2" style="hotspot_ani_dian_white" ath="102.465" atv="-12.581"  ondown="draghotspot();" linkedscene="scene_9" />
+    <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="177.909" atv="-0.902"  ondown="draghotspot();" linkedscene="scene_2" />
+     <hotspot name="spot4" style="hotspot_ani_right_white" ath="-98.876" atv="-0.14"  ondown="draghotspot();" linkedscene="scene_1" />
+
+		               <!-- 互动对话部分 -->
+		<hotspot name="helps-1" url="images/help3.png" scale="0.5" ath="56.367" atv="-33.816" distorted="flase" ondown="draghotspot();" />
+        <!-- end。互动对话部分 -->
+
+	</scene>
+
+	<scene name="scene_9" title="崂山区政府夜景" onstart="" havevrimage="true" thumburl="panos/9.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-47.885" vlookat="3.502" fovtype="MFOV" fov="136.214" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/9.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/9.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/9.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/9.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		   <hotspot name="spot2" style="hotspot_ani_hangpai_white" ath="153.732" atv="-23.791"  ondown="draghotspot();" linkedscene="scene_3" />
+
+		               <!-- 互动对话部分 -->
+		<hotspot name="helps-1" url="images/help9.png" scale="0.5" ath="56.367" atv="-33.816" distorted="flase" ondown="draghotspot();" />
+        <!-- end。互动对话部分 -->
+
+	</scene>
+
+	<scene name="scene_10" title="深圳路夜景" onstart="" havevrimage="true" thumburl="panos/10.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-349.235" vlookat="0.261" fovtype="MFOV" fov="136.214" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/10.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/10.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/10.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/10.tiles/vr/pano_%s.jpg" />
+		</image>
+
+			   <hotspot name="spot2" style="hotspot_ani_dian_white" ath="-42.79" atv="-19.335"  ondown="draghotspot();" linkedscene="scene_9" />
+			   	   <hotspot name="spot3" style="hotspot_ani_hangpai_white" ath="61.841" atv="-30.719"  ondown="draghotspot();" linkedscene="scene_7" />
+
+	</scene>
+
+
+</krpano>

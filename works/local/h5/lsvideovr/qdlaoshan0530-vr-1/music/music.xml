@@ -1,0 +1,26 @@
+<krpano version="1.0.8">
+
+<!--START:音乐控制需要在tiaoyong 粘贴插件-->
+	   <plugin name="soundinterface"
+				url="%SWFPATH%/music/soundinterface.swf"
+				alturl="%SWFPATH%/music/soundinterface.js"
+				rootpath=""
+				preload="true"
+				keep="true"
+				volume="1.0"
+				mute="false"
+				/>
+	<!--END:音乐控制-->
+
+<!--START:音乐控制-->
+	   
+	<layer name="sndbt1" style="skin_base|skin_glow" align="righttop" x="0" y="70"  scale="0.5" keep="true"
+		    onover="tween(alpha,1);" 
+		    onout="tween(alpha,1);" 
+			crop="0|360|120|120"
+			onhover="showtext(播放/暂停,STYLE2);"
+			zorder="1"
+	        onclick="switch(soundinterface.mute); switch(crop, 0|360|120|120, 120|360|120|120);" />
+	<!--END:音乐控制-->	
+
+</krpano>

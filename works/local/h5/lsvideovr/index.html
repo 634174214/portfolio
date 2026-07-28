@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/demo.css?t=1">
+    <title>崂山城区·城载人文 心驰山海——宜居宜业的现代化山海品质新城-信网VR</title>
+    <meta name="description" content="在这里:山海感动着一切、幸福包容着一切、品质成就着一切、精彩书写着一切、美得让你忘却世间所有的疲惫-宜居宜业的现代化山海品质新城“青岛·崂山”。">
+    <meta name="keywords" content="崂山城区·城载人文 心驰山海——宜居宜业的现代化山海品质新城">
+    <script src="qdlaoshan0530-vr-1/tour.js"></script>
+</head>
+<body>
+
+<div class="loading">
+                <div class="logo"></div>
+                <div class='body'>
+                      <span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                      </span>
+                      <div class='base'>
+                                  <span></span>
+                                  <div class='face'></div>
+                      </div>
+              </div>
+              <div class='longfazers'>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+              </div>
+              <p></p>
+</div>
+
+<!-- 安卓显示 -->
+<div id="playvideo">
+       <div class="playbtn">
+                    <p><em>调整音量 轻触屏幕</em><em>- 精彩即将呈现 -</em></p>
+       </div>
+      <div id="imglist"></div>
+</div>
+
+<div id="main">
+     <div class="logo"></div>
+     <video id="bgvid" playsinline x-webkit-airplay webkit-playsinline  x5-video-player-type="h5"  preload="auto">
+          <source src="lss.mp4" type="video/mp4" ></source>您的浏览器不支持video标签
+    </video>
+</div>
+
+
+<!-- vr -->
+<div class="panowrap">
+       <div id="music"></div>
+      <em id="audiocol" class="bgmclose"></em>
+      <div id="pano"></div>
+</div>
+<script>
+       embedpano({swf:"qdlaoshan0530-vr-1/tour.swf", xml:"qdlaoshan0530-vr-1/tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+</script>
+<!-- vr  end-->
+
+<audio src="bgmg2.mp3" loop="loop" preload="auto" id="bgmusic"></audio>
+
+<!-- share -->
+<div id="sharelogo"><img src="img/share.jpg"></div>
+<script>
+var cDiv = document.getElementById("sharelogo");
+var aImgs = cDiv.getElementsByTagName("img");
+var t_pic = "";
+if (aImgs.length>0) {
+ var t_pic = aImgs[0].src;
+}
+</script>
+
+   <script src="js/xinjq.js"></script>
+   <script src="js/preloadjs.min.js"></script>
+   <script src="js/soundjs.min.js"></script>
+   <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script>
+   <script src="js/myjs.js?t=939"></script>
+</body>
+</html>
