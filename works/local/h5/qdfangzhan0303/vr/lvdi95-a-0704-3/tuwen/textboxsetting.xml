@@ -1,0 +1,288 @@
+<krpano>
+
+
+	<textbox_settings 
+
+		pic_ratio="30%"
+		pic_ratio_portrait="84%"
+		pic_align="righttop"
+		pic_resize_min="1"
+		pic_resize_max="1"
+
+		linecolor="0xFFFFFF"
+		linealpha="0.3"
+		separation_line_visible="false"
+		scale_normal="0.8"
+		scale_mobile="0.6"
+		scale_normal_for_next_prev="75"
+		scale_mobile_for_next_prev="75"
+        next_prev_x_normal="-5" 
+		next_prev_x_normal_portrait="0"
+		next_prev_x_mobile="0" 
+		next_prev_x_mobile_portrait="0"
+		next_prev_portrait_bottom="false"
+		button_postion_x="16"
+		button_postion_y.normal="-10"
+		button_postion_y.mobile="0"
+		title_postion_y_mobile="-50"
+		title_postion_y_normal="-70"
+		index_postion_y_mobile="10"
+		index_postion_y_normal="10"
+		usebg="false"
+		bg_url="bg.png"
+		bg_scale9grid="28|30|662|340"
+
+		bgcolor="0x001122" 
+		bgalpha="0.98"
+		bgborder="0 0xFFFFFF 0"
+		bgroundedge="0"
+		bgshadw="0 0 0.5 0xFFFFFF 0"   
+		bgwidth="100%"
+		bgheight="100%"   
+
+		closebutton_color="true"
+		enlarge_button="flase"
+		enlarge_button_x="0"
+		enlarge_button_y="0"
+
+		next_and_prev_button_color="false"
+		next_and_prev_button_alpha="1"
+		next_and_prev_loop="true"
+		next_and_prev_button="false"
+
+
+		title_normal="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:24px;"
+		title_mobile="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;"
+		index_visible="true"  
+		index_normal="text-align:center; color:#FFFFFF; font-family:Arial;  font-size:26px;"
+		index_mobile="text-align:center; color:#FFFFFF; font-family:Arial;  font-size:22px;"  
+		index_color="#71b6ff"
+		text_normal="color:#FFFFFF; font-family:Arial; font-size:16px;"
+		text_mobile="color:#FFFFFF; font-family:Arial; font-size:14px;"
+
+		zoomtocursor="false"
+		autoplaysound="true"                
+		button="music|link"
+		linkbutton="2"
+
+		loadingtext=""
+		loadingtextcss="color:#FFFFFF; font-family:Arial; font-size:28px; text-align:center;"
+		loadingimgurl="loadanimation2.png"
+		loadingimgvalue="100|100|4"
+
+		imgurl="gallerybtns5.png"
+		
+		change_pic_ratio=""
+		change_pic_ratio_portrait=""
+		change_next_and_prev_loop="get:textbox_settings.next_and_prev_loop"
+		change_next_and_prev_button="get:textbox_settings.next_and_prev_button"		
+		change_pic_bg="get:textbox_settings.usebg"
+		skintextbox=""
+		iframe="false" 
+		bfl="http://localhost:8090/"
+                
+
+	/>
+
+
+<textbox_gallery_settings
+        name="gallery_1"
+        fileurl="2/" 
+        sfileurl="2/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="A-lf-一室一厅简介" 
+        text="scene_172"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+<textbox_gallery_settings
+        name="gallery_2"
+        fileurl="2/" 
+        sfileurl="2/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="客厅" 
+        text="scene_174"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+	<textbox_gallery_settings
+        name="gallery_3"
+        fileurl="3/" 
+        sfileurl="3/s/" 
+        fileprefix=""
+        fileex=".jpg"
+        file_end_index="1" 
+        title="卫生间" 
+        text="scene_175"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+
+		<textbox_gallery_settings
+        name="gallery_4"
+        fileurl="4/" 
+        sfileurl="4/s/" 
+        fileprefix=""
+        fileex=".png"
+        file_end_index="0" 
+        title="壮阔海景" 
+        text="scene_176"
+        pic_ratio="35%" 
+        pic_ratio_portrait="35%" 
+
+	/>
+    
+  
+
+<!-- 设置用户点击关闭按钮后的自定义动作
+
+-->
+
+	<action name="useraction">  
+
+
+	</action>
+
+
+
+
+   
+  <!--tuwen tooltip 热点文本显示 -->
+<action name="add_all_the_time_tooltip_for_VR">
+	
+	 txtadd(tooltipname, 'vrtooltip_', get(name));
+	 addhotspot(get(tooltipname)); 
+	 set(hotspot[get(tooltipname)].type,text);
+	 copy(hotspot[get(tooltipname)].edge,hotspot[get(name)].edge);
+	 copy(hotspot[get(tooltipname)].distorted,hotspot[get(name)].distorted);
+	 copy(hotspot[get(tooltipname)].ath,hotspot[get(name)].ath);
+	 copy(hotspot[get(tooltipname)].atv,hotspot[get(name)].atv);
+	 set(hotspot[get(tooltipname)].oy,-25);
+	 set(hotspot[get(tooltipname)].ox,0);
+	 set(hotspot[get(tooltipname)].vcenter,true);
+	 set(hotspot[get(tooltipname)].padding,5);
+	 set(hotspot[get(tooltipname)].bg,true);
+	 set(hotspot[get(tooltipname)].bgcolor,0xf57c00);
+	 set(hotspot[get(tooltipname)].bgroundedge,3);
+	 set(hotspot[get(tooltipname)].bgalpha,0.8);
+	 set(hotspot[get(tooltipname)].bgborder,0);
+	 set(hotspot[get(tooltipname)].bgshadow,'0 0 0 0x000000 0');
+	 set(hotspot[get(tooltipname)].css,'text-align:left; color:#FFFFFF; font-family:MicrosoftYahei; font-size:12px;');
+	 if(device.mobile,set(hotspot[get(tooltipname)].css,'text-align:center; color:#FFFFFF; font-family:MicrosoftYahei; font-weight:bold; font-size:10px;');
+	 );
+	 set(hotspot[get(tooltipname)].txtshadow,'0 0 0 0x000000 0');
+ 
+	 if(text == '' OR text === null,
+ 
+		 copy(hotspot[get(tooltipname)].html,scene[get(linkedscene)].title),
+		 copy(hotspot[get(tooltipname)].html,text);
+ 
+	 ); 
+ 
+	 set(hotspot[get(tooltipname)].enabled,false); 
+ 
+	 if(lp_running == false,
+	 	set(hotspot[get(tooltipname)].visible,true); 
+	 	, 	
+	 	if(!webvr.isenabled,
+	 	  if(lp_running == true,
+		 	set(hotspot[get(tooltipname)].visible,false); 
+		 	set(hotspot[get(tooltipname)].mark2,true);
+	 	   );
+	 	  );
+	 	);
+ 
+	 if(hotspot[get(name)].normal == false, 
+ 
+		set(hotspot[get(tooltipname)].normal,false);
+		set(hotspot[get(tooltipname)].onloaded,
+			if(webvr.isenabled,
+				set(visible,false);
+				,	
+				if(lp_running == false OR lp_running == null,  
+					set(visible,true);
+					);
+				);
+	       );
+ 
+	 	);
+</action>
+
+<!--end tuwen tooltip --> 
+   
+   
+   
+   
+   
+   
+
+
+
+
+
+  
+
+
+  <data name="scene_172"><![CDATA[
+
+       
+    <p align="left"></font>户型图简介<font color='#b4520d'>方正格局，南北通透，全明设计，动静分区，互不干扰，布局合理。人性化双卫，细节考量，南向宽敞阳台，南向双飘窗，观景、生活两相宜。南向三开间，大面宽，优采光。奢阔双厅，阳光贯通，气度尽显。高配置主卧套件，私密性强，餐厨一体设计，动线流畅。
+        </p>
+
+    <br>
+
+    <br>
+      ]]>
+  </data>
+
+
+  
+  <data name="scene_174"><![CDATA[
+
+       
+    <p align="left"><font color='#b4520d'></font>方正格局，南北通透，全明设计，动静分区，互不干扰，布局合理。人性化双卫，细节考量，南向宽敞阳台，南向双飘窗，观景、生活两相宜。南向三开间，大面宽，优采光。奢阔双厅，阳光贯通，气度尽显。高配置主卧套件，私密性强，餐厨一体设计，动线流畅。</p>
+    <br>
+
+
+
+      ]]>
+  </data>
+
+    <data name="scene_175"><![CDATA[
+
+
+    <p align="left"><font color='#b4520d'><b>
+    卫生间结构</b></font></p>
+    <p align="left">&#12288;&#12288;地面：局部地砖；墙面：局部墙砖；天棚：铝扣板吊顶；其他：整体定制卫浴柜、面盆及龙头、坐便器、花洒、电热水器、淋浴隔断、浴霸。</p>
+
+    <br>
+
+
+      ]]>
+  </data>
+
+      <data name="scene_176"><![CDATA[
+
+
+    <p align="left"><font color='#b4520d'><b>
+    旖旎海景</b></font></p>
+    <p align="left">&#12288;&#12288;直面大海，无遮挡才尽兴，广袤视野-旖旎海景尽收眼底。让你足不出户即可感受大大海所带来的壮阔与优美。</p>
+
+    <br>
+
+
+      ]]>
+  </data>
+
+
+   
+	
+</krpano>

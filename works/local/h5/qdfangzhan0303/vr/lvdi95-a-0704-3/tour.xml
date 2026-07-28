@@ -1,0 +1,260 @@
+﻿<krpano version="1.19" title="绿地·国科健康科技小镇">
+
+<include url="skin/vtourskin.xml" />
+<include url="start/start.xml" />
+<include url="loading/loadingpercenttext.xml" />
+
+
+
+<!-- <include url="introduce/index.xml"/> -->
+<include url="tuwen/textbox.xml" />
+<include url="tuwen/textboxsetting.xml?t=12388" />
+
+<include url="navigation/nav.xml" />
+<!--<include url="skin/dragable-hotspots.xml" /> !-->
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		
+		
+		<!--插入编辑:加载背景音乐 -->		
+        playsound(bggsnd1, music/gangqin1.mp3, 0);
+		
+		
+	</action>
+
+
+	
+	<scene name="scene_1" title="玄关" onstart="" havevrimage="true" thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="179.072" vlookat="1.190" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/1.tiles/vr/pano_%s.jpg" />
+		</image>
+
+								<!-- 帮助图片消失层5秒消失 -->
+<layer name="test" url="skin/touchalert.png" align="center"  keep="true"  scale="0.5"
+alpha="0" visible="false"
+onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+onloaded="picture_resize(get(name));" />
+
+<events name="picture_period"
+ onpreviewcomplete="
+ set(layer[test].visible,true);
+ tween(layer[test].alpha,1);
+ delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+"/>
+
+<!-- end 弹窗消失层5秒消失 --> 
+
+<hotspot name="spot1" style="hotspot_ani_dian_white" ath="171.758" atv="28.331" ondown="draghotspot();" linkedscene="scene_2" />  
+ 
+
+
+
+	</scene>
+
+	<scene name="scene_2" title="客厅" onstart="" havevrimage="true" thumburl="panos/2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-84.192" vlookat="17.334" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/2.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="hs5" ath="-79.189" atv="27.62" style="tuwen-dian" text="客厅" onloaded="add_all_the_time_tooltip_for_VR"  ondown="draghotspot();" onclick="open_textbox(0,gallery_2,null,null,true,false);" /> 
+
+		<hotspot name="spot1" style="hotspot_ani_dian_white" ath="-177.188" atv="26.713" ondown="draghotspot();" linkedscene="scene_3" />
+		<hotspot name="spot2" style="hotspot_ani_dian_white" ath="75.813" atv="29.494" ondown="draghotspot();" linkedscene="scene_1" />
+		<hotspot name="spot3" style="hotspot_ani_dian_white" ath="104.349" atv="9.507" ondown="draghotspot();" linkedscene="scene_8" />
+
+	</scene>
+
+	<scene name="scene_3" title="走廊" onstart="" havevrimage="true" thumburl="panos/3.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-2.882" vlookat="-3.013" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/3.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/3.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/3.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/3.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="hotspot_ani_dian_white" ath="173.494" atv="26.693" ondown="draghotspot();" linkedscene="scene_2" />
+
+		<hotspot name="spot2" style="hotspot_ani_left_white" ath="126.277" atv="88.223" ondown="draghotspot();" linkedscene="scene_4" />
+
+		<hotspot name="spot3" style="hotspot_ani_right_white" ath="172.844" atv="55.007" ondown="draghotspot();" linkedscene="scene_5" />
+
+		<hotspot name="spot4" style="hotspot_ani_right_white" ath="-2.985" atv="42.207" ondown="draghotspot();" linkedscene="scene_7" />
+
+		<hotspot name="spot5" style="hotspot_ani_left_white" ath="-2.043" atv="55.623" ondown="draghotspot();" linkedscene="scene_6" />
+
+	</scene>
+
+	<scene name="scene_4" title="卫生间" onstart="" havevrimage="true" thumburl="panos/4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="334.330" vlookat="26.869" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/4.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/4.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/4.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/4.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="hotspot_ani_right_white" ath="157.586" atv="44.361" ondown="draghotspot();" linkedscene="scene_3" />
+
+	</scene>
+
+	<scene name="scene_5" title="次卧" onstart="" havevrimage="true" thumburl="panos/5.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-84.593" vlookat="39.473" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/5.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/5.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/5.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/5.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="hotspot_ani_dian_white" ath="153.237" atv="30.303" ondown="draghotspot();" linkedscene="scene_3" />
+
+	</scene>
+
+	<scene name="scene_6" title="书房" onstart="" havevrimage="true" thumburl="panos/6.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="44.658" vlookat="29.552" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/6.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/6.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/6.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/6.tiles/vr/pano_%s.jpg" />
+		</image>
+
+         <hotspot name="spot1" style="hotspot_ani_dian_white" ath="127.836" atv="35.764" ondown="draghotspot();" linkedscene="scene_3" />
+	</scene>
+
+	<scene name="scene_7" title="主卧" onstart="" havevrimage="true" thumburl="panos/7.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-10.406" vlookat="14.275" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/7.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/7.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/7.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/7.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="hotspot_ani_dian_white" ath="-144.902" atv="22.616" ondown="draghotspot();" linkedscene="scene_3" />
+
+		<hotspot name="helps-1" url="images/help3.png" scale="0.5" ath="-75.114" atv="-5.506" distorted="flase" ondown="draghotspot();" />
+
+		<!--<hotspot name="hs9" ath="-93.47" atv="17.614" style="tuwen-dian"  text="主卧卫生间" onloaded="add_all_the_time_tooltip_for_VR" ondown="draghotspot();" />-->
+	</scene>
+
+		<scene name="scene_8" title="厨房" onstart="" havevrimage="true" thumburl="panos/8.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="13.455" vlookat="17.101" fovtype="MFOV" fov="124.789" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/8.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2176" tiledimageheight="2176">
+				<cube url="panos/8.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1152">
+				<cube url="panos/8.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/8.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="hotspot_ani_dian_white" ath="136.413" atv="25.595" ondown="draghotspot();" linkedscene="scene_2" />
+
+	</scene>
+
+
+</krpano>

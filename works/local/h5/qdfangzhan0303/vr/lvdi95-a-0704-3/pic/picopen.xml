@@ -1,0 +1,87 @@
+<krpano>
+	
+	
+<!-- 放大图片-->
+
+<style name="pichotspot"
+		       capture="false"
+		       zorder="2"
+		       onclick="showpic();"
+               alturl="%SWFPATH%/skin/vtourskin2.png"
+		       zoom="true"
+		       scale="0.4"
+		       crop="480|1080|120|120"
+		       />
+
+
+
+<action name="showpic">
+		if(layer[pic_bg1],
+		  ,
+			addlayer(pic_bg1);
+			set(layer[pic_bg1].type, container);
+			set(layer[pic_bg1].zorder, 999998);
+			set(layer[pic_bg1].safearea, false);
+			set(layer[pic_bg1].align, lefttop);
+			set(layer[pic_bg1].width, 100%);
+			set(layer[pic_bg1].height, 100%);
+			set(layer[pic_bg1].bgcolor, 0x000000);
+			set(layer[pic_bg1].bgalpha, 0.9);
+			set(layer[pic_bg1].bgcapture, true);
+			set(layer[pic_bg1].handcursor, false);
+			set(layer[pic_bg1].alpha, 0.0);
+			tween(layer[pic_bg1].alpha, 1.0, 0.5, default,);			
+    );
+    
+    if(hotspot[get(pic)] === null,
+			txtadd(picfilename,'%SWFPATH%/pic/images/pic_',get(pic),'.png');
+			
+			addlayer(get(pic));
+			set(layer[get(pic)].visible,false);
+			set(layer[get(pic)].distorted,true);
+			set(layer[get(pic)].scale,0.5);
+			set(layer[get(pic)].algin,center);
+			set(layer[get(pic)].alpha,0.0);
+			set(layer[get(pic)].zorder, 999999);
+			set(layer[get(pic)].onloaded, flyin(get(name)) );
+			set(layer[get(pic)].onclick, flyout(get(name)) );
+			copy(layer[get(pic)].url,picfilename);
+		,
+			flyin(get(pic));
+		);
+		  
+		  
+	</action>
+
+<action name="flyin">
+		if(layer[%1].flying == 0.0, hotspot[%1].resetsize(); calc_flyout_size(%1); );
+		if(layer[%1].oldscale === null, copy(hotspot[%1].oldscale, hotspot[%1].scale) );
+		if(layer[%1].oldrx === null, copy(hotspot[%1].oldrx, hotspot[%1].rx) );
+		if(layer[%1].oldry === null, copy(hotspot[%1].oldry, hotspot[%1].ry) );
+		if(layer[%1].oldrz === null, copy(hotspot[%1].oldrz, hotspot[%1].rz) );
+		set(layer[%1].enabled,true);
+		set(layer[%1].visible,true);
+		set(layer[%1].align,center);
+		set(layer[%1].zorder, 999999);
+		tween(layer[%1].alpha,  1.0);
+		tween(layer[%1].flying, 1.0);
+		tween(layer[%1].scale, 0.5);
+	</action>
+
+	<action name="flyout">
+		set(layer[%1].enabled,false);
+		tween(layer[%1].alpha,  0.0, 0.5, default, set(hotspot[%1].visible,false); );
+		tween(layer[%1].flying, 0.0);
+		tween(layer[%1].scale,  get(hotspot[%1].oldscale));
+		tween(layer[%1].rx,  get(hotspot[%1].oldrx));
+		tween(layer[%1].ry,  get(hotspot[%1].oldry));
+		tween(layer[%1].rz,  get(hotspot[%1].oldrz));
+		removelayer(pic_bg1);
+		removelayer[get(pic)];
+	</action>
+<!-- end放大图片-->
+
+
+
+
+</krpano>

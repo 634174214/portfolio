@@ -1,0 +1,35 @@
+*{padding: 0;margin: 0;}
+.pc-show{position: fixed;background-color: #FFFBEF;left: 0;right: 0;width: 100%;height: 100%;z-index: 999;top: 0;bottom: 0;}
+.pc-show .inner{width: 400px;position: absolute;left: 50%;top: 50%;margin: -300px 0 0 -200px;}
+.pc-show .inner img{width: 100%;display: block;}
+.pc-show .qrbox{width: 150px;padding: 10px;background-color: #fff;margin: 0 auto;position: absolute;top:0;border-radius: 10px;left: 50%;margin-left: -85px;top: 48%;}
+.pc-show .qrbox p{font-size: 14px;text-align: center;line-height: 22px;}
+.pc-show .qrbox p:last-child{color: #d41a41;}
+
+
+.header,
+.expo-info,
+.part
+#vr-window,
+.dialog,
+.footer
+{display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
