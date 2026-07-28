@@ -1,0 +1,861 @@
+<!DOCTYPE html>        
+<html>
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />    
+    <meta content="telephone=no" name="format-detection" />    
+    <meta name="apple-touch-fullscreen" content="yes" />    
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />    
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">            
+    <title>愈夜愈美丽 青岛崂山区旅游指南 | 信网</title>   
+    <meta name="description" content="崂山区是啤酒节的主会场之一，拥有海天一色的美景，自然人文景观丰富。到崂山区来，去哪儿吃、去哪儿玩、住在哪儿？怎么逛？希望这个指南能助您一臂之力。">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" href="css/layout.css?t=22" type="text/css">
+</head>
+<body ontouchstart>
+<!-- 加载 -->
+<div class="loading" id="loading">
+                <div class="logo"></div>
+                <div class='body'>
+                      <span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                      </span>
+                      <div class='base'>
+                                  <span></span>
+                                  <div class='face'></div>
+                      </div>
+              </div>
+              <div class='longfazers'>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+              </div>
+              <p></p>
+</div>
+<!-- 加载end -->
+<!-- 音乐 -->
+<div id="audiobtn" class="on"></div>
+<!-- 音乐end -->
+<!-- 首屏 -->
+<div id="p1_screen">
+    <!-- p1_title -->
+    <div class="p1_title">
+        <!-- <p>来到崂山区，这儿的夜色让你看个够~越“夜”越美丽！崂山区吃喝玩乐的好去处，助你欢乐游“夜”青岛！</p> -->
+        <img src="img/p1_title4.png" class="title_t">
+        <img src="img/p1_beer.png" class="title_beer">
+    </div>
+    <!-- p1_title end-->
+
+    <!-- p1_footer -->
+    <div class="p1_footer">
+        <div id="mapBtn">
+            <ul>
+                <li>
+                    <em class="btnicon-1"></em>
+                </li>
+                <li>
+                    <em class="btnicon-2"></em>
+                </li>
+                <li>
+                    <em class="btnicon-3"></em>
+                </li>
+                <li>
+                    <em class="btnicon-4"></em>
+                </li>
+                <li>
+                    <em class="btnicon-6"></em>
+                </li>
+                <li>
+                    <em class="btnicon-7"></em>
+                </li>
+                <li>
+                    <em class="btnicon-8"></em>
+                </li>
+                <li>
+                    <em class="btnicon-5"></em>
+                </li>
+            </ul>
+        </div>
+        <img src="img/p1_footer.png">
+    </div>
+    <!--p1_footer end -->
+    <!-- 云 -->
+    <div class="p1_yun1"></div>
+    <div class="p1_yun2"></div>
+</div>
+<!-- 首屏end -->
+<!-- 遮罩层 -->
+<div id="cover"></div>
+<!-- 遮罩层end -->
+
+<!-- 分屏 -->
+<div id="p2_screen">
+    <!-- 分屏关闭 -->
+    <div id="close"></div>
+    <!-- 分屏关闭end -->
+    <section id="night">
+        <div class="title">
+            <span>夜</span>
+            <p><em>NIGHT</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                <h5>啤酒节夜景</h5>
+                <div class="imgs_three">
+                    <div class="left vis">
+                        <img src="images/yj-beer1.jpg" class="wow fadeInLeft">
+                    </div>
+                    <div class="right vis">
+                        <span><img src="images/yj-beer2.jpg" class="wow fadeInRight"></span>
+                        <span><img src="images/yj-beer3.jpg"class="wow fadeInRight"></span>
+                    </div>
+                </div>
+                <div class="imgs_two">
+                    <div class="left">
+                        <img src="images/yj-beer4.jpg" >
+                    </div>
+                    <div class="right">
+                        <img src="images/yj-beer5.jpg" >
+                    </div>
+                </div>
+                <div class="imgs_one vis">
+                    <img src="images/yj-beer6.jpg" class="wow rollIn">
+                </div>
+                <div class="imgs_two">
+                    <div class="left">
+                        <img src="images/yj-beer7.jpg">
+                    </div>
+                    <div class="right">
+                        <img src="images/yj-beer8.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_video">
+               <h5>崂山区延时摄影</h5>
+               <video preload="auto" id="vid1" controls=" controls"  poster="img/p2_v2.jpg">
+                     <source src="media/yanshi.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>城区夜景</h5>
+                 <div class="p2_video">
+                    <video preload="auto" poster="img/p2_v1.jpg" id="vid2"  controls=" controls">
+                       <source src="media/lianghua.mp4" type="video/mp4" />
+                    </video>
+                 </div>
+                 <div class="imgs_two">
+                     <div class="left">
+                         <img src="images/yj-city6.jpg">
+                     </div>
+                     <div class="right">
+                         <img src="images/yj-city7.jpg">
+                     </div>
+                 </div>
+                 <div class="imgs_three">
+                     <div class="left">
+                         <img src="images/yj-city1.jpg" class="wow rollIn">
+                     </div>
+                     <div class="right wow fadeInRight">
+                         <span><img src="images/yj-city4.jpg"></span>
+                         <span><img src="images/yj-city10.jpg"></span>
+                     </div>
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>金狮广场</h5>
+                 <div class="imgs_one">
+                     <img src="images/yj-lion.jpg" class="wow bounceIn">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>丽达购物中心</h5>
+                 <div class="imgs_one">
+                     <img src="images/yj-lida.jpg" class="wow fadeInLeft">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>利群金鼎广场</h5>
+                 <div class="imgs_one">
+                     <img src="images/yj-liqun.jpg" class="wow fadeInRight">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>石老人海水浴场</h5>
+                 <div class="imgs_one">
+                     <img src="images/yj-laoren.jpg" class="wow bounceIn">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>极地</h5>
+                 <div class="imgs_one">
+                     <img src="images/yj-jidi.jpg" class="wow fadeInLeft">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>崂山</h5>
+                 <div class="imgs_one">
+                     <img src="images/yj-laoshan.jpg" class="wow fadeInRight">
+                 </div>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="eat">
+        <div class="title">
+            <span>吃</span>
+            <p><em>EAT</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>素茗乡素食馆</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/eat-sushi.png" class="wow fadeInRight">
+                 </div>
+                 <p class="info">一家装饰古朴大气的素食馆，进入这样的环境会很容易平心静气，精致的刀工和摆盘也显得十分优雅，而且不妨碍食物本身的美味，好吃又好看，网友极力推荐，值得一试。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>辽阳东路8号香邑暖山8-6号网点</li>
+                     <li><i>电话：</i>0532-68065411 13306427025</li>
+                     <li><i>人均消费：</i>￥157</li>
+                     <li><i>营业时间：</i>周一至周日 10:00-22:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>王老六铁锅炖鱼(石老人店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/eat-tieguo.jpg" class="wow bounceInUp">
+                 </div>
+                 <p class="info">来到崂山区逛大剧院累了，吃顿铁锅炖鱼是再享受不过的事情了。这里的鱼刺少肉嫩，味道也很鲜，小饼子很正宗，让你吃到满足。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>香港东路217号索菲亚大酒店后面(云岭路大剧院东门对面)</li>
+                     <li><i>电话：</i>0532-80994279</li>
+                     <li><i>人均消费：</i>￥87</li>
+                     <li><i>营业时间：</i>周一至周日 09:00-23:30</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>炉子旁(利群金鼎店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/eat-luzi.jpg" class="wow flipInY">
+                 </div>
+                 <p class="info">体装修以暗色调为主的一家美食店，众多网友亲测力荐海苔手握饭，好吃到停不下来，一根排骨肉也是必点菜，爱吃烤肉的朋友们赶紧去吃起来吧。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>青岛崂山区海尔路金鼎广场7楼</li>
+                     <li><i>电话：</i>15066169349</li>
+                      <li><i>人均消费：</i>￥80</li>
+                     <li><i>营业时间：</i>周一至周日 午市 10:00-14:30 晚市 16:30-20:30</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>绣罗韩国料理(香港东路店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/eat-hanguo.jpg" class="wow flipInX">
+                 </div>
+                 <p class="info">想吃韩国料理，这家韩料你不得不尝。离韩国领事馆很近，口味也十分正宗，烤肉恰到好处，还有好吃的土豆泥、炒年糕等美食，环境干净菜量实惠，给你吃韩料的不二选择。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>香港东路77-2号(开泰耳鼻喉医院东侧)</li>
+                     <li><i>电话：</i>0532-67702375</li>
+                     <li><i>人均消费：</i>￥83</li>
+                     <li><i>营业时间：</i>周一至周日 11:00-21:30</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>铭家小院私家菜(燕岭路店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/eat-mingjia.jpg" class="wow bounceIn">
+                 </div>
+                 <p class="info">好吃的青岛本帮菜，海鲜偏多，很有青岛特色，食材也新鲜。饭店是独栋小别墅，环境服务都非常棒，回头客很多，强力推荐。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>铭家凌峰别墅(燕岭路与桐岭路交汇)</li>
+                     <li><i>电话：</i>0532-68721919</li>
+                      <li><i>人均消费：</i> ￥303</li>
+                     <li><i>营业时间：</i>周一至周日 09:00-14:00 16:00-23:30</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="hotel">
+        <div class="title">
+            <span>住</span>
+            <p><em>HOTEL</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>朴宿酒店（青岛微澜山居店）</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/zhu-piaosu.jpg" class="wow rotateInDownLeft">
+                 </div>
+                 <p class="info">朴宿酒店（青岛微澜山居店）位于仰口风景区，与仰口风景区管理处毗邻，周围青山绿水，环境清幽。朴宿酒店（青岛微澜山居店）致力于原生态山居生活体验；设有各类温馨客房，并配有餐厅、休闲区和停车位。客房的装潢设计简约、恬静，内设24小时热水淋浴、空调、电视、电话和宽带上网等，让您亲近自然，享受美好假期。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>仰口风景区索道旁(紧邻仰口风景区管理处)</li>
+                     <li><i>电话：</i>4000800707</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>索菲亚国际大酒店</h5>
+                 <div class="imgs_one">
+                     <img src="images/zhu-suofeiya.jpg" class="wow rotateInDownRight">
+                 </div>
+                 <p class="info">酒店位于国家旅游度假区青岛崂山区的中心地段，向南距石老人海水浴场仅100米，紧邻青岛大剧院、国际啤酒城、国际会展中心、崂山区政府，酒店的东侧和北侧都是高档住宅区。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>香港东路217号(近云岭路) 距离石老人观光园910m</li>
+                     <li><i>电话：</i>0532-88971111 0532-88971999</li>
+                     <li><i>入离店时间：</i>请在14:00以后入住并于次日12:00前退房</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>青岛世园假日酒店</h5>
+                 <div class="imgs_one">
+                     <img src="images/zhu-jiari.jpg" class="wow rotateInUpLeft">
+                 </div>
+                 <p class="info">青岛世园假日酒店由洲际酒店集团（IHG）管理，是青岛独一无二的城市度假及会议酒店。酒店毗邻崂山风景区，紧邻2014青岛世界园艺博览会，是世园村内优选一家国际品牌星级酒店。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>天水路2号，近松岭路(原滨海大道)</li>
+                     <li><i>电话：</i>0532-66757888</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>青岛鲁商凯悦酒店</h5>
+                 <div class="imgs_one">
+                     <img src="images/zhu-lushang.jpg" class="wow rotateInUpRight">
+                 </div>
+                 <p class="info">青岛鲁商凯悦酒店位于东海东路，矗立绵延3公里长的石老人海滩；步行可达金狮广场，毗邻国际会展中心、青岛大剧院、石老人高尔夫球场、极地海洋世界以及道教发源地崂山等。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>东海东路88号(近石老人海水浴场)</li>
+                     <li><i>电话：</i>0532-86121234</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>蓝海大饭店(青岛崂山店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/zhu-lanhai.jpg" class="wow fadeInLeft">
+                 </div>
+                 <p class="info">青岛蓝海大饭店（崂山）隶属于山东蓝海酒店集团，是一家以高端标准打造的集会议、餐饮及住宿为一体的综合性饭店。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>苗岭路9-2号(近啤酒城、青岛世园会)</li>
+                     <li><i>电话：</i>0532-88965111 0532-88996666</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>乐活美宿酒店</h5>
+                 <div class="imgs_one">
+                     <img src="images/zhu-meisu.jpg" class="wow fadeInRight">
+                 </div>
+                 <p class="info">乐活美宿，位于青岛市崂山区仰口风景区内，是一家集住宿、餐饮、茶咖、休闲娱乐、家居体验等服务为一体的，具有人性化家居特色的高端民宿。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>崂山景区旅游专用路崂山矿泉水东150米</li>
+                     <li><i>电话：</i>4006167757</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="traffic">
+        <div class="title">
+            <span>行</span>
+            <p><em>TRAFFIC</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>地铁 | 地铁2号线</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/xing-ditie2.jpg" class="wow bounceIn">
+                 </div>
+                 <p class="info">华楼山路站、东韩站、辽阳东路站、同安路站、苗岭路站、石老人浴场站、海安路站、海川路站、海游路站、麦岛站</p>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>地铁 | 地铁11号线</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-ditie11.jpg" class="wow flipInY">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 东海路与海口路</h5>
+                 <div class="imgs_two">
+                     <div class="left">
+                         <img src="images/xing-donghai1.jpg" class="wow fadeInLeft">
+                     </div>
+                     <div class="right">
+                         <img src="images/xing-donghai2.jpg" class="wow fadeInRight">
+                     </div>
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 东海路与麦岛路</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-maidao3.jpg" class="wow flipInX">
+                 </div>
+                 <div class="imgs_two_h">
+                     <div class="left">
+                         <img src="images/xing-maidao1.jpg">
+                     </div>
+                     <div class="right">
+                         <img src="images/xing-maidao2.jpg">
+                     </div>
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 海尔路与海口路</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-haikou.jpg" class="wow bounceIn">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 海尔路与苗岭路</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-miaoling2.jpg" class="wow rotateInDownLeft">
+                 </div>
+                 <div class="imgs_one">
+                     <img src="images/xing-miaoling1.jpg" class="wow rotateInUpRight">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 海尔路与同安路路段</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-tongan1.jpg" class="wow rotateInDownRight">
+                 </div>
+                 <div class="imgs_one">
+                     <img src="images/xing-tongan2.jpg" class="wow rotateInUpLeft">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 海尔路与仙霞岭路路段</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-xianxia.jpg" class="wow fadeInLeft">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 海尔路与香港东路</h5>
+                 <div class="imgs_two">
+                     <div class="left">
+                         <img src="images/xing-hongkang1.jpg" class="wow fadeInLeft">
+                     </div>
+                     <div class="right">
+                         <img src="images/xing-hongkang2.jpg" class="wow fadeInRight">
+                     </div>
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 海尔路与银川路交汇</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-yinchuan.jpg" class="wow flipInX">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 辽阳路与海尔路交汇</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-liaoyang1.jpg" class="wow fadeInRight">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 辽阳路与深圳路交汇</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-laoyang2.jpg" class="wow bounceIn">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 深圳路与苗岭路</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-shenzhen.png" class="wow fadeInLeft">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 深圳路与仙霞岭路路段</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-shenxian.jpg" class="wow fadeInRight">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 深圳路与香山路路段</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-shenxiang.jpg" class="wow flipInY">
+                 </div>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>道路 | 深圳路与银川东路</h5>
+                 <div class="imgs_one">
+                     <img src="images/xing-shendong1.jpg" class="wow rotateInDownLeft">
+                 </div>
+                 <div class="imgs_one">
+                     <img src="images/xing-shendong2.jpg" class="wow rotateInUpRight">
+                 </div>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="travel">
+        <div class="title">
+            <span>游</span>
+            <p><em>TRAVEL</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>石老人海水浴场</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/you-laoren.jpg" class="wow rotateInDownLeft">
+                 </div>
+                 <p class="info">石老人海水浴场位于崂山区海尔路南端，大唐渔宴以东，是青岛市区最大的海水浴场之一，石老人海水浴场，左端海中巨石即为“石老人”，成为集度假、观光旅游、海上运动、沙滩运动、休闲娱乐为一体的综合性旅游度假海滩。</p>
+                 <ul class="aboutme">
+                     <li><i>开放时间：</i>全天</li>
+                     <li><i>门票价格：</i>免费</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>雕塑园</h5>
+                 <div class="imgs_one">
+                     <img src="images/you-diaosu.jpg" class="wow rotateInUpRight">
+                 </div>
+                 <p class="info">青岛雕塑园坐落于青岛市东部新区黄海滨畔，由青岛市政府和中国各个艺术家一起创办的，由室内雕塑艺术馆和室外雕塑公园两部分组成，总规划面积8公顷，总投资4000余万元。其中室内3800余平方米，以收藏近现代中外雕塑精品为主；园区则以国内外优秀室外雕塑艺术品陈列其中，其功能主要展示20世纪中国近现代雕塑家代表作品和成名作。</p>
+                 <ul class="aboutme">
+                     <li><i>开放时间：</i>5.1日-10.31日每天4:00-20:00</li>
+                     <li><i>门票价格：</i>园区免费，雕塑艺术馆10元</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>青岛极地海洋世界</h5>
+                 <div class="imgs_one">
+                     <img src="images/you-jidi.jpg" class="wow fadeInLeft">
+                 </div>
+                 <p class="info">青岛极地海洋世界是一个集休闲、娱乐、购物、文化为一体的大型旅游度假综合服务设施，于2006年7月竣工，其中一期核心项目极地海洋动物展示和表演馆、海洋博览与科普展示馆。 </p>
+                 <ul class="aboutme">
+                     <li><em style="color: #6d3f04">开园时间：</em></li>
+                     <li><i>旺季：</i>5月1日-10月31日 8:30-17:30，停止检票：16:50，建议16:00之前入园</li>
+                     <li><i>淡季：</i>11月1日-4月30日 8:30-16:30 ，停止检票：15:00</li>
+                     <li>以上信息仅供参考，具体以景区当日实际公示信息为准。优惠情况请登录青岛海昌极地海洋世界查看。<a href="http://qd.haichangoceanpark.com/qdhcop/mpxx/A1506index_1.htm">（点我查看）</a></li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>崂山</h5>
+                 <div class="imgs_one">
+                     <img src="images/you-laoshan.jpg" class="wow fadeInRight">
+                 </div>
+                 <p class="info">崂山，位于青岛市东部，古代又曾称牢山、劳山、鳌山等。它是山东半岛的主要山脉，崂山的最高峰名为巨峰，又称崂顶，地处北纬36°10′，东经120°37′，海拔1132.7米，峰顶面积约1.5平方公里，为崂山的主峰。 [1]  是中国海岸线第一高峰，有着海上“第一名山”之称。当地有一句古语说：“泰山虽云高，不如东海崂。” </p>
+                 <ul class="aboutme">
+                     <li><i>开放时间：</i>07：30~17：30</li>
+                     <li><i>门票价格：</i>通票160元</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>石老人音乐喷泉</h5>
+                 <div class="imgs_one">
+                     <img src="images/you-penquan.jpg" class="wow fadeInDownBig">
+                 </div>
+                 <p class="info">晚上的石老人海水浴场，成了滨海城市会客厅，直接引燃了大家的热情。天海为幕，星海流云，五彩缤纷的音乐灯光秀，伴着中国特色的民族乐曲，非常有感觉。 </p>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="happy">
+        <div class="title">
+            <span>乐</span>
+            <p><em>ENT</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>魔力丫健身训练营</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/le-magic.jpg" class="wow fadeInDown">
+                 </div>
+                 <p class="info">一家经过网友认证的健身房，设施比较全，实用性强，环境温馨轻松，教练也很专业有亲和力。商家很负责任，能够感受到他们的用心。 </p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>劲松七路77号古早文化城南一层A6(同兴路与劲松七路交叉口)</li>
+                     <li><i>电话：</i>0532-55786770</li>
+                     <li><i>营业时间：</i>周一至周日 09:00-21:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>堂庭香柏雅集(金狮店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/le-yaji.jpg" class="wow flipInY">
+                 </div>
+                 <p class="info">如果你想寻求一个幽雅的环境，不妨来这家店品品茶，欣赏江南水乡般的意境，这里会让你沉淀下来。不管是和朋友一起来，还是带客户来商量事情，都是相当适合的地方。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>香港东路195号乙金狮购物广场4层</li>
+                     <li><i>电话：</i> 18563922552 0532-55726572</li>
+                     <li><i>营业时间：</i>周一至周日 10:00-22:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>宅舍 | HOUSE(香港东路店) </h5>
+                 <div class="imgs_one">
+                     <img src="images/le-zhaishe.jpg" class="wow fadeInLeft">
+                 </div>
+                 <p class="info">看装修像咖啡馆，其实是一家推拿店，不仅可以推拿和足疗，还能写毛笔字，非常有氛围。技师专业而且健谈，会告诉你一些调理的知识，服务很贴心。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i> 香港东路81号亚麦山庄南门院内西侧(近利群金鼎广场)</li>
+                     <li><i>电话：</i> 0532-80795979 0532-80795989</li>
+                     <li><i>营业时间：</i> 周一至周日 11:00-23:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>三剑客剧情密室(崂山店)</h5>
+                 <div class="imgs_one">
+                     <img src="images/le-jianke.jpg" class="wow fadeInRight">
+                 </div>
+                 <p class="info">喜欢玩密室逃脱的一定要去三剑客，主题各不相同，机关设计精巧逻辑缜密，可以给你完美的体验，负责提示的工作人员细心贴心，玩过之后你会觉得很有趣哦。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>大拇指4楼</li>
+                     <li><i>电话：</i> 0532-67786915</li>
+                     <li><i>营业时间：</i> 周一至周日 09:00-22:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>原宿漂浮·城市迷你死海</h5>
+                 <div class="imgs_one">
+                     <img src="images/le-piaofu.jpg" class="wow bounceIn">
+                 </div>
+                 <p class="info">环境干净，设备体验感满分，漂浮对于解压是最快最有效的方式，沐浴后提供的食物摆盘讲究，秀色可餐，无论硬件还是服务都非常完美。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i> 海口路33-3号麦岛家园网点最东头(麦岛金岸对面，近海信天玺)</li>
+                     <li><i>电话：</i> 0532-80976707 15269262855</li>
+                     <li><i>营业时间：</i>周一至周日 10:30-21:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="buy">
+        <div class="title">
+            <span>购</span>
+            <p><em>CONSUMPTION</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>Lion Mall金狮广场</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/buy-lion.jpg" class="wow fadeIn">
+                 </div>
+                 <p class="info">去金狮广场可以在石老人海水浴场站下地铁，交通非常方便，景色很漂亮，有事没事可以来散步，女生可以顺便看看自己有没有口红包包要添置，男生看看衣服鞋子有没有名牌新款。这里的美食也很美味，是逛吃的好去处。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i> 香港东路195号乙(近海尔路)</li>
+                     <li><i>电话：</i>0532-55725799</li>
+                     <li><i>营业时间：</i>周一至周四,周日 10:00-21:30 周五,周六 10:00-22:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>丽达购物中心</h5>
+                 <div class="imgs_one">
+                     <img src="images/buy-lida.jpg" class="wow flipInY">
+                 </div>
+                 <p class="info">丽达购物中心地理位置优越，坐落在青岛市最繁华的商业中心，购物中心规模很大，衣食住行玩基本覆盖，购物体验非常不错。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>秦岭路18号(近会展中心)</li>
+                     <li><i>电话：</i>0532-66718018</li>
+                     <li><i>营业时间：</i>周一至周日 09:00-22:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>利群金鼎广场</h5>
+                 <div class="imgs_one">
+                     <img src="images/buy-liqun.jpg" class="wow bounceInDown">
+                 </div>
+                 <p class="info">利群金鼎广场，是崂山商圈大型综合性购物场所，价格优惠品种齐全，顶层有影城，七楼小吃云集，可谓是一站到底的吃喝玩乐购。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>海尔路83号(啤酒城对面,海尔路与香港东路路口)</li>
+                     <li><i>电话：</i>0532-58668888</li>
+                     <li><i>营业时间：</i>周一至周日 09:30-21:30</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+    <section id="wen">
+        <div class="title">
+            <span>文</span>
+            <p><em>CULTURE</em><em>青岛崂山区旅游指南</em></p>
+        </div>
+        <article>
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>崂山区图书馆</h5>
+                 <div class="imgs_one vis">
+                     <img src="images/wen-tushuguan.jpg" class="wow lightSpeedIn">
+                 </div>
+                 <p class="info">崂山区图书馆位于仙霞岭路20号崂山区市民文化中心B座三层、四层，设有外借室、少儿阅览室、电子阅览室、盲人阅览室、地方文献室、报刊阅览室、自习室、培训室等多个服务窗口。现有藏书29.8万册，报刊400余种，阅览座席310个，是文化部评定的国家一级图书馆。</p>
+                 <ul class="aboutme">
+                     <li><i>开放时间：</i>周一，周二，周三，周五9：00-17：00，周六，周日9：00-11：30    13：30-17：00（周四内部学习，不对外开放）</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>青岛出版艺术馆(海尔路馆)</h5>
+                 <div class="imgs_one">
+                     <img src="images/wen-yishuguan.jpg" class="wow rotateIn">
+                 </div>
+                 <p class="info">如果你腻烦了城市的热闹喧嚣，不妨来这里释放一下自己的身心。青岛出版艺术馆，让你提升自己的品味</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>海尔路182号</li>
+                     <li><i>电话：</i>0532-68068647</li>
+                     <li><i>营业时间：</i>09:00-21:00 周一至周日</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>如是美术馆</h5>
+                 <div class="imgs_one">
+                     <img src="images/wen-rushi.jpg" class="wow bounceIn">
+                 </div>
+                 <p class="info">位于国信体育馆如是书店下层，经常举办展览，可免费参观，推荐喜欢艺术的朋友有空去欣赏一下。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>国信体育馆如是书店附近</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>大剧院</h5>
+                 <div class="imgs_one">
+                     <img src="images/wen-juyuan.jpg" class="wow rotateInDownLeft">
+                 </div>
+                 <p class="info">青岛大剧院是青岛公共文化设施的标志性建筑，总面积8.7万平方米，外观似两架白色钢琴。由德国GMP建筑事务所首席设计师麦哈德·冯·格康先生主持设计。2010年12月被山东省“齐鲁文化新地标”评委会确定为“十大齐鲁文化新地标”之一，2011年11月获得“2010~2011年度中国建设工程鲁班奖”。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>青岛市崂山区云岭路5号</li>
+                     <li><i>营业时间：</i>08:00-22:00</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>博物馆</h5>
+                 <div class="imgs_one">
+                     <img src="images/wen-bowu.jpg" class="wow rotateInUpRight">
+                 </div>
+                 <p class="info">青岛市博物馆始建于1965年，是一座集历史、艺术为一体的综合类博物馆，首批国家一级博物馆，全国古籍重点保护单位、省级爱国主义教育基地。</p>
+                 <ul class="aboutme">
+                     <li><i>地址：</i>山东省青岛市崂山区梅岭东路51号</li>
+                     <li><i>开放时间：</i>08:00-22:005月-10月：9:00-17:00，11月-次年4月：9:00-16:30；每周一闭馆（法定节假日除外）</li>
+                     <li><i>门票：</i>免费，但是每天限定参观人数3000人</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+            <!-- part -->
+            <div class="p2_part">
+                 <h5>金石馆</h5>
+                 <div class="imgs_one">
+                     <img src="images/wen-jinshi.jpg" class="wow flipInY">
+                 </div>
+                 <p class="info">青岛金石馆地处青岛市崂山区，位于青岛市金家岭国家级金融财富聚集区和青岛市文化中心区的核心位置。周边有青岛啤酒城、青岛市博物馆、青岛大剧院、青岛国际会展中心和石老人海水浴场。</p>
+                 <ul class="aboutme">
+                     <li><em>免费开放参观时间：</em></li>
+                     <li><i>星期一到星期五：</i>上午 9:00-11:00 下午 1:30-4:30</li>
+                     <li><i>星期六到星期日：</i>上午 9:30-11:00 下午 1:30-4:30</li>
+                 </ul>
+            </div>
+            <!-- part end -->
+        </article>
+    </section>
+</div>      
+<!-- 分屏end -->
+<script>
+var t_pic = "http://vip.qdxin.cn/lin/wb/maptest8/img/shareimg1.png";
+</script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/createjs.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!-- <script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script> -->
+<script src="js/wow.min.js"></script>
+<script src="js/index.js?t=0723"></script>
+</body>
+</html>
+    
