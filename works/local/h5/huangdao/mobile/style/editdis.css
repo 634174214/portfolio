@@ -1,0 +1,4 @@
+html .fbTopBar,
+html .searchBar{display: none;}
+html .pbTopBar{display: none;}
+html .pbToolBar{display: none;}
