@@ -1,0 +1,117 @@
+<!DOCTYPE html>        
+<html>
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />    
+    <meta content="telephone=no" name="format-detection" />    
+    <meta name="apple-touch-fullscreen" content="yes" />    
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />    
+    <title>春节贺卡“祝您新年快乐”！- 信网</title>
+    <meta name="description" content="新的一年，信网祝您：信心十足迈入新时代，信马由缰勇当追梦人，信以为本结交四海朋友，信手拈来绘就人生华章。">
+    <link rel="stylesheet" type="text/css" href="http://www.qdxin.cn/ziyuan/css/animate.min.css">
+    <link rel="stylesheet" href="css/phone.css?t=843331">
+    <script src="http://vip.qdxin.cn/navmenu/js/jxinq111.js"></script>
+</head>
+<body ontouchstart>
+<!-- 加载 -->
+<div id="loading">
+    <p></p>
+</div>
+<!-- 加载end -->
+<!-- p1 -->
+<section class="mainBox" id="canvas">
+            <!-- title -->
+            <header class="p1-title" id="p1Title">
+                <img src="img/p1_title.png" alt="金猪贺岁">
+            </header>
+            <!-- title end -->
+            <!-- 内容 -->
+            <div class="content-wrap">
+                <div class="content" id="content">
+                    <h2>新的一年，信网祝您：</h2>
+                    <p>信心十足迈入新时代，信马由缰勇当追梦人，信以为本结交四海朋友，信手拈来绘就人生华章。</p>
+                </div>
+            </div>
+            <!-- 内容end -->
+        <!-- bottom -->
+        <footer>
+            <div id="wantdo" class="animated infinite pulse"></div>
+            <div id="showEr">
+                <img src="img/p3_pig.png" class="left">
+                <div class="right">
+                    <img src="img/ee.png?t=2">
+                    <p>长按识别二维码<span>我也要发送祝福</span></p>
+                </div>
+            </div>
+        </footer>
+        <!-- bottom end -->
+</section>
+<!-- p1 end -->
+<!-- p2 -->
+<div id="dialog">
+    <div class="form-wrap">
+        <div class="form-title">
+            <img src="img/p2_pig.png">
+            <span>定制您独一无二的</span>
+            <h4>猪年祝福!</h4>
+        </div>
+        <ul class="form">
+            <li>
+                <label for="inputName">
+                   请填写您的姓名或昵称：
+                   <span id="nameNum"><i>0</i>/12</span>
+                </label>
+                <input type="text" placeholder="例：信网恭祝您" id="inputName" maxlength="12">
+                <div><em class="empty"></em></div>
+            </li>
+            <li>
+                <label for="textinput">
+                    请填写您的新年祝福：
+                    <span id="fontNum"><i>0</i>/80</span>
+                </label>
+                <textarea placeholder="例：祝您猪年大吉大利！" id="textinput" maxlength="80"></textarea>
+                <div class="textbtn">
+                    <cite id="setWish">添加祝福</cite>
+                    <em class="empty"></em>
+                </div>
+            </li>
+        </ul>
+        <div id="submit">生成祝福</div>
+        <div id="close-dialog"></div>
+         
+    </div>
+</div>
+<!-- p2 end -->
+<!-- p3 -->
+<div id="createPic">
+    <div id="picBox">
+        <img src="">
+        <div id="makeagain"></div>
+        <div id="shareto">
+            <span>恭喜！贺卡制作完成！</span>
+            <p>长按<i>分享给朋友</i><br>或<br><em>保存图片再分享</em>到朋友圈</p>
+        </div>
+    </div>
+</div>
+<!-- p3 end -->
+<div id="audiobtn" class="on"></div>
+<div id="waiting">
+        <img src="img/loading2.gif?t=1" alt="">
+        <p>正在生成新年祝福...</p>
+</div>
+<audio id="sound" src="bgmnew.mp3" preload="auto" loop="loop"></audio>
+<script>
+    var t_pic = 'http://vip.qdxin.cn/2019/newyear2019/img/share.jpg';
+    var t_url = 'http://vip.qdxin.cn/2019/newyear2019';
+</script>
+<script src="js/createjs.js"></script>
+<script src="js/html2canvas.js"></script>
+<script src="js/canvas2image.js"></script>
+<script src="js/base64.js"></script>
+<script src="js/index.js?t=823"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script>
+</body>
+</html>
+    
