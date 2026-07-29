@@ -1,0 +1,81 @@
+cite, em{font-style: normal;}
+li{list-style: none;}
+.qdmap-bg{
+    background: url('../images/qdmapbg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.visualSfzsfl .zhuanchang{width: 96%;height: 80%;overflow: hidden;}
+.visualSfzsfl .zhuanchang .title{width: 100%;display: flex;}
+.visualSfzsfl .zhuanchang .title p{flex: 1;color: #fff;text-align: center;color: #07a6ff;font-weight: 700;height: 30px;line-height: 30px;}
+.visualSfzsfl .zhuanchang .zc-content li{display: flex;border-bottom: 1px dashed #969595;align-items: center;padding: 10px 0;}
+/* .visualSfzsfl .zhuanchang .zc-content li:last-child{border: 0;} */
+.visualSfzsfl .zhuanchang .zc-content li p{flex: 1;color: #fff;text-align: center;}
+
+.visualSssf_right .visualSssf_right_box{height: 90%;}
+.visualSssf_right .text-box{clear: both;color: #fff;overflow: hidden;position: relative;top: -16px;}
+.visualSssf_right .text-box p{width: 33%;text-align: center;float: left;font-size: 12px;}
+
+.visual_box .visual_chart{width: 99%;}
+
+.visual_con .visual_conBot .visual_chart_text h1,
+.visual_con .visual_conBot .visual_chart_text h2
+{font-weight: 700;}
+
+
+.visual_left .sfzcll .sfzcll_box{line-height: 33px;height: 33px;  overflow: hidden;}
+.visual_left .sfzcll .sfzcll_box .sfzcll_smallBk>div{line-height: 28px;}
+.visual_left .sfzcll .sfzcll_pos_box .near-box{height: 100%;overflow: hidden;width: 100%;}
+.visual_left .sfzcll .sfzcll_pos_box .near-box .item{padding: 5px 0;box-sizing: content-box;height: auto!important;}
+.visual_left .sfzcll .sfzcll_box label{display: flex;justify-content: center;align-items: center;}
+
+.visualSssf_left p.desc{font-size: 14px;color: #f2f2f2;line-height: 24px;}
+
+.vert{width: 100%;height: 100%;}
+.vert .simply-scroll-clip{width: 100%;height: 94%;}
+.vert .simply-scroll-list li{width: 100%;height: auto;}
+
+.visual_con .visual_conTop .visual_conTop25{width: 24%;height: 100%;}
+.visual_con .visual_conTop{display: flex;justify-content: space-between;}
+.visual_con .visual_conTop .visual_conTop25>div {
+    background: url(../images/ksh40.png) no-repeat;
+    background-size: 100% 100%;
+}
+.visual_con .visual_conTop .visual_conTop_box>div p{float: none;text-align: center;width: 100%;}
+
+.visual{padding-bottom: 15px;}
+.visual_box .visual_chart{height: calc(100% - 45px);}
+
+.team-show{width: 100%;height: 100%;}
+.team-show .item{display: flex;height: 25%;align-items: center;cursor: pointer;transition: all 0.5s;}
+.team-show .item:hover{background-color: #031127;}
+.team-show .item>.name{flex: 0 0 56px;color: #fff;padding-left: 6px;}
+.team-show .item>.box{flex: 1;display: flex;justify-content: space-between;height: 100%;}
+.team-show .item>.box .man{display: inline-block;width: 7%;background: url(../images/team-man.png) no-repeat center center;background-size: 70% auto;}
+.team-show .item>.box .man.act{background: url(../images/team-man-act.png) no-repeat center center;background-size: 70% auto;}
+
+.visual_chart_text .m-title{display: none;}
+
+.follow-tips-box{position: absolute;background-color: rgba(0, 0, 0, 0.5);color: #fff;display: none;z-index: 100;cursor: pointer;padding: 5px;border-radius: 5px;}
+
+.visual_con .visual_conBot .visual_conBot_4{z-index: 20;}
+.visualSssf_left{width: 45%;}
+.visualSssf_left h3,
+.visual_con .visual_conBot .visual_chart_text h2{color: #61c2f9;}
+.visualSssf_right{float: right;width: 55%;}
+.visual{padding-top: 15px;}
+.visual_con{width: 100%;padding: 0 26%;}
+.visual_left{margin-left: -100%;}
+.visual_right{margin-left: -26%;}
+.head_top{height: 50px;line-height: 50px;}
+.head_top span{height: auto;}
+.mapBig, .cover.mapbtn{display: none;}
+
+.visualSssf_left h3{margin-bottom: 5px;}
+.today-service-box{font-size: 16px;width: 100%;}
+.today-service-box .title{font-weight: 700;font-size: 16px;border-bottom: 1px dashed #fff;height: 50px;line-height: 50px;}
+.today-service-box ul{display: flex;flex-wrap: wrap;}
+.today-service-box ul li{width: 50%;height: 36px;line-height: 36px;font-size: 15px;}
+.today-service-box ul li em{padding-right: 3px;font-weight: 700;color: #07a6ff;}
+
+

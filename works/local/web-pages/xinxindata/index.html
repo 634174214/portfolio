@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>信新相映大数据可视化平台</title>
+    <meta name="keywords" content="信新相映" />
+    <meta name="description" content="信新相映公益平台以网络为载体，联合岛城公益力量，携手街道走进社区，开展一系列公益服务活动。今后，“信新相映”将通过志愿服务，传递公益理念，将点滴爱心汇成海洋。" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.simplyscroll.css">
+    <link rel="stylesheet" type="text/css" href="css/visual.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css?t=361">
+    <link rel="stylesheet" type="text/css" href="css/phone.css?t=3451" media="screen and (max-width: 480px)">
+</head>
+<body class="ksh">
+    <div id="load">
+        <div class="load_img">
+            <!-- 加载动画 -->
+            <img class="jzxz1" src="images/jzxz1.png">
+            <img class="jzxz2" src="images/jzxz2.png">
+        </div>
+    </div>
+    <div class="head_top"><span>信新相映大数据可视化平台</span></div>
+    <div class="visual">
+        <div class="visual_con">
+            <div class="visual_conTop">
+                <div class="visual_conTop_box visual_conTop25">
+                    <div>
+                        <h3>活动总数(个)</h3>
+                        <p>700<em>+</em></p>
+                    </div>
+                </div>
+                <div class="visual_conTop_box visual_conTop25">
+                    <div>
+                        <h3>服务群众数量</h3>
+                        <p style="letter-spacing: -1px;">150,000<em>+</em></p>
+                    </div>
+                </div>
+                <div class="visual_conTop_box visual_conTop25">
+                    <div>
+                        <h3>志愿者团队</h3>
+                        <p>402<em>+</em></p>
+                    </div>
+                </div>
+                <div class="visual_conTop_box visual_conTop25">
+                    <div>
+                        <h3>公益团队总人数</h3>
+                        <p>16433<em>+</em></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="visual_conBot">
+                <img class="visual_conBot_l" src="images/ksh42.png">
+                <img class="visual_conBot_2" src="images/ksh43.png">
+                <img class="visual_conBot_3" src="images/ksh44.png">
+                <img class="visual_conBot_4" src="images/ksh45.png">
+                <div class="visual_chart_text">
+                    <h1>公益服务+大数据</h1>
+                    <h2>信新相映公益服务辐射区域</h2>
+                    <small class="m-title">信新相映活动辐射区县</small>
+                </div>
+                <div class="main8-wrapper">
+                    <div class="cover mapbtn" id="showbigMap">
+                        <div class="btn-inner">
+                            <img src="images/fangda.png?t=3">
+                            <p>查看全部的辐射范围</p>
+                        </div>
+                    </div>
+                    <div class="visual_chart" id="main8"></div>
+                </div>
+                <div class="visual_conBot_bot">
+                    <div class="visualSssf_left">
+                        <h3>今日志愿服务动态</h3>
+                        <div class="today-service-box">
+                            <p class="title">服务类别：</p>
+                            <ul>
+                                <li>技能类：<em>40</em>项</li>
+                                <li>宣讲类：<em>5</em>项</li>
+                                <li>文娱类：<em>10</em>项</li>
+                                <li>医疗健身类：<em>7</em>项</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visualSssf_right">
+                        <div class="visualSssf_right_box" id="main5"></div>
+                        <div class="visualSssf_right_box" id="main6"></div>
+                        <div class="visualSssf_right_box" id="main7"></div>
+                        <div class="text-box">
+                            <p>今日打卡(例)</p>
+                            <p>今日活跃度</p>
+                            <p>本月新增志愿者(人)</p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="visual_left m-height-auto">
+            <div class="visual_box">
+                <div class="visual_title">
+                    <span>志愿者服务人数 (月/周)</span>
+                    <img src="images/ksh332.png">
+                </div>
+                <div class="visual_chart" id="main1">
+
+                </div>
+            </div>
+            <div class="visual_box">
+                <div class="visual_title">
+                    <span>服务走势</span>
+                    <img src="images/ksh33.png">
+                </div>
+                <div class="visual_chart" id="main2">
+
+                </div>
+            </div>
+            <div class="visual_box m-near-wrapper">
+                <div class="visual_title">
+                    <span>近期活动</span>
+                    <img src="images/ksh33.png">
+                </div>
+                <div class="visual_chart sfzcll m-not-touch">
+                    <div>
+                        <a>市区</a>
+                        <a>街道</a>
+                        <a>参与人数</a>
+                    </div>
+                    <div class="sfzcll_pos_box" id="near-active">
+                        <ul id="near-inner" class="near-box"></ul>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="visual_right m-height-auto">
+            <div class="visual_box m-main3-wrapper">
+                <div class="visual_title">
+                    <span>本月公益行动</span>
+                    <img src="images/ksh33.png">
+                </div>
+                <div class="visual_chart" id="main3"></div>
+            </div>
+            <div class="visual_box visualSfzsfl">
+                <div class="visual_title">
+                    <span>近期公益专场活动</span>
+                    <img src="images/ksh331.png">
+                </div>
+                <div class="visual_chart qdmap-bg" id="main9"></div>
+                <div class="visual_table zhuanchang m-not-touch">
+                    <div class="title">
+                        <p class="td">街道</p>
+                        <p class="td">社区</p>
+                        <p class="td">服务项目</p>
+                    </div>
+                    <ul id="zc-content" class="zc-content"></ul>
+                </div>
+            </div>
+            <div class="visual_box">
+                <div class="visual_title">
+                    <span>志愿团队</span>
+                    <img src="images/ksh33.png">
+                </div>
+                <div class="swiper-container visual_swiper2 visual_chart swiper-no-swiping" id="follow-tips">
+                    <div class="swiper-wrapper" id="team-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    <div class="m-map-big" id="mapBig-wrapper">
+        <div class="map-close"></div>
+        <div class="title" style="display: none;">信新相映公益服务辐射区域</div>
+        <div class="bigmap-inner hasloading" id="mapBig"></div>
+    </div>
+
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/echarts.min.js"></script>
+     <script src="js/swiper.min.js"></script>
+     <script src="js/jquery.simplyscroll.min.js"></script>
+     <script src="js/visual.min.js?t=41"></script>
+     <script src="js/qdmap.min.js?t=4421"></script>
+     <script src="js/run.min.js?t=451"></script>
+     <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script>
+</body>
+</html>
