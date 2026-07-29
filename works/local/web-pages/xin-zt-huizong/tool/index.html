@@ -1,0 +1,262 @@
+<!DOCTYPE html >
+<html >
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />   
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"   />
+    <title>媒体资源 | 信网</title>   
+    <meta name="description" content="信网媒体资源,全方位了解信网媒体资源与优势。品牌宣传、整合营销、微营销、微信营销" />
+    <link rel="stylesheet" href="css/layout.css?t=31">
+    
+</head>
+<body>
+    <section class="mounted" id="mounted"></section>
+    <section id="app" class="app-wrapper">
+        <aside class="aside-left">
+            <h2 class="image-select-h2">选择专题内容版块</h2>
+            <ul class="image-select-ul">
+                <li v-for="(image, index) in ztImages" 
+                    :key="index"
+                    @click="selectLeftComp(index)"
+                >
+                    <img :src="image.src">
+                </li>
+            </ul>
+        </aside>
+        <aside class="aside-center">
+            <h1>信网专题组合注释工具</h1>
+            <ul class="images-list">
+                <li v-for="(item, index) in ztData"
+                    :key="item.id"
+                    :data-index="index + 1"
+                    @dragover="allowedDrop($event)"
+                >
+                    <div class="control">
+                        <div class="btn add"
+                             title="添加注释"
+                             @click="addTips(index)"
+                        >
+                            +
+                        </div>
+                        <div class="btn delete"
+                                title="删除组件" 
+                                @click="deleteComp(index)"
+                        >
+                            ✖
+                        </div>
+                    </div>
+                    <div class="tips"
+                         v-for="(tip, tindex) in item.tips"
+                         :key="tindex"
+                         :class="{'active': `${index}-${tindex}` == activeTip}"
+                         @click="selectedTip(index, tindex)"
+                         :style="tip.css"
+                         draggable="true"
+                         @dragstart="tipDragstart(index, tindex, $event)" 
+                         @dragend="tipDragend(index, tindex, $event)"
+                    >
+                        <span>{{ index + 1 }}-{{ tindex + 1 }}</span>
+                        <em @click="deleteTip(index, tindex)">✖</em>
+                    </div>
+                    <img :src="item.src" >
+                </li>
+            </ul>
+        </aside>
+        <aside class="aside-right">
+            <div class="tool-box">
+                <button type="button" class="tool-btn orange">
+                    加载数据
+                    <input type="file" 
+                           id="upload-json" 
+                           class="upload-json" 
+                           accept=".json"
+                           @change="uploadJson($event)"
+                    >
+                </button>
+                </button>
+                <button type="button" class="tool-btn yellow" @click="saveData">
+                    保存并导出数据
+                </button>
+                <div class="tool-btn-group">
+                    <button type="button" class="tool-btn" @click="toggleSort">
+                        {{ showSortWrap ? '关闭排序' : '打开排序' }}
+                    </button>
+                    <button type="button" class="tool-btn" @click="toggleTips">
+                        {{ showTips ? '隐藏注释' : '显示注释' }} 
+                    </button>
+                </div>
+                
+                <div class="tool-btn-group" v-show="showDownHTML">
+                    <button type="button" class="tool-btn green no-m"
+                            @click="createZThtml"
+                    >
+                        生成专题文件
+                    </button>
+                    <a :href="ztZip" :download="ztZip" class="tool-btn green no-m">下载专题包</a>
+                </div>
+            </div>
+            <div class="editor-box">
+                <div class="upload-button">
+                    <button type="button" class="tool-btn">
+                        <input type="file" 
+                               id="upload-file"
+                               accept=".jpg,.png,.jpeg,.gif"
+                               class="upload-file"
+                               @change="uploadImages($event)"
+                        >
+                        上传图片
+                    </button>
+                </div>
+                <ol class="upload-preview">
+                    <li v-for="(img, imgIndex) in activeTipObj.imgs"
+                        :key="imgIndex"
+                    >
+                        <div class="preview">
+                            <img :src="img">
+                        </div>
+                        <div class="del" @click="deleteTipImg(imgIndex)">删除</div>
+                    </li>
+                </ol>
+                <div class="text-area">
+                    <textarea rows="30" 
+                              placeholder="请输入要添加的注释或者文案内容"
+                              @input="inputTipText($event)"
+                              :value="activeTipObj.text"
+                    ></textarea>
+                </div>
+            </div>
+            
+        </aside>
+
+        <Transition name="fadeIn">
+            <div class="sort-wrapper" v-show="showSortWrap">
+                <draggable v-model="ztData" 
+                           chosen-class="chosen" 
+                           force-fallback="true" 
+                           :scroll="true" 
+                           animation="500" 
+                           @start="sortStart" 
+                           @end="sortEnd"
+                           class="sort-inner"
+                >
+                    <transition-group class="">
+                        <div class="item" v-for="element in ztData" :key="element.id">
+                            <img :src="element.src">
+                        </div>
+                    </transition-group>
+                </draggable>
+            </div>
+        </Transition>
+
+        <Transition name="fadeIn">
+            <div class="loading" v-show="showIframeLoading"></div>
+        </Transition>
+    </section>
+
+    <script>
+        // 专题组件文件
+        window.ztComponents = 'images/components.html';
+        // 专题压缩包存放目录
+        window.ztZip = 'zt-huizong.zip';
+        // 专题图片
+        window.ztImages = [
+            {
+                label: 'part-header-banner',
+                selector: '#header-banner',
+                src: 'images/zt_01.jpg'
+            },
+            {
+                label: 'part-header-nav',
+                selector: '#header-nav-button',
+                src: 'images/zt_18.jpg'
+            },
+            {
+                label: 'part-focus',
+                selector: '.part-focus',
+                src: 'images/zt_02.png'
+            },
+            {
+                label: 'part-bigbanner',
+                selector: '.part-bigbanner',
+                src: 'images/zt_03.png'
+            },
+            {
+                label: 'part-cards',
+                selector: '.part-cards',
+                src: 'images/zt_04.png'
+            },
+            {
+                label: 'part-news-a',
+                selector: '.part-news-a',
+                src: 'images/zt_05.png'
+            },
+            {
+                label: 'part-news-b',
+                selector: '.part-news-b',
+                src: 'images/zt_06.png'
+            },
+            {
+                label: 'part-normalbanner',
+                selector: '.part-normalbanner',
+                src: 'images/zt_07.png'
+            },
+            {
+                label: 'part-accordion',
+                selector: '.part-accordion',
+                src: 'images/zt_08.png'
+            },
+            {
+                label: 'part-news-c',
+                selector: '.part-news-c',
+                src: 'images/zt_09.png'
+            },
+            {
+                label: 'part-news-video',
+                selector: '.part-news-video',
+                src: 'images/zt_10.png'
+            },
+            {
+                label: 'part-fullscreen-slide',
+                selector: '.part-fullscreen-slide',
+                src: 'images/zt_11.png'
+            },
+            {
+                label: 'part-news-live',
+                selector: '.part-news-live',
+                src: 'images/zt_12.png'
+            },
+            {
+                label: 'part-news-e',
+                selector: '.part-news-e',
+                src: 'images/zt_13.png'
+            },
+            {
+                label: 'part-link-a',
+                selector: '.part-link-a',
+                src: 'images/zt_14.png'
+            },
+            {
+                label: 'part-newsone',
+                selector: '.part-newsone',
+                src: 'images/zt_15.png'
+            },
+            {
+                label: 'part-friends',
+                selector: '.part-friends',
+                src: 'images/zt_16.png'
+            },
+            {
+                label: 'footer',
+                selector: '#zt-footer',
+                src: 'images/zt_17.jpg'
+            }
+        ];
+    </script>
+    <script src="js/vue@2.6.14.js"></script>
+    <script src="js/Sortable.min.js"></script>
+    <script src="js/vuedraggable.umd.min.js"></script>
+    <script src="js/run.js?t=334"></script>
+</body>
+</html>

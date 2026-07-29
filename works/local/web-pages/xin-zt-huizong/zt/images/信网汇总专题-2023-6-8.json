@@ -1,0 +1,100 @@
+[
+    {
+        "label": "part-header-banner",
+        "selector": "#header-banner",
+        "src": "images/zt_01.jpg",
+        "id": "1686212122953cgxx09pn52r",
+        "tips": []
+    },
+    {
+        "label": "part-focus",
+        "selector": ".part-focus",
+        "src": "images/zt_02.png",
+        "id": "1686212127227cvogh0a39kj",
+        "tips": []
+    },
+    {
+        "label": "part-bigbanner",
+        "selector": ".part-bigbanner",
+        "src": "images/zt_03.png",
+        "id": "1686212127620w2ilrqpsxzh",
+        "tips": []
+    },
+    {
+        "label": "part-cards",
+        "selector": ".part-cards",
+        "src": "images/zt_04.png",
+        "id": "16862121280130e4a6p2kf2ih",
+        "tips": []
+    },
+    {
+        "label": "part-news-a",
+        "selector": ".part-news-a",
+        "src": "images/zt_05.png",
+        "id": "1686212129230ukqsn03p4d",
+        "tips": []
+    },
+    {
+        "label": "part-news-b",
+        "selector": ".part-news-b",
+        "src": "images/zt_06.png",
+        "id": "1686212129532xotwo49dsu9",
+        "tips": []
+    },
+    {
+        "label": "part-normalbanner",
+        "selector": ".part-normalbanner",
+        "src": "images/zt_07.png",
+        "id": "1686212130466p5m8o4xp7rr",
+        "tips": []
+    },
+    {
+        "label": "part-accordion",
+        "selector": ".part-accordion",
+        "src": "images/zt_08.png",
+        "id": "1686212130716c3w660hkgr",
+        "tips": []
+    },
+    {
+        "label": "part-news-c",
+        "selector": ".part-news-c",
+        "src": "images/zt_09.png",
+        "id": "1686212130986udycpm8ewf",
+        "tips": []
+    },
+    {
+        "label": "part-news-c",
+        "selector": ".part-news-c",
+        "src": "images/zt_09.png",
+        "id": "168621213204283rc0l4xc9x",
+        "tips": []
+    },
+    {
+        "label": "part-fullscreen-slide",
+        "selector": ".part-fullscreen-slide",
+        "src": "images/zt_11.png",
+        "id": "1686212136254ixqwlyndwng",
+        "tips": []
+    },
+    {
+        "label": "part-news-live",
+        "selector": ".part-news-live",
+        "src": "images/zt_12.png",
+        "id": "168621213670007vza25swi85",
+        "tips": []
+    },
+    {
+        "label": "part-friends",
+        "selector": ".part-friends",
+        "src": "images/zt_16.png",
+        "id": "1686212140758tks5ae3801a",
+        "tips": []
+    },
+    {
+        "label": "footer",
+        "selector": "#zt-footer",
+        "src": "images/zt_17.jpg",
+        "id": "16862121415063ypx6hs0oe9",
+        "tips": []
+    }
+]
