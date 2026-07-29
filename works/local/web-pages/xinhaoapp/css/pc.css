@@ -1,0 +1,378 @@
+/*PC页面重置(非响应式)*/
+@charset "utf-8";
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  /*font-family:' Microsoft YaHei ','PingFang SC','Droidsansfallback';*/
+ font-family:PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
+}
+
+html{border:0; overflow-x: hidden; overflow-y: auto;
+        font-family:' Microsoft YaHei ','PingFang SC','Droidsansfallback';
+}
+body{margin:0 auto; padding:0;font-size:12px;background: #fff;
+line-height: inherit;}
+div,dl,dt,dd,ol,ul,b,li,p,h1,h2,h3,h4,input,h6,h5,form,i,pre,fieldset,textarea,p,blockquote,th,td
+{margin:0; padding:0;list-style:none; font-weight:normal; font-style: normal;}
+dl,ul,li,p{text-align:left;}
+img{border:0px;display: block;}
+.clear{clear:both; overflow:hidden; }
+a{ color:#000; text-decoration:none;-webkit-user-select:none;-webkit-touch-callout: none;}
+em{font-style: normal;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+table {
+     border-collapse:collapse;
+     border-spacing:0;
+ }
+fieldset,img {
+     border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+     font-style:normal;
+     font-weight:normal;
+}
+caption,th {
+     text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+     font-size:100%;
+     font-weight:normal;
+}
+q:before,q:after {
+     content:”;
+}
+abbr,acronym {
+     border:0;
+}
+
+.qdxinChanl{height:32px; line-height: 32px; background: #858585; overflow: hidden; border-bottom: 1px solid #6b6b6b; }
+.qdxinChanl ul{width: 1000px; margin: 0 auto;height: 32px; line-height: 32px;}
+.qdxinChanl ul li{float: left;}
+.qdxinChanl ul li a{float: left; padding: 0 10px 0 6px; color: #f5f5f5; font-size: 14px; text-align: center; }
+.qdxinChanl ul li a:hover{background: #333;}
+.qdxinChanl ul .ged a{border-left:1px solid #a0a0a0; margin-left: 4px; padding-left: 15px; }
+.qdxinChanl ul .rightQ{float:right;}
+
+.layout{
+	width: 1000px;
+	overflow: hidden;
+	margin: auto;
+}
+.h65{
+	height: 65px;
+}
+.bg-gray{
+	background-color: #f1f1f1;
+}
+.head-top .p1{
+	width: 195px;
+	height: 45px;
+	background-image: url(../img/shouye_03.png?t=4);
+	background-repeat: no-repeat;
+	float: left;
+	margin-top: 10px;
+}
+.head-top .p1 a{float: left; width: 120px; height: 40px; text-indent: -9999em;}
+.head-top .p2{
+	width: 396px;
+	height: 30px;
+	background-image: url(../img/shouye_06.png);
+	float: left;
+	margin-top: 17px;
+	margin-left: 15px;
+}
+.head-top .p3{
+	width: 30px;
+	height: 33px;
+	background-image: url(../img /shouye_09.png);
+	float: left;
+	margin-top: 16px;
+	margin-left: 8px;
+}
+.link{
+	float: right;
+	line-height: 65px;
+}
+.link a{
+	color: #737373;
+	font-size: 12px;
+}
+.link a:hover{
+	color: #e94a47;
+}
+.baselogo-wrap{float: left; height: 40px; overflow: hidden;}
+.baselogo-wrap.styup{margin-top: 12px;}
+.baselogo-wrap .side-logo{float:left; width: 72px;height: 40px;}
+.baselogo-wrap .side-logo a{display: block;width: 100%;height: 40px;background-image: url(../img/xlogo190729.png);background-image: -webkit-image-set(url(../img/xlogo190729.png) 1x,url(../img/xlogo190729@2x.png) 2x);background-repeat: no-repeat;}
+.baselogo-wrap .side-p{float:left;height: 40px; line-height: 38px;font-size: 24px; color: #fff; background:#54A9DD;padding: 0 20px 0 23px ; border-radius:2px; position: relative; }
+.baselogo-wrap .side-p:after{content: ''; position: absolute; left:-1px; top:4px;  width: 0;height: 0; border-top: 16px solid transparent;border-bottom: 16px solid transparent;border-left: 10px solid #f5f5f5;border-radius: 1px;}
+
+
+.top-banner{
+    width: 1000px;
+    margin: 0 auto 60px;
+    background: #EFF7FF url(../img/topbg.png) no-repeat;
+    padding-bottom: 30px;
+    position: relative;
+}
+.top-banner:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 70px 70px 0 70px;
+    border-color: #EFF7FF transparent transparent transparent;
+    left: 50%;
+    margin-left: -70px;
+
+}
+.top-logo{
+    width: 200px;
+    margin: 0 auto 20px;
+}
+.top-content{
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 50px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.top-download{
+    width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.top-download .ios,
+.top-download .android
+{
+    width: 46%;
+    float: left;
+}
+.top-download .ios{
+    padding-right: 8%;
+}
+.top-download .ios-link{
+    background-color: #F26E33;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 0;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+.top-download .ios-link:hover{
+    background-color: #FFC401;
+}
+
+.top-download .ios-link img{
+    display: inline-block;
+    width: auto;
+    height: 40px;
+}
+.top-download .ios-link strong{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    vertical-align: top;
+    padding-left: 10px;
+}
+.top-download .android-down img{
+    display: inline-block;
+    width:auto;
+    height: 30px;
+}
+.top-download .android-down strong{
+    height: 30px;
+    line-height: 34px;
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: top;
+    padding-left: 5px;
+    font-weight: 700;
+}
+.top-download .android-links{
+    overflow: hidden;
+    padding-top: 10px;
+}
+.top-download .android-links a{
+    float: left;
+    background: url(../img/icon-download.png) no-repeat left center;
+    background-size: auto 15px;
+    font-size: 14px;
+    width: 50%;
+    line-height: 30px;
+}
+.top-download .android-links a:hover{
+    color: #1EA17D;
+}
+.top-download .android-links span{
+    background: url(../img/icon-download.png) no-repeat left center;
+    background-size: auto 15px;
+    padding-left: 18px;
+}
+
+.block{
+    overflow: hidden;
+    width: 1000px;
+    margin: 30px auto;
+}
+.block .left{
+    float: left;
+    width: 50%;
+}
+.block .right{
+    float: left;
+    width: 50%;
+}
+.block-p{
+    text-align: center;
+    font-size: 15px;;
+}
+
+
+.block-1{
+    margin-bottom: 30px;
+}
+.block-1-right{
+    padding-top: 60px;
+}
+.block-1-img{
+    width: 300px;
+    margin: 0 auto;
+}
+.block-1-title{
+    margin-bottom: 20px;
+}
+.block-1-title h3{
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+}
+.block-1-title em{
+    color: #ff2525;
+    font-weight: 700;
+}
+.block-1-images{
+    width: 100%;
+    font-size: 0;
+    margin-top: 45px;
+}
+.block-1-images img{
+    display: block;
+    width: 100%;
+}
+.block-1-images span{
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+}
+.block-1-images p{
+    display: inline-block;
+    width: 95px;
+    margin-left: 30px;
+}
+.block-1-images p:first-child{
+    margin-left: 0;
+}
+
+.block-2{
+    background: #EFF7FF url(../img/qd-bg.png) no-repeat left bottom;
+    background-size: 100% auto;
+}
+.block-2-img{
+    width: 360px;
+}
+.block-2-right{
+    padding-top: 50px;
+}
+.block-2-left{
+    padding-top: 80px;
+}
+.block-2-title{
+    margin-bottom: 20px;
+}
+.block-2-title h3{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center; 
+}
+.block-2-p{
+    font-size: 15px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.block-3-img{
+    width: 360px;
+    margin: 0 auto;
+}
+.block-3-title{
+    margin-bottom: 20px;
+}
+.block-3-title h3{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+.block-3-p{
+    font-size: 15px;
+    width: 90%;
+    margin: 0 auto; 
+}
+.block-3-right{
+    padding-top: 50px;
+}
+
+.qr-download{
+    position: fixed;
+    right: 10px;
+    bottom: 20%;
+    width: 150px;
+    box-shadow: 0px 0px 3px #ccc; 
+}
+.qr-download img{
+    display: block;
+    width: 100%;
+}
+.qr-download p{
+    color: #fff;
+    background-color: #0A79C8;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+a#go-top{
+    background-image: url(../img/sprit20200904.png?t=090414);
+    background-image: -webkit-image-set(url(../img/sprit20200904.png?t=090414) 1x,url(../img/sprit20200904@2x.png?t=090414) 2x);
+    background-repeat: no-repeat;
+}
+a#go-top{width:40px;height:40px;background-position:-40px 0px;color:#999;text-decoration:none;text-indent:-9999em;line-height:25px}
+a#go-top:hover{background-position:0 0;color:#333}
+
+
+.bot1000{border-top:1px solid #ccc; margin-top: 30px; padding-top: 10px;font-size: 12px;}
+.bot1000 ul{width: 1000px; margin: 0 auto;}
+.bot1000 ul li{text-align: center;  line-height: 30px; color: #888;}
+.bot1000 ul li a{padding: 0 10px;}
+
+
+
+#fixMenu,
+#menuPid
+{
+    display: none;
+}
