@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>   
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="apple-mobile-web-app-capable" content="yes" /> 
+   <meta content="telephone=no" name="format-detection" />
+   <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+   <title>信新相映后台-核销记录-1</title>
+   <meta name="description" content="信新相映后台" />
+   <link rel="stylesheet" media="(min-width: 641px)" href="css/screen.css" />
+   <link rel="stylesheet" media="(max-width:640px)" href="css/phone.css" />
+   <script src="js/respond.src.js"></script>
+   <style>
+        /* 简单调整，确保示例可见 */
+        .record-info .title { margin: 0 0 4px; font-weight: normal; }
+        .record-info span { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #666; }
+        .record-state { color: #2d8a4e; background: #e6f5ec; padding: 0 8px; border-radius: 12px; }
+        .record-data { color: #999; }
+   </style>
+</head>
+<body>
+<nav id="navM">
+  <ul>
+    <li><a href="核销商品-1.html">核销商品</a></li>
+    <li><a href="核销记录-1.html">核销记录</a></li>
+    <li><a href="员工管理-1.html">员工管理</a></li>
+  </ul>
+  <div id="close">×</div>
+</nav>
+<div class="header">
+  <div class="left">
+    <h2>后台管理</h2>
+    <div class="header-login">
+      <img src="images/user-pic.png" alt="user">
+      <span>您好，<i>信网传媒</i></span>
+      <a href="index.html">【退出】</a>
+    </div>
+  </div>
+  <a href="后台首页.html" class="right">
+    <img src="img/logo.png" alt="logo">
+    <span>信新相映</span>
+  </a>
+  <div id="goback"></div>
+  <div id="header-nav">导航</div>
+</div>
+<!-- header end -->
+
+<div class="content">
+  <div class="col-left col-hide">
+    <ul>
+      <li><a href="核销商品-1.html">核销商品<i class="list-arrow"></i></a></li>
+      <li class="on"><a href="核销记录-1.html">核销记录<i class="list-arrow"></i></a></li>
+      <li><a href="员工管理-1.html">员工管理<i class="list-arrow"></i></a></li>
+    </ul>
+  </div>
+  <!-- col-left end -->
+  
+  <div class="col-right">
+    <div class="col-inner">
+      <div class="sale-record">
+        <ul>
+          <!-- 多样化的核销记录 —— 瞎编一些真实感商品 -->
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">【限时秒杀】智能保温杯 316不锈钢 真空商务办公水杯 (580积分)</p>
+              <span>
+                <i class="record-state">商品已核销</i>
+                <i class="record-data">2024-06-18 14:32</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">北欧风棉麻抱枕套 沙发靠垫 含芯 (230积分)</p>
+              <span>
+                <i class="record-state">已核销</i>
+                <i class="record-data">2024-06-17 09:15</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">小米生态链 无线充电宝 10000mAh 快充版 (760积分)</p>
+              <span>
+                <i class="record-state">核销成功</i>
+                <i class="record-data">2024-06-16 21:40</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">晨光文具礼盒 钢笔+墨水+笔记本 精美套装 (450积分)</p>
+              <span>
+                <i class="record-state">已核销</i>
+                <i class="record-data">2024-06-15 11:08</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">便携式榨汁机 家用水果榨汁杯 随行杯 (380积分)</p>
+              <span>
+                <i class="record-state">商品已核销</i>
+                <i class="record-data">2024-06-14 16:52</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">故宫联名款 文创书签 金属镂空 中国风 (120积分)</p>
+              <span>
+                <i class="record-state">已核销</i>
+                <i class="record-data">2024-06-13 08:47</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">日本花王 蒸汽眼罩 缓解疲劳 12片装 (310积分)</p>
+              <span>
+                <i class="record-state">核销成功</i>
+                <i class="record-data">2024-06-12 20:19</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">香薰加湿器 家用静音 大容量 七彩氛围灯 (540积分)</p>
+              <span>
+                <i class="record-state">商品已核销</i>
+                <i class="record-data">2024-06-11 13:25</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">李宁运动袜 3双装 毛巾底 透气跑步 (190积分)</p>
+              <span>
+                <i class="record-state">已核销</i>
+                <i class="record-data">2024-06-10 10:02</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">迪士尼正版 草莓熊毛绒公仔 30cm (680积分)</p>
+              <span>
+                <i class="record-state">核销成功</i>
+                <i class="record-data">2024-06-09 18:30</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">苏泊尔 电热水壶 1.7L 304不锈钢 自动断电 (430积分)</p>
+              <span>
+                <i class="record-state">商品已核销</i>
+                <i class="record-data">2024-06-08 07:55</i>
+              </span>
+            </div>
+          </li>
+          <li>
+            <img src="images/sale-img.png" alt="商品图">
+            <div class="record-info">
+              <p class="title">高颜值 桌面收纳盒 化妆品整理盒 多格 (270积分)</p>
+              <span>
+                <i class="record-state">已核销</i>
+                <i class="record-data">2024-06-07 12:12</i>
+              </span>
+            </div>
+          </li>
+        </ul>
+        <!-- pages -->
+        <div class="pageArea">
+          <p class="ipages">
+            <a class="a1">934条</a> 
+            <a href="#" class="a1">上一页</a> <span>1</span> 
+            <a href="#">2</a> 
+            <a href="#">3</a> 
+            <a href="#">4</a> 
+            <a href="#">5</a> 
+            <a href="#">6</a> ..
+            <a href="#">15</a> 
+            <a href="#" class="a1">下一页</a>
+          </p>
+        </div>
+        <!-- pages end -->
+      </div>
+    </div>
+    <!-- inner end -->
+  </div>
+  <!-- col-right end -->
+</div>
+<!-- content end -->
+
+<!-- dialog -->
+<div id="dialog">
+  <div class="dialog-wrapper">
+    <div class="dialog-mes"><span></span></div>
+    <a href="javascript:;" class="dialog-back">确认</a>
+  </div>
+</div>
+<!-- dialog end -->
+
+<script src="js/jxinq111.js"></script>
+<script src="js/go-top.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

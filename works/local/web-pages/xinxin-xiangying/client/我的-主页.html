@@ -1,0 +1,119 @@
+<!DOCTYPE html>        
+<html>
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />    
+    <meta content="telephone=no" name="format-detection" />    
+    <meta name="apple-touch-fullscreen" content="yes" />  
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+    <title>信新相映积分商城-我的</title>
+    <meta name="description" content="信新相映积分商城" />
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css?t=1">
+    <link rel="stylesheet" type="text/css" href="css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css?t=152">
+</head>
+<body ontouchstart>
+<!-- nav -->
+<header class="normal-header">
+    <div id="goback" class="goback"></div>
+    <a href="index.html" class="logo">信新相映积分商城</a>
+    <div id="header-menu" class="nav-hamburger">
+        <div class="nav-hamburger-line"></div>
+        <div class="nav-hamburger-line"></div>
+        <div class="nav-hamburger-line"></div>
+    </div>
+</header>
+<nav id="nav">
+    <div class="nav-warpper">
+        <div class="nav-top">
+            <a href="index.html"><i class="icon-home"></i>首页</a>
+            <a href="我的-主页.html"><i class="icon-mine"></i>我的信息</a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="商品列表页-分类.html">实用工具</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">零食</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">水果</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">玩具</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">植物类</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">虚拟类</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- nav end -->
+<section class="mine-index">
+    <div class="my-points">
+        <span>我的积分</span>
+        <p>
+            <cite id="mypoints">35429</cite>
+        </p>
+    </div>
+    <div class="my-button">
+        <a href="兑换记录-无记录.html">我的兑换记录</a>
+        <a href="收货地址-无地址.html">我的收货地址</a>
+    </div>
+    <div class="mine-index-bg"></div>
+</section>
+<section class="convert-record convert-new">
+    <h2><em>最新兑换记录</em></h2>
+    <ul class="record-list">
+            <li>
+                <a href="兑换记录-详情-已发货.html" class="item-box">
+                    <img src="images/goods1.png">
+                    <div class="item-text">
+                        <p class="title">三只松鼠 蜀香牛肉100g 休闲零食肉脯手撕牛肉麻辣味三只松鼠 蜀香牛肉100g 休闲零食肉脯手撕牛肉麻辣味 </p>
+                        <p class="price">
+                            <span>共一件商品</span>
+                            <em>花费: <cite>3529</cite>积分</em>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="兑换记录-详情-未发货.html" class="item-box">
+                    <img src="images/goods1.png">
+                    <div class="item-text">
+                        <p class="title">三只松鼠 蜀香牛肉100g 休闲零食肉脯手撕牛肉麻辣味 </p>
+                        <p class="price">
+                            <span>共一件商品</span>
+                            <em>花费: <cite>3529</cite>积分</em>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="兑换记录-主页.html" class="convert-all">查看全部兑换记录</a>
+</section>
+
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="lib/jquery-weui.js?t=1"></script>
+<script src="js/basic.js?t=34457"></script>
+<script src="js/go-top.js"></script>
+<!-- 单独的JS -->
+<script src="lib/jquery.leoTextAnimate.js"></script>
+<script>
+$('#mypoints').leoTextAnimate({
+    delay: 0, //延时出现时间
+    autorun: true, //是否自动运行
+    fixed: [',', ':', '.'], 
+    start: '0'
+});
+</script>
+</body>
+</html>
+    

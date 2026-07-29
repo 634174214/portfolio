@@ -1,0 +1,153 @@
+<!DOCTYPE html>        
+<html>
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />    
+    <meta content="telephone=no" name="format-detection" />    
+    <meta name="apple-touch-fullscreen" content="yes" />  
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+    <title>信新相映积分商城</title>
+    <meta name="description" content="信新相映积分商城" />
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css?t=1">
+    <link rel="stylesheet" type="text/css" href="css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css?t=144">
+</head>
+<body ontouchstart>
+<header class="index-header">
+    <div class="points">
+        <i></i>
+        <span>已有积分: <cite>224</cite>分</span>
+    </div>
+    <a class="mine" href="我的-主页.html">我的</a>
+</header>
+<section class="index-search">
+    <div class="weui-search-bar" id="searchBar">
+      <form class="weui-search-bar__form">
+        <div class="weui-search-bar__box">
+          <i class="weui-icon-search"></i>
+          <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索您需要的商品" value="">
+          <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText">
+          <i class="weui-icon-search"></i>
+          <span>请输入您需要的商品</span>
+        </label>
+      </form>
+      <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+</section>
+<section class="index-carousel">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="img/index-swiper.png">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="images/2.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="images/3.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section class="index-menu">
+    <ul>
+        <li>
+            <a href="商品列表页-分类.html">
+                <img src="img/icon-menu-1.png">
+                <p>实用工具</p>
+            </a>
+        </li>
+        <li>
+            <a href="商品列表页-分类.html">
+                <img src="img/icon-menu-2.png">
+                <p>零食</p>
+            </a>
+        </li>
+        <li>
+            <a href="商品列表页-分类.html">
+                <img src="img/icon-menu-3.png">
+                <p>水果</p>
+            </a>
+        </li>
+        <li>
+            <a href="商品列表页-分类.html">
+                <img src="img/icon-menu-4.png">
+                <p>玩具</p>
+            </a>
+        </li>
+        <li>
+            <a href="商品列表页-分类.html">
+                <img src="img/icon-menu-5.png">
+                <p>植物类</p>
+            </a>
+        </li>
+        <li>
+            <a href="商品列表页-分类.html">
+                <img src="img/icon-menu-6.png">
+                <p>虚拟类</p>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="index-shopping">
+    <div class="banner">
+        <img src="img/index-banner.png">
+    </div>
+    <div class="title">
+        <span>商品积分高低排序</span><i class="icon-sort"></i>
+        <div class="right">
+            <div id="up" class="btn">低 - 高</div>
+            <div id="down" class="btn">高 - 低</div>
+        </div>
+    </div>
+    <!-- 
+<li>
+    <a href="javascript:;">
+        <img src="images/goods1.png">
+        <p>三只松鼠 蜀香牛肉100g 休闲零食肉脯手撕牛肉麻辣味 </p>
+    </a>
+    <div class="buythis">
+        <span>3529<cite>积分</cite></span>
+        <a href="javascript:;">立即兑换</a>
+    </div>
+</li>
+     -->
+    <ul id="shopping-list">
+        
+    </ul>
+</section>
+<!-- 滚动加载 -->
+<div class="weui-loadmore">
+  <i class="weui-loading"></i>
+  <span class="weui-loadmore__tips">正在加载</span>
+</div>
+<!-- 滚动加载 end -->
+<div id="index-bottom-line">
+    <span>积分商城也是有底线的</span>
+</div>
+<div id="cover"></div>
+
+<script>
+var t_pic = 'http://' + window.location.host + window.location.pathname + 'img/share.png';
+</script>
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="lib/jquery-weui.js?t=1"></script>
+<script src="lib/swiper.min.js"></script>
+<script src="js/go-top.js"></script>
+<script src="js/index-addall.js?t=9"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script>
+</body>
+</html>
+    

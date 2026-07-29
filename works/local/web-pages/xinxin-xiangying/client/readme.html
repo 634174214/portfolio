@@ -1,0 +1,82 @@
+<!-- 除首页+商品详细页外基本顶部引用 以及菜单 -->
+<!DOCTYPE html>        
+<html>
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />    
+    <meta content="telephone=no" name="format-detection" />    
+    <meta name="apple-touch-fullscreen" content="yes" />  
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+    <title>信新相映积分商城-收货地址-无地址</title>
+    <meta name="description" content="信新相映积分商城" />
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body ontouchstart>
+<!-- nav -->
+<header class="normal-header">
+    <div id="goback" class="goback"></div>
+    <a href="index.html" class="logo">信新相映积分商城</a>
+    <div id="header-menu" class="nav-hamburger">
+        <div class="nav-hamburger-line"></div>
+        <div class="nav-hamburger-line"></div>
+        <div class="nav-hamburger-line"></div>
+    </div>
+</header>
+<nav id="nav">
+    <div class="nav-warpper">
+        <div class="nav-top">
+            <a href="index.html"><i class="icon-home"></i>首页</a>
+            <a href="我的-主页.html"><i class="icon-mine"></i>我的信息</a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="商品列表页-分类.html">实用工具</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">零食</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">水果</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">玩具</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">植物类</a>
+                </li>
+                <li>
+                    <a href="商品列表页-分类.html">虚拟类</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- nav end -->
+
+
+
+<!-- 除特殊外基本JS引用 -->
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="lib/jquery-weui.js?t=1"></script>
+<script src="js/basic.js?t=34"></script>
+<script src="js/go-top.js"></script>
+
+
+
+<!-- 特殊情况页面 -->
+我的-主页-- 页面中有单独标注
+
+收货地址-新建 -- formcheck.js
+收货地址-编辑
+
+商品详情页 -- shopping.js
+
+首页-- index.js
+
+
+<!-- 另外需要注意事项 -->
+订单提交-填写订单-无地址 处未有选择地址时 #express-takeover 的class=error,当有选择地址时，class=pass

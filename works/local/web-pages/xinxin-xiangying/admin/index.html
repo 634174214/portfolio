@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>   
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />  
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="apple-mobile-web-app-capable" content="yes" /> 
+   <meta content="telephone=no" name="format-detection" />
+   <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+   <title>信新相映后台-登录</title>
+   <meta name="description" content="信新相映后台" />
+   <link rel="stylesheet" media="(min-width: 641px)" href="css/screen.css" />
+   <link rel="stylesheet" media="(max-width:640px)" href="css/phone.css" />
+   <script src="js/respond.src.js"></script>
+</head>
+<body>
+<div class="login">
+    <div class="login-wrapper">
+        <div class="login-header">
+            <p>Hello,Welcome back!</p>
+            <h1>信新相映 后台管理系统</h1>
+        </div>
+        <div class="login-body">
+            <form id="form" action="" method="post">
+                <div class="login-row">
+                    <div class="clear">
+                        <i><img src="img/login-id.png"></i>
+                        <input type="text" name="login-id" placeholder="请填入您的登录账号" id="user-name" class="hook" value="634174214@qq.com">
+                    </div>
+                    <p>* 请填写正确的登录帐号</p>
+                </div>
+                <div class="login-row">
+                    <div class="clear">
+                        <i><img src="img/login-mi.png"></i>
+                        <input type="password" name="login-password" placeholder="请填入您的账号密码 " id="user-password" class="hook" value="634174214@qq.com">
+                    </div>
+                    <p>* 请检查您的密码（密码不能为空或密码不正确）</p>
+                </div>
+                  <button id="checkSubmit">提交</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="js/jxinq111.js"></script>
+<script>
+var user_in = $('#form input').filter('.hook');
+var user_name = $('#user-name');
+var user_password = $('#user-password');
+$('#form').on('submit', function() {
+  // 判断所有的input是否都为空值：
+  /*
+每次点击时候，创建变量i，作为记录用，遍历每个Input，当内容不为空时，i++，只有当2个input都不为空，即i=input.length时候，才代表通过验证，也可以用every()或者some的数组操作，但是支持ie9+
+  */
+    var i = 0; 
+    user_in.each(function(index, item) {
+        if ($(item).val() == '') {
+          $(item).parents('.login-row').addClass('error');
+        } else {
+          $(item).parents('.login-row').removeClass('error');
+          i++;
+        }
+    });
+    if (i >= user_in.length) {
+      window.open('后台首页.html'); // 跳转效果
+      return true;
+    } else {
+      return false;
+    }
+});
+</script>
+</body>
+</html>
+    
+    

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>   
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="apple-mobile-web-app-capable" content="yes" /> 
+   <meta content="telephone=no" name="format-detection" />
+   <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+   <title>员工绑定成功</title>
+   <meta name="description" content="信新相映后台" />
+   <style type="text/css">
+     *{padding: 0;margin: 0;}
+     .bind-success{position: fixed;width: 100%;height: 100%;left: 0;right: 0;top: 0;background: #f1f1f1;}
+     .inner{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+     .done-ok{border-radius: 50%;width: 30vw;color: #3eb94e;border:5px solid #3eb94e;height: 30vw;text-align: center;line-height: 30vw;font-size: 90px;margin: 0 auto;}
+     .done-ok img{width: 75%;}
+     p{width: 100%;text-align: center;font-size: 20px;padding-top: 15px;color: #3eb94e;font-weight: 700;}
+     #done-close{width: 50vw;height: 50px;text-align: center;line-height: 50px;color: #1a1a1a;background: #d3d3d3;margin-top: 50px;}
+   </style>
+</head>
+<body>
+<div class="bind-success">
+  <div class="inner">
+    <div class="done-ok"><img src="data:image/png;base64,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"></div>
+    <p>绑定成功！</p>
+    <div id="done-close">点击关闭</div>
+  </div>
+</div>
+
+<script src="js/jxinq111.js"></script>
+<script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+$('#done-close').on('click', function (){
+ wx.closeWindow();
+});
+</script>
+</body>
+</html>
+    
+    
