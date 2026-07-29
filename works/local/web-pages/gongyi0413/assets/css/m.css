@@ -1,0 +1,18 @@
+.header-hero-image:after
+{
+    display: none;
+}
+.header-hero-image:before{
+    opacity: 0.6;
+    width: 100%;
+    background-size: 100% auto;
+    z-index: -1;
+}
+.header-sub-title{
+    letter-spacing: 0;
+    font-size: 1.2em!important;
+}
+
+body{
+    overflow-x: hidden;
+}
