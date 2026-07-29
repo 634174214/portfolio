@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>确认下单</title>
+	<!-- 调用点餐内页样式 -->
+	<link rel="stylesheet" href="css/stylepay.css" type="text/css">
+	<!-- 公用/重置 样式调用 -->
+	<link rel="stylesheet" href="css/public.css" type="text/css">
+	<!-- ！信字库样式调用 改网站链接！ -->
+	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	<!-- 引用weui样式 -->
+            <link rel="stylesheet" href="css/weui.css" type="text/css">
+
+	<!-- textarea超出高度自适应JS -->
+	<script type="text/javascript"> 
+	// 最小高度 
+	var minHeight = 60; 
+	// 最大高度，超过则出现滚动条 
+	var maxHeight = 100; 
+	function ResizeTextarea(){ 
+	var t = document.getElementById('txtContent'); 
+	h = t.scrollHeight; 
+	h = h > minHeight ? h : minHeight; 
+	h = h > maxHeight ? maxHeight : h; 
+	t.style.height = h + "px"; 
+	} 
+	</script> 
+	
+</head>
+<body ontouchstart>
+<!-- 地址信息 -->
+<header class="paytop">
+	<a href="空白地址待添加页面.html" class="f17 fcgreen">
+	       <i class="xq-jia-x"></i> 添加一个新的收货地址
+	       <span class="xq-rightfanhui-x"></span>
+	</a>
+</header>
+<!-- 地址信息END -->
+<!-- 送达、优惠券、备注 -->
+<div class="paymid fcdark f12">
+ <form method="post" action="#" class="biaodan">
+	   <table class="biaoge">
+	        <tbody>
+		        <tr>
+			 <td><label for="passtime">送达时间:</label></td>
+		              <td>
+		                      <div class="weui_cell_bd weui_cell_primary">
+		                                     <select class="weui_select" name="select2" id="passtime">
+		                                         <option value="1">请选择送达时间</option>
+		                                         <option value="1">18：00-18：15</option>
+		                                         <option value="2">18：15-18：30</option>
+		                                         <option value="3">18：30-18：45</option>
+		                                     </select>
+		                        <em class="xq-rightfanhui-x"></em>
+	                                      <!-- 错误提示叹号 -->
+	                                      <!-- <i class="weui_icon_warn"></i> -->
+	                                      <!-- 错误提示叹号END -->
+                     		         </div>
+                     		         <!-- 错误提示 -->
+                     		         <div class="weui_toptips weui_warn js_tooltips" style="display: none;">请选择送货时间</div>
+                     		         <!-- 错误提示END -->
+		              </td>
+		        </tr>
+		        <tr>
+			 <td>可选优惠券:</td>
+		             <td colspan="3">
+		                      <a href="#">未使用优惠券
+				<span class="xq-rightfanhui-x"></span>
+		                      </a>
+		              </td>
+		        </tr>
+		       <tr>
+		       	<td colspan="4">
+		       		<textarea id="txtContent" rows="1" onpropertychange="ResizeTextarea()" oninput="ResizeTextarea()" onkeyup="ResizeTextarea()" placeholder="备注 请在此处填写您的个人喜好"></textarea>
+		       	</td>
+		       </tr>
+                     </tbody>
+                </table>
+      </form> 
+</div>
+<!-- 送达、优惠券、备注 END-->
+<!-- 商品数量确认 -->
+<div class="paysure">
+	<table class="paytable fcdark f12">
+		<tbody>
+			<tr>
+			      <th>食物名称</th>
+			      <th>数量</th>
+			      <th>价格</th>
+			</tr>
+			<tr>
+			      <td>新疆正宗兰州拉面</td>
+			      <td>
+			      	<div class="num middle">
+					<a href="#" class="sy_minus" id="sy_minus_gid1">-</a>
+					<input class="sy_num" id="sy_num_gid1" type="text" name="number1" value="0">
+					<a href="#" class="sy_plus" id="sy_plus_gid1">+</a>
+					<br>
+			             </div>
+			      </td>
+			      <td>￥<em>189.69</em></td>
+			</tr>
+			<tr>
+			      <td>新疆正宗兰州拉面</td>
+			      <td>
+			      	<div class="num middle">
+					<a href="#" class="sy_minus" id="sy_minus_gid1">-</a>
+					<input class="sy_num" id="sy_num_gid1" type="text" name="number1" value="0">
+					<a href="#" class="sy_plus" id="sy_plus_gid1">+</a>
+					<br>
+			             </div>
+			      </td>
+			      <td>￥<em>189.69</em></td>
+			</tr>
+			<tr>
+			      <td>新疆正宗兰州拉面</td>
+			      <td>
+			      	<div class="num middle">
+					<a href="#" class="sy_minus" id="sy_minus_gid1">-</a>
+					<input class="sy_num" id="sy_num_gid1" type="text" name="number1" value="0">
+					<a href="#" class="sy_plus" id="sy_plus_gid1">+</a>
+					<br>
+			             </div>
+			      </td>
+			      <td>￥<em>189.69</em></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="payonsale fclight f12">
+		<p>已使用优惠券抵用￥<em>5.00</em></p>
+		<p>打包费共￥<em>5.55</em></p>
+	</div>
+</div>
+<!-- 数量加减END -->
+<!-- 底部结算 -->
+<div class="footer">
+	<div class="fnum f12"><p>共￥<em>145.56</em></p></div>
+	<div class="passnum f10">
+	    配送费￥<em>4.00</em>
+	</div>
+	<!-- 当钱>0时 调用paymoney 样式并产生点击效果 -->
+	<div class="fbtn"><a href="选择支付方式页面.html" class="nomoney">确认下单</a></div>
+</div>
+<!-- 底部结算END -->
+</body>
+</html>

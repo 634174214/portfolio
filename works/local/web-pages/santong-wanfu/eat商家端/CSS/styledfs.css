@@ -1,0 +1,307 @@
+/*资金、店铺、优惠、商品管理CSS*/
+
+/*库存管理首页*/
+/*今日收入*/
+.income{
+	background: url(../images/topimg.png) #FF5F5A no-repeat bottom;
+	padding: 15px 15px 45px 15px;
+	position: relative;
+}
+.intoday{
+	margin-top: 20px;
+}
+.intoday span{
+           color: #fff;
+           font-size: 12px;
+           position: absolute;
+           top: 20px;
+}
+.intoday em{
+	font-size: 36px;
+             padding-right: 5px;
+}
+.income>a{
+	display: block;
+	float: right;
+	color: #fff;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+}
+/*资金明细*/
+.indetail ul li{
+	overflow: hidden;
+}
+.indetail ul li{
+              padding: 10px 0;
+              display: block;
+              border-bottom: 1px dashed #D9D9D9;
+}
+.indetail p{
+	color: #FF5F5A;
+}
+.indetail p:nth-child(2){
+	color: #4D4D4D;
+}
+.inorder{
+	width: 60%;
+	line-height:25px;
+}
+.inorder em{
+	display: block;
+	color: #B3B3B3;
+}
+.inmoney{
+	line-height: 75px;
+	height: 75px;
+	font-size: 17px;
+	color: #FF5F5A;
+	width: 40%;
+	text-align: right;
+}
+
+/*往期收入明细*/
+/*往期明细*/
+.olddetail{
+                 width: 100%;
+                 border-collapse: collapse;
+}
+.olddetail tr td{
+           padding: 10px 0;
+}
+.olddetail tr td:nth-child(1){
+           width: 50%;
+           text-align: left;
+           color: #808080;
+}
+.olddetail tr td:nth-child(2){
+           width: 50%;
+           padding-left: 10px;
+           text-align:right;
+}
+.olddetail tr{
+	border-bottom: 1px dashed #D9D9D9;
+}
+.olddetail tr:last-child{
+	border-bottom: 0;
+}
+
+
+/*优惠活动首页*/
+/*优惠券积分兑换设置*/
+.intsetbar{
+            position: absolute;
+            top: 8px;
+            right: 15px;
+}
+/*优惠券设置*/
+.intsave ul li{
+            display: block;
+            padding: 15px 0;
+            font-size: 16px;
+            color: #4D4D4D;
+            border-bottom: 1px dashed #D9D9D9;
+            position: relative;
+}
+.intsave input[type=number]{
+            width: 25%;
+            height: 45px;
+            margin: 0 5px;
+            font-size: 16px;
+            color: #4D4D4D;
+            text-align: center;
+            border:1px solid #E6E6E6;
+}
+.intsavedel{
+	width: 30px;
+	height:30px;
+	background: #F2F2F2;
+	line-height: 30px;
+	text-align:center;
+	color: #CCCCCC;
+	position: absolute;
+	top: 23px;
+	right: 0;
+}
+.intsavedel:active{
+	background: #CCCCCC;
+	color: #fff;
+}.intsavedis{
+	width: 30px;
+	height:30px;
+	background: #F2F2F2;
+	line-height: 30px;
+	text-align:center;
+	color: #FFF;
+	position: absolute;
+	top: 23px;
+	right: 0;
+}
+
+
+/*修改店铺信息页面*/
+/*图片上传*/
+.shophead ul{
+	overflow: hidden;
+}
+.shophead ul li{
+             float: left;
+             padding: 10px 0;
+}
+.shophead ul li:nth-child(1){
+	font-size: 16px;
+	color: #4D4D4D;
+	margin-right: 10px;
+}
+.shophead ul li:nth-child(2){
+}
+.headsay{
+	margin-top:10px;
+	margin-left:74px; 
+	border-top: 1px dashed #D9D9D9;
+	color: #B3B3B3;
+	font-size: 14px;
+	padding: 5px 0;
+}
+/*店铺相册*/
+.shopphoto{
+                 margin-right: 9px;
+                 margin-bottom: 9px;
+                 width: 60px;
+                 line-height: 60px;
+                 text-align: center;
+                 height: 60px;
+                 border: 1px dashed #D9D9D9;
+                 color: #D9D9D9;
+                 font-size: 24px;
+}
+/*温馨提示*/
+.shoplove{
+	margin-top: 15px;
+	color: #B3B3B3;
+	padding-left: 15px;
+}
+.shoplove em{
+	padding-left: 15px;
+}
+
+/*有商品的商品管理首页*/
+/*商品编辑*/
+.wareshow{ 
+             width: 100%;
+             border-collapse: collapse;
+             line-height: 25px;
+}
+.wareshow tr td{
+             padding: 10px 0;
+             overflow: hidden;
+}
+.wareshow tr{
+	border-bottom: 1px dashed #D9D9D9;
+}
+.wareshow tr:last-child{
+              border: 0;
+}
+.wareshow tr td:nth-child(1){
+	padding-right: 10px;
+}
+.wareshow tr td:nth-child(2){
+	width: 105px;
+}
+.warejia{
+	line-height: 19px;
+	margin-left: 55px;
+}
+.warejia p:nth-child(1){
+             color: #4D4D4D;
+             font-size: 14px;
+}
+.warejia p:nth-child(2){
+	color: #FF5F5A;
+	font-size: 16px;
+}
+.warejia p:nth-child(3){
+	color: #B3B3B3;
+	font-size: 12px;
+}
+
+.wareclass span{
+              color: #B3B3B3;
+              font-size: 12px;
+              float: left;
+              padding-right: 5px;
+              height: 17px;
+}
+.wareclass em{
+              color: #B3B3B3;
+              font-size: 12px;
+              float: left;
+}
+
+/*商品-库存管理首页*/
+/*商品库存管理*/
+.waremas{ 
+             width: 100%;
+             border-collapse: collapse;
+             line-height: 25px;
+}
+.waremas tr td{
+             padding: 10px 0;
+             overflow: hidden;
+}
+.waremas tr{
+	border-bottom: 1px dashed #D9D9D9;
+}
+.waremas tr:last-child{
+              border: 0;
+}
+.waremas tr td:nth-child(1){
+	padding-right: 10px;
+}
+.waremas tr td:nth-child(2){
+	width: 55px;
+	text-align: right;
+}
+
+/*添加商品信息页面*/
+/*积分开关*/
+.jifen span{
+	height: 46px;
+	line-height: 46px;
+	width: 30%;
+}
+.jifen input[type=number]{
+             border: 1px solid rgb(187,187,187);
+             background-color: #F7F7F7;
+             height: 36px;
+             border-radius: 2px;
+             padding-left: 10px;
+}
+/*积分开关*/
+.on-off{
+              width: 100%;
+}
+.on-off input[type=number]{
+             padding-right: 25px;
+             width: 100%;
+             border: 1px solid rgb(187,187,187);
+             background-color: #F7F7F7;
+             height: 36px;
+             border-radius: 2px;
+             padding-left: 10px;
+             padding-right: 30px;
+}
+.on-off tr td{
+              padding: 10px 0;
+              color: #4D4D4D;
+              position: relative;
+}
+.on-off tr td:nth-child(1){
+             width: 80px;
+}
+.on-off tr td:nth-child(2){
+             text-align: right;
+}

@@ -1,0 +1,185 @@
+/*商家信息*/
+.shopallinfo{
+	background: #fff;
+	width: 100%;
+	padding:15px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.shopimginfo{
+   
+    position: relative;
+   
+}
+.shopimg{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+}
+.shopimg img{
+	width: 60px;
+	height: 60px;
+	border:1px solid #CCCCCC;
+}
+.shopinfo{
+	margin-left: 70px;
+	line-height: 15px;
+	padding-bottom: 20px;
+}
+.shopinfo h5{
+	color: #ED1C24;
+	font-weight: 600;
+}
+.shoptimebtn{
+    border-top: 1px dashed #E6E6E6;
+    padding: 15px 0;
+}
+.infobtn a{
+    border-radius: 5px 5px;
+    padding: 5px;
+    color: #fff;
+    background: #04BE02;
+    border:1px solid #039802;
+}
+
+/*跳转选择*/
+.choice ul li i{
+	display: block;
+    width: 65px;
+    height: 65px;
+    background: url(../images/choice.png);
+    margin: 10px auto;
+}
+
+.choice ul li{
+	float: left;
+	width: 33.3%;
+	
+	text-align: center;
+}
+.choice ul{
+	overflow: hidden;
+	width: 100%;
+	padding: 5%;
+}
+.choice ul li a{
+	color: #4D4D4D;
+	display: block;
+}
+.choice ul li.icon-a i{
+	background-position: 0 0;
+}
+.choice ul li.icon-b i{
+	background-position: 65px 0;
+}
+.choice ul li.icon-c i{
+	background-position: 134px 0;
+}
+
+
+
+/*店铺筛选页面样式*/
+.shopchoice{
+	width: 100%;
+	padding: 0 15px;
+	background: #fff;
+	border-bottom: 1px solid #E6E6E6;
+}
+.shopchoice ul li{
+	display: block;
+	padding: 15px 0;
+	border-bottom: 1px dashed #E6E6E6;
+	position: relative;
+}
+.shopchoice ul li:last-child{border:none;}
+.scimg{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+}
+.scimg img{
+	width: 60px;
+	height: 60px;
+	border:1px solid #cccccc;
+}
+.scinfo{
+	margin-left: 65px;
+	margin-right: 65px;
+	line-height: 20px;
+	
+	height: 60px;
+}
+.scbtn a{
+	    border-radius: 5px 5px;
+	    padding: 5px;
+	    color: #fff;
+	    background: #04BE02;
+	    border:1px solid #039802;
+	    position: absolute; 
+	    top: 25px;
+	    right: 0;
+}
+
+
+/*我的订单页面*/
+/*订单详情*/
+.orderstate p{
+            float: left;
+            height: 40px;
+            line-height: 40px;
+}
+.orderstate p span{
+	padding-left: 10px;
+	color: #B3B3B3;
+}
+.orderstate a{
+            margin-top: 7px;
+}
+.orderstate{
+	border-bottom: 1px solid #E6E6E6;
+}
+.orderdetail {
+             height: 40px;
+             border-top:1px dashed #E6E6E6;
+             border-bottom: 1px dashed #E6E6E6;
+             text-align: right;
+             line-height: 40px;
+}
+.orderdetail span{
+	padding: 0 15px;
+}
+.ordernum{
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	font-weight: 600;
+}
+.ordernum em{
+	color: #ED1C24;
+}
+
+/*商家详细页面*/
+/*店铺相册-4图横排列*/
+.shopphoto{
+	width: 100%;
+	padding: 10px 15px;
+}
+.shopphoto tr td{
+	width: 25%;
+	text-align:center;
+}
+.shopphoto img{
+	width: 60px;
+	margin: 0 auto;
+	border: 1px solid #E6E6E6;
+	vertical-align:middle;
+}
+/*店铺相处-4图纵排列*/
+.shoppic{
+	width: 100%;
+}
+.shoppic img{
+	width: 100%;
+}
+.shoppic ul li{
+	padding: 10px 0;
+}

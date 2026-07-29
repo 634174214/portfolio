@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>店铺管理</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+             <!-- 信网字体库 -->
+             <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
+	<!-- 资金 样式 -->
+	<link rel="stylesheet" href="CSS/styledfs.css" type="text/css">
+	<!-- WEUI样式 -->
+             <link rel="stylesheet" href="CSS/weui.css" type="text/css">
+          
+</head>
+<body ontouchstart>
+<!-- 顶部蓝灰 -->
+<header class="top fcwhite">
+   <span class="xq-leftfanhui-x" onClick="window.location.href='店铺管理页面.html';"></span>店铺信息管理
+ </header>
+<!-- 顶部蓝灰END -->
+<!-- 配送信息 -->
+<form action="#" method="post"  class="title padd_lr">
+            <table class="formnor fcdark f16">
+                <tbody>
+                    <tr>
+                        <td>起送金额：</td>
+                        <td>
+                            <input type="number" placeholder="请商品起送金额" name="money">
+                            <em>元</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>配 送 费：</td>
+                        <td>
+                            <input type="number" placeholder="请输入店铺配送金额" name="pass">
+                            <em>元</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>配送范围：</td>
+                        <td>
+                            <input type="text" placeholder="请输入配送最大范围" name="fanwei">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </form>
+<!-- 配送信息END -->
+<!-- 提示 -->
+<div class="shoplove">
+    <span class="xq-tanhao-x"></span>
+    温馨提示：
+    <br>
+    <em>起/配送金额设置为0，即可免起/配送费</em>
+</div>
+<!-- 提示END -->
+<!-- 保存 -->
+<div class="save pos_fixed">
+        <div class="btnsave f17 btnmargno" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">保存</div>
+</div>
+<!-- 保存END -->
+
+<!-- 弹窗页面 -->
+<div id="light" class="white_content">
+            <div class="qtext">
+                <strong>提示</strong>
+                <div class="qask">
+                       配送信息编辑成功
+                </div>
+            </div>
+            <div class="qone" onClick="window.location.href='店铺管理页面.html';">确定
+             </div>
+</div> 
+<div id="fade" class="black_overlay"></div> 
+<!-- 弹窗页面END -->
+</body>
+</html>

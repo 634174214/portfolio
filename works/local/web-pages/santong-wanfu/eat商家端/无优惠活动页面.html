@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>优惠活动</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+            <!-- 信网字体库 -->
+            <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
+	<!-- 资金 样式 -->
+	<link rel="stylesheet" href="CSS/styledfs.css" type="text/css">
+	<!-- WEUI样式 -->
+             <link rel="stylesheet" href="CSS/weui.css" type="text/css">
+</head>
+<body ontouchstart>
+<!-- 修改积分说明 -->
+<div class="title padd_lr padd_tb pos_rel border_bs">
+     <span class="xq-edit2"></span>
+     <h6>修改积分说明</h6>
+     <i class="xq-rightfanhui-x"></i>
+</div>
+<!-- 修改积分说明END -->
+<!-- 优惠券积分兑换设置 -->
+<div class="title padd_lr padd_tb pos_rel">
+     <span class="xq-shezhi"></span>
+     <h6><label for="int1">优惠券积分兑换设置</label></h6>
+     <div class="intsetbar">
+                <input class="weui_switch" type="checkbox" id="int1" checked="checked">
+     </div>
+</div>
+<!-- 优惠券积分兑换设置END -->
+<!-- 无优惠提示 -->
+<form method="post" action="#" class="basicmid marg_top padd_lr marg_bigbb intsave">
+              <ul>
+                  <li>
+                         <label for="n1">满<input type="number" name="intnum" id="n1">分</label>
+                         <label for="n2">兑换<input type="number" name="intmon" id="n2">元</label>
+                           <div class="intsavedis"><i class="xq-guanbi"></i></div>
+                  </li>
+              </ul>
+              <div class="padd_tb">
+                     <div class="btnsure f16 marg_middle">+新增优惠券</div>
+              </div>
+</form>
+<!-- 无优惠提示END -->
+<!-- 保存 -->
+<div class="save pos_fixed">
+        <div class="btnsave f17 btnmargno" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">保存</div>
+</div>
+<!-- 保存END -->
+
+<!-- 弹窗页面 -->
+<div id="light" class="white_content">
+            <div class="qtext">
+                <strong>提示</strong>
+                <div class="qask">
+                       信息保存成功
+                </div>
+            </div>
+            <div class="qone" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">确定
+             </div>
+</div> 
+<div id="fade" class="black_overlay"></div> 
+<!-- 弹窗页面END -->
+</body>
+</html>

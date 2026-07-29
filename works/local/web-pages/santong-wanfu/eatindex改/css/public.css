@@ -1,0 +1,420 @@
+/*重置*/
+* {
+  tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*手机网站引用此字体 字体粗壮*/
+  font-family:'PingFang SC','Droidsansfallback';
+}
+
+html{border:0;height: inherit;}
+body{margin:0 auto; font-size:12px; font-family:Helvetica; background: #EBEBEB;
+max-width: 640px; min-width: 320px;
+height: inherit;
+line-height: inherit;
+}
+div,dl,dt,dd,ol,ul,b,li,p,h1,h2,input,h6,h5,form,i{ margin:0; padding:0;list-style:none; font-weight:normal; font-style: normal;}
+dl,ul,li,p{text-align:left;}
+img{border:0px;}
+.clear{clear:both; overflow:hidden; }
+a{ color:#000; text-decoration:none;-webkit-user-select:none;-webkit-touch-callout: none;}
+em{font-style: normal;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+/*公用*/
+
+body{
+	max-width: 640px;
+	margin: 0 auto;
+	background-color: #EBEBEB;
+	font-family:'PingFang SC','Droidsansfallback';
+	/*定义BODY高度让主题元素可以自适应*/
+	height:100%;
+}
+.fl-l{
+	float: left;
+}
+.fl-r{
+	float: right;
+}
+.f12{
+	font-size: 16px;
+}
+.f10{
+	font-size: 10px;
+}
+.f14{
+	font-size: 14px;
+}
+.f17{
+	font-size: 17px;
+}
+.fcdark{
+	color: #4D4D4D;
+}
+.fclight{
+	color: #B3B3B3;
+}
+.fcgreen{
+             color: #04BD02;
+}
+.wait{
+	color: #B3B3B3;
+	text-align: center;
+	margin-top: 10%;
+}
+.toptitle{
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	width: 100%;
+	padding-left: 15px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.toptitle p{
+             font-size: 17px;
+             color: #B3B3B3;
+}
+.title{
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	width: 100%;
+	padding-left: 15px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.title p{
+	color: #B3B3B3;
+	font-size: 17px;
+}
+.clear{
+	overflow: hidden;
+}
+.hang-height1{
+             line-height:24px;
+}
+/*底块基础样式*/
+.basic{
+	padding: 0 15px;
+	background: #fff;
+}
+.basictop{
+	padding:  0 15px;
+	border-bottom: 1px solid #E6E6E6;
+	background: #fff;
+}
+.basicmid{
+	border-top: 1px solid #E6E6E6;
+	border-bottom: 1px solid #E6E6E6;
+	background: #fff;
+}
+.padd_lr{
+	padding: 0 15px;
+}
+.padd_tb{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.padd_r{
+	padding-right:10px; 
+}
+.middle{
+	margin: 0 auto;
+}
+.marg_top{
+	margin-top: 8px;
+}
+
+.marg_top2{
+	margin-top: 24px;
+}
+.marg_bottom{
+	margin-bottom: 54px;
+}
+.marg_r{
+	margin-right: 10px;
+}
+.marg_l{
+	margin-left: 10px;
+}
+.marg_t{
+	margin-top: 2px;
+}
+.marg_b{
+	margin-bottom: 5px;
+}
+/*绝对定位*/
+.pos-rel{
+	position: relative;
+}
+.pos-ab{
+	position: absolute;
+}
+/*按钮*/
+.btn{
+	border-radius: 5px;
+	background: #04BE02;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	font-size: 17px;
+}
+.btn90{
+	border-radius: 5px;
+	background: #04BE02;
+	text-align: center;
+	color: #fff;
+	width: 90%;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+}
+.btnnone{
+	border-radius: 5px;
+	background: #cccccc;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+}
+.btn:active{
+	color: #BADCB1;
+	background:#039900;
+}
+.btn90:active{
+	color: #BADCB1;
+	background:#039900;
+}
+.btn_marg1{
+	margin: 30px auto;
+}
+.btn_fixed{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.btn_fixed1{
+	position: fixed;
+	bottom: 10px;
+	left: 5%;
+	right: 5%;
+}
+/*返回首页按钮  矩形*/
+.basicback {
+	color: #fff;
+	background: #04BE02;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+}
+.basicback:active{
+	color: #BADCB1;
+	background:#039900;
+}
+/*表格实线2列*/
+.biaoge{
+	width: 100%;
+	border-collapse: collapse;
+}
+.biaoge tr{
+	border-bottom: 1px solid #E6E6E6;
+}
+.biaoge tr:last-child{
+	border:none;
+}
+.biaoge tr td{
+	height: 50px;
+}
+.biaogehang p{
+	line-height: 40px;
+}
+.biaoge tr td:nth-child(1){
+	width: 90px;
+}
+/*表格虚线2列*/
+.biaogexu{
+	width: 100%;
+	border-collapse: collapse;
+}
+.biaogexu tr{
+	border-bottom: 1px dashed #E6E6E6;
+}
+.biaogexu tr:last-child{
+	border:none;
+}
+.biaogexu tr td{
+	height: 40px;
+}
+.biaogexu tr td:nth-child(1){
+	width: 25%;
+}
+
+.biaogexu tr td:nth-child(3){
+	width: 25%;
+}
+/*表格虚线3列*/
+.biaogexu3{
+	width: 100%;
+	border-collapse: collapse;
+}
+.biaogexu3 tr{
+	border-bottom: 1px dashed #E6E6E6;
+}
+.biaogexu3 tr:last-child{
+	border:none;
+}
+.biaogexu3 tr td{
+	height: 35px;
+}
+.biaogexu3 tr td:nth-child(1){
+	width: 50%;
+}
+.biaogexu3 tr td:nth-child(2){
+	width: 25%;
+	text-align: center;
+}
+.biaogexu3 tr td:nth-child(3){
+	width: 25%;
+	text-align: right;
+}
+.biaogexu3 tr td img{
+	border: 1px solid #E6E6E6;
+}
+/*表格无线3列*/
+.biaogenone3{
+	width: 100%;
+	border-collapse: collapse;
+}
+.biaogenone3 tr{
+}
+.biaogenone3 tr:last-child{
+	border:none;
+}
+.biaogenone3 tr td{
+	height: 70px;
+}
+.biaogenone3 tr td:nth-child(1){
+	width: 70px;
+	height: 70px;
+             padding: 5px 0;
+}
+.biaogenone3 tr td:nth-child(2){
+	text-align: left;
+}
+.biaogenone3 tr td:nth-child(3){
+	width: 100px;
+	text-align: right;
+}
+.biaogenone3 tr td img{
+	border: 1px solid #CCCCCC;
+	width: 60px;
+	height: 60px;
+}
+.biaogenone3 tr td em{
+	padding-left: 5px;
+}
+/*地址录入表单表格专用*/
+.biaogexu2{
+	width: 100%;
+	border-collapse: collapse;
+}
+.biaogexu2 tr{
+	border-bottom: 1px dashed #E6E6E6;
+}
+.biaogexu2 tr:last-child{
+	border:none;
+}
+.biaogexu2 tr td{
+	height: 50px;
+}
+.biaogexu2 tr td:nth-child(1){
+	width: 25%;
+}
+
+.biaogexu2 tr td:nth-child(2){
+	width: 75%;
+}
+.biaogexu2 tr td h5{
+	padding: 10px 0 0px 0;
+	width: 100%;
+	text-align: left;
+} 
+
+/*表单*/
+.biaodan input[type="number"]{
+              width: 90%;
+              border:none;
+              text-align: left;
+              height: 35px;
+}
+.biaodan input[type="text"]{
+              width: 100%;
+              border:none;
+              text-align: left;
+              height: 35px;
+              color: #4D4D4D;
+	  font-size: 12px;
+}
+.biaodan input[type="tel"]{
+              width: 100%;
+              border:none;
+              text-align: left;
+              height: 35px;
+              color: #4D4D4D;
+	  font-size: 12px;
+}
+
+/*.biaodan select{
+	width: 100%;
+	text-align: center;
+	height: 35px;
+	border:none;
+	color: #999999;
+}*/
+.biaodan textarea{
+	width: 100%;
+	border:none;
+	height: 60px;
+	text-align: left;
+	padding: 5px 0;
+	color: #999999;
+	font-size: 16px;
+}
+
+/*弹窗  提示文字局中*/
+.weui_dialog_mid{
+	text-align: center;
+	padding: 0 20px;
+	font-size: 15px;
+	color: #888;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+/*没有地址 优惠券 提示*/
+.pointout{
+	background: #fff;
+	color: #E6E6E6;
+	height: 200px;
+	text-align: center;
+             border-bottom: 1px solid #E6E6E6;
+}
+.pointout span{
+	font-size: 100px;
+             line-height: 160px;
+}
+.pointout p{
+	text-align: center;
+	font-weight: 600;
+	line-height: 0px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>新增收货地址</title>
+	<!-- 调用点餐内页样式 -->
+	<link rel="stylesheet" href="css/styleaddint.css" type="text/css">
+	<!-- 公用/重置 样式调用 -->
+	<link rel="stylesheet" href="css/public.css" type="text/css">
+	<!-- WEUI样式调用 -->
+	<link rel="stylesheet" href="css/weui.css" type="text/css">
+	<!-- ！信字库样式调用 改网站链接！ -->
+	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	
+</head>
+<body ontouchstart>
+<!-- 副标题 -->
+<header class="wrongout">
+	请填写完整信息
+</header>
+<!-- 副标题 -->
+<!-- 表单报错提示 -->
+<div class="weui_toptips weui_warn js_tooltips" style="display: none;">请填写完整信息</div>
+<!-- 表单报错提示END -->
+<!-- 表单信息 -->
+<div class="addcells weui_cells_form marg_top">
+        <div class="weui_cell">
+	            <div class="weui_cell_hd">
+		            <label class="weui_label">姓名</label>
+	            </div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                        <input class="weui_input" type="text" pattern="[0-9]*" placeholder="请输入您的姓名">
+	            </div>
+        </div>
+
+            <div class="weui_cell">
+	            <div class="weui_cell_hd">
+		            <label class="weui_label">性别</label>
+	            </div>
+	            <div class="weui_cells_checkbox">
+                                    <label class="weui_check_label clear" for="s12">
+	                                    <div class="weui_cell_hd fl-l">
+		                               <input type="radio" name="checkbox1" class="weui_check" id="s12" checked="checked">
+		                               <i class="weui_icon_checked"></i>
+	                                    </div>
+	                                    <div class="fl-l fcdark f17 marg_r">
+	                                            <p>男</p>
+	                                    </div>
+                                    </label>
+                        </div>
+                        <div class="weui_cells_checkbox padd_l">
+	                       <label class="weui_check_label clear" for="s13">
+		                        <div class="weui_cell_hd fl-l marg_l">
+		                               <input type="radio" name="checkbox1" class="weui_check" id="s13">
+		                               <i class="weui_icon_checked"></i>
+		                        </div>
+	                                    <div class="fl-l fcdark f17">
+	                                	        <p>女</p>
+	                                    </div>
+	                        </label>
+              	</div>
+           </div>
+
+            <!-- 报错表单 -->
+	<div class="weui_cell weui_cell_warn">
+	            <div class="weui_cell_hd"><label for="" class="weui_label">联系电话</label></div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <input class="weui_input" type="number" pattern="[0-9]*" value="weui input error" placeholder="请输入您的联系方式">
+	            </div>
+	            <div class="weui_cell_ft">
+	                <i class="weui_icon_warn"></i>
+	            </div>
+	        </div>
+            <!-- 报错表单END -->
+            <!-- 问本框报错 -->
+	<div class="addcells weui_cells_form">
+	            <div class="weui_cell weui_cell_warn">
+	                   <div class="weui_cell_bd weui_cell_primary">
+			            <div class="weui_cell_hd marg_b clear">
+			                   	<label class="weui_label fl-l">收货地址</label>
+			                   	<div class="weui_cell_ft fl-r">
+			                   	    <i class="weui_icon_warn"></i>
+			                   	</div>
+			            </div>
+			            <textarea class="weui_textarea" placeholder="请输入您的收货地址" rows="3"></textarea>
+			            <div class="weui_textarea_counter"><span>0</span>/200</div>
+	                   </div>
+	            </div>
+	</div>
+	<!-- 文本框报错END -->
+    </div>
+<!-- 表单信息END -->
+
+
+<!-- 确认按钮 -->
+<div class="weui_btn_area">
+        <a class="weui_btn weui_btn_primary" href="地址信息填写完整页面.html" id="showTooltips">确定</a>
+</div>
+<!-- 确认按钮END -->
+
+</body>
+</html>

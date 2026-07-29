@@ -1,0 +1,323 @@
+/*个人中心页面（无优惠券）*/
+/*兑换优惠券*/
+.nocoupons {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: 600;
+	border-bottom: 1px solid #E6E6E6;
+	background: #fff;
+}
+.nocoupons a{
+	color: #04BD02;
+	display: block;
+	width: 100%;
+	height: 60px;
+}
+.nocoupons span{
+	padding-right: 5px;
+	margin-top: 1px;
+}
+
+/*个人中心页面*/
+/*个人信息*/
+.mytitle{
+	height: 90px;
+	width: 100%;
+	background: url(../images/335.jpg) no-repeat;
+	background-size:cover;
+	padding: 15px;
+	box-sizing: border-box;
+}
+.mytitle img{
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 5px;
+}
+.mytitle .myname{
+	margin-left: 10px;
+	float: left;
+	font-weight: 800;
+	padding: 8px 0;
+}
+/*个人资产*/
+.myasset{
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+.myasset tr th{
+	width: 33%;
+	color: #B3B3B3;
+	border-left: 1px dashed #E6E6E6;
+}
+.myasset tr td{
+	width: 33%;
+	border-left: 1px dashed #E6E6E6;
+}
+.myasset tr td:nth-child(1){
+	border: none;
+}
+.myasset tr th:nth-child(1){
+	border: none;
+}
+/*分类选择*/
+.myoption ul li a{
+            border-bottom: 1px solid #E6E6E6;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            position: relative;
+            width: 100%;
+}
+.myoption ul li:last-child{
+	border: 0;
+}
+.myoption ul li a{
+	     color: #4D4D4D;
+}
+.myoption ul li a span{
+                   margin-right: 10px;
+}
+.myoption ul li a i{
+	position:absolute;
+	right:0;
+	top: 15px;
+	color:#E6E6E6;
+}
+
+/*钱包充值首页*/
+/*当前余额*/
+.balance{
+	border-bottom: 1px solid #E6E6E6;
+	background: #fff;
+	padding: 15px;
+} 
+.balance p{
+	text-align: center;
+	color: #ED1C24;
+	font-size: 36px;
+	font-weight: 400;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.balance p em{
+	color: #4D4D4D;
+	position: absolute;
+	top: -10px;
+	left: :0;
+             font-size: 12px;
+}
+/*充值明细*/
+.balancexi{
+	width: 100%;
+	border-collapse: collapse;
+}
+.balancexi tr{
+	border-bottom: 1px dashed #E6E6E6;
+}
+.balancexi tr:last-child{
+	border:none;
+}
+.balancexi tr td{
+	padding: 10px 0;
+}
+.balancexi tr td:nth-child(1){
+	width: 65%;
+	text-align: left;
+}
+.balancexi tr td:nth-child(2){
+	width: 35;
+	text-align: right;
+}
+.balancexi tr td p em{
+	margin-left: 10px;
+	color: #B3B3B3;
+}
+
+
+/*优惠券兑换页面*/
+/*我的积分*/
+.myint span{
+              margin-left: 20px;
+}
+/*可兑换的优惠券*/
+.intchange ul li{
+              overflow: hidden;
+              display: block;
+              border-bottom: 1px dashed #E6E6E6;
+              width: 100%;
+              padding: 15px 0;
+              position: relative;
+}
+.intchange ul li:last-child{
+	border: 0;
+}
+.intchange ul li h5{
+	float: left;
+	font-size: 24px;
+	color: #ED1C24;
+	border-right: 1px solid #B3B3B3;
+	padding-right: 10px;
+	margin-right: 10px;
+	width: 116px;
+	letter-spacing: -1px;
+}
+.intchange .intbtnmid{
+	position: absolute;
+	right: 0;
+	top: 33%;
+}
+/*兑换记录*/
+.intrecord{
+	position: relative;
+}
+.intrecord i{
+             position: absolute;
+             right: 15px;
+             top: 15px;
+             color: #E6E6E6;
+}
+.intrecord span{
+	padding-right: 5px;
+	padding-top: 5px;
+}
+
+/*积分说明页*/
+/*积分说明*/
+.intexplain{
+	background-color: #fff;
+	padding:0 15px;
+	height: 100%;
+}
+.intexplain ul li{
+	border-bottom: 1px dashed #E6E6E6;
+	padding: 15px 0;
+}
+.intexplain ul li:last-child{
+	border: 0;
+}
+.intexplain ul li h5{
+	color: #ED1C24;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.intexplain ul li p{
+	color: #4D4D4D;
+	line-height: 24px;
+	font-size: 12px;
+	text-indent: 1.2em;
+}
+.intexplain ul li span{
+	display: block;
+	width: 100%;
+	text-align: right;
+	color: #B3B3B3;
+	margin-top: 30px;
+}
+
+/*选择优惠券页面*/
+/*选择优惠券*/
+.changemove{
+	margin-top: 6px;
+}
+
+
+/*选择、更改、删除可添加收货地址页面*/
+/*收货地址*/
+.addtable{
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+.addtable tr td h5{
+	border-bottom: 1px dashed #E6E6E6;
+	padding-bottom: 5px;
+}
+.addtable tr td p{
+	padding-top: 5px;
+}
+.addtable tr{
+	border-bottom: 1px solid #E6E6E6;
+}
+.addtable tr td:nth-child(1){
+	width: 28px;
+	padding-left: 10px;
+}
+.addtable tr td:nth-child(3){
+	width: 112px;
+	padding-right: 10px;
+}
+.addtable tr td:nth-child(2){
+	padding: 10px 15px 10px 3px;
+}
+
+
+/*信息未填写完整页面*/
+/*表单报错*/
+.wrongout{
+	height: 40px;
+	line-height: 40px;
+	background: #E54340;
+	color:#fff;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+}
+
+
+/*编辑收货地址页面*/
+/*管理收货地址*/
+.edittable{
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+.edittable tr td{
+	padding: 10px 0;
+}
+.edittable tr td h5{
+	border-bottom: 1px dashed #E6E6E6;
+	padding-bottom: 5px;
+}
+.edittable tr td p{
+	padding-top: 5px;
+}
+.edittable tr{
+	border-bottom: 1px solid #E6E6E6;
+}
+.edittable tr td:nth-child(1){
+	padding-right: 15px;
+}
+.edittable tr td:nth-child(2){
+	width: 102px;
+}
+
+/*填写页面信息*/
+/*表单信息 addcell代替原WEUI中weui_cells*/
+.addcells{
+	background-color: #FFFFFF;
+	line-height: 1.41176471;
+	font-size: 17px;
+	overflow: hidden;
+	position: relative;
+}
+.addcells:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.addcells em{
+	position: absolute;
+}

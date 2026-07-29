@@ -1,0 +1,555 @@
+/*点餐页面样式*/
+/*搜索框*/
+.search{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+/*左侧导航*/
+.mainbody{
+	position: relative;
+	height: 100%;
+
+}
+.tuij{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #E6E6E6;
+    color: #808080;
+    background: url(../images/tuij.png) no-repeat 85% 16px;
+    border-right: 1px solid #E6E6E6;
+}
+.mainleft{
+	width: 100px;
+	background: #EFEFF4;
+    height:100%;
+    padding-bottom: 40px; 
+    border-right: 1px solid #E6E6E6;
+    position: fixed;
+    top: 44px;
+}
+.mainleft ul li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /*设置A的宽度比原来100%大 让A宽度扩出去 覆盖外DIV边框*/
+    width: 101%;
+    color: #808080;
+    border-bottom: 1px solid #E6E6E6;
+    
+}
+.mainleft ul li a:active{
+	background: #fff;
+	color: #ED1C24;
+}
+/*触发效果后的样式*/
+.mainleft .on a{
+	background: #fff;
+	color: #ED1C24;
+	width: 101%;
+}
+.mainleft ul li{
+    position: relative;
+}
+.mainleft ul li i{
+	position: absolute;
+	top: 25%;
+	left: 3%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 50% 50%;
+	background: #ED1C24;
+	font-size: 8px;
+	color: #fff;
+}
+
+/*右边商品列表*/
+.mainright{
+     width: 70%;
+     height: 100%;
+     position: absolute;
+     top: 44px;
+     left: 100px;
+     margin-bottom: 100px;
+}
+.righttitle{
+	height: 25px;
+	width: 100%;
+	line-height: 25px;
+	background: #EFEFF4;
+	border-bottom: 1px solid #E6E6E6;
+	padding-left: 15px;
+	color: #808080;
+	position: fixed;
+	z-index: 900;
+}
+
+.rightsell{
+	position: relative;
+	top: 25px;
+}
+.rightsell br{
+	clear: both;
+}
+.rightsell ul li{
+	padding: 15px;
+	border-bottom: 1px solid #F2F2F2;
+	position: relative;
+}
+.sellimg{
+	position: absolute;
+    width: 60px;
+    height: 60px;
+}
+.sellimg i{
+	position: absolute;
+	display: block;
+	width: 23px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	border-radius: 50% 50%;
+	background: #ED1C24;
+	font-size: 10px;
+	color: #fff;
+}
+.sellimg img{
+	border:1px solid #CCCCCC;
+	width: 60px;
+	height: 60px;
+}
+.sellprice{
+	width: 60%;
+    padding-left: 5px;
+    margin-left: 60px;
+}
+.sellprice h5{
+    color: #4D4D4D;
+    font-size: 10px;
+}
+.sellprice h6{
+	color: #B3B3B3;
+	font-size: 10px;
+}
+.sellprice span{
+	color: #ED1C24;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.sellnum{
+	overflow: hidden;
+	margin-top: 10px;
+}
+/*数量增减*/
+.num{
+	
+	border: 1px solid #DDDDDD;
+	width: 105px;
+	height: 35px;
+}
+.num br{clear: both;}
+.num a{
+	display: block;
+	text-decoration: none;
+}
+.sy_minus,.sy_plus{
+	width: 33px;
+	height: 33px;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	font-size: 24px;
+	cursor: pointer;
+	color: #BABABA;
+	background: #F7F6F7;
+}
+.sy_minus{
+	float: left;
+	border-right: 1px solid #DDDDDD;
+}
+.sy_plus{
+	float: right;
+	border-left: 1px solid #DDDDDD;
+}
+/*input*/
+.sy_num{
+	width: 37px;
+	float: left;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	border: none;
+}
+.sellnum span{
+	float: right;
+	color: #B3B3B3;
+	line-height: 35px;
+}
+
+
+
+
+/*底部结算*/
+.footer{
+	height: 46px;
+	width: 100%;
+	background: #666666;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+             overflow: hidden;
+}
+.footer .fnum{
+	float: left;
+	padding: 9px 0;
+	width: 33%;
+	color: #fff;
+	margin-right: 4px;
+}
+.footer .fnum p{
+	border-right: 1px solid #4D4D4D;
+	text-align: center;
+	font-size: 12px;
+}
+.footer .fnum p>em{
+	font-size: 16px;
+}
+
+.footer .passnum {
+	float: left;
+	padding: 14px 0 14px 3px;
+	color: #fff;
+}
+.footer .passnum span{
+	margin-right: 2px;
+}
+/**/
+.footer .fbtn a.paymoney{
+	float: right;
+	width: 35%;
+	height: 46px;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	background: #04BE02;
+	font-size: 16px;
+}
+.footer .fbtn a.nomoney{
+	float: right;
+	width: 35%;
+	height: 46px;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	background: #999;
+	font-size: 16px;
+}
+.footer .fbtn a.paymoney:active{
+	color: #BADCB1;
+	background:#039900;
+}
+
+
+
+/*点餐内页样式*/
+/*商品图片*/
+.proimg img{
+	width: 100%;
+	border-bottom: 1px solid #E6E6E6;
+}
+.proinfo{
+	background: #fff;
+	padding: 15px;
+
+}
+.proinfo h5{
+	font-size: 16px;
+	 font-weight: 600;
+	color: #4D4D4D;
+	margin-bottom: 5px;
+}
+.proprice h6{
+             color: #ED1C24;
+             font-size: 24px;
+             font-weight: 600;
+             line-height: 35px;
+}
+.proprice span{
+             color: #B3B3B3;
+             font-size: 10px;
+             margin-left: 5px;
+             padding-left: 5px;
+             border-left: 1px solid #E6E6E6;
+}
+.proprice p{
+	color: #4D4D4D;
+	margin-top: 5px;
+}
+.promation{
+	overflow: hidden;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.pronum span{
+	float: right;
+	color: #B3B3B3;
+	margin-top: 5px;
+}
+.hunpai{
+	min-height: 100px;
+	width: 100%;
+}
+
+/*下单页面（有地址）*/
+/*地址信息*/
+.paytop{
+	padding: 15px 45px 15px 15px;
+	background: #fff;
+	border-bottom: 1px solid #E6E6E6;
+	position: relative;
+}
+.paytop a{
+	display: block;
+}
+.paytop a p:nth-child(1){
+	border-bottom: 1px solid #E6E6E6;
+	margin-bottom: 10px;
+             padding-bottom: 10px;
+}
+.paytop span{
+	position: absolute;
+	top: 40%;
+	right: 15px;
+	color: #E6E6E6;
+}
+.paytop p em{
+	margin-left: 20px;
+}
+
+/*送达、优惠券、备注 */
+.paymid{
+	padding:  0 15px;
+	margin-top: 8px;
+	border-top: 1px solid #E6E6E6;
+	border-bottom: 1px solid #E6E6E6;
+	background: #fff;
+	position: relative;
+}
+.paymid a{
+	display: block;
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	color: #999999;
+	padding-left: 14px;
+}
+.paymid a span{
+	color: #E6E6E6;
+	position: absolute;
+	top: 72px;
+	right: 15px;
+}
+.paymid em{
+	color: #E6E6E6;
+	position: absolute;
+	top: 20px;
+	right: 15px;
+}
+.paymid i{
+	position: absolute;
+	z-index: 100;
+	right: 15px;
+	top: 14px;
+}
+.paymid select{
+	width: 87%;
+	color: #999999;
+}
+
+/*商品数量确认*/
+.paysure{
+	background: #fff;
+	border-top: 1px solid #E6E6E6;
+	border-bottom: 1px solid #E6E6E6;
+	padding:  0 15px;
+	margin-top: 8px;
+	margin-bottom: 54px;
+}
+.paytable{
+	width: 100%;
+	border-collapse: collapse;
+}
+.paytable tr{
+	border-bottom: 1px dashed #E6E6E6;
+}
+.paytable tr th{
+             height: 35px;
+             text-align: center;
+ }
+.paytable tr:last-child{
+	border:none;
+}
+.paytable tr:nth-child(1){
+	border-bottom: 1px solid #E6E6E6;
+}
+.paytable tr td:nth-child(1){
+             width: 30%;
+
+}
+.paytable tr td:nth-child(3){
+	width: 20%;
+	text-align: center;
+}
+.paytable tr td{
+	height: 50px;
+	padding: 10px 0;
+}
+.payonsale p{
+	text-align: right;
+	height: 46px;
+	line-height: 46px;
+	border-top: 1px dashed #E6E6E6;
+}
+
+/*选择支付方式页面*/
+/*支付方式选择*/
+.payway{
+	background: #fff;
+	border-bottom: 1px solid #E6E6E6;
+	margin-top: 8px;
+}
+.payway label{
+            display: block;
+            padding: 15px 0;
+            border-bottom: 1px solid #E6E6E6;
+            padding-left: 15px;
+}
+.payway label:last-child{
+            border:none;
+}
+.payway  h6{
+	color: #B3B3B3;
+}
+/*底部确认*/
+.paywayfoot{
+	height: 46px;
+	width: 100%;
+	background: #666666;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+             overflow: hidden;
+}
+.paywayfoot .paywayoff a{
+	float: right;
+	width: 35%;
+	height: 46px;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	background: #666666;
+	font-size: 16px;
+}
+.paywayfoot .paywayon a{
+	float: right;
+	width: 65%;
+	height: 46px;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	background: #04BE02;
+	font-size: 16px;
+}
+.paywayfoot .paywayon a:active{
+	color: #BADCB1;
+	background:#039900;
+}
+.paywayfoot .paywayoff a:active{
+	color: #C1BFBF;
+	background:#4C4C4C;
+}
+/*确认取消页面*/
+/*取消订单*/
+.paywayover{
+            width: 100%;
+            text-align: center;
+            padding: 40% 10%;
+            height: 100%;
+}
+.paywayover h3{
+            font-size: 18px;
+            margin: 3% 0;
+}
+.paywayover p{
+	width: 100%;
+	text-align: center;
+	color: #888888;
+	margin-bottom: 20%;
+}
+.paywayover i{
+
+}
+
+/*下单成功订单详细状态页面*/
+/*顶部标题*/
+.payovertop{
+	padding: 10px 15px;
+	background: #fff;
+	border-bottom: 1px solid #E6E6E6;
+	overflow: hidden;
+	height: 50px;
+}
+.payovertop a{
+	float: right;
+	padding: 8px 10px;
+	background: #04BE02;
+	color: #fff;
+	border-radius: 5px;
+}
+.payovertop p{
+	float: left;
+	color: #4D4D4D;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+/*配送信息*/
+.payoverpass ul li{
+             display: block;
+             border-top: 1px dashed #E6E6E6;
+             height: 35px;
+             line-height: 35px;
+             overflow: hidden;
+}
+.payoverpass ul li p{
+	float: left;
+	width: 50%;
+}
+.payoverpass span{
+	color: #B3B3B3;
+	padding-left: 10px;
+}
+.payoverpass em{
+	text-align: right;
+	float: right;
+	width: 50%;
+	color: #B3B3B3;
+}
+.payoverpass li i{
+	text-align: right;
+	color: #ED1C24;
+	font-size: 14px;
+	font-weight: 600;
+	width: 100%;
+	display: block;
+}

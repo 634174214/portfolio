@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>选择收货地址</title>
+	<!-- 调用点餐内页样式 -->
+	<link rel="stylesheet" href="css/styleaddint.css" type="text/css">
+	<!-- 公用/重置 样式调用 -->
+	<link rel="stylesheet" href="css/public.css" type="text/css">
+	<!-- WEUI样式调用 -->
+	<link rel="stylesheet" href="css/weui.css" type="text/css">
+	<!-- ！信字库样式调用 改网站链接！ -->
+	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	
+</head>
+<body ontouchstart>
+<!-- 收货地址 -->
+<form method="post" action="#">
+	<table class="addtable fcdark f12">
+		<tbody>
+			<tr>
+
+				<!-- <td>
+				       	<div class="weui_cells_checkbox">
+				       	        <label class=" weui_check_label clear" for="s11">
+					       	            <div class="weui_cell_hd fl-l">
+							                <input type="radio" class="weui_check" name="checkbox1" id="s11" checked="checked">
+							                <i class="weui_icon_checked"></i>
+					       	            </div>
+				       	        </label>
+				       	</div>
+				</td> -->
+				<td>
+					<label  for="s11" onClick="window.location.href='下单页面（有地址）.html';">
+						<h5>于思诺<em>13688715423</em></h5>
+						<p>青岛市市南区南京路110号半岛都市报社0505青岛市市南区南京路110号半市市南区南京路110号半岛都市报社0505</p>
+					</label>
+				</td>
+				<td>
+					<a href="信息修改页面.html" class="weui_btn weui_btn_mini weui_btn_primary">更改</a>
+					<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">删除</a>
+				</td>
+			</tr>
+			<tr>
+				
+				<td>
+					<label  for="s12" onClick="window.location.href='下单页面（有地址）.html';">
+						<h5>于思诺<em>13688715423</em></h5>
+						<p>青岛市市南区南京路110号半岛都市报社0505</p>
+					</label>
+				</td>
+				<td>
+					<a href="信息修改页面.html" class="weui_btn weui_btn_mini weui_btn_primary">更改</a>
+					<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">删除</a>
+				</td>
+			</tr>
+			<tr>
+			
+				<td>
+					<label  for="s13" onClick="window.location.href='下单页面（有地址）.html';">
+						<h5>于思诺<em>13688715423</em></h5>
+						<p>青岛市市南区南京路110号半岛都市报社0505</p>
+					</label>
+				</td>
+				<td>
+					<a href="信息修改页面.html" class="weui_btn weui_btn_mini weui_btn_primary">更改</a>
+					<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">删除</a>
+				</td>
+			</tr>
+			<tr>
+			
+				<td>
+					<label  for="s14" onClick="window.location.href='下单页面（有地址）.html';">
+						<h5>于思诺<em>13688715423</em></h5>
+						<p>青岛市市南区南京路110号半岛都市报社0505</p>
+					</label>
+				</td>
+				<td>
+					<a href="信息修改页面.html" class="weui_btn weui_btn_mini weui_btn_primary">更改</a>
+					<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">删除</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+<!-- 收货地址 -->
+<!-- 新建收货地址 -->
+<div class="btn90 btn_fixed1" onClick="window.location.href='填写信息页面.html';">
+	+新建收货地址
+</div>
+<!-- 新建收货地址END -->
+
+<!-- 弹窗删除确认 -->
+<!-- <div class="weui_dialog_confirm" id="dialog1">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+              <strong class="weui_dialog_title">确认删除</strong>
+        </div>
+        <div class="weui_dialog_mid">确认删除此条地址么？</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog default" >取消</a>
+            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div> -->
+<!-- 弹窗删除确认END -->
+</body>
+</html>

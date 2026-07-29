@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>确认下单</title>
+	<!-- 调用点餐内页样式 -->
+	<link rel="stylesheet" href="css/stylepay.css" type="text/css">
+	<!-- 公用/重置 样式调用 -->
+	<link rel="stylesheet" href="css/public.css" type="text/css">
+	<!-- ！信字库样式调用 改网站链接！ -->
+	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	<!-- weui样式调用 -->
+	<link rel="stylesheet" href="css/weui.css" type="text/css">
+
+</head>
+<body ontouchstart>
+<!-- 订单号 金额 -->
+<header class="basictop">
+	<table class="biaoge f12 fcdark">
+		<tbody>
+			<tr>
+			         <td>订单号</td>
+			         <td>168977585224562</td>
+			</tr>
+			<tr>
+			         <td>支付金额</td>
+			         <td><em>1589.36</em>元</td>
+			</tr>
+		</tbody>
+	</table>
+</header>
+<!-- 订单号 金额END -->
+<!-- 支付方式选择 -->
+<div class="payway">
+    <div class="title"><p>支付方式</p></div>
+       <form method="post" action="#" class="payway">
+       	<div class="weui_cells_checkbox">
+       	        <label class=" weui_check_label clear" for="s11">
+	       	            <div class="weui_cell_hd fl-l">
+			                <input type="radio" class="weui_check" name="checkbox1" id="s11" checked="checked">
+			                <i class="weui_icon_checked"></i>
+	       	            </div>
+	       	            <div class="fl-l fcdark f12">
+	       	                <p>三统万福钱包</p>
+	       	                <h6>账户余额<em>769.36元</em></h6>
+	       	            </div>
+       	        </label>
+       	        <label class="weui_check_label clear" for="s12">
+	       	            <div class="weui_cell_hd fl-l">
+		       	                <input type="radio" name="checkbox1" class="weui_check" id="s12">
+		       	                <i class="weui_icon_checked"></i>
+	       	            </div>
+	       	            <div class="fl-l fcdark f12 ">
+	       	                <p>微信钱包</p>
+	       	            </div>
+       	        </label>
+       	</div>
+       </form>
+</div>
+<!-- 支付方式选择END-->
+
+<!-- 底部确认 -->
+<div class="paywayfoot">
+	<div class="paywayon"><a href="下单成功订单详细状态页面.html" class="paymoney" id="showDialog1">确认下单</a></div>
+	<div class="paywayoff"><a href="确认取消页面.html">取消订单</a></div>
+</div>
+<!-- 底部确认END -->
+
+<!-- 弹窗确认 -->
+<!-- <div class="weui_dialog_confirm" id="dialog1">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+              <strong class="weui_dialog_title">确认支付</strong>
+        </div>
+        <div class="weui_dialog_mid">确认使用三统万福钱包支付？</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog default" >取消</a>
+            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div> -->
+<!-- 弹窗确认END -->
+<!-- 弹窗取消订单 -->
+<!-- <div class="weui_dialog_confirm" id="dialog1">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+              <strong class="weui_dialog_title">取消订单</strong>
+        </div>
+        <div class="weui_dialog_mid">确认取消该订单？</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog default" >取消</a>
+            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div> -->
+<!-- 弹窗取消订单END -->
+<!-- 弹窗完成 -->
+<!-- <div class="weui_dialog_alert" id="dialog2">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">支付完成</strong></div>
+        <div class="weui_dialog_bd">您已完成支付</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div> -->
+<!-- 弹窗完成END -->
+<!-- 弹窗余额不足 -->
+<!-- <div class="weui_dialog_alert" id="dialog2">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">钱包余额不足</strong></div>
+        <div class="weui_dialog_bd">请使用其他支付方式或充值</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div> -->
+<!-- 弹窗余额不足END -->
+</body>
+</html>

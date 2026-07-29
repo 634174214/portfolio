@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>商品管理</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+             <!-- 信网字体库 -->
+             <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
+	<!-- 资金 样式 -->
+	<link rel="stylesheet" href="CSS/styledfs.css" type="text/css">
+	<!-- WEUI样式 -->
+             <link rel="stylesheet" href="CSS/weui.css" type="text/css">
+             <!-- 鸿健原图片上传模块CSS -->
+             <link rel="stylesheet" href="CSS/webuploader.css" type="text/css">
+
+</head>
+<body ontouchstart>
+<!-- 副标题 -->
+<header class="top fcwhite f14">
+           添加新商品
+</header>
+<!-- 副标题END -->
+<!-- 商品信息 -->
+<form action="#" method="post"  class="basicmid padd_lr">
+        <table class="formnor fcdark f16">
+            <tbody>
+                <tr>
+                    <td>菜品名称：</td>
+                    <td>
+                        <input type="text" placeholder="请输入商品名称" name="mingc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>菜品价格：</td>
+                    <td>
+                        <input type="number" placeholder="请输入菜品价格" name="price">
+                        <em>元</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>打 包 费：</td>
+                    <td>
+                        <input type="number" placeholder="请打包费价格" name="mingc">
+                        <em>元</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>排 序 号：</td>
+                    <td>
+                        <input type="number" placeholder="0-9数字越小越靠前" name="paixu">
+                    </td>
+                </tr>
+                <tr>
+                    <td>分 类 名：</td>
+                    <td>
+                           <select name="fenlei" id="#">
+                                <option value ="请选择您菜品的分类"  selected = selected>请选择您菜品的分类</option>
+                                <option value ="拉面系列">拉面系列</option>
+                                <option value="烧烤系列">烧烤系列</option>
+                                <option value="川菜系列">川菜系列</option>
+                                <option value="川菜系列">火锅系列</option>
+                           </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</form>
+<!-- 商品信息END -->
+<!-- 积分开关 -->
+<div class="basicmid padd_lr marg_top clear">
+         <table class="on-off fcdark f16">
+             <tbody>
+                 <tr>
+                     <td>下单送积分</td>
+                     <td><input class="weui_switch" type="checkbox" checked></td>
+                 </tr>
+                 <tr>
+                     <td>赠送积分：</td>
+                     <td><input type="number" placeholder="请输入购买此菜品所获得的积分" name="paixu"></td>
+                 </tr>
+             </tbody>
+         </table>
+</div>
+<!-- 积分开关END -->
+<!-- 大图片上传 完全不会就写了个样子 调用鸿健上传模块 -->
+<div class="basicmid padd_lr marg_top">
+       <p class="fcdark f16 padd_tb">产品图片上传：</p>
+       <div class="shopphoto">
+                 <span class="xq-jia-x"></span>
+       </div>
+       <!-- 这是鸿健原来的 -->
+       <!-- <div class="clear">
+            <div class="parentFileBox">
+                <ul class="fileBoxUl">
+                    <li id="filePicker" class="filePicker">+</li>       
+                </ul>
+            </div>
+                <div class="filePickerLoad"><span class="xq-loading2"></span></div>
+        </div> -->
+        <!-- 这是鸿健原来的 -->
+</div>
+<!-- 大图片上传END -->
+<!-- 百度编辑器 -->
+<div class="marg_bigb marg_top border_ts">
+     <div class="title padd_tb padd_lr fclight f16">菜品简介</div>
+    <script type="text/plain" id="myEditor">
+
+    </script>
+</div>
+<!-- 百度编辑器END -->
+<!-- 确认添加 -->
+<div class="waresure f17 pos_fixed clear pos_z">
+               <a href="#" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'">取消</a>
+               <a href="#" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">确认添加</a>
+</div>
+<!-- 确认添加END -->
+<!-- 弹窗-确认添加 -->
+<div id="light" class="white_content">
+            <div class="qtext">
+                <strong>提示</strong>
+                <div class="qask">
+                       菜品信息编辑成功
+                </div>
+            </div>
+            <div class="qone" onClick="window.location.href='有商品的商品管理首页.html';">确定
+             </div>
+</div> 
+<div id="fade" class="black_overlay"></div> 
+<!-- 弹窗-确认添加END -->
+<!-- 弹窗删除 -->
+<div id="light2" class="white_content">
+            <div class="qtext">
+                <strong>提示</strong>
+                <div class="qask">
+                       确认取消编辑商品？
+                </div>
+            </div>
+            <div>
+                   <a href="javascript:void(0)" onClick="window.location.href='有商品的商品管理首页.html';">确认</a>
+                  <a href="javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'">继续编辑</a>
+             </div>
+</div> 
+<div id="fade2" class="black_overlay"></div> 
+<!-- 弹窗页面END -->
+
+<!-- UEeditor调用 -->
+<script type="text/javascript" charset="utf-8" src="Xeditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="Xeditor/ueditor.all.min.js"></script>
+<!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </script>
+
+  <script type="text/javascript">
+        UE.getEditor('myEditor',{
+            //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+            toolbars:[['Undo', 'Redo','Bold','test','fontsize','forecolor','simpleupload']],
+            //focus时自动清空初始化时的内容
+            autoClearinitialContent:true,
+            //关闭字数统计
+            wordCount:false,
+            //关闭elementPath
+            elementPathEnabled:false,
+            //默认的编辑区域高度
+            initialFrameHeight:300
+            //更多其他参数，请参考ueditor.config.js中的配置项
+        })
+    </script>
+<script type="text/plain" id="myEditor">
+
+</script>
+<!-- UEeditor调用 -->
+</body>
+</html>

@@ -1,0 +1,211 @@
+
+.filePickerLoad{
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 40%;
+	display: none;
+}
+.filePickerLoad span{
+ 	animation: spin 800ms infinite linear;
+}
+@keyframes spin {
+  0%   { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+
+.webuploader-container {position: relative;margin: 10px 20px;}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	cursor: pointer;
+	padding: 10px 15px;
+	color: #999;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+	border: 1px dashed #999;
+}
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+
+.parentFileBox {
+	height:auto;
+	overflow:hidden;
+	position:relative;
+}
+.parentFileBox>.fileBoxUl {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	padding-bottom:5px;
+	margin: auto;
+	
+}
+.parentFileBox>.fileBoxUl>li {
+	width:64px;
+	height:64px;
+	position:relative;
+	margin: 5px;
+	margin-bottom: 10px;
+}
+
+.parentFileBox>.fileBoxUl>li:nth-child(odd){float: left;}
+.parentFileBox>.fileBoxUl>li:nth-child(even){float:left;}
+
+.parentFileBox>.fileBoxUl>li>.viewThumb {
+	width: 64px;
+	height: 64px;
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+}
+.parentFileBox>.fileBoxUl>li>.viewThumb>img {
+	width:100%;
+	height:100%;
+}
+
+.parentFileBox>.fileBoxUl>li>.diyCancel,.parentFileBox>.fileBoxUl>li>.diySuccess {
+	position:absolute;
+	width:32px;
+	height:32px;
+	top:2px;
+	right:2px;
+	cursor:pointer;
+	display:none;
+}
+.parentFileBox>.fileBoxUl>li>.diyClose{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	color: #fff;
+	z-index: 999;
+	font-size: 10px;
+	background: #000;
+	padding: 3px 4px;
+	border-radius: 50%;
+}
+.parentFileBox>.fileBoxUl>li>.diyCancel {
+	background:url(../images/x_alt.png) no-repeat;
+}
+.parentFileBox>.fileBoxUl>li>.diySuccess {
+	background:url(../images/check_alt.png) no-repeat;
+	cursor:default;
+}
+.parentFileBox>.fileBoxUl>li>.diyFileName {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+	display:none;
+	background:url(../images/bgblack.png);
+}
+.parentFileBox>.fileBoxUl>li>.diyBar {
+	top:0;
+	left:0;
+	position: absolute;
+	width: 170px;
+	height: 150px;
+	line-height:150px;
+	background:url(../images/bgblack.png);
+	display:none;
+}
+.parentFileBox>.fileBoxUl>li>.diyBar>.diyProgressText {
+	font-size:14px;
+	text-align:center;
+	color:#FFF;
+	position:relative;
+	z-index:99;
+}
+.parentFileBox>.fileBoxUl>li>.diyBar>.diyProgress {
+	position:absolute;
+	left:0;
+	top:42%;
+	height:24px;
+	width:100%;
+	background-color:#09F;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity:0.7;
+	z-index:97;
+}
+.parentFileBox>.diyButton {
+	width:100%;
+	margin-top:5px;
+	margin-bottom:5px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+}
+.parentFileBox>.diyButton>a {
+	padding:5px 10px 5px 10px;
+	background-color:#09C;
+	color:#FFF;
+	font-size:12px;
+	text-decoration:none;
+	border-radius:3px;
+}
+.parentFileBox>.diyButton>a:hover {
+	background-color:#0CC;
+	color:#F30;
+}
+/* .parentFileBox>.fileBoxUl>li:hover {
+	-moz-box-shadow: 3px 3px 4px #FF0;
+	-webkit-box-shadow: 3px 3px 4px #FF0;
+	box-shadow: 3px 3px 4px #FF0;
+} */
+.parentFileBox>.fileBoxUl>.diyUploadHover:hover .diyCancel {
+	display:block;
+}
+.parentFileBox>.fileBoxUl>li:hover .diyFileName {padding: 10px; background: #ccc;}
+.avi_diy_bg,.txt_diy_bg,.doc_diy_bg,.zip_diy_bg,.csv_diy_bg,.xls_diy_bg,.mp3_diy_bg,.pdf_diy_bg,.rar_diy_bg {
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.avi_diy_bg {
+	background-image:url(../images/filebg/avi.png);
+}
+.txt_diy_bg {
+	background-image:url(../images/filebg/txt.png);
+}
+.doc_diy_bg {
+	background-image:url(../images/filebg/doc.png);
+}
+.zip_diy_bg {
+	background-image:url(../images/filebg/zip.png);
+}
+.csv_diy_bg {
+	background-image:url(../images/filebg/csv.png);
+}
+.xls_diy_bg {
+	background-image:url(../images/filebg/xls.png);
+}
+.mp3_diy_bg {
+	background-image:url(../images/filebg/mp3.png);
+}
+.pdf_diy_bg {
+	background-image:url(../images/filebg/pdf.png);
+}
+.rar_diy_bg {
+	background-image:url(../images/filebg/rar.png);
+}

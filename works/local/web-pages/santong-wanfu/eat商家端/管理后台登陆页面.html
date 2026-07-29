@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>三统万福商户登陆</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+	<!-- 资金/店铺/优惠/登陆 样式 -->
+	<link rel="stylesheet" href="CSS/stylezdyd.css" type="text/css">
+	<link rel="stylesheet" href="../eat商家端/CSS/media.css">
+
+</head>
+<script language=JavaScript>
+// //判断用户是否输入用户名和密码
+// function InputCheck(LoginForm)
+// {
+//   if (LoginForm.uname.value == "")
+//   {
+//     alert("请输入用户名!");
+//     LoginForm.uname.focus();
+//     return (false);
+//   }
+//   if (LoginForm.passwd.value == "")
+//   {
+//     alert("请输入密码!");
+//     LoginForm.passwd.focus();
+//     return (false);
+//   }
+// }
+</script>
+<style type="text/css">
+	body{
+		background: #FF5F5A;
+		max-width: 640px;
+	}
+}
+</style>
+<body ontouchstart>
+<!-- 登陆框 -->
+<div class="bgred">
+	<div class="login padd_lr">
+	    <div class="padd_tb border_bs">
+	    	<h5>登录</h5>
+	    	<p>三统万福美食馆</p>
+	    </div>
+		<form name="LoginForm" action="#" method="post" onSubmit="return InputCheck(this)">
+			<input type="hidden" name="ac" value="login">
+			<input type="text" placeholder="帐号" name="uname" autocomplete="on">
+			<input type="password" placeholder="密码" name="passwd">
+			<input type="submit" value="登录" name="sub">
+			<a href="#">微信登录</a>
+		</form>
+	</div>
+
+</div>
+<!-- 登陆框END -->
+</body>
+</html>

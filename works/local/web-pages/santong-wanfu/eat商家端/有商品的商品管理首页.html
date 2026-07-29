@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>商品管理</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+             <!-- 信网字体库 -->
+             <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
+	<!-- 资金 样式 -->
+	<link rel="stylesheet" href="CSS/styledfs.css" type="text/css">
+	<!-- WEUI样式 -->
+             <link rel="stylesheet" href="CSS/weui.css" type="text/css">
+
+</head>
+<body ontouchstart>
+<!-- 添加新分类 -->
+<div class="btnnew f17" onClick="window.location.href='添加商品信息页面.html';">
+         添加新商品
+</div>
+<!-- 添加新分类END -->
+<!-- 商品编辑 -->
+<div class="basicmid padd_lr marg_bigb">
+           <table class="wareshow fcdark">
+               <tbody>
+                   <tr>
+                       <td>
+                           <div class="fl-l allimg">
+                               <img src="images/113.jpg">
+                           </div>
+                           <div class="f14 warejia">
+                               <p>正宗新疆兰州拉面</p>
+                               <p>￥578.00</p>
+                               <p>打包费2元</p>
+                           </div>
+                           <div class="clear wareclass">
+                                 <span>分类：烧烤系列</span>
+                                 <em>创建时间：2016-06-23</em>
+                           </div>
+                       </td>
+                      <td>
+                          <div class="btnedit fl-l f16" onClick="window.location.href='添加商品信息页面.html';">修改</div>
+                          <div class="btndel fl-r f16" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">删除</div>
+                      </td>
+                   </tr>
+
+                   <tr>
+                       <td>
+                           <div class="fl-l allimg">
+                               <img src="images/113.jpg">
+                           </div>
+                           <div class="f14 warejia">
+                               <p>正宗新疆兰州拉面</p>
+                               <p>￥578.00</p>
+                               <p>打包费2元</p>
+                           </div>
+                           <div class="clear wareclass">
+                                 <span>分类：拉面系列</span>
+                                 <em>创建时间：2016-06-23</em>
+                           </div>
+                       </td>
+                      <td>
+                          <div class="btnedit fl-l f16">修改</div>
+                          <div class="btndel fl-r f16" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">删除</div>
+                      </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           <div class="fl-l allimg">
+                               <img src="images/113.jpg">
+                           </div>
+                           <div class="f14 warejia">
+                               <p>正宗新疆兰州拉啊啊啊啊啊啊面</p>
+                               <p>￥578.00</p>
+                               <p>打包费2元</p>
+                           </div>
+                           <div class="clear wareclass">
+                                 <span>分类：炒面系列</span>
+                                 <em>创建时间：2016-06-23</em>
+                           </div>
+                       </td>
+                      <td>
+                          <div class="btnedit fl-l f16">修改</div>
+                          <div class="btndel fl-r f16" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">删除</div>
+                      </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           <div class="fl-l allimg">
+                               <img src="images/113.jpg">
+                           </div>
+                           <div class="f14 warejia">
+                               <p>正宗新疆兰州拉面</p>
+                               <p>￥578.00</p>
+                               <p>打包费2元</p>
+                           </div>
+                           <div class="clear wareclass">
+                                 <span>分类：厕所系列</span>
+                                 <em>创建时间：2016-06-23</em>
+                           </div>
+                       </td>
+                      <td>
+                          <div class="btnedit fl-l f16">修改</div>
+                          <div class="btndel fl-r f16" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">删除</div>
+                      </td>
+                   </tr>
+               </tbody>
+           </table>
+</div>
+<!-- 商品编辑END -->
+<!-- 返回首页 -->
+<div class="btnback f17 fcwhite" onClick="window.location.href='总店管理后台页面.html';">
+        返回首页
+</div>
+<!-- 返回首页END -->
+
+<!-- 弹窗删除 -->
+<div id="light" class="white_content">
+            <div class="qtext">
+                <strong>确认删除</strong>
+                <div class="qask">
+                       确认删除此分类？
+                </div>
+            </div>
+            <div>
+                   <a href="javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">取消</a>
+                  <a href="javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">确定</a>
+             </div>
+</div> 
+<div id="fade" class="black_overlay"></div> 
+<!-- 弹窗页面END -->
+</body>
+</html>

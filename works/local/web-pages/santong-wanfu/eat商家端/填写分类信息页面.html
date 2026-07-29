@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>分类管理</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+      <!-- 信网字体库 -->
+      <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
+	<!-- 资金/店铺/优惠/登陆 样式 -->
+	<link rel="stylesheet" href="CSS/stylezdyd.css" type="text/css">
+       <!-- WEUI样式 -->
+       <link rel="stylesheet" href="CSS/weui.css" type="text/css">
+	
+</head>
+<body ontouchstart>
+<!-- 添加新分类 -->
+<div class="btnnewdis f17">
+         添加新分类
+</div>
+<!-- 添加新分类END -->
+<!-- 添加表单 -->
+ <div class="weui_cells weui_cells_form border_ts border_bs">
+           <div class="weui_cell">
+                   <div class="weui_cell_hd">
+                        <label for="" class="weui_label fcdark">分类</label>
+                   </div>
+                   <div class="weui_cell_bd weui_cell_primary">
+                         <input class="weui_input" type="text" value="" placeholder="请输入一个新分类">
+                   </div>
+                   <div class="weui_cell_ft">
+                         <i class="weui_icon_warn"></i>
+                   </div>
+           </div>
+           <div class="weui_cell">
+                   <div class="weui_cell_hd">
+                         <label for="" class="weui_label fcdark">排序</label>
+                   </div>
+                   <div class="weui_cell_bd weui_cell_primary">
+                         <input class="weui_input" type="number" pattern="[0-9]*" value="weui input error" placeholder="数字越小越靠前">
+                   </div>
+                   <div class="weui_cell_ft">
+                         <i class="weui_icon_warn"></i>
+                   </div>
+         </div>
+         <div class="clear classifyadd">
+                  <div class="btnoff fl-l" onClick="window.location.href='有分类的分类管理页面.html';">取消</div>
+                  <div class="btnsure fl-r" onClick="window.location.href='信息填写不完整提示页面.html';">确定</div>
+         </div>
+ </div>
+<!-- 添加表单END -->
+<!-- 分类详情 -->
+<div class="basicmid padd_lr marg_top marg_bigb">
+           <table class="classify f17 fcdark">
+               <tbody>
+                   <tr>
+                       <td>牛排系列</td>
+                      <td>
+                          <div class="btnetddis fl-l">修改</div>
+                          <div class="btnetddis fl-r">删除</div>
+                      </td>
+                   </tr>
+                   <tr>
+                       <td>新疆最最最最最最最牛逼的系列</td>
+                       <td>
+                               <div class="btnetddis fl-l">修改</div>
+                               <div class="btnetddis fl-r">删除</div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>炒面系列</td>
+                       <td>
+                               <div class="btnetddis fl-l">修改</div>
+                               <div class="btnetddis fl-r">删除</div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>其他</td>
+                       <td>
+                               <div class="btnetddis fl-l">修改</div>
+                               <div class="btnetddis fl-r">删除</div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>其他</td>
+                       <td>
+                               <div class="btnetddis fl-l">修改</div>
+                               <div class="btnetddis fl-r">删除</div>
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+</div>
+<!-- 分类详情END -->
+<!-- 返回首页 -->
+<div class="btnback f17 fcwhite">
+        返回首页
+</div>
+<!-- 返回首页END -->
+
+<!-- 弹窗页面 -->
+<div id="light" class="white_content">
+            <div class="qtext">
+                <strong>提示</strong>
+                <div class="qask">
+                       信息保存成功
+                </div>
+            </div>
+            <div class="qone" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">确定
+             </div>
+</div> 
+<div id="fade" class="black_overlay"></div> 
+<!-- 弹窗页面END -->
+</body>
+</html>

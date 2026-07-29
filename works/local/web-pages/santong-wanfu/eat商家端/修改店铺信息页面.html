@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>店铺管理</title>
+	<!-- 重置/公用样式 -->
+	<link rel="stylesheet" href="CSS/public.css" type="text/css">
+             <!-- 信网字体库 -->
+             <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
+	<!-- 资金 样式 -->
+	<link rel="stylesheet" href="CSS/styledfs.css" type="text/css">
+	<!-- WEUI样式 -->
+             <link rel="stylesheet" href="CSS/weui.css" type="text/css">
+             <!-- 上传样式引用 -->
+             <link rel="stylesheet" href="CSS/webuploader.css" type="text/css">
+
+             <!-- textarea超出高度自适应JS -->
+                <script type="text/javascript"> 
+                        // 最小高度 
+                        var minHeight = 60; 
+                        // 最大高度，超过则出现滚动条 
+                        var maxHeight = 100; 
+                        function ResizeTextarea(){ 
+                        var t = document.getElementById('txtContent'); 
+                        h = t.scrollHeight; 
+                        h = h > minHeight ? h : minHeight; 
+                        h = h > maxHeight ? maxHeight : h; 
+                        t.style.height = h + "px"; 
+                        } 
+                </script> 
+    
+
+
+</head>
+<body ontouchstart>
+<!-- 顶部蓝灰 -->
+<header class="top fcwhite"> 店铺信息管理</header>
+<!-- 顶部蓝灰END -->
+<!-- 店铺头像 -->
+<div class="title border_bs clear shophead padd_lr">
+        <ul>
+            <li>店铺头像</li>
+            <li>
+                <div class="weui_uploader_input_wrp">
+                            <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="">
+                </div>
+            </li>
+        </ul>
+        <div class="headsay">建议上传图片尺寸 290X260 px</div>
+</div>
+<!-- 店铺头像END -->
+<!-- 店铺信息 -->
+<form action="#" method="post"  class="basicmid marg_top padd_lr">
+        <table class="forminfo fcdark f16">
+            <tbody>
+                <tr>
+                    <td>店铺名称：</td>
+                    <td>
+                        <input type="text" placeholder="请输入店铺名称" name="mingc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>联系电话：</td>
+                    <td>
+                        <input type="number" placeholder="请输入店铺名称" name="mingc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>开始营业：</td>
+                    <td>
+                        <input type="time" placeholder="请输入店铺名称" name="mingc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>打烊时间：</td>
+                    <td>
+                        <input type="time" placeholder="请输入店铺名称" name="mingc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>商家地址：</td>
+                    <td>
+                         <textarea id="txtContent" rows="1" onpropertychange="ResizeTextarea()" oninput="ResizeTextarea()" onkeyup="ResizeTextarea()" placeholder="请输入您店铺地址"></textarea>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</form>
+<!-- 店铺信息END -->
+<!-- 店铺相册 完全不会就写了个样子 调用鸿健上传模块 -->
+<div class="basicmid padd_lr marg_top">
+       <p class="fcdark f16 padd_tb">店铺相册：</p>
+       <div class="shopphoto">
+                 <span class="xq-jia-x"></span>
+       </div>
+       <!-- 这是鸿健原来的 -->
+       <!-- <div class="clear">
+            <div class="parentFileBox">
+                <ul class="fileBoxUl">
+                    <li id="filePicker" class="filePicker">+</li>       
+                </ul>
+            </div>
+                <div class="filePickerLoad"><span class="xq-loading2"></span></div>
+        </div> -->
+        <!-- 这是鸿健原来的 -->
+        <!-- 图片上传 end -->
+</div>
+<!-- 店铺相册END -->
+<!-- 店铺简介 -->
+<div class="title padd_lr padd_tb marg_top f16 fclight">
+           店铺简介
+</div>
+<!-- 店铺简介END -->
+<!-- 百度编辑器 -->
+<div class="marg_bigbb">
+    <script type="text/plain" id="myEditor">
+
+    </script>
+</div>
+
+<!-- 百度编辑器END -->
+<!-- 保存 -->
+<div class="save pos_fixed pos_z">
+        <div class="btnsave f17 btnmargno" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">保存</div>
+</div>
+<!-- 保存END -->
+
+
+<!-- 鸿健上传模块JS -->
+<script type="text/javascript">
+    $(function(){
+    $('#filePicker').diyUpload({
+        //type:'POST';
+        url:'/fileupload.php',
+        //dataType:'json';
+        fileNumLimit:20, //图片个数限制
+        fileSizeLimit:10000 * 1024, //文件总大小限制
+        fileSingleSizeLimit:10000 * 1024, //单张图片大小限制。10M
+
+        success:function( data ) {
+            movePicker();
+        },
+        error:function( err ) {
+            console.info( err );    
+        }
+    });
+    function movePicker(){
+        $(".diyStart").text("上传成功");
+        $(".filePickerLoad").hide();
+    }
+
+})
+</script>
+
+<!-- UEeditor调用 -->
+<script type="text/javascript" charset="utf-8" src="Xeditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="Xeditor/ueditor.all.min.js"></script>
+<!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </script>
+
+  <script type="text/javascript">
+        UE.getEditor('myEditor',{
+            //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+            toolbars:[['Undo', 'Redo','Bold','test','fontsize','forecolor','simpleupload']],
+            //focus时自动清空初始化时的内容
+            autoClearinitialContent:true,
+            //关闭字数统计
+            wordCount:false,
+            //关闭elementPath
+            elementPathEnabled:false,
+            //默认的编辑区域高度
+            initialFrameHeight:300
+            //更多其他参数，请参考ueditor.config.js中的配置项
+        })
+    </script>
+<script type="text/plain" id="myEditor">
+
+</script>
+<!-- UEeditor调用 -->
+
+<!-- 弹窗页面 -->
+<div id="light" class="white_content">
+            <div class="qtext">
+                <strong>提示</strong>
+                <div class="qask">
+                       店铺信息编辑成功
+                </div>
+            </div>
+            <div class="qone" onClick="window.location.href='店铺管理页面.html';">确定
+             </div>
+</div> 
+<div id="fade" class="black_overlay"></div> 
+<!-- 弹窗页面END -->
+</body>
+</html>

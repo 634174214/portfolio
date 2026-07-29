@@ -1,0 +1,12 @@
+@media(min-width: 641px){
+	body{
+		background: #FF5F5A;
+		max-width: 640px;
+	}
+}
+@media(max-width: 640px){
+	body{
+		background: #FF5F5A;
+		max-width: 640px;
+	}
+}

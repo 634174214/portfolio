@@ -1,0 +1,10 @@
+1、填写信息页面
+HTML-98行
+警示I标签 置入textarae 块上的标题块时 不显示 
+原因 weui样式中设置了
+.weui_cells_form .weui_icon_warn {
+    display: none;
+}
+此处暂时在 i标签上加style 将display：inline-block 显示样子
+
+问题已解决：在<div class="weui_cell">加 weui_cell_warn 即可
