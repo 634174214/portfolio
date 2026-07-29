@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>嫦娥游戏跳转</title>
+    <style type="text/css">
+    body{background: #f44336;}
+    *{color: #fff;padding: 0;margin: 0;}
+        span, em{color: #ffeb3b;font-size: 59px;font-weight: 700;padding-right: 10px;font-style: normal;}
+        body{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            justify-content: center;
+        }
+        .box{
+            width: 90%;
+        }
+        .box p{
+            text-align: center;
+        }
+        #jiang{font-size: 48px;}
+        h1{
+            text-align: center;
+            border-top: 1px dashed rgba(0,0,0,0.4);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        .gift{
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .gift cite{
+            display: block;
+            color: #666;
+            text-align: center;
+            font-style: normal;
+        }
+        .gift .yjw{
+            color: #4d4d4d;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        .gift p{
+            color:#aaa;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>恭喜您，您得分是: <br><span id="score"></span>分</p>
+        <h1>
+           特此为您颁发
+        </h1>
+        <p><em id="jiang"></em></p>
+        <div class="gift">
+            <cite>您获得的奖品是</cite>
+            <p class="yjw" id="yjw"></p>
+            <p>请尽快联系信网进行领取</p>
+        </div>
+    </div>
+
+<script src="js/base.js"></script>
+<script type="text/javascript">
+    var host = window.location.href.split('jumped')[0];
+    var host_index = host + 'index.html';
+    console.log(document.referrer);
+    // 判断上一页来源
+    if (document.referrer === host ||
+        document.referrer === host_index
+    ) {
+        var query = getQueryArgs();
+        var levelText = '';
+        var jiangText = '';
+        switch(parseInt(query.level)) {
+            case 4:
+                levelText = '特等奖';
+                jiangText = '德纳影城电影票兑换券2张';
+                break;
+            case 3:
+                levelText = '优秀奖';
+                jiangText = '获得毛绒玩偶1个';
+                break;
+            case 2:
+                levelText = '鼓励奖';
+                jiangText = '信网新闻体验会员1周';
+                break;
+            case 1:
+                levelText = '安慰奖';
+                jiangText = '鲜蔬打折券一张';
+                break;
+            default:
+                levelText = '安慰奖';
+                jiangText = '鲜蔬打折券一张';
+                break;
+        }
+        $('#jiang').text(levelText);
+        $('#yjw').text(jiangText);
+        $('#score').text(query.score);
+    } else {
+        var sure = window.confirm('抱歉，请先参与游戏再来领取礼品');
+        if (sure) {
+            window.location.replace('index.html');
+        } else {
+            $('body').html('<a href="index.html">如果页面没自动跳转，请点这里</a>');
+
+        }
+    }
+
+    function getQueryArgs(){
+        var qs = (location.search.length > 0 ? location.search.substr(1) : ''),
+            //保存每一项
+            args = {},
+            //得到每一项
+            items = qs.length ? qs.split('&') : [],
+            item = null,
+            name = null,
+            value = null,
+            i = 0,
+            len = items.length;
+
+            for(i = 0;i<len ;i++){
+                item = items[i].split('='),
+                name = decodeURIComponent(item[0])
+                value = decodeURIComponent(item[1])
+                if(name.length){
+                    args[name] = value;
+                }
+            }
+            return args;
+    }
+</script>
+</body>
+</html>

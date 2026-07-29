@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="Description" content="来筑梦新区秒变亿万富翁吧，还等什么？快来赚钱！| 信网小游戏" />
+    <meta name="Keywords" content="来筑梦新区秒变亿万富翁吧，还等什么？快来赚钱！信网小游戏" />
+    <title>来筑梦新区秒变亿万富翁吧，还等什么？快来赚钱！</title>
+    <link rel="shortcut icon" href="img/city-s.png">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">');
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">');
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">');
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            // console.log(hwr * _width + "px");
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300);
+            }, false);
+            resize();
+        })();
+    </script>
+    <link rel="stylesheet" href="css/index.t.css?T=3" charset="utf-8">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+</head>
+
+<body>
+
+    <div class="pc-show">
+        <style type="text/css">
+            .pc-show{position:fixed;left:0;right:0;top:0;bottom:0;background:#f2f2f2;z-index:999}.pc-show-inner{position:absolute;width:400px;left:0;right:0;top:0;bottom:0;margin:15% auto 0}.pc-show-qr{display:block;margin:0 auto 10px}.pc-show p{text-align:center;font-weight:700;line-height:24px}
+        </style>
+        <div class="pc-show-inner">
+            <img src="http://api.tech.qdxin.cn/qrxin.php?data=http://mp.qdxin.cn/public/xwqmt/live/html/255.html" class="pc-show-qr" width="160" height="160">
+            <p>抱歉，当前小游戏仅支持在手机上玩耍</p>
+            <p>快快扫码尝试一下吧！</p>
+        </div>
+    </div>
+
+    <!-- 游戏 -->
+    <div class="container game" id="game">
+        <!-- start -->
+        <div class="section start">
+            <img src="img/logo.png" class="abs logo">
+            <img src="img/start-title.png" class="abs title">
+            <img src="img/small-title.png" class="abs small-title">
+            <img src="img/city.png" class="abs cities">
+
+            <a href="javascript:;" class="abs btn rule-btn"></a>
+            <a href="javascript:;" class="abs btn start-btn"></a>
+
+        </div>
+        <!-- start end -->
+        <i class="wenyue" style="opacity: 0;width: 0;height: 0">四</i>
+        <!-- 规则-->
+        <div class="section rule">
+            <div class="abs content">
+                <div class="abs rule-title">
+                    <img src="img/rule-title.png" class="title-img">
+                </div>
+                <div class="abs rule-txt">
+                    都说花钱容易挣钱难，来到青岛市高新区，赚钱变得特别容易，赶紧来试试在3分钟内赚到10个亿吧！通过来高新区投资四新经济，了解高新区招商引资的优惠政策和未来可能获得的收益，秒变亿万富翁，还等什么？快来赚钱！
+                </div>
+                <a href="javascript:;" class="abs close"></a>
+            </div>
+        </div>
+        <!-- 规则end-->
+
+        <div class="section game-box">
+            <p class="abs money">您的账户余额：
+                <i>0</i>亿</p>
+            <p class="abs timer">倒计时
+                <i class="min"></i>:
+                <i class="second"></i>
+            </p>
+            <div class="abs content">
+                <img src="img/game-title.png" class="game-title">
+
+                <div class="chose-list">
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                        </div>
+                    </div>
+
+                    <a href="javascript:;" class="abs check"></a>
+                    <a href="javascript:;" class="abs prev"></a>
+                    <a href="javascript:;" class="abs next"></a>
+                </div>
+            </div>
+
+            <div class="abs intro">
+                <div class="abs intro-title">
+                    四新企业
+                </div>
+                <div class="abs intro-txt">
+                    市经开区各项顶层设计加快推进，三期15平方公里基础设施实现“七通一平”，江淮新能源汽车产销量居全国前列，富士康五轴车铣复合加工机批量生产并填补了国内空白，赛富环新电池包项目建成投产，跃迪新能源汽车产业园开工建设。安庆市已出台《持新能源汽车产业发展和推广应用若干政策》，全力支持新能源汽车产业发展。
+                </div>
+
+                <div class="abs btns">
+                    <a href="javascript:;" class="cancel">换一个</a>
+                    <a href="javascript:;" class="buy">投资</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 游戏结果-->
+        <div class="section result">
+            <div class="abs full light"></div>
+            <div class="abs content">
+                <div class="success-title">
+                    <img src="img/success-title.png">
+                </div>
+                <div class="res-desc1">
+                    <p class="res-desc">沉着冷静，目光如炬，</p>
+                    <p class="res-desc">赚钱就是如此潇洒</p>
+                    <p class="res-desc">你就是名副其实的“投资奇才”！</p>
+                    <p class="res-desc">赶紧来筑梦新区当“亿万富翁”吧！</p>
+                </div>
+
+                <div class="res-desc2">
+                    <p class="res-desc">赚钱是个技术活</p>
+                    <p class="res-desc">很遗憾，这个技术你还未成熟掌握</p>
+                    <p class="res-desc">好的投资才是创造财富</p>
+                    <p class="res-desc">赶紧来筑梦新区实践一下吧！</p>
+                </div>
+                <div class="fly"></div>
+
+                <p class="res-tips">“善筑未来，携梦遂行”！</p>
+                <p class="res-tips">锐意创新的安庆市筑梦新区欢迎您！</p>
+                <a href="javascript:;" class="check-btn">点击查看更多</a>
+            </div>
+        </div>
+        <!-- 游戏结果 end -->
+    </div>
+
+    <!-- 政策 -->
+    <div class="policy">
+        <div class="content">
+            <img src="img/code-img.png" class="code-img">
+            <p class="code-tips">识别二维码，关注“青岛高新区”公众号
+                <br>了解实时动态</p>
+            <p class="more-title">更多激励政策请点击：</p>
+
+            <a class="more-link" href="https://mp.weixin.qq.com/s?__biz=MzUzODA4NDM0OA==&mid=100000004&idx=1&sn=bf463f9cb0db77dbd24402976a2c38f4&chksm=7adc57974dabde8105f4c79eabfb411727ebdbf831c06e9e6b16b6c8f35bd1dd8974c079aa20&mpshare=1&scene=1&srcid=1023EeTcMaCt2fB2b1YpCso6#rd">人才引进激励办法</a>
+            <a class="more-link" href="https://mp.weixin.qq.com/s?__biz=MzUzODA4NDM0OA==&mid=100000005&idx=1&sn=e51b3b08a19157222b7103baf15de3ca&chksm=7adc57964dabde8019d99649218b85554889ccf827e8132417d23bdcd800e5838cf5d90f229e&mpshare=1&scene=1&srcid=1023C1qM3HH5WnqN8rHNX1Eu#rd">科研平台及创新创业团队引进激励办法</a>
+            <a class="more-link" href="https://mp.weixin.qq.com/s?__biz=MzUzODA4NDM0OA==&mid=100000002&idx=1&sn=ac1baecf3037d27834aeaa98fa0d1b5b&chksm=7adc57914dabde879489de18c6b7867cc642b10e30419e27a04464ca99c74e1c07adbefdd5a6&mpshare=1&scene=1&srcid=1023aMnGNnfSGppHXd1QJFRN#rd">高新区筑梦新区企业入园办法</a>
+        </div>
+    </div>
+    <!-- 政策 end -->
+
+
+    <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}' src="js/pace.min.js"
+        charset="utf-8"></script>
+
+    <script charset="utf-8" type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <script charset="utf-8" type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script src="js/audioautoplay.v2.js"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+
+</body>
+
+</html>

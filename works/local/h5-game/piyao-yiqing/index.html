@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="不听不看，做谣言的“绝缘体”；不信不传，做谣言的“终结者”；多思多虑，做谣言的“粉碎机”！" />
+    <meta name="keywords" content="青岛辟谣,辟谣平台,次生疫情" />
+    <title>辟谣游戏技能包：动动手指，粉碎涉青谣言严防“次生疫情”</title>
+    <link rel="shortcut icon" href="http://www.qdxin.cn/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">');
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">');
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">');
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            // console.log(hwr * _width + "px");
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300);
+            }, false);
+            resize();
+        })();
+    </script>
+    <link rel="stylesheet" href="css/index.t.css?T=3" charset="utf-8">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+</head>
+
+<body>
+
+    <div class="pc-show">
+        <style type="text/css">
+            .pc-show{position:fixed;left:0;right:0;top:0;bottom:0;background:#f2f2f2;z-index:999}.pc-show-inner{position:absolute;width:400px;left:0;right:0;top:0;bottom:0;margin:15% auto 0}.pc-show-qr{display:block;margin:0 auto 10px}.pc-show p{text-align:center;font-weight:700;line-height:24px}
+        </style>
+        <div class="pc-show-inner">
+            <img src="" class="pc-show-qr" width="160" height="160" id="pc-show-qrcode">
+            <script type="text/javascript">
+                document.getElementById('pc-show-qrcode').src = 'https://ssl.qdxin.cn/api.tech/qrxin.php?data=' + window.location.href;
+            </script>
+            <p>抱歉，当前小游戏仅支持在手机上玩耍</p>
+            <p>快快扫码尝试一下吧！</p>
+        </div>
+    </div>
+
+    <!-- 游戏 -->
+    <div class="container game" id="game">
+        <!-- start -->
+        <div class="section start">
+            <img src="img/logo.png" class="abs logo">
+            <img src="img/start-title.png" class="abs title">
+            <img src="img/small-title.png" class="abs small-title" style="display: none;">
+            <img src="img/city.png" class="abs cities">
+
+            <a href="javascript:;" class="abs btn rule-btn"></a>
+            <a href="javascript:;" class="abs btn start-btn"></a>
+
+        </div>
+        <!-- start end -->
+        <i class="wenyue" style="opacity: 0;width: 0;height: 0">四</i>
+        <!-- 规则-->
+        <div class="section rule">
+            <div class="abs content">
+                <div class="abs rule-title">
+                    <img src="img/rule-title.png" class="title-img">
+                </div>
+                <div class="abs rule-txt">
+                    2022年3月，青岛疫情防控形势严峻。在打赢这场疫情遭遇战、阻击战、歼灭战的同时，青岛争分夺秒<b>严防谣言制造“次生疫情”</b>。此轮疫情衍生的谣言内容代表类别广泛、警示含义重大、可借鉴性参性强，对培养市民今后的识谣辨谣能力起到了前瞻性作用。翻开下方这份<b>“谣言备忘录”</b>，重温这段粉碎谣言的记忆吧!<b>每粉碎一个谣言获取一份辟谣锦囊哦~</b>
+                </div>
+                <a href="javascript:;" class="abs close"></a>
+            </div>
+        </div>
+        <!-- 规则end-->
+
+        <div class="section game-box">
+            <p class="abs money">您已获取辟谣锦囊：
+                <i>0</i>个</p>
+            <p class="abs timer">倒计时
+                <i class="min"></i>:
+                <i class="second"></i>
+            </p>
+            <div class="abs content">
+                <img src="img/game-title.png" class="game-title">
+
+                <div class="chose-list">
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                        </div>
+                    </div>
+
+                    <a href="javascript:;" class="abs check"></a>
+                    <a href="javascript:;" class="abs prev"></a>
+                    <a href="javascript:;" class="abs next"></a>
+                </div>
+            </div>
+
+            <div class="abs intro">
+                <div class="abs intro-title">
+                    青岛卫校出现阳性病例？
+                </div>
+                <div class="abs intro-txt-wrapper" id="intro-txt-wrapper">
+                    <div class="intro-txt">
+                        <p>3月10日，有网传青岛卫校不实涉疫信息。对此，青岛卫生学校3月10日发布声明，目前，学校教学秩序正常，未发生此类情况。请网民朋友时刻保持高度警惕，持续关注官方发布的权威信息，不信谣、不传谣、不造谣。</p>
+                    </div>
+                </div>
+
+                <div class="abs btns">
+                    <a href="javascript:;" class="cancel" style="display: none;">换一个</a>
+                    <a href="javascript:;" class="buy">收下锦囊</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 游戏结果-->
+        <div class="section result">
+            <div class="abs full light"></div>
+            <div class="abs content">
+                <div class="success-title">
+                    <img src="img/success-title.png">
+                </div>
+                <!-- <div class="res-desc1">
+                    <p class="res-desc">沉着冷静，目光如炬，</p>
+                    <p class="res-desc">阻止谣言传播有你有我！</p>
+                    <p class="res-desc">你就是名副其实的“谣言阻拦者”！</p>
+                    <p class="res-desc">请持续关注官方发布的权威信息，不信谣、不传谣、不造谣。</p>
+                </div> -->
+
+                <!-- <div class="res-desc2">
+                    <p class="res-desc">哎呀！锦囊就在你的犹豫间溜走啦~</p>
+                    <p class="res-desc">请毫不犹豫撕碎谣言面具哦!</p>
+                    <p class="res-desc">理性鉴别谣言才能让我们的环境更美好</p>
+                    <p class="res-desc">请持续关注官方发布的权威信息，不信谣、不传谣、不造谣。</p>
+                </div> -->
+                <div class="fly"></div>
+
+                <p class="res-tips">敬请关注青岛辟谣平台</p>
+                <p class="res-tips">关注最新的谣言、辟谣资讯！</p>
+                <div class="final-btns">
+                    <div class="btn try-again" id="try-again">
+                        再试一次
+                    </div>
+                    <a class="go-piyao btn" href="http://piyao.qdxin.cn/" target="_blank">
+                        青岛辟谣平台
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 游戏结果 end -->
+    </div>
+
+    <script type="text/javascript">
+        var t_pic = window.location.href + 'img/share.jpg';
+    </script>
+    <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}' src="js/pace.min.js"
+        charset="utf-8"></script>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <script charset="utf-8" type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script src="js/audioautoplay.v2.js?t=3"></script>
+    <script src="js/bscroll.min.js"></script>
+    <script src="js/index.js?t=4" charset="utf-8"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script>
+
+</body>
+
+</html>

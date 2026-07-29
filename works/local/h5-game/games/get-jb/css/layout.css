@@ -1,0 +1,258 @@
+ html,body{width:100%;height:100%;padding:0;margin:0;overflow:hidden}
+ *{margin: 0;padding: 0;}
+img{display: block;width: 100%;}
+ #loading-wrapper{
+    position: fixed;
+    background: #fff;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+ }
+
+ .screen-fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+ }
+
+.box{
+    border: 0;margin: 0;padding: 0;overflow: hidden;background-color: #000000;position: relative;
+}
+.box, canvas{
+    user-select: none;
+}
+
+@keyframes scaleTips{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.box .click-tips{
+    content: "";
+    position: absolute;
+    width: 60%;
+    background-repeat: no-repeat;
+    bottom: 20px;
+    right: 4%;
+    display: none;
+}
+.box .click-tips img{
+    animation: scaleTips 1.6s both infinite;
+}
+
+#canvas{
+    display: block;
+}
+
+.top-record{
+    color: #fff;
+    position: fixed;
+    top:20px; 
+}
+.top-record img{
+    display: block;
+    width: 100%;
+}
+.top-record .text{
+    position: absolute;
+    padding-right: 25px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align:right;
+}
+.game-score-wrap{
+    width: 170px;
+    height: 60px;
+    left: 10px;
+}
+.game-score-wrap .text{
+    line-height: 60px;
+}
+
+.time-down-wrap{
+    left: 190px;
+    width: 110px;
+    line-height: 60px;
+    height: 60px;
+}
+.time-down-wrap .text{
+    padding-right: 0;
+    text-align: left;
+}
+
+
+.start-page{
+    z-index: 10;
+}
+.start-page img{
+    min-height: 100%;
+    object-fit: cover;
+}
+.start-inner{
+    position: absolute;
+    width: 70%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start-btns{
+    margin-top: -70px;
+}
+.start-btns .shuoming{
+    width: 70%;
+    margin: 10px auto;
+}
+
+
+
+.game-info{
+    z-index: 11;
+    display: none;
+}
+.game-info-inner{
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    width: 80%;
+    min-height: 200px;
+    color: #fff;
+    padding: 20px 20px 20px;
+    border-radius: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.game-info-inner:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(../images/shuoming-close.png) no-repeat;
+    background-size: 100% auto;
+    right: -10px;
+    top: -10px;
+}
+.game-info-inner h2{
+    text-align: center;
+    color: #ffd76c;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.game-info-inner p{
+    line-height: 1.6em;
+}
+.game-info-inner h3 {
+    color: #ffd76c;
+    line-height: 1.8em;
+}
+.game-info-inner strong{
+    color: #f08383;
+}
+.game-info-inner img{
+    display: inline-block;
+    width: 16px;
+    margin-right: 10px;
+}
+
+.game-final{
+    z-index: 12;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.final-text{
+    width: 70%;
+    position: absolute;
+    background: #eb4b23;
+    color: #fff;
+    border: 10px solid #f7d24d;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.final-man{
+    position: absolute;
+    width: 150px;
+    top: -130px;
+    left: 50%;
+    margin-left: -75px;
+}
+.final-text h2{
+    text-align: center;
+    color: #f7d24d;
+    font-weight: 700;
+    margin-top: 15px;font-size: 30px;
+}
+.final-text p{
+    text-align: center;
+    line-height: 2.2em;
+}
+.final-text .deep{
+    color: #39140b;
+    font-weight: 700;
+}
+
+.final-link{
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.final-link a, .final-link button{
+    display: inline-block;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    display: inline-block;
+    width: 48%;
+}
+.final-link button{
+    margin-left: 4%;
+}
+
+@media screen and (max-width: 480px) {
+    .pc-show{
+        display: none;
+    }
+}
+.pc-show{
+    position: fixed;
+    left: 0;right: 0;
+    top: 0;bottom: 0;
+    background: #f2f2f2;
+    z-index: 999999;
+}
+.pc-show-inner{
+    position: absolute;
+    width: 400px;
+    left: 0;right: 0;
+    top: 0;bottom: 0;
+    margin: 15% auto 0;
+}
+.pc-show-qr{
+    display: block;
+    margin: 0 auto 10px;
+    height: auto;
+    width: 60%;
+}
+.pc-show p{
+    text-align: center;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+

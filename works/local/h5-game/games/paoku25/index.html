@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/captcha.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/transform.css"/>
+    <link rel="stylesheet" href="css/lauout.css">
+    <title>奔向苏宁不能停 iPhone6+等你秒</title>
+</head>
+    
+<body ontouchstart>
+    <div class="pc-show">
+        <div class="pc-show-inner">
+            <img src="http://api.tech.qdxin.cn/qrxin.php?data=http://mp.qdxin.cn/public/xwqmt/live/html/255.html" class="pc-show-qr" width="160" height="160">
+            <p>抱歉，当前小游戏仅支持在手机上玩耍</p>
+            <p>快快扫码尝试一下吧！</p>
+        </div>
+    </div>
+
+    <div id="loading-wrapper" style="position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: #fff;z-index: 999;"></div>
+
+    <div class="wrap">
+        <section id="moduleid_10451">
+            <div id="home">
+                <div class="startgame-wrapper">
+                    <div class="inner animated" id="startgame">
+                        <img src="img/home-start.png">
+                    </div>
+                </div>
+            </div>
+            <div id="container">
+                <div id="road">
+                    <div id="road-move"></div>
+                    <div id="props"></div>
+                </div>
+                <div id="bars" class="bstep1">
+                    <img src="img/bar1.png" class="bar1-bg">
+                    <img src="img/bar2.png" class="bar2-bg">
+                </div>
+                <div id="cloud"></div>
+                <div id="sight">
+                    <div id="sight-static"></div>
+                    <div id="sight-final"></div>
+                    <div id="sight-move"></div>
+                </div>
+                <div id="proptip"></div>
+                <div id="starttip">
+                    <img src="img/ready.png" class="ready">
+                    <img src="img/go.png" class="go">
+                </div>
+                <div id="endtip"></div>
+                <div id="level">LV.0</div>
+                <div id="gametimer">0:00</div>
+                <div class="process" id="processbg"></div>
+                <canvas id="game"></canvas>
+                <div class="tipshow" id="speedup"></div>
+                <div class="tipshow" id="levelup"></div>
+                <div id="wintip"></div>
+                <div class="process" id="processtip"></div>
+                <a href="javascript:void(0)" class="game_btn" id="left_btn">
+                    <img src="img/icons_btn_arrow_left.png">
+                </a>
+                <a href="javascript:void(0)" class="game_btn" id="right_btn">
+                    <img src="img/icons_btn_arrow_right.png">
+                </a>
+            </div>
+            <div id="prompt">
+                <img src="img/game-jieshao.png">
+            </div>
+            <div id="gameresult">
+                <div id="sharelogo"></div>
+                <div id="wechatshare"></div>
+                <div class="result-box">
+                    <div class="result-inner">
+                        <div id="result-word" class="result-word"></div>
+                        <div class="result-btns">
+                            <div id="replayBtn">
+                                <img src="img/replaybtn-img.png">
+                            </div>
+                            <div id="shareBtn">
+                                <img src="img/sharebtn-img.png">
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/result.png">
+                </div>
+            </div>
+            <div id="screentip">
+                <img src="img/changescreen2.png" width="504" height="320" />
+            </div>
+        </section>
+        <div class="mask" style="display:none;"></div>
+        
+        <script src="js/audioautoplay.v2.js"></script>
+        <script src="js/base.js"></script>
+        <script src="js/preloadjs.min.js"></script>
+        <script src="js/preloading.v1.js"></script>
+        <!-- <script src="js/click-sound-effect.js"></script> -->
+        <!-- <script src="js/voteCaptcha.js"></script> -->
+        <!-- <script src="js/thickbox.js"></script> -->
+        <!-- <script src="js/activity.js"></script> -->
+        <!-- <script src="js/uploadButton.js"></script> -->
+        <!-- <script src="js/touchSlider1.js"></script> -->
+        <!-- <script src="js/jquery.cookie.js"></script> -->
+        <!-- <script src="js/jquery.scroller-1.0rc2.min.js"></script> -->
+        <script src="js/game-setting.js"></script>
+        <script src="js/game-custom.js"></script>
+        <script src="js/game-run.js"></script>
+    </div>
+</body>
+
+</html>

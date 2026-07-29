@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>全民射嫦娥</title>
+<meta name="keywords" content="法滋,约饼,全民射嫦娥" />
+<meta name="description" content="#后羿射日约嫦娥#" />
+<meta name="author" content="WB" />
+<link rel="stylesheet" type="text/css" href="css/layout.css?t=3">
+
+</head>
+<body ontouchmove="event.preventDefault()">
+
+ <!-- 阻止ios浏览器整页上下滑动 -->
+<img alt="ico" style="position:absolute; top: -400px;" src="img/U10478P1534DT20150828102818.jpg">
+
+    <div class="swiper-container" >
+        <div class="page" id="p1">
+            <img class="titileimg" src="img/U10478P1534DT20150828100031.png" width="540">
+            <img class="helpBtn cp" src="img/e1_2.png" onclick="$('#wrap_1').fadeIn(200);" alt="活动介绍">
+            <div class="text">
+                <p><font color="red" size="5">#游戏规则#</font></p>
+                <p>点击约饼图标，开始射嫦娥~</p>
+                <p>15秒以内，“射”中的嫦娥越多，奖品越丰厚！</p>
+                <p>请一定分享到<em>朋友圈</em>才能领奖哦！</p>
+            </div>
+            <img class="startBtn cp" src="img/start.png" >
+        </div>
+
+        <div class="page" id="p2">
+            <img class="imgArrow" src="http://n.sinaimg.cn/mj/x11.png">
+            <img class="imgArrowText" src="http://n.sinaimg.cn/mj/x22.png">
+            <div class="characterBox">
+                <!-- 动态在此插入 -->
+                <img class="ico cp" sid="1" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="2" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="3" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="4" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="5" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="6" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="7" src="img/U10478P1534DT20150828101212.png">
+            </div>
+            <div class="springBox">
+
+                <!-- 汤池 -->
+
+            </div>
+
+            <div class="time"></div>
+        </div>
+
+        <div class="wrap cp" id="wrap_1" onclick="$('#wrap_1').fadeOut(200);">
+            <div class="popup1">
+                <div class="inner">
+                    <h2>活动介绍</h2>
+                    <div class="active-desc">
+                        <p>中秋节是我国的传统节日，节日期间，线上参与“<font color="red">全民射嫦娥</font>”活动，即可根据您的得分获得不同礼品，快来进行一场手速大比拼吧！。</p>
+                        <p>
+                            <strong>特等奖</strong>： 德纳影城电影票兑换券2张；
+                        </p>
+                        <p><strong>优秀奖</strong>：获得毛绒玩偶1个；</p>
+                        <p><strong>鼓励奖</strong>：信网新闻体验会员1周；</p>
+                        <p><strong>安慰奖</strong>：鲜蔬打折券一张；</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap blackbg" id="wrap_2" >
+            <div class="popup2">
+                <div class="popup2-inner">
+                    <div class="popup2-tab">
+                        <div class="score">99999</div>
+                        <div class="score-text">
+                            <img src="img/game-result-1.png" id="game-result-img">
+                        </div>
+                        <img src="img/tab2.png">
+                    </div>
+                    <div class="popup2-btns">
+                        <div class="onceAgainBtn cp" onclick="onceAgain()">
+                            <img src="img/zlyc.png" />
+                        </div>
+                        <div class="submitBtn cp">
+                            <img src="img/btn_2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- 弹出页 -->
+<div class="weixinCover">
+    <img class="arrow" src="img/e3_3.png">
+    <div class="continer"></div>
+</div>
+
+</div>
+</body>
+
+<script src="js/base.js" type="text/javascript"></script>
+<script src="js/audioautoplay.js"></script>
+<script src="js/jquery.transition.js"></script>
+<script src="js/run.js"></script>
+
+</html>

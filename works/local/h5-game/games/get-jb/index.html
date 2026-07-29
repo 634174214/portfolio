@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <title>接金币</title>
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+    <div class="pc-show">
+        <div class="pc-show-inner">
+            <img src="http://api.tech.qdxin.cn/qrxin.php?data=http://mp.qdxin.cn/public/xwqmt/live/html/255.html" class="pc-show-qr" width="160" height="160">
+            <p>抱歉，当前小游戏仅支持在手机上玩耍</p>
+            <p>快快扫码尝试一下吧！</p>
+        </div>
+    </div>
+    
+    <div id="loading-wrapper"></div>
+
+    <div class="start-page screen-fixed" id="start-page">
+        <div class="start-inner">
+            <img src="images/start-man.png"
+                 class="w-ani" 
+                 data-wani-name="bounceInRight"
+                 data-wani-delay="0.3s"
+            >
+            <div class="start-btns">
+                <img src="images/start-btn.png"
+                     class="w-ani"
+                     data-wani-name="bounceInDown"
+                     data-wani-delay="0.8s"
+                     data-wani-infinite="pulse"
+                     alt="游戏开始" 
+                     id="game-start" 
+                >
+                <img src="images/start-shuoming.png"
+                     class="shuoming w-ani"
+                     data-wani-name="fadeInUp"
+                     data-wani-delay="1s"
+                     alt="游戏说明" 
+                     id="game-shuoming" 
+                >
+            </div>
+        </div>
+        <img src="images/start-bg.jpg">
+    </div>
+
+    <div class="game-info screen-fixed" id="game-info">
+        <div class="game-info-inner">
+            <h2>游戏帮助</h2>
+            <h3>一、操作说明</h3>
+            <p>1、通过<strong>点击屏幕底部部分</strong>，横向左右移动人物位置“接”金币</p>
+            <p>
+            <p>2、请在<strong>15秒</strong>内尽可能多的获得金币</p>
+            <h3>二、游戏规则</h3>
+            <p>1、交好运，迎新年。参与信网接金币小游戏，可以获得多重好礼。</p>
+            <p>2、不同金币所得分数也不同，具体如下：</p>
+            <p><img src="images/3.png">金色：10分</p>
+            <p><img src="images/2.png">银色：5分</p>
+            <p><img src="images/1.png">铜色：1分</p>
+            <p>3、祝愿大家都能取得理想的成绩！</p>
+        </div>
+    </div>
+
+    <div id="box" class="box">
+        <canvas id="canvas"></canvas>
+
+        <div class="game-score-wrap top-record">
+            <div class="text">
+                得分：<span id="game-score"></span>
+            </div>
+            <img src="images/score-bg.png">
+        </div>
+        <div class="time-down-wrap top-record">
+            <div class="text">
+                倒计时：<span id="count-down-time"></span>
+            </div>
+        </div>
+
+        <div class="click-tips" id="click-tips">
+            <img src="images/tips-hand.png">
+        </div>
+    </div>
+
+    <div class="game-final screen-fixed" id="game-final">
+        <div class="final-text">
+            <img src="images/final-man.png" class="final-man">
+            <h2>您的得分：<span id="final-score"></span>分</h2>
+            <p id="final-showText"></p>
+            <p class="deep">快快点击查看你的专属奖品吧</p>
+            <div class="final-link">
+                <a id="jump-link">
+                    <img src="images/final-jump.png" alt="获取奖品">
+                </a>
+                <button type="button" id="game-again">
+                    <img src="images/final-again.png" alt="再玩一次">
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/preloadjs.min.js"></script>
+    <script src="js/preloading.v1.js"></script>
+    <script src="js/audioautoplay.v2.js"></script>
+    <script src="js/click-sound-effect.js"></script>
+    <script src="js/onepageAni.v1.js"></script>
+    <script src="js/three2one.v1.js?t=3"></script>
+    <script src="js/run.js"></script>
+
+</body>
+</html>
