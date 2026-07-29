@@ -1,0 +1,426 @@
+/*H5样式重置*/
+@charset "utf-8";
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{font:0.12rem/1.5 tahoma,arial,'hiragino sans gb','microsoft yahei',sans-serif;font-size: 16px;}
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i,cite{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;  border:none;}
+img{
+  display: block;
+  width: 100%;
+}
+*{box-sizing: border-box;}
+body{
+  overflow-x: hidden;
+}
+
+
+/* public */
+/* 1.iOS 长按时不触发系统的菜单 2.禁止长按时下载图片*/
+a,button,img{-webkit-touch-callout:none;outline:none;-webkit-user-select:none;}
+input{-webkit-appearance:none}
+/* 去除点击时产生的半透明灰色背景 */
+a,button,input,div{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body{width:100%;background: #fff;overflow-x: hidden;}
+ .textnoselect
+ {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+.img-noselect
+{
+    /* 元素不能成为鼠标事件的target */
+    pointer-events:none;
+    -webkit-pointer-events:none;
+    -ms-pointer-events:none;
+    -moz-pointer-events:none;
+}
+
+.m-hidden{
+  display: none;
+}
+
+p{
+    text-align: center;
+}
+span{
+    display: block;
+    text-align: left;
+}   
+  
+.basew{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top-bg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.top{
+    margin-top: 70vh;
+    position: relative;
+    background: #fff;
+}
+.top:before{
+  content: "";
+  position: absolute;
+  background: url(../img/white-alpha.png);
+  width: 100%;
+  height: 60px;
+  top: -55px;
+  z-index: 2;
+  background-size: auto 100%;
+}
+.top h1{
+    color: #CE0000;
+    font-size: 24px;
+}
+/*.top-text-box
+{
+    background-image: url(../img/top-text-box.png);
+    background-image: -webkit-image-set(url(../img/top-text-box.png) 1x,url(../img/top-text-box@2x.png) 2x);
+    background-repeat: no-repeat;
+}*/
+.top-text-box
+{
+   width: 90vw;
+   margin: 10px auto 0;
+   padding: 10px 0px;
+   position: relative;
+}
+.top-text-box:before,
+.top-text-box:after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+}
+.top-text-box:before{
+    background-image: url(../img/m-top-text-box-1.png);
+    background-size: 80% auto;
+    top: 0;
+}
+.top-text-box:after{
+    background-image: url(../img/m-top-text-box-2.png);
+    background-size: 80% auto;
+    bottom: 0;
+    right: 0;
+}
+.top-text-box .content{
+    font-size: 14px;
+    line-height: 26px;
+    padding: 15px;
+    border: 1px solid #FF6363;
+    position: relative;
+}
+.top-text-box em{
+  display: block;
+}
+.top-text-box>img{
+  display: none;
+}
+
+.part-1{
+    position: relative;
+    background: url(../img/part-1-bg.png) bottom left no-repeat;
+    background-size: 100% auto;
+    padding-bottom: 200px;
+}
+.part-1 .content{
+    font-size: 16px;
+    line-height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 0;
+    top: 0;
+}
+.part-1 .bg{
+    display: none;
+}
+
+
+.part-2{
+    margin-top: -80px;
+}
+.headline{
+    font-size: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.headline img{
+    display: inline-block;
+    flex: 1;
+}
+.headline .text{
+    display: inline-block;
+    line-height: 50px;
+    font-size: 24px;
+    vertical-align: top;
+    color: #CE0000;
+    font-weight: 700;
+    flex: 0 0 40vw;
+}
+
+.part-2-x{
+    margin-top: 30px;
+}
+.part-2-x .img-x{
+    width: 20vw;
+    margin: 20px auto 10px;
+}
+.part-2-x p{
+    line-height: 24px;
+    color: #666;
+    font-size: 12px;
+}
+
+.part-3,
+.part-4,
+.part-5,
+.part-6,
+.part-7,
+.part-9 
+{
+  padding: 0 15px;
+}
+
+.part-3{
+    margin-top: 30px;
+    padding: 0 15px;
+}
+
+.mg-bot-l{
+    margin-bottom: 10px;
+}
+.mg-top-ll{
+    margin-top: 20px;
+}
+.mg-bot-ll {
+    margin-bottom: 20px;
+}
+.mg-bot-lll{
+    margin-bottom: 30px;
+}
+
+.normal-head{
+    border-left: 8px solid #CE0000;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.tips{
+    background: #E43D3D;
+    border-radius: 0 6px 6px 0;
+    padding: 15px 15px 15px 30px;
+    color: #fff;
+    position: relative;
+    margin: 15px 0;
+}
+.tips:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: #fff;
+    left: 5px;
+    top: 0;
+}
+
+.time-line{
+    position: relative;
+}
+.time-line:before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed #ccc;
+    left: 7px;
+    z-index: 1;
+}
+.time-line li{
+    padding: 8px 0;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.time-line .left{
+    flex: 0 0 80px;
+}
+.time-line .point{
+    height: 15px;
+    width: auto;
+    display: inline-block;
+    margin-top: -3px;
+}
+.time-line em{
+    display: inline-block;
+    font-weight: 700;
+    vertical-align: top;
+    padding-left: 5px;
+}
+.time-line em.has-b{
+    line-height: 20px;
+}
+.time-line em b{
+    display: block;
+    font-weight: 700;
+}
+.time-line .one-line{
+    vertical-align: top;
+}
+.time-line .right{
+  flex: 1;
+}
+.time-line .many-line{
+    background: #FFE0C1;
+    border-radius: 6px;
+    position: relative;
+}
+.time-line .many-line + .many-line{
+    margin-top: 20px;
+}
+.time-line .many-line + .many-line:before{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #FFE0C1 transparent;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+.time-line .many-line cite{
+    padding: 15px 20px;
+    display: block;
+    line-height: 26px;
+}
+.time-line .many-line:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #FFE0C1 transparent transparent;
+    left: -10px;
+    top: 5px;
+}
+
+.part-5 span{
+    line-height: 1.8em;
+}
+.part5-list li{
+    overflow: hidden;
+    padding: 10px 0;
+}
+.part5-list li img{
+    height: 30px;
+    width: auto;
+}
+.part5-list li span{
+    font-size: 1em;
+    margin-top: 10px;
+}
+.part5-list li span strong{
+    font-weight: 700;
+    color: #CE0000;
+}
+
+
+.part-6{
+    position: relative;
+}
+.part-6 .bg{
+    position: absolute;
+    top: 0;
+}
+.part-6 .jiangp{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.part-7{
+    margin-top: 0px;
+}
+.part-7 .jiangp{
+    width: 90%;
+    margin: 20px auto;
+}
+.part-8 .qr{
+    width: 100%;
+    margin: 20px auto 0px;
+}
+.part-8 p{
+    font-size: 1.3em;
+}
+.baoming{
+    display: block;
+    background: #C12C38;
+    color: #fff;
+    font-weight: 700;
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 40px;
+}
+.baoming:active{
+    background: #9d222c;
+}
+.part-9{
+    margin-top: 50px;
+}
+.part-9 .headline .text{
+  flex: 0 0 50vw;
+}
+.part-9-list{
+    overflow: hidden;
+}
+.part-9-list li{
+    float: left;
+    width: 48%;
+}
+.part-9-list li + li{
+    margin-left: 2%;
+}
+.part-9-list li p{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow:hidden;
+　　text-overflow:ellipsis;
+    width: 100%;
+    height: 22px;
+　　white-space:nowrap;
+}
+.part-9 .baoming{
+    margin-top: 40px;
+}

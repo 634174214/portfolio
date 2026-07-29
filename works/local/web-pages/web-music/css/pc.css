@@ -1,0 +1,379 @@
+/*PC页面重置(非响应式)*/
+@charset "utf-8";
+* {
+  tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+ font-family:PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
+}
+
+html{border:0; font-family:' Microsoft YaHei ','PingFang SC','Droidsansfallback';
+}
+body{margin:0 auto; padding:0;font-size:16px;background: #fff;
+line-height: inherit;}
+div,dl,dt,dd,ol,ul,b,li,p,h1,h2,h3,h4,input,h6,h5,form,i,pre,fieldset,textarea,p,blockquote,th,td
+{margin:0; padding:0;list-style:none; font-weight:normal; font-style: normal;}
+dl,ul,li,p{text-align:left;}
+img{border:0px;display: block;width: 100%;}
+.clear{clear:both; overflow:hidden; }
+a{ color:#000; text-decoration:none;-webkit-user-select:none;-webkit-touch-callout: none;}
+em{font-style: normal;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+table {
+     border-collapse:collapse;
+     border-spacing:0;
+ }
+fieldset,img {
+     border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+     font-style:normal;
+     font-weight:normal;
+}
+caption,th {
+     text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+     font-size:100%;
+     font-weight:normal;
+}
+q:before,q:after {
+     content:”;
+}
+abbr,acronym {
+     border:0;
+}
+
+.pc-hidden{
+    display: none;
+}
+
+p{
+    text-align: center;
+}
+span{
+    display: block;
+    text-align: left;
+}   
+  
+.basew{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+.top-bg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -500px;
+    z-index: -1;
+}
+
+.top{
+    margin-top: 750px;
+}
+.top h1{
+    color: #CE0000;
+    font-size: 42px;
+}
+/*.top-text-box
+{
+    background-image: url(../img/top-text-box.png);
+    background-image: -webkit-image-set(url(../img/top-text-box.png) 1x,url(../img/top-text-box@2x.png) 2x);
+    background-repeat: no-repeat;
+}*/
+.top-text-box
+{
+   width: 700px;
+   margin: 20px auto 0;
+   position: relative;
+}
+.top-text-box .content{
+    position: absolute;
+    font-size: 22px;
+    line-height: 32px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 96px;
+    margin: auto;
+}
+
+.part-1{
+    position: relative;
+    padding-top: 60px;
+}
+.part-1 .content{
+    position: absolute;
+    font-size: 1.2em;
+    line-height: 2em;
+    width: 460px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 0;
+    left: 50%;
+    top: 0;
+    margin-left: -230px;
+}
+.part-1 .bg{
+    width: 70%;
+    margin: 0px auto 0;
+}
+
+
+.part-2{
+    margin-top: -170px;
+}
+.headline{
+    font-size: 0;
+    text-align: center;
+}
+.headline img{
+    display: inline-block;
+    width: auto;
+    height: 50px;
+}
+.headline .text{
+    display: inline-block;
+    line-height: 50px;
+    font-size: 40px;
+    vertical-align: top;
+    padding: 0 20px;
+    color: #CE0000;
+    font-weight: 700;
+}
+
+.part-2-x{
+    margin-top: 30px;
+}
+.part-2-x .img-x{
+    width: 120px;
+    margin: 20px auto 10px;
+}
+.part-2-x p{
+    line-height: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+
+.part-3{
+    margin-top: 50px;
+}
+
+.mg-bot-l{
+    margin-bottom: 10px;
+}
+.mg-top-ll{
+    margin-top: 20px;
+}
+.mg-bot-ll {
+    margin-bottom: 20px;
+}
+.mg-bot-lll{
+    margin-bottom: 30px;
+}
+
+.normal-head{
+    border-left: 8px solid #CE0000;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.tips{
+    background: #E43D3D;
+    border-radius: 0 6px 6px 0;
+    padding: 15px 15px 15px 30px;
+    color: #fff;
+    position: relative;
+    margin: 15px 0;
+}
+.tips:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: #fff;
+    left: 5px;
+    top: 0;
+}
+
+.time-line{
+    position: relative;
+}
+.time-line:before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed #ccc;
+    left: 9px;
+    z-index: -1;
+}
+.time-line li{
+    padding: 10px 0;
+    overflow: hidden;
+}
+.time-line .left{
+    float: left;
+    width: 90px;
+}
+.time-line .point{
+    height: 20px;
+    width: auto;
+    display: inline-block;
+    margin-top: 5px;
+}
+.time-line em{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    vertical-align: top;
+    padding-left: 10px;
+}
+.time-line em.has-b{
+    line-height: 20px;
+}
+.time-line em b{
+    display: block;
+    font-weight: 700;
+}
+.time-line .one-line{
+    vertical-align: top;
+    height: 30px;
+    line-height: 30px;
+}
+.time-line .right{
+    float: right;
+    width: 910px;
+}
+.time-line .many-line{
+    background: #FFE0C1;
+    border-radius: 6px;
+    position: relative;
+}
+.time-line .many-line + .many-line{
+    margin-top: 20px;
+}
+.time-line .many-line + .many-line:before{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #FFE0C1 transparent;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+.time-line .many-line cite{
+    padding: 15px 20px;
+    display: block;
+    line-height: 26px;
+}
+.time-line .many-line:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #FFE0C1 transparent transparent;
+    left: -10px;
+    top: 10px;
+}
+
+.part-5 span{
+    line-height: 1.6em;
+}
+.part5-list li{
+    overflow: hidden;
+    padding: 10px 0;
+}
+.part5-list li img{
+    float: left;
+    height: 36px;
+    width: auto;
+}
+.part5-list li span{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 15px;
+    font-size: 1.3em;
+}
+.part5-list li span strong{
+    font-weight: 700;
+    color: #CE0000;
+}
+
+
+.part-6{
+    position: relative;
+}
+.part-6 .bg{
+    position: absolute;
+    top: 0;
+}
+.part-6 .jiangp{
+    width: 80%;
+    margin: 70px auto;
+}
+
+.part-7{
+    margin-top: -20px;
+}
+.part-7 .jiangp{
+    width: 80%;
+    margin: 20px auto;
+}
+.part-8 .qr{
+    width: 60%;
+    margin: 20px auto 0px;
+}
+.part-8 p{
+    font-size: 1.3em;
+}
+.baoming{
+    display: block;
+    background: #C12C38;
+    color: #fff;
+    font-weight: 700;
+    width: 60%;
+    margin: 30px auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 40px;
+}
+.baoming:hover{
+    background: #9d222c;
+}
+.part-9{
+    margin-top: 100px;
+}
+.part-9-list{
+    overflow: hidden;
+}
+.part-9-list li{
+    float: left;
+    width: 48%;
+}
+.part-9-list li + li{
+    margin-left: 2%;
+}
+.part-9-list li p{
+    margin-top: 10px;
+}
+.part-9 .baoming{
+    margin-top: 70px;
+}
