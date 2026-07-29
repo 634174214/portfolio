@@ -779,3 +779,7 @@ body {
         font-size: 0.7rem;
     }
 }
+
+.swiper-wrapper{
+    align-items: center;
+}

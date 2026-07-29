@@ -668,7 +668,7 @@ const worksData = {
         {
           name: "信网资讯小程序",
           technology: ["WXML", "WXSS", "ES6"],
-          link_local: "works/weather-mini/index.html",
+          link_local: "works/local/wx-xcx/index.html",
           preview: {
             type: PREVIEW_TYPES.pictures,
             text: "扫码查看",
@@ -676,10 +676,12 @@ const worksData = {
               {
                 image: "works/local/wx-xcx/5-xinnewsmini-qr.jpg",
                 text: "微信小程序二维码",
+                portrait: true
               },
               {
                 image: "works/local/wx-xcx/5-xinnewsmini.jpg",
                 text: "效果预览",
+                portrait: false
               }
             ],
           },
@@ -690,7 +692,7 @@ const worksData = {
         {
           name: "青岛网络辟谣平台小程序",
           technology: ["WXML", "WXSS", "ES6"],
-          link_local: "works/todo-mini/index.html",
+          link_local: "works/local/wx-xcx/index.html",
           preview: {
             type: PREVIEW_TYPES.pictures,
             text: "扫码查看",
@@ -698,10 +700,12 @@ const worksData = {
               {
                 image: "works/local/wx-xcx/5-piyaomini-qr.jpg",
                 text: "微信小程序二维码",
+                portrait: true
               },
               {
                 image: "works/local/wx-xcx/5-piyaomini.jpg",
                 text: "效果预览",
+                portrait: false
               }
             ],
           },
@@ -712,7 +716,7 @@ const worksData = {
         {
           name: "微尘公益基金小程序",
           technology: ["WXML", "WXSS", "ES6"],
-          link_local: "works/food-map/index.html",
+          link_local: "works/local/wx-xcx/index.html",
           preview: {
             type: PREVIEW_TYPES.pictures,
             text: "扫码查看",
@@ -720,10 +724,12 @@ const worksData = {
               {
                 image: "works/local/wx-xcx/5-weichenmini-qr.jpg",
                 text: "微信小程序二维码",
+                portrait: true
               },
               {
                 image: "works/local/wx-xcx/5-weichenmini.jpg",
                 text: "效果预览",
+                portrait: false
               }
             ],
           },
@@ -731,15 +737,15 @@ const worksData = {
           desc: "",
           date: "2019-12",
         },
-        {
-          name: "瑞源兴微信商城（前后台）",
-          technology: ["Jquery", "WE-UI", "HTML", "CSS3"],
-          link_local: "",
-          preview: "",
-          link_online: "http://mp2.qdxin.cn/ps/ryx/index.php",
-          desc: "",
-          date: "2018",
-        },
+        // {
+        //   name: "瑞源兴微信商城（前后台）",
+        //   technology: ["Jquery", "WE-UI", "HTML", "CSS3"],
+        //   link_local: "",
+        //   preview: "",
+        //   link_online: "http://mp2.qdxin.cn/ps/ryx/index.php",
+        //   desc: "",
+        //   date: "2018",
+        // },
         {
           name: "信新相映积分商城",
           technology: ["Jquery", "HTML", "CSS3", "PHP", "MYSQL"],
