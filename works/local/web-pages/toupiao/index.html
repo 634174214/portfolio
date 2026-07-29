@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style" />
+    <title>投票</title>
+    <meta name="description" content="" id="pageDescription">
+    <link rel="stylesheet" type="text/css" href="http://m.qdxin.cn/css/font-song/song.css">
+    <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body ontouchstart>
+    <div id="app">
+        <!-- loading -->
+        <transition name="fade">  
+            <div class="loading" v-show="showLoading">
+                <div class="load-inner">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                    <p>加载中，请稍后...</p>
+                </div>
+            </div>
+        </transition>
+        <!-- loading end -->
+
+        <section class="top-banner" id="top-banner">
+            <img :src="top_banner">
+        </section>
+        <section class="actitive-info">
+            <ul class="inner">
+                <li v-for="(actItem , actIndex) in infos"
+                    :key="actIndex"
+                >
+                    <h2 class="info-h2"><em>{{ actItem.info_title }}</em></h2>
+                    <div class="info-p marg-bot" v-html="actItem.info_content"></div>
+                </li>
+            </ul>
+        </section>
+        <section class="count-down-time">
+            <div v-html="leftTime"
+                 v-show="showCountDown"
+                 class="count-down-inner"
+            ></div>
+        </section>
+
+        <section class="sort-list-x">
+            <div class="sort-btns">
+                <button type="button"
+                        class="sort-btn"
+                        @click="sortList(1)"
+                        :class="{'active': currentSort === 1}"
+                >编号排列</button>
+                <button type="button"
+                        class="sort-btn"
+                        @click="sortList(2)"
+                        :class="{'active': currentSort === 2}"
+                >排行榜</button>
+            </div>
+            <ul class="toupiao-list">
+                <li v-for="(item, index) in touList"
+                    :key="item.touid"
+                    class="toupiao-li"
+                    @click="openDetail(item.touid)"
+                >
+                    <span class="tou-index">{{ item.touid }}</span>
+                    <div class="image-x"
+                         v-if="mode === 'image'"
+                         :style="imageBoxStyle"
+                    >
+                        <img :src="item.image">
+                    </div>
+                    <div class="text-x" 
+                         v-if="mode === 'text'"
+                         :style="textBoxStyle"
+                    >
+                        <span>{{ item.text }}</span>
+                    </div>
+                    <div class="tickets-row">
+                        <span class="tickets-num">
+                            {{ item.tickets }} 票
+                        </span>
+                    </div>
+                    <h2 class="ticket-title">{{ item.title }}</h2>
+                    <button type="button"
+                            class="submit-btn"
+                            @click.stop="selectTicket({
+                                tpid: tpid,
+                                touid: item.touid,
+                                from: 'home'
+                            })"
+                    >
+                        投票
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <div class="no-more">
+            没有更多了
+        </div>
+        <router-view v-slot="{ Component }"
+                    @select-ticket="selectTicket"
+                    @init-detail="initDetail"
+                    @touok="detailTou"
+                    @update-cannot="updateCanNot"
+                    :tpid="tpid"
+                    :isholding="isHolding"
+                    :mode="mode"
+        >
+            <transition name="aside-right" appear>
+              <keep-alive exclude="detail">
+                <component :is="Component"/>
+              </keep-alive>
+            </transition>
+        </router-view>
+
+        <div class="detail-close"                 
+               @click="closeDetail"
+               v-show="showDetailClose"
+        >
+            <span>×</span>
+        </div>
+
+        <a class="go-top" href="#" v-scroll-to="'#top-banner'"></a>
+
+    </div>
+    <!-- app end -->
+
+    <!-- <script src="lib/vconsole.min.js"></script> -->
+    <script src="lib/vue.global.js"></script>
+    <script src="lib/vue-router.global.js"></script>
+    <script src="lib/bscroll.min.js"></script>
+    <script src="lib/qs.js"></script>
+    <script src="lib/vue-scrollto.js"></script>
+    <script src="lib/axios.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/run.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="js/wx_share_nojq.js"></script>
+
+</body>
+</html>
