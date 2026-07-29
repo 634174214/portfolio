@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <title>信网创图-智能在线设计系统</title>
+  <script>
+  window.setting = {
+      // 版本号
+      version: '1.0.0',
+      written: 'copyright sj.qdxin.cn',
+      update_time: '2024-04-26',
+      home_url: window.location.href.split('xin-ps')[0] + 'xin-ps/',
+      // 是否压缩最终生成png图片，false则为无损png， true则为jpg
+      png_compress: true,
+      // 最终压缩的质量
+      png_compress_quality: 0.7,
+      // 是否显示设计按钮，不显示则只能从模板加载 或者地址栏中添加?admin
+      show_design: false,
+      // 预加载的字体
+      text_fonts: [
+        {
+          name: '思源黑体-普通',
+          font_family: 'SourceHanSansCN-Regular',
+          file: 'SourceHanSansCN-Regular.otf'
+        },
+        {
+          name: '思源黑体-加粗',
+          font_family: 'SourceHanSansCN-Heavy',
+          file: 'SourceHanSansCN-Heavy.otf'
+        },
+        {
+          name: '思源宋体-加粗',
+          font_family: 'SourceHanSerifCN-Heavy',
+          file: 'SourceHanSerifCN-Heavy.otf'
+        },
+        {
+          name: '优设标题黑',
+          font_family: 'youshe-biaotihei',
+          file: 'youshe-biaotihei.ttf'
+        },
+        {
+          name: '优设自由棒棒体',
+          font_family: 'youshe-ziyoubang',
+          file: 'youshe-ziyoubang.ttf'
+        },
+        {
+          name: '喜鹊古字典体',
+          font_family: 'xique-gudian',
+          file: 'xique-gudian.otf'
+        },
+        {
+          name: '喜鹊小轻松体',
+          font_family: 'xique-qingsong',
+          file: 'xique-qingsong.otf'
+        },
+        {
+          name: '喜鹊招牌体',
+          font_family: 'xique-zhaopai',
+          file: 'xique-zhaopai.ttf'
+        },
+        {
+          name: '庞门正道标题体',
+          font_family: 'pangmen-biaoti',
+          file: 'pangmen-biaoti.ttf'
+        },
+        {
+          name: '庞门正道粗书体',
+          font_family: 'pangmen-cushu',
+          file: 'pangmen-cushu.ttf'
+        },
+        {
+          name: '演示秋鸿楷体',
+          font_family: 'qiuhongkai',
+          file: 'qiuhongkai.ttf'
+        },
+        {
+          name: '站酷高端黑',
+          font_family: 'zhanku-gaoduanhei',
+          file: 'zhanku-gaoduanhei.ttf'
+        },
+        {
+          name: '站酷快乐体',
+          font_family: 'zhanku-kuaile',
+          file: 'zhanku-kuaile.ttf'
+        },
+        {
+          name: '锐字真言体',
+          font_family: 'ruizi-zhenyan',
+          file: 'ruizi-zhenyan.otf'
+        }
+      ],
+      helps: [
+        {
+          text: '下载"编辑图片"的测试用例',
+          href: 'template-demo.zip'
+        },
+        {
+          text: '信网图库',
+          href: 'https://wubin.infinityfreeapp.com/my-works/works/qd-pics-2025/app/html/'
+        },
+        {
+          text: '使用帮助',
+          href: 'how2use.pdf?t=3'
+        }
+      ]
+    };</script>
+  <script>// 动态插入字体并预加载
+    (function () {
+      const fonts = window.setting.text_fonts;
+      const styleEl = document.createElement('style');
+      let styleStr = '';
+      fonts.forEach((font) => {
+        const fileArr = font.file.split('.');
+        const type = fileArr[1];
+        const family = fileArr[0];
+        const fontPath = `text-font/${font.file}`;
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = fontPath;
+        link.as = 'font';
+        link.type = `font/${type}`;
+        link.setAttribute('crossorigin', '');
+        document.head.appendChild(link);
+
+        const fontface = `
+            @font-face {
+              font-family: '${family}';
+              src: url('${fontPath}');
+            }
+            .font-demo-${family} {
+                  font-family: "${family}";
+            }
+          `;
+        styleStr += fontface;
+      });
+      styleEl.innerHTML = styleStr;
+      document.head.appendChild(styleEl);
+    })();</script>
+  <script defer="defer" src="js/chunk-vendors.15fcc90e.js"></script>
+  <script defer="defer" src="js/app.186cc1c9.js"></script>
+  <link href="css/chunk-vendors.86a0c02c.css" rel="stylesheet">
+  <link href="css/app.facc4f49.css" rel="stylesheet">
+</head>
+
+<body><noscript><strong>抱歉，你的浏览器不支持最新版本的javascript，请更换浏览器重试。</strong></noscript>
+  <div id="app"></div>
+</body>
+
+</html>

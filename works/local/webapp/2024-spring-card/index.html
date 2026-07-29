@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://www.qdxin.cn/favicon.ico" type="image/x-icon">
+    <title></title>
+    <meta name="description" content="信网是青岛新闻网站，报道权威青岛新闻资讯，发布青岛生活服务信息，是扎根青岛的新闻门户。">
+    <script>window.setting = {
+            // 基本资源路径
+            assets_path: 'assets',
+            // 调试模式
+            debug: false,
+            // 是否使用vconsole
+            vconsole: false,
+            // 微信分享调试
+            wx_share_debug: false,
+            // 静态资源添加的缓存（图片）
+            assets_timestramp: '20240204',
+            // data.json请求的缓存 new Date().getTime()
+            data_timestramp: ''
+        };</script>
+    <script defer="defer" src="js/chunk-vendors.9b1d711b.js"></script>
+    <script defer="defer" src="js/app.15b5983b.js"></script>
+    <link href="css/chunk-vendors.e1654e07.css" rel="stylesheet">
+    <link href="css/app.ca2f77c1.css" rel="stylesheet">
+</head>
+
+<body><noscript><strong>您的浏览器未启动Javascript的支持，请开启后刷新重试。</strong></noscript>
+    <div id="app"></div>
+    <script>(function () {
+            // img 加载失败，添加错误处理样式 errorClassName
+            document.addEventListener(
+                "error",
+                (e) => {
+                    if (!window.setting.debug) {
+                        return;
+                    }
+                    console.log(e, e.target, e.target.src);
+                    console.log(e.target.parentNode, e.target.parentNode.className);
+                },
+                true
+            );
+        })();</script>
+</body>
+
+</html>

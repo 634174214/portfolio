@@ -1,0 +1,46 @@
+@import "reset-m.less";
+
+.piece-table{
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    tr, tbody{
+        display: block;
+        width: 100%;
+    }
+    thead{ 
+        display: none;
+    }
+    tr{
+        margin-top: 10px;
+    }
+    td{
+        display:block;
+        position:relative;
+        padding-left: 120px;
+        padding-top:13px;
+        padding-bottom:13px;
+        text-align:left;
+        background:#4d4d4d;
+        width: 100%;
+        &::before{
+            content:attr(data-th)":";
+             display: inline-block;
+              color: #fff;
+              background: #4d4d4d;
+              border-right: 2px solid transparent;/*设置表格边框透明 即将表格背景色分隔*/
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              width: 80px;
+              max-height: 100%;
+
+              font-size: 16px;
+              font-weight: 300;
+              padding-left: 13px;
+              padding-top: 13px;
+        }
+    }
+} 

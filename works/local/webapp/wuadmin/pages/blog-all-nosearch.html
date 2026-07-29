@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <title>全部文章</title>    
+    <meta name="description" content="WuBin.work | 内容管理平台" />
+    <link rel="stylesheet" href="../css/pc.css" media="(min-width: 641px)"/>
+    <link rel="stylesheet" href="../css/m.css" media="(max-width:640px)"/>
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <script src="../libs/base/html5shiv.min.js"></script>
+        <script src="../libs/base/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body class="preload">
+<main class="piece-main">
+  <section class="piece-container">
+      <section class="row">
+        <div class="col-6">
+          <!-- card -->
+          <div class="card auto marginBot-l">
+              <!-- headline -->
+              <div class="headline">
+                <span class="title">文章筛选</span>
+              </div>
+              <!-- headline end -->
+              <div class="inner">
+                <form action="GET" class="piece-form marginBot-l">
+                  <fieldset class="form-item">
+                    <label class="form-label">文章标题</label>
+                    <div class="input-block">
+                      <input type="text"
+                      name="search"
+                      placeholder="请输入要搜索的文章标题、内容、关键词"
+                      class="input w80"
+                      >
+                      <div class="piece-btn hot w20">搜索</div>
+                    </div>
+                  </fieldset>
+                </form>
+                <div class="piece-btn-box">
+                  <span class="piece-btn active">全部文章</span>
+                  <a href="#" class="piece-btn primary">JQ插件搜集</a>
+                  <a href="#" class="piece-btn primary">VUE插件搜集</a>
+                  <a href="#" class="piece-btn primary">心情随笔</a>
+                  <a href="#" class="piece-btn primary">天便有多云</a>
+                  <a href="#" class="piece-btn primary">人间道</a>
+                  <a href="#" class="piece-btn primary">中华人民共和国万岁</a>
+                  <a href="#" class="piece-btn primary">呀呀呀呀呀呀呀呀呀呀呀</a>
+                  <a href="#" class="piece-btn primary">全部文章</a>
+                  <a href="#" class="piece-btn primary">JQ插件搜集</a>
+                  <a href="#" class="piece-btn primary">VUE插件搜集</a>
+                  <a href="#" class="piece-btn primary">心情随笔</a>
+                  <a href="#" class="piece-btn primary">天便有多云</a>
+                  <a href="#" class="piece-btn primary">人间道</a>
+                  <a href="#" class="piece-btn primary">中华人民共和国万岁</a>
+                  <a href="#" class="piece-btn primary">呀呀呀呀呀呀呀呀呀呀呀</a>
+                </div>
+              </div>
+          </div>
+          <!-- card end -->
+          <!-- card -->
+          <div class="card auto">
+            <!-- headline -->
+            <div class="headline">
+              <span class="title">文章列表</span>
+            </div>
+            <!-- headline end -->
+            <div class="inner">
+              <!-- no-result -->
+               <div class="no-result">
+                 <img src="../img/nores.svg" class="nores-img">
+                 <div class="nores-text">
+                   <h2>抱歉！没有找到与 <b>“最多显10个字多了显示.”</b>有关的内容</h2>
+                   <small>请更换关键词重试！或者看看其他链接。</small>
+                 </div>
+               </div>
+               <!-- no-result end -->
+            </div>
+            <!-- inner end -->
+          </div>
+          <!-- card end -->
+        </div>
+      </section>
+  </section>
+</main>
+
+<script src="../js/libs/requirejs/require.js" data-main="../js/app/list" defer async="true"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "title": "格力龙年贺新春-制作您的2024年春节贺卡",
+  "description": "在这辞旧迎新的时刻，格力电器衷心祝愿大家新年快乐，万事如意！愿新的一年里，我们共同迎接更多的机遇和挑战，实现更多的梦想和目标。",
+  "wxshare_tpic": "https://vip.qdxin.cn/2024/card/assets/gl/wxshare.jpg",
+  "wxshare_turl": "https://vip.qdxin.cn/2024/card/index.html?id=gl",
+  "text_config": {
+    "alt": "文字内容设置, support=false那么不支持自定义文字",
+    "text_support": true,
+    "text_max_length": 60,
+    "text_title": "寄语",
+    "text_btn": "填写寄语",
+    "text_texteare_head": "填写您的新春寄语",
+    "text_card_head": "分享格力春节贺卡"
+  },
+  "start": {
+    "alt": "开始页面中的图片",
+    "title": "start-title.png",
+    "main": "start-main.png",
+    "button": "start-button.png",
+    "background": "start-bg.jpg"
+  },
+  "paster": {
+    "alt": "贴纸",
+    "files": [
+      {
+        "has_text": "paster-0-b.png",
+        "no_text": "paster-0-a.png",
+        "thumb": "paster-0-thumb.jpg"
+      }
+    ]
+  },
+  "pop_bg": {
+    "alt": "需要按照图片750*1624，测量出出定位的距离，单位px,photo_css拍摄的图像的定位样式",
+    "photo_css": {
+      "top": 437,
+      "left": 105,
+      "width": 540,
+      "height": 540
+    },
+    "text_css": {
+      "top": 1120,
+      "padding": "15px 5%",
+      "font-size": "2.2vh",
+      "color": "#fff",
+      "overflow": "hidden",
+      "line-height": "2.8vh",
+      "text-indent": "2em"
+    }
+  }
+}

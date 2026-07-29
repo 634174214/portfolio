@@ -1,0 +1,33 @@
+采用了丁香园的数据
+https://lab.isaaclin.cn/nCoV/zh
+
+全国概览
+https://lab.isaaclin.cn/nCoV/api/overall
+变量名	注释
+latest	1：返回最新数据（默认）
+0：返回时间序列数据
+返回数据
+变量名	注释
+generalRemark	全国疫情信息概览
+remarkX	注释内容，X为1~5
+note1	病毒名称
+note2	传染源
+note3	传播途径
+currentConfirmedCount(Incr)	现存确诊人数（较昨日增加数量）
+值为confirmedCount(Incr) - curedCount(Incr) - deadCount(Incr)
+confirmedCount(Incr)	累计确诊人数（较昨日增加数量）
+suspectedCount(Incr)	疑似感染人数（较昨日增加数量）
+curedCount(Incr)	治愈人数（较昨日增加数量）
+deadCount(Incr)	死亡人数（较昨日增加数量）
+seriousCount(Incr)	重症病例人数（较昨日增加数量）
+updateTime	数据最后变动时间
+
+各省数据 有10W次请求限制 
+https://www.tianapi.com/
+http://api.tianapi.com/txapi/ncovcity/index?key=813339c588aba8543e7171a8269c3118
+返回参数	类型	示例值	备注说明
+cityName	string	武汉	城市名称
+confirmedCount	int	495	确诊人数
+suspectedCount	int	0	疑似病例
+curedCount	int	31	治愈病例
+deadCount	int	0	死亡病例

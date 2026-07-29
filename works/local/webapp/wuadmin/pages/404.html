@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <title>博客后台管理</title>    
+    <meta name="description" content="WuBin.work | 内容管理平台" />
+    <link rel="stylesheet" href="../css/pc.css" media="(min-width: 641px)"/>
+    <link rel="stylesheet" href="../css/m.css" media="(max-width:640px)"/>
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <script src="../libs/base/html5shiv.min.js"></script>
+        <script src="../libs/base/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body class="preload">
+    <!-- 左边栏导航 -->
+    <aside class="piece-left-aside fixed">
+        <a href="login.html" class="logo">
+            <h2>WuBin.work<em>Admin</em></h2>
+            <small>内容管理平台</small>
+        </a>
+        <section class="peice-tree" id="peice-tree">
+            <div class="tree-item">
+                <a href="admin.html" class="child">
+                    <i class="fal fa-home-alt"></i>
+                    <em>主页</em>
+                </a>
+            </div>
+            <div class="tree-item">
+                <span class="child">
+                    <i class="fal fa-book"></i>
+                    <em>博客</em>
+                </span>
+                <ul class="child-list">
+                    <li>
+                        <a href="blog-editor.html">写文章</a>
+                    </li>
+                    <li>
+                        <a href="blog-all.html">草稿箱</a>
+                    </li>
+                    <li>
+                        <a href="blog-all.html">所有文章</a>
+                    </li>
+                    <li>
+                        <a href="blog-category.html">文章分类</a>
+                    </li>
+                    <li>
+                        <a href="blog-recommend.html">推荐管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tree-item">
+                <a href="blog-uploaded.html" class="child" target="main">
+                    <i class="fal fa-cloud-upload-alt"></i>
+                    <em>上传管理</em>
+                </a>
+            </div>
+            <div class="tree-item">
+                <span class="child">
+                    <i class="fal fa-user-cog"></i>
+                    <em>个人信息</em>
+                </span>
+                <ul class="child-list">
+                    <li>
+                        <a href="myinfo.html">编辑个人信息</a>
+                    </li>
+                    <li>
+                        <a href="mypassword.html">密码修改</a>
+                    </li>
+                    <li>
+                        <a href="myusername.html">用户名修改</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tree-item">
+                <a href="slides-all.html" class="child">
+                    <i class="fal fa-image"></i>
+                    <em>轮播管理</em>
+                </a>
+            </div>
+            <div class="tree-item">
+                <a href="tag-all.html" class="child">
+                    <i class="fal fa-tag"></i>
+                    <em>标签管理</em>
+                </a>
+            </div>
+            <div class="tree-item">
+                <a href="siteinfo.html" class="child">
+                    <i class="fal fa-tachometer"></i>
+                    <em>站点设置</em>
+                </a>
+            </div>
+        </section>
+    </aside>
+    <!-- 左边栏导航 end -->
+
+    <!-- 顶部信息栏 -->
+    <section class="piece-top-nav fixed" id="piece-top-nav">
+        <div class="btns">
+            <a href="#" target="_blank" class="item">
+                <i class="fal fa-globe"></i>
+            </a>
+            <a href="siteinfo.html" class="item">
+                <i class="fal fa-cog"></i>
+            </a>
+            <!-- 关于返回、刷新iframe方法均在piece-iframe中 -->
+            <span class="item" id="reload">
+                <i class="fal fa-undo"></i>
+            </span>
+        </div>
+        <dl class="user-info">
+            <dt class="mes">
+                <span>嗨，WuBin</span>
+                <img src="../images/blog-logo.png" class="avator">
+                <i class="icon fas fa-caret-right"></i>
+            </dt>
+            <dd class="menu">
+                <a href="myinfo.html">编辑个人信息</a>
+                <a href="mypassword.html">修改密码</a>
+                <a href="login.html" target="_parent">退出</a>
+            </dd>
+        </dl>
+    </section>
+    <!-- 顶部信息栏 end -->
+
+    <!-- tabbar -->
+    <section class="piece-tab-bar fixed" id="piece-tab-bar">
+        <div class="left">
+            <!-- back -->
+            <div class="back" id="back">
+                <i class="icon fal fa-chevron-left"></i>返回
+            </div>
+            <!-- back end -->
+            <!-- page-name -->
+            <div class="tab-name">
+                404
+            </div>
+            <!-- page-name end -->
+        </div>
+        <div class="right">
+            <p class="now-date"></p>
+            <p class="text"></p>
+        </div>
+    </section>
+    <!-- tabbar end -->
+
+    <!-- 右侧内容主体 -->
+    <aside class="piece-body-main fixed">
+        <div class="system-message error">
+            <div class="system-inner">
+                <div class="image">
+                    <img src="../img/404.svg" alt="" width="150" />
+                </div>
+                <h1>抱歉！页面走丢了</h1>
+                <p class="jump">
+                    页面将在 
+                    <span id="wait">10</span>
+                    秒后 自动返回上一页        
+                </p>
+                <p class="goother">
+                    <a href="/" class="btn btn-grey">返回首页</a>
+                    <a href="javascript:history.back(-1);" class="btn btn-primary">返回上一页</a>
+                </p>
+            </div>
+        </div>
+    </aside>
+    <!-- 右侧内容主体 end -->
+
+
+    <script src="../js/libs/requirejs/require.js" data-main="../js/app/404" defer async="true"></script>
+</body>
+</html>
+    

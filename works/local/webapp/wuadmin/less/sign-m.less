@@ -1,0 +1,317 @@
+@import "reset-pc.less";
+@import "variable.less";
+@import "mixins.less";
+@import "../font/css/all.min.css";
+   
+@color-login-bg: #fff;
+@color-login-bg-rgba: rgba(255, 255, 255, 0.5);
+@login-width: 80vw;
+@color-gray-middle: #ccc;
+@color-gray-lighter: #f2f2f2;
+
+html{height: 100%}
+body{
+    margin: 0;
+    height: 100%;
+    background: #f8f8f8;
+    &.preload{
+        *{
+            .notransition();
+        }
+    }
+}
+.canvas-bg{display: block;width: 100%;height: 100%;}
+ 
+.login{
+    background-color: @color-main-white;
+    background-color: @color-login-bg-rgba;
+    border-radius: 20px;
+    width: @login-width;
+    min-height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    margin: -200px 0 0 -@login-width/2;
+    box-shadow: 2px 0px 10px @color-gray-middle;
+    padding: 0 20px;
+
+    &.forget{
+        min-height: auto;
+        margin: -150px 0 0 -@login-width/2;
+    }
+
+    .login-top{
+        width: 180px;
+        height: auto;
+        display: block;
+        margin: -87px auto 0;
+        img{
+            display: block;
+        }
+        .login-logo{
+            margin-top: -20px;
+        }
+    }
+
+    .login-form{
+        width: 100%;
+        margin-top: 10px;
+        .form-group{
+            position: relative;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            padding: 5px 0;
+            // 验证码行
+            &.verify{
+                background-color:transparent;
+                border-radius: 0;
+                .label{
+                    display: none;
+                    width: 55px;
+                    position: relative;
+                    height: 40px;
+                    padding-left: 0px;
+                    line-height: 40px;
+                    top: 0;
+                } 
+                .input{
+                    float: right;
+                    width: 48%;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 10px;
+                    // border: 1px solid #c4d8dc;
+                    background-color: #fff;
+                }
+                .v-code{
+                    float: left;
+                    width: 50%;
+                    display: inline-block;
+                    height: 40px;
+                    cursor: pointer;
+                    position: relative;
+                    &:hover{
+                        .icon {
+                            transform: rotate(270deg);
+                        }
+                    }
+                    .refresh-vcode{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #fff;
+                        background-color: rgba(255, 255, 255, 0.9);
+                        font-size: 9px;
+                        padding: 5px;
+                        color: #4d4d4d;
+                        border-radius: 10px 0 0 0;
+                        .icon{
+                            transition: all 0.3s;
+                        }
+                    }
+                    img{
+                        width: auto;
+                        height: 40px;
+                        border-radius: 5px;
+                    };
+                }
+                span.error{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    background-color: transparent;
+                    display: block;
+                    width: 100%;
+                    clear: both;
+                    margin-bottom: -15px;
+                }
+            } 
+            // 记住我
+            &.remember{
+                border-radius: 0;
+                background-color:transparent;
+                padding-top: 15px;
+                border-top: 1px dashed darken(@color-gray-lighter, 10%);
+                .checkbox{
+                    float: left;
+                }
+                .forget-psd{
+                    float: right;
+                    font-size: 12px;
+                    height: 22px;
+                    line-height: 22px;
+                    color: darken(@color-gray-middle, 30%);
+                    transition: all 0.5s;
+                    &:hover{
+                        color: @color-main-llll;
+                    }
+                }
+            } 
+            // 灰色背景
+            &.gray-bg{
+                background-color: @color-gray-lighter;
+            }
+            // 当处于焦点后
+            &.focus{
+                .label-control{
+                    left: calc(100% - 70px);
+                    opacity: 1;
+                    font-size: 12px;
+                    color: @color-gray-middle;
+                    text-align: right;
+                    padding-right: 20px;
+                    padding-left: 0;
+                }
+            }
+            span.error{
+                position: absolute;
+                top: 5px;
+                height: 40px;
+                line-height: 40px;
+                right: 10px;
+                color: @color-scene-error;
+                background-color: @color-gray-lighter;
+                position: absolute;
+                z-index: 10;
+            }
+        } 
+        .input{
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border: 0;
+            padding-left: 20px;
+            border-radius: 6px;
+            color: #555;
+            background-color: transparent;
+            -webkit-appearance: none;
+            // 通过使用shadow覆盖住chrome浏览器自带的选中背景色
+            box-shadow: inset 0 0 0 1000px @color-gray-lighter;
+        }
+        .label-control, .label { 
+            position: absolute;
+            top: 5px;
+            left: 0;
+            display: block;
+            width: 70px;
+            padding-left: 20px;
+            height: 40px;
+            line-height: 40px;
+            color: #555;
+            opacity: 1;
+            font-size: 14px;
+            cursor: text;
+            transition: all 0.2s ease;
+        }
+        
+        // 注意配合验证的，由原来使用css样式控制改为JS
+        // .input:focus + .label-control,
+        // .input.notEmpty + .label-control,
+        // .textarea:focus + .label-control,
+        // .textarea.notEmpty + .label-control {
+        //     left: 250px;
+        //     opacity: 1;
+        //     font-size: 12px;
+        //     color: @color-gray-middle;
+        //     text-align: right;
+        //     padding-right: 20px;
+        //     padding-left: 0;
+        // }
+    }
+
+    .checkbox{
+        cursor: pointer;
+        overflow: hidden;
+        display: inline-block;
+        user-select: none;
+        .checkbox-inner{
+            float: left;
+            margin-right: 10px;
+        }
+        .checkbox-inner, .imgicon-checked{
+            height: 22px;line-height: 22px;width: 22px;
+        }
+        p{
+            color: #fff;
+            float: left;
+            height: 22px;
+            line-height: 23px;
+            font-size: 14px;
+            color: @color-font-black-l;
+        }
+        input[type="checkbox"]{
+            position: absolute;left: -9999em;
+            &:checked+.imgicon-checked{
+                background-position: -22px 0;
+            }
+        }
+        .imgicon-checked{
+            display: inline-block;
+            .bg-image('checkbox_icon_purple');
+            background-position: 0 0;
+        }
+    }
+ 
+    .sign-btn{
+        background-color: @color-main-l;
+        border: 0;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        height: 46px;
+        line-height: 46px;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        &:hover{
+            opacity: .8;
+            filter: alpha(opacity=80);
+        }
+        &.disable{
+            background-color: @color-gray-l;
+        }
+        &.goback{
+            background-color: @color-main-ll;
+        }
+    }
+}
+
+.login-menu{
+    display: none;
+}
+
+.layui-layer-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.noemail-address{
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    img{
+        width: 40%;
+        display: block;
+        margin: 0 auto 15px;
+    }
+    p{
+        text-align: center;
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    a{
+        color: @color-main-llll;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 15px;
+    }
+}

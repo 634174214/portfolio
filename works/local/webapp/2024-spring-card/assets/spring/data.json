@@ -1,0 +1,95 @@
+{
+  "title": "制作您的2024年春节贺卡",
+  "description": [
+      "新年不只是团圆，还有您的独特祝福。做张贺卡，让温情传递。",
+      "用创意贺卡，让您的新年祝福独一无二,我们的贺卡，您的故事。"
+  ],
+  "wxshare_tpic": "https://vip.qdxin.cn/2024/card/assets/spring/wxshare.jpg",
+  "wxshare_turl": "https://vip.qdxin.cn/2024/card/index.html?id=spring",
+  "text_demo": [
+      "龙腾盛世迎新春，家家户户福满门，愿您龙年吉祥如意，幸福安康！",
+      "龙年到来喜气浓，祝您事业高飞龙腾，家庭和睦乐融融。",
+      "新春佳节龙舞翩翩，愿您龙年大吉大利，幸福安康！",
+      "龙年春节，愿您如龙马精神，事业腾飞，家庭幸福，心想事成！",
+      "春风送暖入屠苏，龙年到来好运聚。愿您新的一年里，万事如意，喜乐常伴！",
+      "龙舞春风喜洋洋，新春祝福满园香。愿您龙年运势旺，健康幸福长长久久！",
+      "迎龙年，祝福传千里；福星高照，事业家庭双丰收。愿您新春快乐，心想事成！",
+      "龙年新春，愿吉星高照，幸福和您不离不弃。祝福您一年四季平安喜乐！",
+      "春风拂面龙年来，祝您身体健康，合家欢乐，好运连连！",
+      "龙年春节，愿您福如东海，寿比南山。新年新气象，万事顺心如意！",
+      "龙腾瑞气映朝阳，春回大地暖意长。愿您龙年吉祥，诗酒趁年华",
+      "春风十里，不如您笑容温暖；龙年好运，愿伴您左右，如诗如画",
+      "龙踏春风千里来，墨香书卷画中开。愿您龙年福气绕，诗意生活每一天",
+      "云淡风轻近午天，龙游细水春光新。愿您在这龙年，遇见所有美好如画卷",
+      "龙蟠虎踞春意浓，桃李争妍艳阳中。愿您龙年每一刻，都是温柔和诗意的钟",
+      "龙舞春风喜洋洋，新春祝福满园香。愿您龙年运势旺，健康幸福长长久久！",
+      "春风拂面龙年来，祝您身体健康，合家欢乐，好运连连！",
+      "龙年春到福星照，祝您事业飞黄腾达，家庭和乐美满！",
+      "龙舞春风好运来，愿您新春大吉，财运亨通，幸福长伴！",
+      "龙年新春，愿您龙马精神，事业成功，家庭幸福，万事如意！"
+  ],
+  "text_config": {
+    "alt": "文字内容设置, support=false那么不支持自定义文字",
+    "text_support": true,
+    "text_max_length": 60,
+    "text_title": "寄语",
+    "text_btn": "填写寄语",
+    "text_texteare_head": "填写您的春节寄语",
+    "text_card_head": "分享您的春节贺卡"
+  },
+  "start": {
+    "alt": "开始页面中的图片",
+    "title": "start-title.png",
+    "main": "start-main.png",
+    "button": "start-button.png",
+    "background": "start-bg.jpg"
+  },
+  "paster": {
+    "alt": "贴纸",
+    "files": [
+      {
+        "has_text": "paster-0-b.png",
+        "no_text": "paster-0-a.png",
+        "thumb": "paster-0-thumb.jpg"
+      },
+      {
+        "has_text": "paster-1-b.png",
+        "no_text": "paster-1-a.png",
+        "thumb": "paster-1-thumb.jpg"
+      },
+      {
+        "has_text": "paster-2-b.png",
+        "no_text": "paster-2-a.png",
+        "thumb": "paster-2-thumb.jpg"
+      },
+      {
+        "has_text": "paster-3-b.png",
+        "no_text": "paster-3-a.png",
+        "thumb": "paster-3-thumb.jpg"
+      },
+      {
+        "has_text": "paster-4-b.png",
+        "no_text": "paster-4-a.png",
+        "thumb": "paster-4-thumb.jpg"
+      }
+    ]
+  },
+  "pop_bg": {
+    "alt": "需要按照图片750*1624，测量出出定位的距离，单位px,photo_css拍摄的图像的定位样式",
+    "photo_css": {
+      "top": 437,
+      "left": 105,
+      "width": 540,
+      "height": 540
+    },
+    "text_css": {
+      "top": 1150,
+      "padding": "0 25px",
+      "font-size": "2.2vh",
+      "color": "#fff",
+      "overflow": "hidden",
+      "line-height": "3.5vh",
+      "text-indent": "2em"
+    }
+  }
+}

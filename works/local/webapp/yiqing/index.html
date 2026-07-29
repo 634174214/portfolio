@@ -1,0 +1,511 @@
+<!doctype html>    
+<html lang="en">
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />  
+    <meta content="telephone=no" name="format-detection" /> 
+    <meta name="apple-touch-fullscreen" content="yes" />    
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />               
+    <title>新冠肺炎疫情-青岛实时数据 | 信网</title>
+    <meta name="description" content="坚定信心、同舟共济、科学防治、精准施策，打赢疫情防控阻击战！">      
+    <meta name="keywords" content="新型冠状病毒肺炎,新型冠状病毒,新冠肺炎,青岛市,新冠肺炎疫情疫情青岛实时数据">
+    <link rel="stylesheet" href="css/layout.min.css?t=34446">
+</head>
+<body ontouchstart>
+    <div class="inload" id="loading">
+        <div class="pos_abs loading">
+            <div class="circle"></div>
+            <div class="circle1"></div>
+            <p id="loadText">数据加载中 请稍候...</p>
+        </div>
+    </div>
+    <section class="main" id="app">
+        <div class="topmenu fixedtop"
+             :class="{'pcshow': ispc}"
+             v-show="!showpic"
+        >
+            <a href="http://m.qdxin.cn/" class="mid-logo">信网</a>
+            <div class="nav-hamburger-link" @click="toggleMenuPop">
+                <div class="nav-hamburger" :class="{'opened': showMenuPop}">
+                  <div class="nav-hamburger-line"></div>
+                  <div class="nav-hamburger-line"></div>
+                  <div class="nav-hamburger-line"></div>
+                </div>
+            </div>
+            <div class="sdnews">
+                <span>省级新闻网站</span>
+            </div>
+        </div>
+        <transition name="menuFadeIn">
+            <div class="menuPop" 
+                 :class="{'pcshow': ispc}"
+                 v-show="showMenuPop"
+            >
+                <div class="page-wrap">
+                    <div class="headMenu">
+                        <ul class="menuTan">
+                            <li><a href="http://m.qdxin.cn/">头条</a></li>
+                            <li><a href="http://m.qdxin.cn/qingdao/">青岛</a></li>
+                            <li><a href="http://m.qdxin.cn/xin/">原创</a></li>
+                            <li><a href="http://m.qdxin.cn/Fortune/">财富</a></li>
+                            <li><a href="http://house.qdxin.cn/">房产</a></li>
+                            <li><a href="http://www.qdxin.cn/Car/">汽车</a></li>
+                            <li><a href="http://m.qdxin.cn/tech/">科技</a></li>
+                            <li><a href="http://m.qdxin.cn/Health/">健康</a></li>
+                            <li><a href="http://m.qdxin.cn/edu/">教育</a></li>
+                            <li><a href="http://m.qdxin.cn/sports/">体育</a></li>
+                            <li><a href="http://m.qdxin.cn/ent/">娱乐</a></li>
+                            <li><a href="http://m.qdxin.cn/Picture/">影像</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="proDuction">
+                    <ul>
+                        <li><a href="http://piyao.qdxin.cn"><p>青岛辟谣</p></a></li>
+                        <li><a href="http://xinbao.qdxin.cn"><p>大众报系</p></a></li>
+                        <li><a href="http://b.qdxin.cn/"><p>信链网</p></a></li>
+                        <li><a href="http://law.qdxin.cn/"><p>法律文书</p></a></li>
+                        <li><a href="http://faxian.qdxin.cn"><p>发现青岛</p></a></li>
+                        <li><a href="http://vip.qdxin.cn/2017/vip/piyaojubao/"><p>有害信息举报</p></a></li>
+                        <li><a href="http://m.qdxin.cn/zhuanti/"><p>信网专题</p></a></li>
+                        <li><a href="http://www.qdxin.cn/about/pub.html"><p>广告服务</p></a></li>
+                        <li><a href="http://vr.qdxin.cn/"><p>VR·全景</p></a></li>
+                        <li><a href="http://live.qdxin.cn" target="_blank"><p>直播服务</p></a></li>
+                        <li><a href="http://www.qdxin.cn/ziyuan/" target="_blank"><p>平台资源</p></a></li>
+                        <li><a href="http://www.qdxin.cn/about/chuanboli/" target="_blank"><p>信网传播力</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </transition> 
+
+        <div class="header" :class="{'margTop': !showpic}">
+            <div class="title">
+                <a href="http://m.qdxin.cn/" class="logo">
+                    <img src="imgs/title-1.png" alt="信网数据">
+                </a>
+            </div>
+            <div class="qrbox" v-show="showpic">
+                <img src="imgs/qrcode.png" alt="专题H5二维码">
+            </div>
+        </div>
+        <div class="tabs" v-show="!showpic">
+            <div class="tab-item" 
+                 v-for="(item, index) in tabsData"
+                :class="{'active': tabsCur === index}"
+                :key="index"
+                ref="tabItem"
+                @click="changeTabs(index)"
+            >
+                <em ref="tabsEm">{{item.title}}</em>
+            </div>
+            <div class="line-road">
+                <span class="line" :style="tabLineStyle"></span>
+            </div>
+            <div class="tab-cover" v-show="showTabCover"></div>
+        </div>
+        <section class="content">
+            <div class="content-wrapper">
+                <aside class="page page-1" v-show="tabsCur === contentIndex[0]">
+                    <div class="top-title">
+                        <h2>青岛疫情</h2>
+                        <span>数据更新至 {{today}}</span>
+                        <!-- <span>数据更新至 2020.02.04 / 24时</span> -->
+                    </div>
+                    <ul class="numbers">
+                        <li class="ill">
+                            <span>{{allIll}}</span>
+                            <p>确诊</p>
+                            <div class="compare">
+                                <!-- <em>昨日</em>{{compareCount.ill}} -->
+                                <em>新增</em>{{now.illAdd}}
+                            </div>
+                        </li>
+                        <li class="foreign">
+                            <span>{{allForeign}}</span>
+                            <p>输入</p>
+                            <div class="compare">
+                                <!-- <em>昨日</em>{{compareCount.ill}} -->
+                                <em>新增</em>{{now.foreignadd}}
+                            </div>
+                        </li>
+                        <li class="doubt">
+                            <span>{{now.doubt}}</span>
+                            <p>疑似</p>
+                            <div class="compare">
+                                <em>新增</em>{{now.doubtAdd}}
+                            </div>
+                        </li>
+                        <li class="cure">
+                            <span>{{now.cure}}</span>
+                            <p>出院</p>
+                            <div class="compare">
+                                <em>新增</em>{{now.cureAdd}}
+                            </div>
+                        </li>
+                        <li class="die">
+                            <span>{{now.die}}</span>
+                            <p>死亡</p>
+                            <div class="compare">
+                                <em>新增</em>{{now.dieAdd}}
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="chart" id="chart"></div>
+                    <div class="chart-tips" v-show="!showpic">
+                        <div class="left">
+                            <img src="imgs/icon-1.png">
+                            <span>本图表仅展示近20天疫情数据信息</span>
+                        </div>
+                        <div class="right">(单位) X:月/日 Y:人</div>
+                    </div>
+                    <div class="tables" v-show="!showpic">
+                        <div class="th">
+                            <!-- <p class="area td">区/市</p>
+                            <p class="nums td">确诊</p> -->
+                            <p class="td-left">区/市 <em>确诊</em></p>
+                        </div>
+                        <ul>
+                            <li v-for="(item, index) in area" :key="index">
+                                <p class="area td">{{item.name}}</p>
+                                <p class="nums td">{{item.count}}</p>
+                            </li>
+                        </ul>
+                        <!-- 境外确诊 -->
+                        <div class="th">
+                            <p class="td-left">境外 <em>确诊</em></p>
+                        </div>
+                        <ul>
+                            <li v-for="(item, index) in foreign" :key="index">
+                                <p class="area td">{{item.name}}</p>
+                                <p class="nums td">{{item.count}}</p>
+                            </li>
+                        </ul>
+                        <!-- 本市无症状感染者 -->
+                        <div class="th">
+                            <p class="td-left">本市无症状感染者</p>
+                        </div>
+                        <ul>
+                            <li v-for="(item, index) in illerNoSymptom" :key="index">
+                                <p class="area td">{{item.name}}</p>
+                                <p class="nums td">{{item.count}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tips">
+                        <img src="imgs/icon-1.png">
+                        <span>数据来自 山东省卫生健康委员会</span>
+                    </div>
+                </aside>
+
+                <aside class="page" 
+                       v-show="tabsCur === contentIndex[1]" 
+                       :class="{'page-hidden': !chinaWait.show}"
+                       v-if="showChina"
+                >
+                    <transition name="waitOut">
+                        <div class="waiting-load" v-show="!chinaWait.show">
+                            <div class="inner">
+                                <div class="top"></div>
+                                <p class="text">
+                                    {{chinaWait.text}}
+                                </p>
+                            </div>
+                        </div>
+                    </transition>
+                    <article class="china">
+                        <div class="row" v-show="chinaTotal.show">
+                            <h2 class="headline">
+                                国内疫情
+                                <span>数据更新至{{chinaTotal.date}}</span>
+                            </h2>
+                            <ul class="numbers" :class="{'hidecompare': showChinaCompare}">
+                                <li class="ill">
+                                    <!-- <span>{{chinaTotal.diagnosed}}</span> -->
+                                    <count-to :start-val="0"
+                                              :end-val="chinaTotal.diagnosed" :duration="3000"
+                                    ></count-to>
+                                    <p>确诊病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>+{{chinaTotal.diagnosedIncr}}
+                                    </div>
+                                </li>
+                                <li class="doubt">
+                                    <count-to :start-val="0"
+                                              :end-val="chinaTotal.suspect" :duration="3000"
+                                    ></count-to>
+                                    <p>疑似病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>+{{chinaTotal.suspectIncr}}
+                                    </div>
+                                </li>
+                                <li class="cure">
+                                    <count-to :start-val="0"
+                                              :end-val="chinaTotal.cured" :duration="3000"
+                                    ></count-to>
+                                    <p>治愈病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>+{{chinaTotal.curedIncr}}
+                                    </div>
+                                </li>
+                                <li class="die">
+                                    <count-to :start-val="0"
+                                              :end-val="chinaTotal.death" :duration="3000"
+                                    ></count-to>
+                                    <p>死亡病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>+{{chinaTotal.deathIncr}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 全国疫情end -->
+                        <div class="row">
+                            <h2 class="headline"
+                                @click="tableSlideUp(0)"
+                            >
+                                山东疫情
+                                <em :class="showSDtableArea ?'slide-up': 'slide-down'">
+                                    <cite></cite>
+                                    {{showSDtableArea ? '折叠':'展开'}}
+                                </em>
+                            </h2>
+                            <ul class="numbers" v-if="shanDong">
+                                <li class="ill">
+                                    <span>{{shanDong.confirmedCount}}</span>
+                                    <p>确诊病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>{{now.sdData.illadd}}
+                                    </div>
+                                </li>
+                                <li class="cure">
+                                    <span>{{shanDong.curedCount}}</span>
+                                    <p>治愈病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>{{now.sdData.cureadd}}
+                                    </div>
+                                </li>
+                                <li class="die">
+                                    <span>{{shanDong.deadCount}}</span>
+                                    <p>死亡病例</p>
+                                    <div class="compare">
+                                        <em>昨日</em>{{now.sdData.dieadd}}
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="sdcitys" ref="sdcitys" :class="{'height0': !showSDtableArea}">
+                                <table class="areas-data">
+                                    <tr>
+                                        <th>地区</th>
+                                        <th class="red">确诊</th>
+                                        <th>死亡</th>
+                                        <th>治愈</th>
+                                    </tr>
+                                    <tr class="hasbg">
+                                        <td>{{shanDong.provinceName}}</td>
+                                        <td class="red">{{shanDong.confirmedCount}}</td>
+                                        <td>{{shanDong.deadCount}}</td>
+                                        <td>{{shanDong.curedCount}}</td>
+                                    </tr>
+                                    <tr v-for="(item, index) in shanDongCitys"
+                                        :key="index"
+                                    >
+                                        <td class="gray border-left">{{item.cityName}}</td>
+                                        <td class="red">{{item.confirmedCount}}</td>
+                                        <td>{{item.deadCount}}</td>
+                                        <td class="border-right">{{item.curedCount}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 山东疫情end -->
+                        <div class="row">
+                            <h2 class="headline"
+                                @click="tableSlideUp(1)"
+                            >
+                                各省市区疫情
+                                <small>(含港澳台)</small>
+                                <em :class="showProvtableArea ?'slide-up': 'slide-down'">
+                                    <cite></cite>
+                                    {{showProvtableArea ? '折叠':'展开'}}
+                                </em>
+                            </h2>
+                            <div class="province" ref="province" :class="{'height0': !showProvtableArea}">
+                                <table class="areas-data">
+                                    <tr>
+                                        <th>地区</th>
+                                        <th class="red">现存确诊</th>
+                                        <th>确诊</th>
+                                        <th>死亡</th>
+                                        <th>治愈</th>
+                                    </tr>
+                                    <tr v-for="(item, index) in chinaProvince"
+                                        :key="index"
+                                    >
+                                        <td class="border-left"><strong>{{item.name}}</strong></td>
+                                        <td class="red">{{item.currentConfirmed}}</td>
+                                        <td>{{item.confirmed}}</td>
+                                        <td>{{item.dead}}</td>
+                                        <td class="border-right">{{item.cured}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 全国数据end -->
+                        <div class="tips">
+                            <img src="imgs/icon-1.png"> 
+                            <span>数据获取可能会有延迟 如有差异请以官方通报为准</span>
+                        </div>
+                    </article>
+                </aside>
+                
+                <aside class="page" v-show="tabsCur === contentIndex[2]">
+                    <div class="case-all" v-show="!showpic">
+                        <h1 class="head"><span>青岛/境外输入--例确诊病例详情</span></h1>
+                        <ol class="case-list">
+                            <li class="case-item"
+                                v-for="(item, index) in casedoc"
+                                :data-num="index"
+                                :key="index"
+                            >
+                                <div class="left">
+                                    <span v-html="item.show"></span>
+                                    <p>病例</p>
+                                </div>
+                                <div class="right">
+                                    <p>{{item.desc}}</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="case-loading" 
+                             :class="{'isloadover': isCaseLoaded}"
+                        >
+                            <div class="case-load-ing">
+                                请稍等，数据加载中...
+                            </div>
+                            <div class="case-load-ed">
+                                <span>天佑中华，战“疫”必胜！</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="page" 
+                       v-show="tabsCur === contentIndex[3]"
+                       :class="{'page-hidden': !piyaoWait.show}"
+                >
+                    <transition name="waitOut">
+                        <div class="waiting-load" v-show="!piyaoWait.show">
+                            <div class="inner">
+                                <div class="top"></div>
+                                <p class="text">
+                                    {{piyaoWait.text}}
+                                </p>
+                            </div>
+                        </div>
+                    </transition>
+                    <div class="piyao" v-show="piyaoWait.show">
+                        <h1>谣言粉碎机</h1>
+                        <ul class="piyao-list">
+                            <li v-for="(piItem, index) in piyao"
+                                class="pi-item"
+                                :key="index"
+                            >
+                                <a :href="piItem.url"
+                                    class="piyao-link"
+                                >
+                                    <div class="imgbox"
+                                         v-if="piItem.hasimg"
+                                    >
+                                        <img :src="piItem.imgurl">
+                                    </div>
+                                    <div class="textbox">
+                                        <h2>{{piItem.ntitle}}</h2>
+                                        <p>{{piItem.summary}}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="http://piyao.qdxin.cn/fensuiji/" class="lookmore">查看更多</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <div class="footer" v-show="!showpic" ref="footer">
+            <img src="imgs/bg-logo.png">
+            <span>copyright © 2020 qdxin.cn</span>
+        </div>
+        <div class="press-lang" v-show="showpic">
+            <p>长按图片识别二维码</p>
+            <p>获取最新<strong>青岛实时疫情信息</strong></p>
+        </div>
+        <div class="shareImg" 
+            :class="{'pcshow':ispc}" 
+            v-show="!showpic && tabsCur === 0" 
+            @click="getPic"
+        >
+            分享疫情实时动态
+        </div>
+        <transition name="gotopfade">
+            <div class="gotop"
+                 :class="{'pcshow':ispc}"
+                 v-show="showGotop"
+                 @click="gotoY(0, 400)"
+            ></div>
+        </transition>
+        <div class="qrpc-show" :class="{'pcshow':ispc}" v-if="ispc">
+            <img src="imgs/qrcode.png">
+            <p>
+                <span>为保证更好的浏览效果</span>
+                <span>请手机扫码体验</span>
+            </p>
+        </div>
+        <div class="picBox" 
+            :class="{'pcshow': ispc}" 
+            v-show="showpicOK" 
+            ref="picBox"
+        >
+            <div class="inner">
+                <span class="close" @click="closePicBox"></span>
+                <p><em>{{ispc ? '请右键图片另存为分享' : '请长按下载图片分享'}}</em></p>
+                <img :src="imgUrl">
+            </div>
+        </div>
+    </section>
+
+    <div class="show-popup" id="show-popup">
+        <div class="inner">
+            <p class="desc">
+                <b>友情提示：</b><br> 本项目数据已<b>不再更新</b>，目前数据为筛选的展示数据，如需查看最终真实效果，请 <a href="http://vip.qdxin.cn/h5/2020/yiqing/">点击此处</a>
+            </p>
+            <div class="link">
+                <span class="show-popup-btn" id="stay-here">建议在本页继续查看</span>
+            </div>
+        </div>
+    </div>
+<script>
+    // 是否显示国内数据
+    var showChina = true;
+</script>
+
+<script src="js/data.js?t=05554186"></script>
+<script src="lib/echarts.min.js"></script>
+<script src="lib/vue.min.js"></script>
+<script src="lib/vue-count-to.min.js"></script>
+<script src="lib/vue-resource.min.js"></script>
+<script src="lib/html2canvas.js"></script>
+<script src="lib/canvas2image.js"></script>
+<script src="lib/base64.js"></script>
+<script src="js/index.min.js?t=04264"></script>
+
+<script>
+    var t_pic = window.location.protocol + '//'  + window.location.host + window.location.pathname + 'imgs/share.png';
+    var t_title = '新冠肺炎疫情-青岛实时数据' + hourShow + ' | 信网';
+    // console.log(t_pic)
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script src="js/wx_share.js?t=0404"></script>
+<script src="http://libs.qdxin.cn/wx/js/wx_share.js"></script>
+</body>
+</html>
+    

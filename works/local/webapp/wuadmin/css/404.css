@@ -1,0 +1,22 @@
+
+.system-message{background:#fff;box-shadow:1px 1px 1px hsla(0,0%,39%,.1);text-align:center;position: absolute;left: 20px;top: 20px;right: 20px;bottom: 20px;}
+.system-message h1{margin:0;margin-bottom:9pt;color:#444;font-weight:400;font-size:40px}
+.system-message .jump,.system-message .image{margin:20px 0;padding:0;padding:10px 0;font-weight:400}
+.system-message .image{width: 200px;margin: 0 auto;}
+.system-message .jump{font-size:14px;text-align: center;}
+.system-message .jump a{color:#333}
+.system-message p{font-size:9pt;line-height:20px}
+.system-message .btn{display:inline-block;margin-right:10px;width:140px;height:40px;border:1px solid #44a0e8;border-radius:30px;color:#44a0e8;text-align:center;font-size:1pc;line-height:40px;margin-bottom:5px;}
+.success .btn{border-color:#69bf4e;color:#69bf4e}
+.error .btn{border-color:#ff8992;color:#ff8992}
+.info .btn{border-color:#3498db;color:#3498db}
+.copyright p{width:100%;color:#919191;text-align:center;font-size:10px}
+.system-message .btn-grey{border-color:#bbb;color:#bbb}
+.goother{
+    overflow: hidden;
+    text-align: center;
+}
+.system-inner{position: absolute;
+top: 50%;left: 50%;margin: -190px 0 0 -160px;width: 380px;}
+@media (max-width:768px){body {padding:20px 0;}}
+@media (max-width:480px){.system-message h1{font-size:30px;}}

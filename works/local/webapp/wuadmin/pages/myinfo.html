@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <title>编辑个人信息</title>    
+    <meta name="description" content="WuBin.work | 内容管理平台" />
+    <link rel="stylesheet" href="../css/pc.css" media="(min-width: 641px)"/>
+    <link rel="stylesheet" href="../css/m.css" media="(max-width:640px)"/>
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <script src="../libs/base/html5shiv.min.js"></script>
+        <script src="../libs/base/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body class="preload">
+<main class="piece-main">
+    <section class="piece-container">
+        <section class="row">
+            <div class="col-6">
+                <div class="card">
+                   <!-- headline -->
+                   <div class="headline">
+                       <span class="title">完善个人信息</span>
+                   </div>
+                   <!-- headline end -->
+                   <div class="inner">
+                       <form action="#" method="POST" class="piece-form validate">
+                        <fieldset class="form-item">
+                            <label class="form-label">个人昵称</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="myname"
+                                       placeholder="请输入个人的昵称"
+                                       class="input"
+                                       data-msg-required="个人昵称不能为空！"
+                                       required
+                                >
+                              </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">个人备注</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="myremark"
+                                       placeholder="请输入个人网站备注"
+                                       class="input"
+                                       data-msg-required="个人网站备注不能为空！" required
+                                >
+                              </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">个性签名</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="myshuo"
+                                       placeholder="请输入个性签名"
+                                       class="input"
+                                       data-msg-required="个性签名不能为空！"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item piece-upload ">
+                            <label class="form-label">个人头像</label>
+                            <div class="input-block">
+                                <div id="avatarPicker" class="piece-btn">点击上传新的头像</div>
+                                <small class="btn-tips">仅支持jpg/png/gif（如需特殊形状请自行处理），点击其他可选择曾经上传过的头像</small>
+                                <ul class="upimg-list">
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                        <p class="name">333</p>
+                                        <p class="status success">上传成功</p>
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="myavatar">
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">码云</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="mygitee"
+                                       placeholder="请输入码云gitee主页地址"
+                                       class="input"
+                                       required
+                                       data-msg-required="码云gitee主页地址不能为空！"
+                                       data-rule-url="true"
+                                       data-msg-url="请注入gitee主页地址的url"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">Github</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="mygithub"
+                                       placeholder="请输入github主页地址"
+                                       class="input"
+                                       required
+                                       data-msg-required="github主页地址不能为空！"
+                                       data-rule-url="true"
+                                       data-msg-url="请注入github主页地址的url"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">个人手机</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="myphone"
+                                       placeholder="请输入手机号"
+                                       class="input"
+                                       required
+                                       data-msg-required="手机号不能为空！"
+                                       data-rule-mobile="true"
+                                       data-msg-mobile="手机号格式不正确！"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">个人QQ</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="myqq"
+                                       placeholder="请输入QQ号"
+                                       class="input"
+                                       required
+                                       data-msg-required="QQ号不能为空！"
+                                       data-rule-number="true"
+                                       data-msg-number="请输入正确的QQ号（数字）"
+                                       minlength="5"
+                                       data-msg-minlength="QQ号最少为5位"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">个人邮箱</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="myemail"
+                                       placeholder="请输入个人邮箱地址"
+                                       class="input"
+                                       data-rule-email="true"
+                                       data-msg-email="请输入邮箱地址！"
+                                       required
+                                       data-msg-required="邮箱地址不能为空！"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item">
+                            <label class="form-label">个人微信</label>
+                            <div class="input-block">
+                                <input type="text"
+                                       name="mywechat"
+                                       placeholder="请输入微信号"
+                                       class="input"
+                                       required
+                                       data-msg-required="个人微信号不能为空！"
+                                >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-item piece-upload">
+                            <label class="form-label">打赏码</label>
+                            <div class="input-block">
+                                <div class="piece-btn pick-imgone">点击上传支付宝打赏码</div>
+                                <small class="btn-tips">仅支持jpg/png/gif格式，上传后会替换之前的二维码</small>
+                                <ul class="upimg-list">
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                        <p class="name">333</p>
+                                        <p class="status success">上传成功</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="myalipayqr">
+                        </fieldset>
+                        <fieldset class="form-item piece-upload">
+                            <label class="form-label">微信码</label>
+                            <div class="input-block">
+                                <div class="piece-btn pick-imgone">点击上传个人微信号二维码</div>
+                                <small class="btn-tips">仅支持jpg/png/gif格式，上传后会替换之前的二维码</small>
+                                <ul class="upimg-list">
+                                    <li class="item">
+                                        <img src="../images/avatar.png">
+                                        <p class="name">333</p>
+                                        <p class="status error">上传失败</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="mywechatqr">
+                        </fieldset>
+                        <div class="piece-btn-box avg-1 marginTop-l">
+                            <button type="submit" class="piece-btn hot lang">提交个人信息</button>
+                        </div>
+                       </form>
+                   </div>
+                </div>
+            </div>
+        </section>
+      </section>
+</main>
+
+<script src="../js/libs/requirejs/require.js" data-main="../js/app/myinfo" defer async="true"></script>
+</body>
+</html>

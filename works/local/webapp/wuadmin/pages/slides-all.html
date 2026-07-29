@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <title>轮播管理</title>    
+    <meta name="description" content="WuBin.work | 内容管理平台" />
+    <link rel="stylesheet" href="../css/pc.css" media="(min-width: 641px)"/>
+    <link rel="stylesheet" href="../css/m.css" media="(max-width:640px)"/>
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <script src="../libs/base/html5shiv.min.js"></script>
+        <script src="../libs/base/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body class="preload">
+<main class="piece-main">
+    <section class="piece-container">
+        <section class="row">
+            <div class="col-6">
+                <div class="card">
+                   <!-- headline -->
+                   <div class="headline">
+                       <span class="title">全部轮播</span>
+                   </div>
+                   <!-- headline end -->
+                   <div class="inner">
+                        <div class="piece-btn-box marginBot-l">
+                            <a href="slides-edit.html" class="piece-btn big lang">新建轮播项</a>
+                        </div>
+                        <ol class="piece-tips marginBot-l">
+                            <li class="title">
+                                重要提示
+                            </li>
+                            <li>1、轮播不要选择显示的太多，数量5个左右为宜。</li>
+                            <li>2、轮播也不要选择显示的太少，<b>最少应该为3个</b></li>
+                            <li>3、此处限制最少提交数为1个。</li>
+                        </ol>
+                       <!-- data-ajax设置了data-ajax就以ajax方式提交表单，提交到ajax的地址=action中的地址 -->
+                       <form action="post-test.php"
+                             class="piece-form validate"
+                             method="POST"
+                             data-ajax="true"
+                             data-layer-nopassmsg="请选择要显示的轮播，最少一条！"
+                        >
+                            <table class="piece-table marginBot-l">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col>
+                                    <col width="150px">
+                                    <col width="130px">
+                                    <col width="130px">
+                                    <col width="130px">
+                                    <col width="200px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th class="text-left">轮播文字描述</th>
+                                        <th>按钮文字</th>
+                                        <th>图片预览</th>
+                                        <th>链接指向</th>
+                                        <th>发布日期</th>
+                                        <th>管理</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <label for="s2" class="checkbox center">
+                                                <div class="checkbox-inner">
+                                                    <input type="checkbox" name="radio1" id="s2">
+                                                    <span class="imgicon-checked"></span>
+                                                </div>
+                                                <p>JQ插件搜集，整合JQ插件使用以及下载等</p>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            商务合作
+                                        </td>
+                                        <td>
+                                            <div class="imgbox">
+                                                <img src="http://statics.qdxin.cn/uploadfile/2020/0921/20200921082329910.jpg">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="http://www.wubin.work/tool" target="_blank" class="textlink texthidden">http://www.wubin.work/tool</a>
+                                        </td>
+                                        <td>2020-09-09</td>
+                                        <td>
+                                            <a href="#" class="piece-btn light">编辑</a>
+                                            <span href="#" class="piece-btn warn del" data-layer-delmsg="确定要删除这条轮播吗？">删除</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">
+                                            <label for="s3" class="checkbox center">
+                                                <div class="checkbox-inner">
+                                                    <input type="checkbox" name="radio3" id="s3">
+                                                    <span class="imgicon-checked"></span>
+                                                </div>
+                                                <p>JQ插件搜集，整合JQ插件使用以及下载等</p>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            商务合作
+                                        </td>
+                                        <td>
+                                            <div class="imgbox">
+                                                <img src="http://statics.qdxin.cn/uploadfile/2020/0921/20200921082329910.jpg">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="http://www.wubin.work/tool" target="_blank" class="textlink texthidden">http://www.wubin.work/tool</a>
+                                        </td>
+                                        <td>2020-09-09</td>
+                                        <td>
+                                            <a href="#" class="piece-btn light">编辑</a>
+                                            <span href="#" class="piece-btn warn del" data-layer-delmsg="确定要删除这条轮播吗？">删除</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 分页 -->
+                            <div class="piece-btn-box avg-1">
+                                <button type="submit" class="piece-btn hot lang">提交选择显示的轮播</button>
+                            </div>
+                            <!-- 分页 end -->
+                       </form>
+                   </div>
+                </div>
+            </div>
+        </section>
+      </section>
+</main>
+
+<script src="../js/libs/requirejs/require.js" data-main="../js/app/list" defer async="true"></script>
+</body>
+</html>

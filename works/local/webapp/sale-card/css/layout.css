@@ -1,0 +1,452 @@
+/*PC页面重置(非响应式)*/
+@charset "utf-8";
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-sizing: border-box;
+ font-family:PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
+}
+
+html{font-family:' Microsoft YaHei ','PingFang SC','Droidsansfallback';
+}
+body{margin:0 auto;font-size:16px;background: #f4f5f5;
+line-height: inherit;}
+div,dl,dt,dd,ol,ul,b,li,p,h1,h2,h3,h4,input,h6,h5,form,i,pre,fieldset,textarea,p,blockquote,th,td
+{margin:0; padding:0;list-style:none; font-weight:normal; font-style: normal;}
+dl,ul,li,p{text-align:left;}
+img{border:0px;}
+.clear{clear:both; overflow:hidden; }
+a{ color:#000; text-decoration:none;-webkit-user-select:none;-webkit-touch-callout: none;}
+em{font-style: normal;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+table {
+     border-collapse:collapse;
+     border-spacing:0;
+ }
+fieldset,img {
+     border:0;
+}
+address,caption,cite,code,dfn,em,th,var {
+     font-style:normal;
+     font-weight:normal;
+}
+caption,th {
+     text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+     font-size:100%;
+     font-weight:normal;
+}
+q:before,q:after {
+     content:"";
+}
+abbr,acronym {
+     border:0;
+}
+
+.top {
+    border-bottom: 1px solid #ccc;
+    margin: 40px auto 40px;
+    width: 1000px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.top h1{
+    font-size: 2em;
+    font-weight: bold;
+}
+.top .top-tips{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #4d4d4d;
+}
+
+#app{
+    width: 1000px;
+    margin: 0px auto 20px;
+}
+.footer{
+    clear: both;
+    height: 60px;
+}
+body.sk-loading{
+    overflow: hidden;
+}
+.left-and-right{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.left-and-right.show{
+    visibility: visible;
+    opacity: 1;
+}
+.left-and-right:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.left{
+    width: 410px;
+    float: left;
+}
+.right{
+    border-left: 1px dashed #aaa;
+    width: 590px;
+    min-height: 812px;
+    float: right;
+}
+
+.form{
+    padding-left: 25px;
+}
+
+
+.form-row{
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+}
+.request:after{
+    content: "*";
+    color: red;
+    position: absolute;
+    top: 36%;
+    right: 5px;
+}
+.form-label{
+    display: inline;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 15px;
+    width: 80px;
+}
+.form-input{
+    line-height: 40px;
+    border: 1px solid #fff;
+    padding: 0 15px 0 10px;
+    width: 100%;
+}
+.form-input:placeholder-shown{
+    border:1px solid #bbb;
+}
+.form-input:focus{
+    outline: 1px hotpink;
+}
+
+
+.form-validate .form-input:invalid + .form-error-tips{
+    visibility: visible;
+    opacity: 1;
+}
+.form-error-tips{
+    position: absolute;
+    width: 200px;
+    font-size: 13px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #f44336;
+    right: -200px;
+    top: 0;
+    visibility: hidden;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+.news-input .form-error-tips{
+    right: -240px;
+}
+
+.form-row-x{
+    flex: 1;
+}
+
+.select-x{
+    cursor: pointer;
+    position: relative;
+}
+.select-text{
+    background-color: #fff;
+    border: 1px solid #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.select-text .fa{
+    position: absolute;
+    right: 20px;
+    top: 11px;
+}
+.select-list{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 3px 6px #aaa;
+    z-index: 10;
+    max-height: 170px;
+    overflow-y: auto;
+}
+.select-list li{
+    background-color: #fff;
+    padding: 10px;
+}
+.select-list li:hover{
+    background-color: #f2f2f2;
+}
+
+
+.add-news-item{
+    border: 0;
+    background-color: #2196f3;
+    color: #fff;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+}
+.add-news-item:hover{
+    background-color: #1f8ade;
+}
+
+.news-input-list li{
+    margin-bottom: 15px;
+    display: flex;
+}
+.news-input{
+    flex: 1;
+    position: relative;
+    border-left: 8px solid #2196f3;
+}
+.news-del{
+    border: 0;
+    font-size: 26px;
+    padding-left: 15px;
+    line-height: 36px;
+    cursor: pointer;
+}
+.news-del:hover{
+    color: red;
+}
+
+
+.range{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.range-text{
+    width: 200px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.form-submit{
+    background-color: #F7931E;
+    color: #fff;
+    height: 50px;
+    width: 300px;
+    border: 0;
+    font-size: 1.3em;
+    border-radius: 5px;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+.form-submit:hover{
+    background-color: #d27b17;
+}
+
+.create-today{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+.create-today:hover{
+    color: #000;
+}
+
+
+.history-image{
+    display: flex;
+    align-items: center;
+}
+.history-image .imgbox{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    text-align: center;
+}
+.history-image .imgbox img{
+    height: 100%;
+    width: auto;
+}
+.history-image .history-btn{
+    display: inline-block;
+    background-color: #2196f3; 
+    color: #fff;
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    border-radius: 5px;
+}
+.history-image .download{
+    background-color: #ff5722;
+}
+.no-history-image{
+    line-height: 40px;
+    color: #666;
+}
+
+.dialog{
+    background-color: rgba(13,17,39,0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+}
+.dialog-waiting{
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.dialog-waiting i{
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.dialog-waiting p{
+    text-align: center;
+}
+
+.dialog-image-created{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dialog-image-created .imgbox{
+    width: 290px; 
+    height: 630px;
+}
+.dialog-image-created .imgbox img{
+    width: 100%;
+    height: auto;
+}
+.dialog-image-created .textbox{
+    padding-left: 40px;
+    color: #fff;
+}
+.dialog-image-created .textbox h2{
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+}
+.dialog-image-created .textbox p{
+    line-height: 1.8em;
+}
+.dialog-btns .btn{
+    display: inline-block;
+    width: 48%;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+    border: 0;
+    cursor: pointer;
+}
+.dialog-btns .bot{
+    display: flex;
+    justify-content: space-between;
+}
+.dialog-btns .download-btn{
+    background-color: #ff5722;
+    display: block;
+    width: 100%;
+}
+.dialog-btns .btn:hover{
+    opacity: 0.9;
+}
+.dialog-btns .next-btn{
+    background-color: #2196f3;
+}
+.dialog-btns .close-btn{
+    background-color: #607d8b;
+}
+
+/* 骨架屏 */
+.sk-screen-fixed{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 200;
+    background-color: #f4f5f5;
+}
+.sk-screen{
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+}
+.sk-left{
+    width: 375px;
+    height: 500px;
+    background-color: #ccc;
+}
+.sk-right{
+    flex: 1;
+    padding-left: 40px;
+}
+.sk-row{
+    background-color: #ccc;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.sk-row.w-50{
+    width: 50%;
+}
+.sk-row.w-30{
+    width: 30%;
+}
+.sk-row.w-60{
+    width: 60%;
+}
+.sk-row.w-80{
+    width: 80%;
+    animation-delay: .06s;
+}
+.sk-row.w-70{
+    width: 70%;
+}
+.sk-screen .sk-left,
+.sk-screen .sk-row
+{
+    background-color: #ededed;
+    background: linear-gradient( 100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60% ) #ededed;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite;
+}
+@keyframes loading {
+    to {
+      background-position-x: -20%;
+    }
+}
+/* 骨架屏 end */

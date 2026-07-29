@@ -1,0 +1,131 @@
+/*
+修改67行 imgbox中img的定位问题 去掉object-fit属性
+
+ */
+
+@charset "utf-8";
+* {
+  tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.canvas{
+    width: 375px;
+    height: 812px;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    overflow: hidden;
+}
+.canvas-content{
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.canvas-bg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.canvas-top{
+  padding-top: 175px;
+  padding-left: 28px;
+}
+.canvas-qr{
+  width: 86px;
+  height: 86px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  background-size: 90% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.canvas-qr img{
+  display: block!important;
+  width: 100%;
+}
+.canvas-qr canvas{
+  display: none!important;
+  width: 100%;
+}
+
+
+/* 使用什么字体在html加样式 */
+.font-haoshenti{
+  font-family: "youshehao";
+}
+.font-biaoheiti{
+  font-family: "youshebiao";
+}
+.font-songti{
+  font-family: "qdxin serif SC";
+  font-weight: 700;
+}
+.font-sheiti{
+  font-family: "siyuanhei";
+}
+
+/* 经营部模板-1 */
+.jingying-1 .canvas-top{
+  color: #fff;
+  font-size: 28px;
+  padding-top: 175px;
+  padding-left: 28px;
+}
+.jingying-1 .canvas-list{
+  /* background-color: #000; */
+  width: 100%;
+  /* height: 330px; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 13px 20px 5px 36px;
+}
+.jingying-1 .canvas-list li{
+  margin-bottom: 10px;
+  line-height: 1.45em;
+}
+.jingying-1 .canvas-title{
+  color: #fff;
+  font-size: 28px;
+  margin-top: 28px;
+  width: 348px;
+  padding-left: 30px;
+  height: 90px;
+  padding-top: 5px;
+  overflow: hidden;
+  /* background-color: #000; */
+}
+.jingying-1 .canvas-list li{
+  position: relative;
+  padding-left: 15px;
+}
+.jingying-1 .canvas-list li:before{
+  content: "\25b2";
+  color: #c43012;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  transform: rotate(30deg);
+}
+.jingying-1 .canvas-bottom{
+  position: absolute;
+  width: 100%;
+  height: 86px;
+  bottom: 54px;
+}
+.jingying-1 .canvas-qr{
+  position: absolute;
+  right: 30px;
+  /* display: inline-block会导致二维码截图时渲染失败，不显示二维码！ */
+  /* display: inline-block; */
+}
+
+

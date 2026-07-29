@@ -1,0 +1,283 @@
+{
+  "template_list": [
+    {
+      "id": 1,
+      "title": "红色主题A-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "mobile",
+      "folder": "tpl-1-1"
+    },
+    {
+      "id": 2,
+      "title": "红色主题A-电脑版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-1-2"
+    },
+    {
+      "id": 3,
+      "title": "科技类主题-PC版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-2-1"
+    },
+    {
+      "id": 4,
+      "title": "科技类主题-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "mobile",
+      "folder": "tpl-2-2"
+    },
+    {
+      "id": 5,
+      "title": "红色主题B-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "mobile",
+      "folder": "tpl-3-1"
+    },
+    {
+      "id": 6,
+      "title": "红色主题B-电脑版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-3-2"
+    },
+    {
+      "id": 7,
+      "title": "普通A-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "mobile",
+      "folder": "tpl-4-1"
+    },
+    {
+      "id": 8,
+      "title": "普通A-电脑版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-4-2"
+    },
+    {
+      "id": 9,
+      "title": "红色主题C-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "mobile",
+      "folder": "tpl-5-1"
+    },
+    {
+      "id": 10,
+      "title": "红色主题C-电脑版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-5-2"
+    },
+    {
+      "id": 11,
+      "title": "普通B-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "mobile",
+      "folder": "tpl-6-1"
+    },
+    {
+      "id": 12,
+      "title": "普通B-电脑版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-6-2"
+    },
+    {
+      "id": 13,
+      "title": "普通C-手机版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-7-1"
+    },
+    {
+      "id": 14,
+      "title": "普通C-电脑版",
+      "preview": "preview.jpg",
+      "json": "data.json",
+      "label": "pc",
+      "folder": "tpl-7-2"
+    }
+  ],
+  "source_list": [
+    {
+      "name": "五月的风",
+      "keyword": "5月的风",
+      "src": "54-red-1.png"
+    },
+    {
+      "name": "五月的风",
+      "keyword": "5月的风",
+      "src": "54-red-2.png"
+    },
+    {
+      "name": "海边沿线-黑",
+      "keyword": "5月的风,海边",
+      "src": "54-lang-black.png"
+    },
+    {
+      "name": "海边沿线-白",
+      "keyword": "5月的风,海边",
+      "src": "54-lang-white.png"
+    },
+    {
+      "name": "5月的风-勾边-黑",
+      "keyword": "5月的风,勾边",
+      "src": "54-line-black.png"
+    },
+    {
+      "name": "5月的风-勾边-白",
+      "keyword": "5月的风,勾边",
+      "src": "54-line-white.png"
+    },
+    {
+      "name": "光",
+      "keyword": "光,光源",
+      "src": "light-1.png"
+    },
+    {
+      "name": "左侧横向光源",
+      "keyword": "光,光源",
+      "src": "light-2-left.png"
+    },
+    {
+      "name": "右侧横向光源",
+      "keyword": "光,光源",
+      "src": "light-2-right.png"
+    },
+    {
+      "name": "标题丝带背景",
+      "keyword": "丝带,标题背景",
+      "src": "ribbon-1.png"
+    },
+    {
+      "name": "丝带装饰",
+      "keyword": "丝带",
+      "src": "ribbon-2.png"
+    },
+    {
+      "name": "云朵",
+      "keyword": "云朵",
+      "src": "cloud-white-1.png"
+    },
+    {
+      "name": "云朵",
+      "keyword": "云朵",
+      "src": "cloud-white-2.png"
+    },
+    {
+      "name": "云朵",
+      "keyword": "云朵",
+      "src": "cloud-white-3.png"
+    },
+    {
+      "name": "烟花",
+      "keyword": "烟花",
+      "src": "fire-flower-1.png"
+    },
+    {
+      "name": "红飘带",
+      "keyword": "红飘带,隔断",
+      "src": "ribbon-red-1.png"
+    },
+    {
+      "name": "红飘带",
+      "keyword": "红飘带,隔断",
+      "src": "ribbon-red-2.png"
+    },
+    {
+      "name": "红飘带",
+      "keyword": "红飘带,隔断",
+      "src": "ribbon-red-3.png"
+    },
+    {
+      "name": "光源",
+      "keyword": "光源",
+      "src": "light-3.png"
+    },
+    {
+      "name": "光源",
+      "keyword": "光源",
+      "src": "light-4.png"
+    },
+    {
+      "name": "光源",
+      "keyword": "光源",
+      "src": "light-5.png"
+    },
+    {
+      "name": "光源",
+      "keyword": "光源",
+      "src": "light-6.png"
+    },
+    {
+      "name": "光源",
+      "keyword": "光源",
+      "src": "light-7.png"
+    },
+    {
+      "name": "光源",
+      "keyword": "光源",
+      "src": "light-8.png"
+    },
+    {
+      "name": "禁止标志",
+      "keyword": "辟谣,禁止",
+      "src": "stop-red-1.png"
+    },
+    {
+      "name": "和平鸽",
+      "keyword": "鸟,鸽子",
+      "src": "bird-1.png"
+    },
+    {
+      "name": "喇叭",
+      "keyword": "辟谣,喇叭,宣传",
+      "src": "horn-yellow-1.png"
+    },
+    {
+      "name": "pc底部长云朵装饰",
+      "keyword": "pc底部装饰,云朵",
+      "src": "cloud-bottom-pc.png"
+    },
+    {
+      "name": "手机长云朵隔断",
+      "keyword": "手机,云朵,隔断",
+      "src": "cloud-bottom-m.png"
+    },
+    {
+      "name": "体育运动",
+      "keyword": "体育,运动",
+      "src": "sport-1.png"
+    },
+    {
+      "name": "体育运动",
+      "keyword": "体育,运动",
+      "src": "sport-2.png"
+    },
+    {
+      "name": "体育运动",
+      "keyword": "体育,运动",
+      "src": "sport-3.png"
+    },
+    {
+      "name": "红飘带",
+      "keyword": "红飘带",
+      "src": "ribbon-red-4.png"
+    }
+  ]
+}

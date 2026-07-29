@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <title>上传管理</title>    
+    <meta name="description" content="WuBin.work | 内容管理平台" />
+    <link rel="stylesheet" href="../css/pc.css" media="(min-width: 641px)"/>
+    <link rel="stylesheet" href="../css/m.css" media="(max-width:640px)"/>
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <script src="../libs/base/html5shiv.min.js"></script>
+        <script src="../libs/base/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body class="preload">
+<main class="piece-main">
+    <section class="piece-container">
+        <section class="row">
+            <div class="col-6">
+                <div class="card marginBot-l auto">
+                    <!-- headline -->
+                   <div class="headline">
+                        <span class="title">搜索文件</span>
+                    </div>
+                    <!-- headline end -->
+                    <div class="inner">
+                        <form action="GET" class="piece-form marginBot-l">
+                          <fieldset class="form-item">
+                            <label class="form-label">文章标题</label>
+                            <div class="input-block">
+                              <input type="text" name="search" placeholder="请输入要搜索的文件名称" class="input w80">
+                              <div class="piece-btn hot w20">搜索</div>
+                            </div>
+                          </fieldset>
+                        </form>
+                      </div>
+                </div>
+
+                <div class="card">
+                   <!-- headline -->
+                   <div class="headline">
+                       <span class="title">文件列表</span>
+                   </div>
+                   <!-- headline end -->
+                   <div class="inner">
+                       <form action="123.html" class="piece-form" method="GET">
+                            <div class="row marginBot-l">
+                                <div class="pull-left w60">
+                                    <select id="" class="select" name="filecategory">
+                                        <option value="0">全部板块</option>
+                                        <option value="1">博客</option>
+                                        <option value="2">个人信息</option>
+                                        <option value="3">网站设置</option>
+                                        <option value="4">轮播管理</option>
+                                    </select>
+                                    <select id="" class="select" name="filetype">
+                                        <option value="0">不限类型</option>
+                                        <option value="1">图片类型</option>
+                                        <option value="2">压缩文件类型</option>
+                                    </select>
+                                    <button type="submit" class="piece-btn lang" value="dressfiles">筛选</button>
+                                </div>
+                                <div class="pull-right w30">
+                                    <span
+                                        class="piece-btn hot w100 delmany"
+                                        data-layer-delmsg="确定要删除选中的文件吗？(删除后不可恢复)"
+                                        href="delete.php"
+                                    >删除所选文件</span>
+                                    <!-- <button type="submit" class="piece-btn hot w100 delmany">删除所选文件</button> -->
+                                </div>
+                            </div>
+
+                            <table class="piece-table marginBot-l">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col>
+                                    <col width="120px">
+                                    <col width="100px">
+                                    <col width="100px">
+                                    <col width="130px">
+                                    <col width="130px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th class="text-left">文件名称</th>
+                                        <th>文件预览</th>
+                                        <th>文件类型</th>
+                                        <th>文件大小</th>
+                                        <th>上传日期</th>
+                                        <th>文件链接</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <label for="s2" class="checkbox center">
+                                                <div class="checkbox-inner">
+                                                    <input type="checkbox" name="radio1" id="s2">
+                                                    <span class="imgicon-checked"></span>
+                                                </div>
+                                                <p>JQ插件搜集，整合JQ插件使用以及下载等</p>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="imgbox">
+                                                <img src="../images/timg.jpg">
+                                            </div>
+                                        </td>
+                                        <td>jpg</td>
+                                        <td>18kb</td>
+                                        <td>2020-09-09</td>
+                                        <td><a href="#" class="textlink">访问链接</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">
+                                            <label for="s3" class="checkbox center">
+                                                <div class="checkbox-inner">
+                                                    <input type="checkbox" name="radio2" id="s3">
+                                                    <span class="imgicon-checked"></span>
+                                                </div>
+                                                <p>JQ插件搜集，整合JQ插件使用以及下载等</p>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="imgbox">
+                                                <img src="../images/vtest.jpg">
+                                            </div>
+                                        </td>
+                                        <td>jpg</td>
+                                        <td>18kb</td>
+                                        <td>2020-09-09</td>
+                                        <td><a href="#" class="textlink">访问链接</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">
+                                            <label for="s4" class="checkbox center">
+                                                <div class="checkbox-inner">
+                                                    <input type="checkbox" name="radio3" id="s4">
+                                                    <span class="imgicon-checked"></span>
+                                                </div>
+                                                <p>JQ插件搜集，整合JQ插件使用以及下载等</p>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="imgbox">
+                                                <img src="../img/zip-icon.png">
+                                            </div>
+                                        </td>
+                                        <td>zip</td>
+                                        <td>18kb</td>
+                                        <td>2020-09-09</td>
+                                        <td><a href="#" class="textlink">访问链接</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 分页 -->
+                            <div class="piece-pages" id="piece-pages">
+                                <span class="counts">共 100 条</span>
+                                <a href="javascript:;" class="first disabled">
+                                首页
+                                </a>
+                                <a href="javascript:;" class="prev disabled">
+                                上一页
+                                </a>
+                                <!-- <span class="spr">…</span> -->
+                                <span class="active">
+                                1
+                                </span>
+                                <a href="javascript:;">2</a>
+                                <a href="javascript:;">3</a>
+                                <a href="javascript:;">4</a>
+                                <a href="javascript:;">5</a>
+                                <span class="spr">…</span>
+                                <a href="javascript:;" class="next">下一页</a>
+                                <a href="javascript:;" class="last">尾页</a>
+                            </div>
+                            <!-- 分页 end -->
+                       </form>
+                   </div>
+                </div>
+            </div>
+        </section>
+      </section>
+</main>
+
+<script src="../js/libs/requirejs/require.js" data-main="../js/app/normalform" defer async="true"></script>
+</body>
+</html>

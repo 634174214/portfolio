@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="font/font-song/song.css">
+    <link rel="stylesheet" href="font/youshe-biao/youshe-biao.css">
+    <link rel="stylesheet" href="font/youshe-hao/youshe-hao.css">
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <title>卡片创建-经营</title>
+</head>
+<body class="sk-loading">
+    <header class="top">
+        <h1>卡片新闻截图生成器 | 信网</h1>
+        <div class="top-tips">为获得流畅的使用体验，<font color="red">推荐使用chrome浏览器</font>！</div>
+    </header>
+    <section id="app">
+        <!-- 骨架屏 -->
+        <div class="sk-screen-fixed" v-show="showSkScreen">
+            <div class="top">
+                <h1>卡片新闻截图生成器 | 信网</h1>
+            </div>
+            <div class="sk-screen">
+                <div class="sk-left"></div>
+                <div class="sk-right">
+                    <div class="sk-row"></div>
+                    <div class="sk-row w-70"></div>
+                    <div class="sk-row w-30"></div>
+                    <div class="sk-row w-50"></div>
+                    <div class="sk-row"></div>
+                    <div class="sk-row w-80"></div>
+                    <div class="sk-row w-60"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 骨架屏 end -->
+        <div class="left-and-right" id="left-and-right" ref="leftAndRight">
+            <aside class="left">
+                <div class="canvas jingying-1"
+                     id="canvas"
+                >
+                    <img :src="canvasBoxBg"
+                         class="canvas-bg"
+                         v-show="bgSelected.bgurl"
+                    >
+                    <!--  -->
+                    <div class="canvas-content">
+                        <div class="canvas-top">
+                            <p class="card-date font-haoshenti">{{ card_day }}</p>
+                        </div>
+                        <div class="canvas-title font-songti" :style="fontSizeTitle">
+                            {{ card_title }}
+                        </div>
+                        <div class="canvas-list">
+                            <ul v-if="news_list.length > 0"
+                                :style="fontSizeList"
+                            >
+                                <li v-for="(item, index) in news_list"
+                                    :key="index"
+                                    class="font-sheiti"
+                                >
+                                    {{ item.title }}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="canvas-bottom"
+                        >
+                            <div class="canvas-qr"
+                                id="canvas-qr"
+                                ref="qrcode"
+                                v-show="qrcode_url"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </aside>
+            <aside class="right">
+                <form class="form" 
+                      @submit.prevent="submitForm"
+                      novalidate
+                      id="form"
+                      ref="form"
+                >
+                    <fieldset class="form-row request">
+                        <label for="card-title" class="form-label">卡片名称</label>
+                        <div class="form-row-x">
+                            <input type="text"
+                                   id="card-title"
+                                   class="form-input"
+                                   placeholder="请输入卡片的名称，必填" required="required"
+                                   v-model="card_name"
+                            >
+                            <span class="form-error-tips">卡片名称不能为空！</span>
+                        </div>
+    
+                    </fieldset>
+                    <fieldset class="form-row">
+                        <label for="card-date" class="form-label">卡片日期</label>
+                        <div class="form-row-x" title="卡片中显示的日期">
+                            <div class="create-today"
+                                @click="getToday"
+                            >
+                                <i class="fa fa-calendar"></i>
+                                获取当天日期
+                            </div>
+                            <input type="text"
+                                   id="card-date"
+                                   class="form-input"
+                                   placeholder="请填入卡片的日期，可选" v-model="card_day"
+                                   pattern="[\d]{4}\/[\d]{2}\/[\d]{2}"
+                            >
+                            <span class="form-error-tips">日期：年/月/日，不足2位的补0</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row request">
+                        <label for="card-big-title" class="form-label">大标题</label>
+                        <div class="form-row-x">
+                            <input type="text"
+                                   id="card-big-title"
+                                   class="form-input"
+                                   placeholder="请输入卡片的大标题，必填" required="required"
+                                   v-model="card_title"
+                            >
+                            <span class="form-error-tips">卡片中的大标题不能为空！</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row">
+                        <label class="form-label">标题字号</label>
+                        <div class="form-row-x">
+                            <div class="range" title="请拖动该条进行调整">
+                                <input type="range"
+                                       name="range-title" 
+                                       id="range-title" 
+                                       min="12"
+                                       max="30" 
+                                       step="1"
+                                       v-model="font_size_title" 
+                                       class="form-input"
+                                >
+                                <span class="range-text">当前字体为：{{ font_size_title }}px</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row request">
+                        <label class="form-label">卡片背景</label>
+                        <div class="form-row-x">
+                            <div class="select-x" @click.stop="openSelect">
+                                <p class="select-text">{{ bgSelected.bgname }}<i class="fa fa-sort-down"></i></p>
+                                <ol class="select-list"
+                                    v-if="bg_select"
+                                    v-show="showBgSelectList"
+                                >
+                                    <li v-for="(bg, bgIndex) in bg_select"
+                                        :key="bgIndex"
+                                        @click.stop="selectBg(bgIndex)"
+                                    >
+                                        {{ bg.bgname }}
+                                    </li>
+                                </ol>
+                            </div>
+                            <input type="hidden">
+                            <span class="form-error-tips">卡片名称不能为空！</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row">
+                        <label class="form-label">新闻添加</label>
+                        <div class="form-row-x">
+                            <ul class="news-input-list" v-if="news_list.length>0">
+                                <li v-for="(news, newsIndex) in news_list"
+                                    :key="newsIndex"
+                                >
+                                    <div class="news-input request">
+                                        <input type="text" 
+                                               class="form-input"
+                                               placeholder="请输入文章标题，根据情况请增加或者删减字数，必填"
+                                               required="required"
+                                               v-model="news.title"
+                                        >
+                                        <span class="form-error-tips">新闻标题不能为空！</span>
+                                    </div>
+                                    <div class="news-del"
+                                         title="删除该条新闻"
+                                         @click="deleteNews(newsIndex)"
+                                    ><i class="fa fa-times-circle"></i></div>
+                                </li>
+                            </ul>
+                            <button type="button"
+                                    class="add-news-item"
+                                    @click="addNews"
+                            >添加一条新闻</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row">
+                        <label class="form-label">新闻字号</label>
+                        <div class="form-row-x">
+                            <div class="range" title="请拖动该条进行调整">
+                                <input type="range"
+                                       name="range-list" 
+                                       id="range-list" 
+                                       min="12"
+                                       max="30" 
+                                       step="1"
+                                       v-model="font_size_list" 
+                                       class="form-input"
+                                >
+                                <span class="range-text">当前字体为：{{ font_size_list }}px</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row">
+                        <label for="card-qrcode" class="form-label">二维码</label>
+                        <div class="form-row-x">
+                            <input type="text"
+                                   id="card-qrcode"
+                                   class="form-input"
+                                   placeholder="请填入卡片的二维码指向地址，可选"
+                                   pattern="^((https?):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$"
+                                   v-model="qrcode_url"
+                            >
+                            <span class="form-error-tips">请填入格式正确的地址</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row" style="display: none;">
+                        <label class="form-label">历史合成</label>
+                        <div class="form-row-x">
+                            <div class="history-image" v-if="created_card">
+                                <div class="imgbox">
+                                    <img :src="created_card">
+                                </div>
+                                <a :href="created_card" class="history-btn" target="_blank">查看图片</a>
+                                <a :href="created_card" class="history-btn download" download="download">下载已生成的图片</a>
+                            </div>
+                            <div class="no-history-image" v-else>
+                                抱歉，请您先保存并生成图片。
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-row">
+                        <button type="submit" class="form-submit">生成卡片</button>
+                    </fieldset>
+                </form>
+            </aside>
+        </div>
+        <div class="dialog" v-show="showDialog">
+            <div class="dialog-waiting" v-show="screenCreating">
+                <i class="fa fa-spinner fa-spin"></i>
+                <p>正在处理中，请稍候...</p>
+            </div>
+            <div class="dialog-image-created" v-show="!screenCreating">
+                <div class="imgbox">
+                    <img :src="screenShotsImg">
+                </div>
+                <div class="textbox">
+                    <h2>{{ dialogH2Text }}</h2>
+                    <p>请点击下方 <strong>“下载图片”</strong> 按钮下载合成的卡片</p>
+                    <p>或者通过在左侧图片 <strong>“右击->图片另存为”</strong> 保存图片</p>
+                    <div class="dialog-btns">
+
+                        <a :href="screenShotsImg" :download="downLoadFileName" class="btn download-btn">
+                            <i class="fa fa-cloud-download"></i>   下载图片
+                        </a>
+                        <div class="bot">
+                            <a href="index.html" class="btn next-btn">
+                                <i class="fa fa-sign-out"></i> 制作新的</a>
+                            <button type="button"
+                                    class="btn close-btn"
+                                    @click="closeDialog"
+                            >
+                                <i class="fa fa-close"></i> 返回编辑
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+    
+    <script>
+        var data = {};
+        // 获取cardbg目录下的文件信息，渲染为json格式
+        var cardBgSelect = [
+            {
+                bgname: '315维权快报（2022）',
+                bgurl: 'cardbg/315bg.jpg',
+                bg_created: '2022-03-03 15:20:20'
+            }
+        ];
+    </script>
+    <script src="js/vue@2.6.14.js"></script>
+    <script src="js/qrcode.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/html2canvas-1.0.js"></script>
+    <script src="js/run.js"></script>
+</body>
+</html>

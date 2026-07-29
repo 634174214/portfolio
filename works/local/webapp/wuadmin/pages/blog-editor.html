@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <title>写文章</title>    
+    <meta name="description" content="WuBin.work | 内容管理平台" />
+    <link rel="stylesheet" href="../css/pc.css" media="(min-width: 641px)"/>
+    <link rel="stylesheet" href="../css/m.css" media="(max-width:640px)"/>
+    <!-- 特别注意上下的顺序 -->
+    <!--[if IE]>
+        <script src="../libs/base/html5shiv.min.js"></script>
+        <script src="../libs/base/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body class="preload">
+<main class="piece-main">
+    <!-- 在需要验证的表单上加上validate -->
+    <form class="piece-container piece-form validate" action="#" id="blog-editor" method="POST" data-layer-passmsg="文章提交成功！">
+        <section class="row">
+            <div class="col-4">
+                <!-- card -->
+                <div class="card marginBot-l">
+                    <!-- headline -->
+                    <div class="headline">
+                        <span class="title">编辑文章内容</span>
+                    </div>
+                    <!-- headline end -->
+                    <article class="form-block inner">
+                        <div class="form-item">
+                            <label class="form-label">文章标题</label>
+                            <div class="input-block">
+                              <input type="text"
+                              name="title"
+                              placeholder="请输入文章标题"
+                              class="input"
+                              data-msg-required="文章标题不能为空！"
+                              required
+                              >
+                            </div>
+                        </div>
+                        <!-- form-item end -->
+                        <div class="form-item">
+                            <div class="piece-editor" id="piece-editor">
+                                <!-- 如果编辑器有内容那么直接将内容字符串输出在这里 -->
+                                <!-- <p>adadadsadada</p><table border="0" width="100%" cellpadding="0" cellspacing="0"><tbody><tr><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><p><br></p> -->
+                            </div>
+                            <textarea
+                            name="articlecontent"
+                            id="article-content"
+                            rows="10"
+                            class="textarea article-content"
+                            data-rule-verifywang="true"
+                            data-msg-verifywang="请确认文章编辑器的内容不能为空！"
+                            ></textarea>
+                        </div>
+                        <!-- form-item end -->
+                        <div class="form-item">
+                            <label class="form-label">文章作者</label>
+                            <div class="input-block">
+                              <input type="text"
+                              name="author"
+                              placeholder="请输入文章作者"
+                              class="input"
+                              value="WuBin"
+                              required
+                              data-msg-required="作者名不能为空"
+                              >
+                            </div>
+                        </div>
+                        <!-- form-item end -->
+                    </article>
+                </div>
+                <!-- card end -->
+                <!-- card -->
+                <div class="card marginBot-l">
+                    <!-- headline -->
+                    <div class="headline">
+                        <span class="title">
+                            上传文章附件
+                            <small>(仅支持*.zip文件格式)</small>
+                        </span>
+                    </div>
+                    <!-- headline end -->
+                    <!-- upload -->
+                    <div class="piece-upload inner">
+                        <ul class="file-list">
+                            <li>
+                                <div class="left">
+                                    <i class="icon fal fa-file-archive"></i>
+                                    <p class="file-name">项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹项目文件夹</p>
+                                </div>
+                                <div class="right">
+                                    <div class="delete">
+                                        <i class="icon fal fa-times-circle"></i>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="uploadfile1" value="value"> 
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <i class="icon fal fa-file-archive"></i>
+                                    <p class="file-name">项目文件夹</p>
+                                    <span class="precent">75%</span>
+                                    <div class="progress">
+                                        <cite style="width: 75%;"></cite>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="tips">
+                                        正在上传...
+                                    </div>
+                                    <div class="delete">
+                                        <i class="icon fal fa-times-circle"></i>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="uploadfile2" value="value"> 
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <i class="icon fal fa-file-archive"></i>
+                                    <p class="file-name">项目文件夹</p>
+                                </div>
+                                <div class="right">
+                                    <div class="tips">
+                                        等待上传
+                                    </div>
+                                    <div class="delete">
+                                        <i class="icon fal fa-times-circle"></i>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="uploadfile2" value="value"> 
+                            </li>
+                            <li class="upload-success">
+                                <div class="left">
+                                    <i class="icon fal fa-file-archive"></i>
+                                    <p class="file-name">项目文件夹</p>
+                                    <span class="precent">100%</span>
+                                    <div class="progress">
+                                        <cite style="width: 100%;"></cite>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="tips">
+                                        上传完成
+                                    </div>
+                                    <div class="delete">
+                                        <i class="icon fal fa-times-circle"></i>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="uploadfile3" value="value"> 
+                            </li>
+                        </ul>
+                        <div class="control-btns">
+                            <div id="picker">
+                                <div class="piece-btn vice">选择上传的文件</div>
+                            </div>
+                            <button class="piece-btn disable begin-upload">上传选中的文件</button>
+                        </div>
+                    </div>
+                    <!-- upload end -->
+                </div>
+                <!-- card end -->
+
+                <!-- card -->
+                <div class="card auto">
+                    <!-- headline -->
+                    <div class="headline">
+                        <span class="title">
+                            添加已有附件链接至文章
+                            <small>(仅支持*.zip文件格式)</small>
+                        </span>
+                    </div>
+                    <!-- headline end -->
+                    <div class="inner" id="addAnnex-container">
+                        <div class="piece-btn-box avg-1 marginTop-ll">
+                            <div class="piece-btn vice w40" id="addAnnex-btn">添加已有附件链接</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+            </div>
+            <!-- col end -->
+            <div class="col-2">
+                <!-- card -->
+                <div class="card marginBot-l">
+                    <!-- headline -->
+                    <div class="headline">
+                        <span class="title">选择文章所属分类</span>
+                    </div>
+                    <!-- headline end -->
+                    <ul class="inner">
+                        <li class="form-item">
+                            <label for="x10" class="radio">
+                                <div class="radio-inner">
+                                    <input type="radio" name="category" id="x10" checked>
+                                    <i class="imgicon-checked"></i>
+                                </div>
+                                <p>默认</p>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label for="x4" class="radio">
+                                <div class="radio-inner">
+                                    <input type="radio" name="category" id="x4">
+                                    <i class="imgicon-checked"></i>
+                                </div>
+                                <p>JQ插件搜集</p>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label for="x1" class="radio">
+                                <div class="radio-inner">
+                                    <input type="radio" name="category" id="x1">
+                                    <i class="imgicon-checked"></i>
+                                </div>
+                                <p>PHP知识点</p>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label for="x2" class="radio">
+                                <div class="radio-inner">
+                                    <input type="radio" name="category" id="x2">
+                                    <i class="imgicon-checked"></i>
+                                </div>
+                                <p>服务器配置</p>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label for="x6" class="radio">
+                                <div class="radio-inner">
+                                    <input type="radio" name="category" id="x6">
+                                    <i class="imgicon-checked"></i>
+                                </div>
+                                <p>服务器配置</p>
+                            </label>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <!-- card end -->
+                <!-- card -->
+                <div class="card">
+                    <!-- headline -->
+                    <div class="headline">
+                        <span class="title">提交文章</span>
+                    </div>
+                    <!-- headline end -->
+                    <ul class="inner">
+                        <li class="form-item">
+                            <label class="form-label right">可见性</label>
+                            <div class="input-block">
+                                <div class="center">
+                                    <label for="y6" class="radio">
+                                        <div class="radio-inner">
+                                            <input type="radio" name="visible" id="y6" checked value="visible">
+                                            <i class="imgicon-checked"></i>
+                                        </div>
+                                        <p>公开</p>
+                                    </label>
+                                    <label for="t8" class="radio">
+                                        <div class="radio-inner">
+                                            <input type="radio" name="visible" id="t8" value="hidden">
+                                            <i class="imgicon-checked"></i>
+                                        </div>
+                                        <p>仅自己可见</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form-item">
+                            <label class="form-label right">关键词</label>
+                            <div class="input-block">
+                                <input type="text" name="keyword" placeholder="请输入文章关键词 以逗号分割" class="input" required data-msg-required="关键词不能为空">
+                            </div>
+                        </li>
+                        <li class="form-item">
+                            <label class="form-label right">文章描述</label>
+                            <div class="input-block">
+                                <textarea name="description" rows="4" placeholder="请输入文章的概要描述" class="textarea" required data-msg-required="页面描述不能为空"></textarea>
+                            </div>
+                        </li>
+                        <li class="form-item">
+                            <label class="form-label right">推荐位</label>
+                            <div class="input-block">
+                                <label for="s2" class="checkbox center" class="checkbox">
+                                    <div class="checkbox-inner">
+                                        <input type="checkbox" name="radio1" id="s2">
+                                        <span class="imgicon-checked"></span>
+                                    </div>
+                                    <p>文章推送到推荐位</p>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="form-item piece-btn-box avg-2">
+                            <button type="submit" class="piece-btn cool big" name="save">保存草稿</button>
+                            <button type="submit" class="piece-btn big hot" name="publish">发布文章</button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- card end -->
+            </div>
+        </section>
+    </form>
+</main>
+
+<script src="../js/libs/requirejs/require.js" data-main="../js/app/blog-editor" defer async="true"></script>
+</body>
+</html>

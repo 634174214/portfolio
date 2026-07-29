@@ -1,0 +1,121 @@
+@sbiconurl: "../js/libs/jquery.selectbox/select-icons.png";
+@sbHeight: 40px;
+@sbHolderBG: @color-main-white;
+@sbHolderBorder: @color-gray-l;
+@sbarrowPosition: 112px;
+@sboptionBG:@color-main-l;
+
+.sbHolder {
+  background-color: @sbHolderBG;
+  border: solid 1px @sbHolderBorder;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  height: @sbHeight;
+  position: relative;
+  width: 200px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.sbHolder:focus .sbSelector {
+}
+.sbSelector {
+  display: block;
+  height: @sbHeight;
+  left: 0;
+  line-height: @sbHeight;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 10px;
+  top: 0;
+  width: 170px;
+  font-size: 14px;
+}
+.sbSelector:link,
+.sbSelector:visited,
+.sbSelector:hover {
+  color: @color-font-black-l;
+  outline: none;
+  text-decoration: none;
+}
+.sbToggle {
+  background: url(~"@{sbiconurl}") 0 -112px no-repeat;
+  display: block;
+  height: @sbHeight;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+}
+.sbToggle:hover {
+  background: url(~"@{sbiconurl}") 0 -165px no-repeat;
+}
+.sbToggleOpen {
+  background: url(~"@{sbiconurl}") 0 -12px no-repeat;
+}
+.sbToggleOpen:hover {
+  background: url(~"@{sbiconurl}") 0 -63px no-repeat;
+}
+.sbHolderDisabled {
+  background-color: #3c3c3c;
+  border: solid 1px @sbHolderBorder;
+}
+.sbHolderDisabled .sbHolder {
+}
+.sbHolderDisabled .sbToggle {
+}
+.sbOptions {
+  background-color: @sbHolderBG;
+  border: solid 1px @sbHolderBorder;
+  list-style: none;
+  left: -1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  width: 200px;
+  z-index: 1;
+  overflow-y: auto;
+  margin-top: -2px;
+}
+.sbOptions a {
+  display: block;
+  outline: none;
+  height: @sbHeight;
+  line-height: @sbHeight;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.piece-main .sbOptions a{transition: all 0s;}
+.sbOptions a:link,
+.sbOptions a:visited {
+  color: @color-font-black-l;
+  text-decoration: none;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus {
+  color: @color-main-white;
+  background-color: @sboptionBG;
+}
+.sbOptions li.last a {
+  border-bottom: none;
+}
+.sbOptions .sbDisabled {
+  border-bottom: dotted 1px @sbHolderBorder;
+  color: #999;
+  display: block;
+  padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup {
+  border-bottom: dotted 1px @sbHolderBorder;
+  color: #ebb52d;
+  display: block;
+  font-weight: bold;
+  padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub {
+  padding-left: 17px;
+}
