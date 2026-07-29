@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html>
+<head>   
+           <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+           <meta http-equiv="Cache-Control" content="no-cache" />
+           <meta http-equiv="cleartype" content="on">     
+           <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />   
+           <meta name="apple-mobile-web-app-capable" content="yes" /> 
+           <meta content="telephone=no" name="format-detection" />
+           <meta content="black" name=" apple-mobile-web-app-status-bar-style"   />
+           <html xmlns:wb="http://open.weibo.com/wb">
+           <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+           <link rel="stylesheet" media="(min-width: 641px)"  href="css/screen.css"/>
+           <link rel="stylesheet"  media="(max-width:640px)" href="css/m.css"/>
+           <script src="js/respond.src.js"></script>
+           <script src="js/jquery-1.11.1.min.js"></script>
+           <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+           <meta name="description" content="首页描述" />
+           <title>列表页</title>   
+</head>
+<body>
+<!-- top bg -->
+<div class="logo">青岛演艺网</div>
+<!-- top bg end-->
+<!-- nav m -->
+<nav id="navm">
+      <div class="nav-hamburger-link">
+                <div id="menuClose" class="nav-hamburger">
+                            <div class="nav-hamburger-line"></div>
+                            <div class="nav-hamburger-line"></div>
+                            <div class="nav-hamburger-line"></div>
+                </div>
+      </div>
+      <!-- menu m -->
+      <div id="menuPid">
+            <div class="touch-menu" id="touch-menu">
+                  <ul>
+                         <li><a href="index.html">首页</a></li>
+                         <li><span>集团动态</span></li>
+                         <li><span>院团风采</span></li>
+                         <li> <span>演出资讯</span></li>
+                   </ul>
+                   <ul>
+                         <li><span>精品剧目</span></li>
+                         <li><a href="#" target="_blank">惠民院线</a></li>
+                         <li><a href="#" target="_blank">票艺青岛</a></li>
+                         <li><span>文化产业</span></li>
+                   </ul>
+            </div>
+            <div class="show-menu" id="show-menu">
+                      <div class="hide">
+                             <ul class="second-menu">
+                                      <li><a href="#">集团动态</a></li>
+                                      <li><a href="#">机构设置</a></li>
+                                      <li><a href="#">集团领导</a></li>
+                          </ul>
+                      </div>
+                       <div class="hide">
+                             <ul class="second-menu">
+                                      <li><a href="#">院团简介</a></li>
+                                      <li><a href="#">剧场简介</a></li>
+                                      <li><a href="#">群星荟萃</a></li>
+                                </ul>
+                      </div>
+                       <div class="hide">
+                             <ul class="second-menu">
+                                      <li><a href="#">演出信息</a></li>
+                                      <li><a href="#">惠民院线</a></li>
+                                      <li><a href="#">幕后探班</a></li>
+                                      <li><a href="#">媒体聚焦</a></li>
+                               </ul>
+                      </div>
+                      <div class="hide">
+                             <ul class="second-menu">
+                                      <li><a href="#">原创精品</a></li>
+                                      <li><a href="#">引进剧目</a></li>
+                                      <li><a href="#">试听欣赏</a></li>
+                              </ul>
+                      </div>
+                      <div class="hide">
+                             <ul class="second-menu">
+                                     <li><a href="#">艺术培训</a></li>
+                                     <li><a href="#">影视制作</a></li>
+                                     <li><a href="#">剧场经营</a></li>
+                                     <li><a href="#">活动策划</a></li>
+                             </ul>
+                      </div>
+            </div>
+            <div id="showclose" class="hide"></div>
+            <!-- menu m  end-->
+</nav>
+<!-- nav m end -->
+<!-- navpc -->
+<div id="navpc">
+      <div class="navwarp">
+               <ul>
+                   <li><a href="index.html" target="_blank">首页</a></li>
+                   <li>
+                          <span><a href="集团动态" target="_blank">集团动态</a></span>
+                          <ul class="second-menu">
+                              <li><a href="#">集团动态</a></li>
+                              <li><a href="#">机构设置</a></li>
+                              <li><a href="#">集团领导</a></li>
+                          </ul>
+                   </li>
+                   <li>
+                          <span class="on"><a href="院团简介" target="_blank">院团风采</a></span>
+                          <ul class="second-menu">
+                              <li><a href="#">院团简介</a></li>
+                              <li><a href="#">剧场简介</a></li>
+                              <li><a href="#">群星荟萃</a></li>
+                          </ul>
+                   </li>
+                   <li>
+                           <span><a href="演出信息" target="_blank">演出资讯</a></span>
+                           <ul class="second-menu">
+                               <li><a href="#">演出信息</a></li>
+                               <li><a href="#">惠民院线</a></li>
+                               <li><a href="#">幕后探班</a></li>
+                               <li><a href="#">媒体聚焦</a></li>
+                           </ul>
+                   </li>
+                   <li>
+                           <span><a href="原创精品" target="_blank">精品剧目</a></span>
+                           <ul class="second-menu">
+                               <li><a href="#">原创精品</a></li>
+                               <li><a href="#">引进剧目</a></li>
+                               <li><a href="#">试听欣赏</a></li>
+                           </ul>
+                   </li>
+                   <li><a href="#" target="_blank">惠民院线</a></li>
+                   <li><a href="#" target="_blank">票艺青岛</a></li>
+                   <li>
+                          <span><a href="艺术培训" target="_blank">文化产业</a></span>
+                          <ul class="second-menu hide">
+                             <li><a href="#">艺术培训</a></li>
+                             <li><a href="#">影视制作</a></li>
+                             <li><a href="#">剧场经营</a></li>
+                             <li><a href="#">活动策划</a></li>
+                          </ul>
+                   </li>
+               </ul>
+               <div class="search">
+                        <a href="#" target="_blank">搜索</a>
+                        <input type="text" placeholder="请输入要搜索的内容" />
+               </div>
+      </div>
+</div>
+<!-- navpc end -->
+<!-- main -->
+<div class="mainbody clear Pagelist"  id="main">
+         <div class="list-left fl-l">
+                     <!-- column -->
+                     <div  id="column">
+                               <h5>院团风采</h5>
+                               <ul>
+                                 <li><a href="#" target="_blank" class="on">院团简介</a></li>
+                                 <li><a href="#" target="_blank">剧场简介</a></li>
+                                 <li><a href="#" target="_blank">群英荟萃</a></li>
+                               </ul>
+                     </div>
+                     <!-- column end -->
+                     <!-- 演出信息 -->
+                      <div class="list-show marg_t2">
+                                  <div class="title-r">
+                                               <p>演出信息</p>
+                                               <a href="#" target="_blank">更多 ></a>
+                                  </div>
+                                  <ul class="show-img clear">
+                                          <li><a href="#">
+                                                       <img src="img/show_01.png">
+                                                       <p>马向阳下乡记</p>
+                                                       <span>四方大剧院</span>
+                                                       <em>80元起</em>
+                                          </a></li>
+                                          <li><a href="#">
+                                                     <img src="img/show_03.png">
+                                                     <p>【首映】东厢记</p>
+                                                     <span>四方大剧院</span>
+                                                     <em>80元起</em>
+                                          </a></li>
+                                  </ul>
+                      </div>
+                     <!-- 演出信息 -->
+                     <!-- 文化产业 -->
+                      <div class="estate marg_t1">
+                                <div class="title-r">
+                                             <p>文化产业</p>
+                                             <a href="#" target="_blank">更多 &gt;</a>
+                                </div>
+                                <ul>
+                                  <li class="estate-1"><a href="#" target="_blank">
+                                            <span></span>
+                                            <p>艺术培训</p>
+                                  </a></li>
+                                  <li class=" estate-2"><a href="#" target="_blank">
+                                            <span></span>
+                                            <p>影视制作</p>
+                                  </a></li>
+                                  <li class="estate-3"><a href="#" target="_blank">
+                                            <span></span>
+                                            <p>活动策划</p>
+                                  </a></li>
+                                  <li class="estate-4"><a href="#" target="_blank">
+                                            <span></span>
+                                            <p>剧场经营</p>
+                                  </a></li>
+                                </ul>
+                      </div>
+                     <!-- 文化产业 -->
+         </div>
+         <!-- list-left end -->
+         <div class="list-right fl-r">
+                  <!-- content-news -->
+                   <div class="content-news">
+                             <h2 class="h2-center">青岛演艺集团院团简介</h2>
+                            <div class="text">
+                                 <img src="img/qdyyjt-1.jpg" alt="演艺集团简介">
+                                 <p>为迎接党的十九大，传承中华优秀传统文化，弘扬和振兴京剧艺术，青岛演艺集团京剧院策划推出了“喜迎十九大《赏国粹名剧•品中国故事》京剧展演月”活动，开启了岛城8月京剧展演之旅。</p>
+                                 <p>         为迎接党的十九大，传承中华优秀传统文化，弘扬和振兴京剧艺术，青岛演艺集团京剧院策划推出了“喜迎十九大《赏国粹名剧•品中国故事》京剧展演月”活动，开启了岛城8月京剧展演之旅。
+        此次活动推出的剧目有全本张派名剧《秦香莲》《状元媒》，京剧折子戏文戏《岳母刺字》、《霸王别姬》《捧印》、《春闺梦》、《红娘》《春草闯堂》、《三击掌》、《罢宴》《游龙戏凤》、《上天台》、《文昭关》，武戏《小商河》、《白水滩》、《昭君出塞》、《夜奔》、《穆柯寨》以及《京剧名段演唱会》等剧目，这次活动是青岛市京剧院近年来举办的规模最大的一次京剧展演月活动，也是青岛惠民院线推出的历年来剧目最多、场次最多、参演演员人数最多的惠民京剧展演活动。</p>
+                              <img src="img/133.jpg">
+                                                       <p>为迎接党的十九大，传承中华优秀传统文化，弘扬和振兴京剧艺术，青岛演艺集团京剧院策划推出了“喜迎十九大《赏国粹名剧•品中国故事》京剧展演月”活动，开启了岛城8月京剧展演之旅。</p>
+                                                       <p>         为迎接党的十九大，传承中华优秀传统文化，弘扬和振兴京剧艺术，青岛演艺集团京剧院策划推出了“喜迎十九大《赏国粹名剧•品中国故事》京剧展演月”活动，开启了岛城8月京剧展演之旅。
+                              此次活动推出的剧目有全本张派名剧《秦香莲》《状元媒》，京剧折子戏文戏《岳母刺字》、《霸王别姬》《捧印》、《春闺梦》、《红娘》《春草闯堂》、《三击掌》、《罢宴》《游龙戏凤》、《上天台》、《文昭关》，武戏《小商河》、《白水滩》、《昭君出塞》、《夜奔》、《穆柯寨》以及《京剧名段演唱会》等剧目，这次活动是青岛市京剧院近年来举办的规模最大的一次京剧展演月活动，也是青岛惠民院线推出的历年来剧目最多、场次最多、参演演员人数最多的惠民京剧展演活动。</p>
+                            </div>
+                    </div>
+                      <!-- content-news end-->
+         </div>
+         <!-- list-right end -->
+</div>
+<!-- main end -->
+<!-- footer -->
+<div class="footerwarp">
+            <div class="footer">
+                         <ul>
+                           <li><a href="院团简介" target="_blank">关于我们</a></li>
+                           <li><a href="#" target="_blank">剧场简介</a></li>
+                           <li><a href="文化产业" target="_blank">产业合作</a></li>
+                           <li><a href="演艺资讯列表页" target="_blank">演艺资讯</a></li>
+                           <li><a href="#" target="_blank">集团动态</a></li>
+                           <li><a href="#" target="_blank">票艺青岛</a></li>
+                           <li><a href="同导航惠民" target="_blank">惠民院线</a></li>
+                           <li><a href="#" target="_blank">机构设置</a></li>
+                         </ul>
+                         <p class="borederB">全国统一服务热线：0532-55731980       <span>地址：青岛市崂山区云岭路5号</span></p>
+                         <p>Copyright by 青岛演艺集团有限公司 All rights reserved <span>网站备案号：鲁IPC2011082700012号 </span></p>
+                         <p>技术支持：信网   <span>网站服务热线  ：0532- 33698874 </span></p>
+            </div>
+</div>
+<!-- footer end -->
+<!-- fixed l&r -->
+        <div class="fixedBar weixin">
+             <a  target="_blank"></a>
+             <span class="fixed-close"></span> 
+        </div>
+        <div class="fixedBar weibo">
+             <a href="http://weibo.com/3228192772/profile?s=6cm7D0&is_hot=1" target="_blank">
+               <wb:follow-button uid="3228192772" type="red_1" width="67" height="24" ></wb:follow-button>
+             </a>
+             <span class="fixed-close"></span> 
+        </div>
+<!-- fixed l&r -->
+
+
+<script src="js/list.js"></script>
+</body>
+</html>
+    
