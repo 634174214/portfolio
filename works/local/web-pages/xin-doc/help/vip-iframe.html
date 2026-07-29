@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://edu-wenku.bdimg.com/v1/pc/protocols/33.htm -->
+<html class="expanded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<style type="text/css">
+
+    body {
+        overflow-x: hidden;
+        font-family: "\5FAE\8F6F\96C5\9ED1","Hiragino Sans GB";
+        font: 12px/1.333 "\5FAE\8F6F\96C5\9ED1","Hiragino Sans GB",arial,helvetica,clean;
+        margin: 0;
+    }
+
+    a {
+        outline: none !important;
+    }
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+    }
+    .g-btn {
+        margin-left: 10px;
+        padding: 3px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: baseline;
+    }
+    .g-btn-pass {
+        background-color: #2fad85;
+        color: #fff;
+    }
+    .g-btn:hover {
+        opacity: .8;
+        filter: alpha(opacity=80);
+        text-decoration: none;
+    }
+    td.delete {
+        background-color: yellow;
+    }
+    table {
+        margin: auto;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: inherit;
+    }
+    td {
+        text-align: center;
+        height: 40px;
+        border: 1px solid #ccc;
+    }
+    .tr-odd {
+        background: #eee;
+    }
+    .text-padding{
+        text-align: left;
+        padding: 8px;
+        line-height: 20px
+    }
+    .help_box {
+        margin-top: 30px;
+    }
+    h2 {
+        font-size: 18px;
+        color: #333;
+        float: left;
+        border-bottom: 2px solid #1bac7d;
+        padding-bottom: 13px;
+        position: relative;
+        bottom: -1px;
+    }
+    h4 {
+        font-size: 18px;
+        padding: 25px 0 15px 0;
+        text-align: center;
+    }
+    h5 {
+        font-size: 16px;
+        height: 14px;
+        line-height: 14px;
+        color: #333;
+        margin-top: 24px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    li {
+        margin-bottom: 0px;
+    }
+    .p-sp-under {
+        text-decoration: underline;
+    }
+    p.tips, span.tips {
+        color: #555;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 5px;
+        text-indent: 20px;
+    }
+    span.bold, p.bold {
+        font-weight: bold;
+        color: #333;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 5px;
+        text-indent: 20px;
+    }
+    p.red, span.red {
+        color: red;
+    }
+    img {
+        max-width: 683px;
+        border: 1px solid #e8e8e8;
+        display: block;
+        margin: 14px auto 16px;
+    }
+    .upload-content{
+        list-style-type: none;
+        margin-top:24px;
+    }
+    .content-sp {
+        float: left;
+        border-bottom: 1px dotted #e9e9e9;
+        margin-bottom: 20px;
+    }
+    .btn{
+        font-size:13px;
+        float:right;
+        height:33px;
+        line-height:33px;
+        width:101px;
+        text-align:center;
+        background-color:#19a97b;
+        border-radius:2px;
+        color:white;
+        cursor:pointer;
+        text-decoration:none;
+    }
+    .btn:hover {
+        background-color:#3fba93;
+    }
+    .span-sp {
+        color:#db5b5a;
+        font-size:12px;
+        font-weight:normal;
+        position: absolute;
+        left: 350px;
+        top: 2px;
+    }
+    .content {
+        width:460px;
+        float:left;
+        border-bottom: 1px dotted #e9e9e9;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size:14px;
+        color:#333;
+        position:relative;
+    }
+    .extra {
+        font-size:12px;
+        color:#555;
+        margin:13px 0px 21px;
+        font-weight: 400;
+    }
+    P > span {
+        color: #555;
+        font-size:14px;
+        font-weight: normal;
+    }
+    .pri-head-box {
+        height: 100px;
+    }
+    .pri-head {
+        position: relative;
+        height: 100px;
+        background: url(https://edu-wenku.bdimg.com/icms_transform/img/iknow/wenku/pri-help_684x100.jpg) no-repeat center;
+    }
+    .fr {
+        position: absolute;
+        right: 28px;
+        top: 27px;
+    }
+    .vip-color-btn {
+        width: 130px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 18px;
+        background-color: #db5b5a;
+
+    }
+    .vip-color-btn:hover {
+        background: #de6f6e;
+        text-decoration: none
+    }
+    .help-vip-tab {
+        height: 35px;
+        line-height: 30px;
+        border-bottom: #e3e3e3 1px solid;
+        background: #fff;
+    }
+    .help-vip-cl {
+        color: #333;
+        font-weight: 600;
+        border-bottom: #e46866 2px solid;
+        height: 35px;
+        width: 150px;
+        font-size: 14px;
+        color: #555;
+        float: left;
+        cursor: pointer;
+        margin-bottom: 0!important;
+        margin-right: 55px;
+        margin-left: -39px
+    }
+    .help-vip-cl2 {
+        height: 35px;
+        width: 150px;
+        font-size: 14px;
+        color: #555;
+        float: left;
+        cursor: pointer;
+        margin-bottom: 0!important;
+        margin-right: 55px;
+    }
+    .help-vip-tab > li {
+        height: 35px;
+        width: 150px;
+        font-size: 14px;
+        color: #555;
+        float: left;
+        cursor: pointer;
+        margin-bottom: 0 !important;
+        margin-right: 55px;
+    }
+    .pri-help > .help-vip-tab > li > i {
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+        width: 20px;
+        height: 18px;
+        vertical-align: middle;
+        background: url(https://edu-wenku.bdimg.com/v1/pc/protocols/help-pri.jpg) no-repeat;
+    }
+    .ic-s-vip {
+        margin-right: 4px;
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+        background-repeat: no-repeat;
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/s-vip.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/s-vip.png), none;
+    }
+    .cla-icon {
+        background: none;
+        color: #e46866;
+        line-height: 1;
+        font-weight: normal;
+    }
+    .edu-icon {
+        display: inline-block;
+        font-family: normal !important;
+        color: #ffffff;
+        width: 17px;
+        height: 20px;
+        vertical-align: middle;
+        margin-top: -5px;
+        background: url(https://edu-wenku.bdimg.com/v1/pc/protocols/jiaoyuvip.png) no-repeat;
+    }
+    .help-vip-cl {
+        color: #333;
+        font-weight: 600;
+        border-bottom: #e46866 2px solid;
+    }
+    .help-vip-edu {
+        color: #333;
+        font-weight: 600;
+        border-bottom: #19a97b 2px solid;
+    }
+    .pri-table {
+        width: 100%;
+        font-size: 14px;
+        border-right: none;
+        border-bottom: none;
+        border-top: 1px solid #eee;
+        border-left: 1px solid #eee;
+
+    }
+    .pri-table > .tab-set-fix {
+        position: fixed;
+        top: 100px;
+        width: 686px;
+        z-index: 999;
+        left: 50%;
+        margin-left: -233px;
+    }
+    .pri-table > thead {
+        color: #555;
+        background-color: #f6f6f6;
+
+    }
+    .pri-table > td {
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .pri-table > td {
+        padding: 20px 15px;
+        border-top: 1px solid #eee;
+        border-left: none;
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+        font-size: 14px;
+        line-height: 24px;
+        vertical-align: top;
+        text-align: left;
+        color: #555;
+
+    }
+    .pri-table > span {
+        display: block;
+        width: 45px;
+        height: 43px;
+        margin: 10px auto 0;
+        background: url(https://edu-wenku.bdimg.com/v1/pc/protocols/help-pri.jpg) no-repeat;
+        background-position: -509px -49px;
+    }
+    .pri-table > em {
+        font-style: normal;
+        color: #db5b5a;
+    }
+    .pri-table > a {
+        color: #df4d4b;
+        text-decoration: underline;
+    }
+    .pri-table > .center {
+        text-align: center;
+    }
+    .pri-table > .yes {
+        padding: 20px 10px;
+
+    }
+    .pri-table > span {
+        width: 18px;
+        height: 15px;
+        background-position: -509px -49px;
+    }
+    .other-pri {
+        padding-top: 16px;
+    }
+    .set-fix {
+        position: fixed;
+        width: 686px;
+        top: 0;
+        left: 50%;
+        margin-left: -233px;
+        z-index: 999;
+    }
+    .marTop15 {
+        margin-top: 15px;
+    }
+    .down {
+        background-position: 0 0;
+    }
+    .profession {
+        background: url(https://edu-wenku.bdimg.com/v1/pc/protocols/zhuanye-line.png) no-repeat;
+        background-position: 1px 2px;
+    }
+    .share {
+        width: 60px;
+        height: 60px;
+        background: url(https://edu-wenku.bdimg.com/v1/pc/protocols/gongxiang-line.png) no-repeat;
+        background-position: 0 2px;
+    }
+    .ljtq {
+        background-position: -461px 2px;
+    }
+    .lottery {
+        background-position: -462px -45px;
+    }
+    .fare-d {
+        background-position: -419px -45px;
+    }
+    .dis {
+        background-position: -49px 0;
+    }
+    .book {
+        background-position: -99px 0;
+    }
+    .fare {
+        background-position: -140px 0;
+    }
+    .free {
+        background-position: 7px -43px;
+    }
+    .money {
+        height: 45px;
+        background-position: -45px -44px;
+    }
+    .search {
+        width: 40px;
+        background-position: -94px -43px;
+    }
+    .vicon {
+        background-position: -134px -49px;
+    }
+    .s-vip-icons {
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+    }
+    .pro-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/pro-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/pro-doc.svg), none;
+    }
+    .share-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/share-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/share-doc.svg), none;
+    }
+    .ad-block {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/ad-block.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/ad-block.svg), none;
+    }
+    .pro-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/pro-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/pro-doc.svg), none;
+    }
+    .customer-service {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/customer-service.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/customer-service.svg), none;
+    }
+    .pro-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/pro-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/pro-doc.svg), none;
+    }
+    .discount-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/discount-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/discount-doc.svg), none;
+    }
+    .free-copy {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/free-copy.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/free-copy.svg), none;
+    }
+    .free-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/free-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/free-doc.svg), none;
+    }
+    .free-video {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/free-video.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/free-video.svg), none;
+    }
+    .ljtq {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/ljtq.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/ljtq.svg), none;
+    }
+    .lottery {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/lottery.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/lottery.svg), none;
+    }
+    .multi-ends {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/multi-ends.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/multi-ends.svg), none;
+    }
+    .save-in-wangpan {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/save-in-wangpan.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/save-in-wangpan.svg), none;
+    }
+    .search-doc {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/search-doc.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/search-doc.svg), none;
+    }
+    .walfare {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/walfare.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/walfare.svg), none;
+    }
+    .vip-id {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/vip-id.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/vip-id.svg), none;
+    }
+    .study-vip {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/study-vip.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/study-vip.svg), none;
+    }
+    .yuedu-vip {
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/yuedu-vip.png);
+        background-image: url(https://edu-wenku.bdimg.com/v1/pc/protocols/yuedu-vip.svg), none;
+    }
+    .down {
+        background-position: -187px 0;
+    }
+    .ljtq {
+        background-position: -372px 2px;
+    }
+    .lottery {
+        background-position: -375px -45px;
+    }
+    .fare-d {
+        background-position: -419px -0px;
+    }
+    .dis {
+        background-position: -234px 0;
+    }
+    .book {
+        background-position: -285px 0;
+    }
+    .fare {
+        background-position: -329px 0;
+    }
+    .free {
+        background-position: -193px -43px;
+    }
+    .money {
+        height: 45px;
+        background-position: -236px -44px;
+    }
+    .search {
+        width: 40px;
+        background-position: -288px -43px;
+    }
+    .vicon {
+        background-position: -328px -49px;
+    }
+    .text {
+        font-family: 'arial', 'microsoft yahei', '\5FAE\8F6F\96C5\9ED1,\5b8b\4f53';
+        font-size: 14px;
+        line-height: 28px!important;
+        color: #555;
+        margin-bottom: 60px;
+    }
+    strong {
+        font-weight: bold;
+    }
+    .fb-header-tips {
+        color: #fff!important;
+    }
+    .help-feedback {
+        cursor: pointer;
+    }
+</style></head>
+
+<body>
+<ul>
+    <li>
+        <p class="bold">
+            特别提示
+        </p>
+        <p class="tips">
+            本协议系由青岛信网网络传媒有限公司（以下简称“信网”）与所有使用信网智库服务会员服务的主
+体（包括但不限于个人、团队等）（以下简称“用户”）对信网智库服务会员服务的使用及相关服务所订立的有效合约。 
+为使用信网智库服务会员服务（简称为：本服务），请您仔细阅读、理解并遵守《信网智库服务会员服务协议》（简称为：本协议）。本协议由您与信网智库服务会员服务协议提
+供方共同缔结，具有合同效力。<span style="font-weight:600;"> 协议中存在相关免除或限制责任的相应条款（以下称“免责条款”）、对用户权利进行限制的条款（以下称“限制条款”）、约定争议解决方式和司法管辖的条款。
+前述，该等免责、限制及争议解决方式和管辖条款可能以黑体加粗、颜色标记或其他合理方式提示您注意，并请您重点阅读，您对该等条款的确认将可能导致您在特
+定情况下的被动、不便、损失，请您在确认同意本协议之前或在使用信网智库服务会员服务协议之前再次阅读前述条款。</span>
+        </p>
+        <p class="bold">
+            一、定义和说明
+        </p>
+        <p class="bold">
+            1.1【信网智库服务会员及帐号】
+        </p>
+        <p class="tips">
+            您如果需要使用和享受信网智库服务会员服务，则您需要将您享有合法使用权的信网帐号或第三方登陆账号作为会员帐号，并在购买后享受跟购买额度相关的会员服务，您即为信网智库服务会员用户（亦即信网智库服务VIP）。本条款下又称“您”、 “用户”或“会员”。
+        </p>
+        <p class="bold">
+            1.2【本服务】
+        </p>
+        <p class="tips">
+            信网智库服务会员服务，即会员可在信网智库服务内专享的会员权益及特色服务，包括但不限于VIP专享文档一定次数下载特权、VIP免费文档无限次下载、部分付费文档折扣优惠、免费观看视频专区内的精品视频课程等，具体内容以信网智库服务VIP权益页面中描述为准。信网智库服务的文档类型由创作者自主设定，部分作品需要单独付费，无法仅使用VIP会员权益进行浏览、下载，文库会员可对部分付费作品享受折扣权益。
+        </p>
+        <p class="bold">
+            【条款修改】
+        </p>
+        <p class="bold">
+            信网有权随时对服务条款进行修改（修改包含变更、增加、减少相应的条款内容），一旦服务条款发生修改，信网将在相关页面进行更新展示。如果您不同意本条款的修改，可以停止对本服务的使用。您继续使用信网提供的服务，则视为您已经接受本条款的全部修改。
+        </p>
+        <p class="bold">
+            1.3【本协议】
+        </p>
+        <p class="bold">
+            1.3.1 本协议内容同时包括信网可能不断发布的关于本服务的相关协议、业务规则等内容。上述内容一经正式发布，即为本协议不可分割的组成部分。同样对双方生效
+        </p>
+        <p class="bold">
+            二、帐号管理及使用规则
+        </p>
+        <p class="bold">
+            2.1 【帐号管理】
+        </p>
+        <p class="tips">
+            2.1.1 您应正确使用及妥善保管、维护您的信网智库服务帐号及密码，如发生任何泄漏、遗失、被盗等行为，而该等行为并非信网法定过错导致，所有损失将由您自行承担；
+        </p>
+        <p class="tips">
+            2.1.2 
+您在此授予信网保护您帐号安全的相关权利，信网可定期或不定期采用不同的方式对您帐号的使用安全进行检查、验证，包括但不限于主动联系您进行身份验证、短
+消息验证、邮箱认证及密码修改等。如您无法完成验证或无正当理由拒绝验证的，信网可合理怀疑您的帐号出现异常或被盗，并中止向该帐号提供服务或采取进一步
+措施。
+        </p>
+        <p class="bold">
+            2.2 【使用规则】
+        </p>
+        <p class="bold">
+            2.2.1【合法获取及使用】
+        </p>
+        <p class="tips">
+            (1) 信网智库服务会员服务 ，均仅限于您在信网智库服务平台内使用，任何以破解、转译、转录等非法手段将信网智库服务服务与信网智库服务平台分离的行为，均不属于本条款中约定的信网智库服务会员服务。信网保留追究侵权人的法律责任及索赔的权利。
+        </p>
+        <p class="tips">
+            (2) 
+任何以盗窃、利用系统漏洞、通过任何非信网官方或授权途径获得的信网智库服务会员服务（包括但不限于购买、租用、借用、分享、受让等方式获得）、恶意利用或破
+坏信网智库服务会员活动获得的会员服务，均不获相关保护，信网有权取消及/或不予提供会员服务，所有产生的损失及责任由行为人自行承担
+        </p>
+        <p class="tips">
+            (3) 使用信网智库服务会员服务及/或参加相关活动时，亦应通过信网智库服务官方公布/授权的方式进行，<span style="font-weight:bold;">用
+户通过其他任何渠道、任何途径、任何方式非法获取的信网智库服务会员服务（包括且不限于帐号、会员权益、会员服务兑换码等）或参加活动获取福利（包括但不限于
+获得实体/虚拟礼品、会员权益、会员服务兑换码等），均不获保护，且一经发现信网有权立即就相关服务做出删除、取消、清零等处理，或采取其他如中止或终止
+对您提供服务等帐号管理措施，所有产生的损失及责任由行为人自行承担。</span>
+        </p>
+        <p class="bold">
+            (4) 您参加会员活动时，应按照活动规则、以合法及不损害活动举办方的方式进行，利用系统漏洞、规则设置缺陷、系统设置错误、滥用会员身份等参加活动并获取相关福利的，均不获保护，且信网有权采取相关措施进行处理，所有产生的损失及责任由行为人自行承担。
+        </p>
+        <p class="bold">
+            2.2.2 【专有及非商业目的使用】
+        </p>
+        <p class="tips">
+            (1) 信网智库服务会员服务，是在您遵守本条款及相关法律法规的前提下，信网给予您一项个人的、不可转让及非排他性的许可。您仅可为非商业目的使用，并仅可用作私人使用。
+        </p>
+        <p class="bold">
+            (2) 
+您理解并同意，您不得将享有会员服务的信网账号以任何方式提供给他人使用，包括但不限于不得以转让、出租、借用、分享、出售等方式提供给他人作包括但不限
+于分享、上传、浏览、下载、使用/享受会员权益、参加活动等使用。否则，因此产生任何法律后果及责任均由您自行承担，且信网有权中止或终止对您提供服务。
+        </p>
+        <p class="bold">
+            2.2.3 【帐号独立】
+        </p>
+        <p class="tips">
+            (1）同一主体拥有多个信网帐号并进行信网智库服务会员登录的，每一个信网帐号将被识别为一个独立的帐号
+        </p>
+        <p class="bold">
+            (2) 每个帐号之间的购买记录、文档数据无法进行转移、迁徙、转让、赠与、售卖、租借、分享，无论该等帐号是否由同一使用人拥有，请您在登录及/或购买/参加活动时注意区分，避免造成损失。信网会视情况采取中止或终止对您提供服务，由此造成的损失由会员自行承担。
+        </p>
+        <p class="bold">
+            2.2.4 【登录限制】
+        </p>
+        <p class="bold">
+            您理解并同意，在开通本服务后，同一个帐号最多可以在五个设备（“设备”指包括但不限于计算机及移动电
+话、平板电脑等手持移动终端设备，下同）上使用，且同一时间内同一帐号最多在两个设备上使用。超过上述范围使用的，信网将会根据情况中止或终止对您的服
+务。造成的损失将由您自行承担，且信网保留采取进一步措施的权利。
+        </p>
+        <p class="bold">
+            2.2.5 【帐号找回】
+        </p>
+        <p class="bold">
+            您登录信网智库服务时使用的信网账号信息遗失、忘记密码，导致无法登录信网智库服务的，您如需找回的，需按照百
+度官方公布的帐号找回流程的要求提供相应的信息和证明，并确保提供的信息和证明文件的合法真实有效，若提供的材料不真实或不符合要求，无法通过信网的安全
+验证，可能会导致帐号找回失败，相应的风险和损失将由您自行承担。您理解信网对您的请求采取行动及处理均需要合理时间，除信网存在法定过错外，信网对您的
+损失不承担任何责任。
+        </p>
+        <p class="bold">
+            三、会员服务内容
+        </p>
+        <p class="bold">
+            3.1 【会员特权】
+        </p>
+        <p class="tips">
+            3.1.1 在您开通会员服务后，根据您的购买记录及您参加的相关活动，将会享有对应服务体验，具体以相关服务页面公布、实际提供的内容为准。
+        </p>
+        <p class="tips">
+            3.1.2 
+您在购买信网智库服务会员后可享受的全部权益以信网智库服务官方网站公布的会员权益为准，信网有权基于自身业务发展需要变更全部或部分会员权益。就前述权益调整百
+度文库将在相应服务页面进行更新展示，您也可通过信网智库服务官方网站或移动端查询最新的会员权益内容。同时我们也鼓励您定期查看本协议内容，以更好地保障您
+的权益。
+        </p>
+        <p class="bold">
+            3.2 【虚拟产品】
+        </p>
+        <p class="bold">
+            基于虚拟产品的性质和特征，您所获取的虚拟产品（包括信网智库服务会员，以及您通过信网智库服务促销活动购买的
+包括但不限于联合会员、加价购会员等）不能够进行退货、换货、兑换现金亦不得用于商业领域，如买卖、置换、抵押等。一切通过非官方公布渠道取得的虚拟产品
+及其衍生服务均不获保护，信网有权中止或终止对您的服务；由此造成的损失由您自行承担。
+        </p>
+        <p class="bold">
+            3.3 【设备及系统差异】
+        </p>
+        <p class="bold">
+            您通过信网指定渠道开通本服务后，可能会由于您使用的软件版本、设备、操作系统等不同以及其他第三方原因等导致您实际可使用的具体服务有差别，由此可能给您带来的不便，您表示理解，您不予追究或者豁免信网的相关责任。
+        </p>
+        <p class="bold">
+            3.4 【关于收费】
+        </p>
+        <p class="bold">
+            本服务是信网提供的收费服务，您须在按照本服务的收费标准支付相应费用后，方可使用本服务。此外，您可
+能也可以通过接受好友赠送等信网认可的其他方式享有、使用本服务。 
+信网可能会根据本服务的整体规划，对本服务相关权益细则、收费标准、方式等进行修改和变更，前述修改、变更，信网将在相应服务页面进行更新展示。信网会根
+据实际状况，对不同阶段购买、续费的会员给予不同的优惠，故划线价为信网智库服务官方建议的零售价。具体优惠政策以信网在相关服务页面公示的信息为准。提请您注意，续费状态及扣费标准更新可能会存
+在延时，以实际支付时的续费签约状态和扣费标准为准。同时我们也鼓励您定期查看本协议内容，以更好地保障您的权益。您在此理解并同意因参加活动不同，信网
+文库会员将享受不同的增值服务或资费。
+        </p>
+        <p class="bold">
+            3.5 【支付】
+        </p>
+        <p class="tips">
+            3.5.1 您应该通过信网指定的包括但不限于支付宝支付、微信支付、度小满支付等现有方式<span style="font-weight:bold;">或今后信网指定方式，依约支付。支付完成后，不可进行转让或退款。</span>
+        </p>
+        <p class="tips">
+            3.5.2 您不得通过以下任何方式为自己或他人开通本服务：
+        </p>
+        <p class="tips">
+            (1) 以营利、经营等非个人使用的目的为自己或他人开通本服务；
+        </p>
+        <p class="tips">
+            (2）通过任何机器人软件、蜘蛛软件、爬虫软件、刷屏软件等任何程序、软件方式为自己或他人开通本服务；
+        </p>
+        <p class="tips">
+            (3）通过任何不正当手段或以违反诚实信用原则的方式为自己或他人开通本服务；
+        </p>
+        <p class="tips">
+            (4) 通过非信网指定的方式为自己或他人开通本服务；
+        </p>
+        <p class="tips">
+            (5) 通过侵犯信网或他人合法权益的方式为自己或他人开通本服务；
+        </p>
+        <p class="tips">
+            (6) 通过其他违反相关法律、行政法规、国家政策等的方式为自己或他人开通本服务；
+        </p>
+        <p class="bold">
+            3.6 【服务期限】
+        </p>
+        <p class="tips">
+            3.6.1 
+本服务的期限以您自行选择并支付相应服务费用的期限为准，您也可以登陆本服务的相应页面查询。如您希望享受会员服务连续采购和自动扣费的服务，您可以根据
+操作指引向我们提出申请，并在仔细阅读《信网智库服务会员自动续费服务协议》后决定是否继续申请，详细内容请见页面显示的《信网智库服务会员自动续费服务协议》；
+        </p>
+        <p class="tips">
+            3.6.2 您理解、知悉并同意，本服务的服务期间，包含信网解决故障、服务器维修、调整、升级、因第三方侵权处理等所需的合理时间，对上述情况所需用的时间不另行补偿；
+        </p>
+        <p class="bold">
+            3.7 【使用规则及说明】
+        </p>
+        <p class="tips">
+            广告宣传：您理解并同意，信网公司拥有通过信网智库服务会员服务的相关软件或网站向您关联或展示广告的权
+利，并对广告投放行为不承担通知义务。您不得以任何方式改变、移除或遮蔽这些广告，亦不得以任何形式利用信网公司关联或展示任何广告。 
+您理解并清楚，您对信网智库服务会员服务中关联或展示的广告应当审慎判断，您通过信网助手车载版服务与广告商进行任何形式的通讯或商业往来，属于您与广告商之
+间的行为。如果您因前述任何行为而遭受的任何性质的后果或损失，您应向有关广告商主张权利。
+        </p>
+        <p class="tips">
+            为了向您提供更好的平台服务，信网智库服务可能会对会员权益进行调整，包括但不限于：
+        </p>
+        <p class="tips">
+            1.会员权益具体内容的调整
+        </p>
+        <p class="tips">
+            2.会员付款方式、价格等的变更
+        </p>
+        <p class="tips">
+            3.其他平台公式的变更内容
+        </p>
+        <p class="bold">
+            四、违约责任
+        </p>
+        <p class="tips">
+            4.1.1 您在使用本服务的过程中，不得进行以下违约行为：
+        </p>
+        <p class="tips">
+            4.1.2 违反法律、法规、规章、条例以及任何具有法律效力之规范规定的；
+        </p>
+        <p class="tips">
+            4.1.3 破坏、影响信网对任何第三方提供本服务；
+        </p>
+        <p class="tips">
+            4.1.4 进行危害计算机网络安全的行为；
+        </p>
+        <p class="bold">
+            4.1.5 对信网及关联第三方（包括授权方和合作方）提供的本条款服务、活动造成不良影响，侵犯及/或关联第三方信网及/或其他用户的正当利益；
+        </p>
+        <p class="tips">
+            4.1.6 被有权机构认定侵犯任何第三方的合法权益的；
+        </p>
+        <p class="tips">
+            4.1.7 利用本服务获取非法利益的，包括但不限于通过转售、转让、转授权等行为不正当牟利；
+        </p>
+        <p class="tips">
+            4.1.8 其他侵犯信网合法利益的行为；
+        </p>
+        <p class="bold">
+            4.2 【违约行为处理】
+        </p>
+        <p class="tips">
+            您确认并同意，在发现违约行为后，信网有权采取以下一项或多项措施处理：
+        </p>
+        <p class="tips">
+            (1) 采取技术手段予以删除、屏蔽或断开相关的信息；
+        </p>
+        <p class="tips">
+            (2) 采取包括但不限于中止或终止部分或全部本服务；
+        </p>
+        <p class="tips">
+            (3) 采取扣除违约行为发生时间内的会员权益；
+        </p>
+        <p class="tips">
+            (4) 采取限制用户下载、播放、复制、存储等权益；
+        </p>
+        <p class="tips">
+            (5) 信网无需向您退还任何费用，未使用的服务费用作为违约金归信网所有，您的相关会员权益的损失由您自行承担，造成信网损失的（包括但不限于律师费、诉讼费等），您也应予以赔偿；
+        </p>
+        <p class="bold">
+            4.3 【赔偿责任】
+        </p>
+        <p class="bold">
+            如用户的违约行为或违法行为使信网及其关联公司遭受损失，包括自身的直接经济损失、商誉损失及对外支付的赔偿金、和解款、律师费、诉讼费等间接经济损失，被告应当赔偿信网及其关联公司的上述全部损失，您的违约行为导致任何第三方损害的，您应当独立承担责任。
+        </p>
+        <p class="bold">
+            五、服务的变更、中止及终止
+        </p>
+        <p class="tips">
+            5.1 本服务的中止或终止包含如下情况：
+        </p>
+        <p class="tips">
+            用户主动中止或终止，包括但不限于与到期未进行续费等；
+        </p>
+        <p class="tips">
+            因为用户违约行为，信网主动中止或终止服务的；
+        </p>
+        <p class="tips">
+            因国家或相关部门要求或发生不可抗力事件时，信网中止或终止服务的；
+        </p>
+        <p class="tips">
+            其他根据法律法规或信网公司业务调整等应当或者需要中止或终止服务的；
+        </p>
+        <p class="tips">
+            5.2 中止或终止服务后，当您发现无法登录或享受服务时，可以咨询我们的在线客服。
+        </p>
+        <p class="tips">
+            5.3 中止或终止后的处理:
+        </p>
+        <p class="tips">
+            5.3.1 除法律规定的责任外，信网对本服务的中止或终止对用户和任何第三人不承担任何责任；
+        </p>
+        <p class="bold">
+            5.3.2 已收取的费用原则上不予退还；
+        </p>
+        <p class="tips">
+            5.3.3 正在进行的平台交易，信网将根据情况合理判断，是否继续进行或终止相关交易，并视情况决定是否进行退费或扣除相关费用作为违约金；
+        </p>
+        <p class="tips">
+            5.4 信网智库服务依据本协议的约定变更服务内容、服务方式以及本协议内容的，如果会员不同意信网智库服务的变更，有权选择取消并停止使用已经获取的对应的全部或部分服务；如果会员继续使用信网智库服务提供的上述服务，则视为会员已经接受信网智库服务的上述调整。
+        </p>
+        <p class="tips">
+            5.5 会员如果不同意条款的修改，可主动向信网智库服务提出终止会员服务，但信网智库服务不退还自开通会员服务至提出终止会员服务所在月的费用；如果会员继续享用会员服务，则视为会员已经接受条款的修改。
+        </p>
+        <p class="tips">
+            5.6 
+您同意，由于互联网服务的特殊性，信网有权基于合法理由，修改、变更、中断或终止部分或全部服务，或变更、删除、转移用户存储、发布在信网智库服务的内容，统
+称“变更行为”。信网保留采取前述变更行为而不需通知您的权利，且您同意，依本服务条款任何规定提供之本服务，无需进行事先通知即可变更、中断或终止。并
+且您同意，由于变更行为而造成的任何损失，信网无需对您对或任何第三人承担任何责任。
+        </p>
+        <p class="bold">
+            六、免责声明
+        </p>
+        <p class="tips">
+            6.1 您知悉并同意，用户在信网智库服务平台上上传、发布或传输的内容，为用户的个人行为，信网不对该等信息和内容的准确性、真实性、可用性、安全性、完整性和正当性承担责任，您在此同意豁免追加信网的相关责任。
+        </p>
+        <p class="tips">
+            6.2 您在进行相关信息及内容的使用、分享、下载等行为（“使用行为”）时，应进行独立判断并合法使用，因您的使用行为造成任何自身损害及对第三方的损害，信网不承担任何责任。
+        </p>
+        <p class="tips">
+            6.3 因电信和网通部门的通讯线路故障、网络或电脑故障、系统不稳定、不可抗力（如服务器当机）等非信网原因造成您帐号、帐号内财产等丢失、减少的，您无权要求信网承担补偿等责任。
+        </p>
+        <p class="tips">
+            6.4 您在使用信网智库服务所提供的服务时，如遭受任何人身或财务的损失、损害或伤害，除法律有明确规定外，信网不承担任何责任。由于您将个人密码告知他人或与他人共享注册帐户，由此导致的任何个人资料泄露，信网不承担任何责任。
+        </p>
+        <p class="bold">
+            七、通知
+        </p>
+        <p class="tips">
+            本协议项下信网对于用户所有的通知均可通过网页公告、手机短信或常规的信件传送等方式进行，该等通知于
+发送之日视为已送达用户。 
+为便于您收取相关通知，您应确保预留的联系方式为正确及有效，并在变更后及时登录信网智库服务修改，如因您未提供正确的联系信息或未及时告知新的联系方式，导
+致无法及时收取通知，将由您自行承担由此产生的损失及法律后果。 
+信网可通过上述方式之一或其中若干向您送达各类通知，而此类通知的内容或将对您产生重大有利或不利影响，请您务必确保联系方式为有效并请及时关注。
+        </p>
+        <p class="bold">
+            八、法律的适用和管辖
+        </p>
+        <p class="tips">
+            8.1 本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律。
+        </p>
+        <p class="tips">
+            8.2 如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向信网公司所在地人民法院提起诉讼。
+        </p>
+        <p class="tips">
+            8.3 信网公司未行使或执行本服务协议任何权利或规定，不构成对前述权利或权利之放弃。
+        </p>
+        <p class="tips">
+            8.4 如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。
+        </p>
+        <p class="tips">
+            8.5 在法律法规允许的范围内，信网智库服务有权对本协议进行解释。
+        </p>
+    </li>
+</ul>
+
+
+</body></html>

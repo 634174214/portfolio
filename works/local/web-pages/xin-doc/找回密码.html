@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="applicable-device" content="pc,mobile">
+    <title>信网服务-找回密码</title>
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="http://m.qdxin.cn/css/font-song/song.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/front-m.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" type="text/css" href="css/front-pc.css" media="screen and (min-width: 481px)">
+    <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="bg-white">
+        <!-- header -->
+        <div class="header">
+            <div class="header-inner">
+                <a class="header-left" href="登录.html">
+                        <img src="img/logo.png" class="header-logo">
+                        <span class="header-welcome">欢迎您</span>
+                    </a>
+                <div class="header-right">
+                    已有账号?<a href="登录.html" class="a-link">请登录</a>
+                    <!-- 您好：17598236899 <a href="#" class="a-link-yellow">退出账号 ></a>  -->
+                </div>
+            </div>
+        </div>
+        <!-- header end -->
+
+        <section class="login-container">
+            <h1 class="font-song login-h1">找回密码</h1>
+
+            <form action="登录.html" class="login-form" id="reset-password-form">
+                <div class="form-row">
+                   <div class="input-box">
+                        <label class="input-placehold" for="login-phone">手机号</label>
+                        <input type="text" class="form-input" id="login-phone" maxlength="11" autocomplete="off">
+                        <cite class="input-box-tips">请输入中国大陆的手机号</cite>
+                   </div>
+                    <div class="form-error-tips">
+                        请输入正确的手机号
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-box">
+                        <div class="form-verify-btn" id="verify-code">发送验证码</div>
+                        <label class="input-placehold" for="login-verify">验证码</label>
+                        <input type="password" class="form-input" id="login-verify" required="required" maxlength="10" autocomplete="off">
+                        <cite class="input-box-tips">请输入手机收到的验证码</cite>
+                    </div>
+                    <div class="form-error-tips">
+                        请输入正确的验证码
+                    </div>
+                </div>
+                <div class="form-row">
+                        <div class="input-box">
+                            <label class="input-placehold" for="login-password">设置新密码</label>
+                            <input type="password" class="form-input" id="login-password" required="required" maxlength="20" minlength="8" autocomplete="off">
+                            <cite class="input-box-tips">密码组合要求8-20位数字和字母的组合</cite>
+                        </div>
+                        <div class="form-error-tips">
+                            您的密码组合安全性较低，请使用8-20位数字和字母的组合
+                        </div>
+                </div>
+                <div class="form-row">
+                        <div class="input-box ">
+                            <label class="input-placehold" for="login-password-again">再次确认新密码</label>
+                            <input type="password" class="form-input" id="login-password-again" required="required"  maxlength="20" minlength="8" autocomplete="off">
+                            <cite class="input-box-tips">请再次确认输入的密码</cite>
+                        </div>
+                        <div class="form-error-tips">
+                            您的密码两次输入不一致
+                        </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="form-submit-btn" id="sign-btn">确定修改</button>
+                    <p class="form-find-password">如果您已经有账号，那么可以 <a href="登录.html" class="a-link" target="_blank">立即前往登录</a></p>
+                </div>
+            </form>
+        </section>
+
+        <script src="https://www.qdxin.cn/js/xinquery.js"></script>
+        <script src="js/layer/layer.js"></script>
+        <script src="js/front-login.js"></script>
+  </body>
+  </html>

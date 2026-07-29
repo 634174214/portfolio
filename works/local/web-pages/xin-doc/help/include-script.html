@@ -1,0 +1,10 @@
+<script src="https://www.qdxin.cn/js/xinquery.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    var url = window.location.href;
+    var leftKey = url.split('help/')[1];
+    leftKey = leftKey.replace('.', '-');
+    console.log(leftKey)
+    $('.'+ leftKey).addClass('active');
+</script>

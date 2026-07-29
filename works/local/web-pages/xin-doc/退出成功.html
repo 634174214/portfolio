@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="applicable-device" content="pc,mobile">
+    <title>信网服务-退出成功</title>
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <link rel="stylesheet" type="text/css" href="http://m.qdxin.cn/css/font-song/song.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/front-m.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" type="text/css" href="css/front-pc.css" media="screen and (min-width: 481px)">
+    <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header-inner">
+            <a class="header-left" href="登录.html">
+                <img src="img/logo.png" class="header-logo">
+                <span class="header-welcome">欢迎您</span>
+            </a>
+            <div class="header-right">
+                <a href="注册.html" class="a-link">登录</a> / <a href="注册.html" class="a-link">注册</a>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <section class="main-container">
+        <h1 class="font-song login-h1">账号已成功退出</h1>
+        <div class="logout-iconx">
+            <i class="fa fa-check-square-o"></i>
+            <p class="logout-iconx">感谢您的使用，期待与您再次相逢</p>
+        </div>
+        <p class="logout-count-down"><span id="logout-count-down">5</span>秒后将自动返回到登录页面</p>
+        <a href="登录.html" class="yellowbg-btn logout-2-login-btn">立即返回</a> 
+    </section>
+
+    <script src="https://www.qdxin.cn/js/xinquery.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script>
+        var timer = null;
+        var countDown = 5;
+        timer = setInterval(() => {
+            countDown--;
+            $('#logout-count-down').text(countDown);
+            if(countDown <= 0) {
+                clearInterval(timer);
+                window.location.href = '登录.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
