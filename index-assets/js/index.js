@@ -46,8 +46,17 @@ new Vue({
     columnCounts: {},
     // 是否显示回到顶部按钮
     showScrollTop: false,
+    // 二维码浮层相关
+    qrVisible: false,
+    qrLabel: '',
+    qrStyle: {},
+    // 是否 PC（支持 hover 的设备）
+    isPc: true,
   },
   mounted() {
+    // 检测是否为 PC 设备（支持 hover）
+    this.isPc = window.matchMedia('(hover: hover)').matches;
+
     // 模拟一个最小加载时长，让骨架屏可见
     setTimeout(() => {
       if (typeof worksData !== "undefined" && worksData.categories) {
@@ -322,6 +331,101 @@ new Vue({
       if (overlay) {
         overlay.removeEventListener("click", closeModal);
         overlay.addEventListener("click", closeModal);
+      }
+    },
+
+    /**
+     * 鼠标移入链接时，显示二维码浮层
+     * @param {String} url - 要生成二维码的链接，为空则不显示
+     * @param {Event} event - 鼠标事件
+     */
+    handleQRHover(url, event) {
+      if (!this.isPc || !url || url === '#') return;
+
+      // 清除之前的隐藏定时器
+      if (this._qrHideTimer) {
+        clearTimeout(this._qrHideTimer);
+        this._qrHideTimer = null;
+      }
+
+      // 计算浮层位置（显示在触发元素上方居中）
+      const rect = event.currentTarget.getBoundingClientRect();
+      const popoverWidth = 180;
+      const popoverHeight = 200;
+
+      let left = rect.left + rect.width / 2 - popoverWidth / 2;
+      let top = rect.top - popoverHeight - 8;
+
+      // 边界修正：防止超出视口左右
+      if (left < 8) left = 8;
+      if (left + popoverWidth > window.innerWidth - 8) {
+        left = window.innerWidth - popoverWidth - 8;
+      }
+      // 如果上方空间不够，显示在下方
+      if (top < 8) {
+        top = rect.bottom + 8;
+      }
+
+      this.qrStyle = {
+        left: left + 'px',
+        top: top + 'px',
+      };
+
+      // 根据链接类型设置标签
+      this.qrLabel = url;
+
+      // 显示浮层
+      this.qrVisible = true;
+
+      // 等 DOM 更新 + 浏览器布局完成后再生成二维码
+      this.$nextTick(() => {
+        setTimeout(() => {
+          const inner = this.$refs.qrInner;
+          if (!inner) return;
+          inner.innerHTML = '';
+          new QRCode(inner, {
+            text: url,
+            width: 140,
+            height: 140,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.M,
+          });
+        }, 0);
+      });
+    },
+
+    /**
+     * 鼠标移出链接时，延迟隐藏二维码浮层
+     */
+    handleQRLeave() {
+      if (this._qrHideTimer) {
+        clearTimeout(this._qrHideTimer);
+      }
+      this._qrHideTimer = setTimeout(() => {
+        this.qrVisible = false;
+        this._qrHideTimer = null;
+      }, 200);
+    },
+
+    /**
+     * 鼠标移入二维码浮层自身时，取消隐藏
+     */
+    handleQRPopoverEnter() {
+      if (this._qrHideTimer) {
+        clearTimeout(this._qrHideTimer);
+        this._qrHideTimer = null;
+      }
+    },
+
+    /**
+     * 鼠标移出二维码浮层时，立即隐藏
+     */
+    handleQRPopoverLeave() {
+      this.qrVisible = false;
+      if (this._qrHideTimer) {
+        clearTimeout(this._qrHideTimer);
+        this._qrHideTimer = null;
       }
     },
   },

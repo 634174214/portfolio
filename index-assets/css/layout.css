@@ -783,3 +783,64 @@ body {
 .swiper-wrapper{
     align-items: center;
 }
+
+/* ======================= 二维码悬浮层 ======================= */
+.qr-popover {
+    position: fixed;
+    z-index: 9999;
+    width: 180px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.qr-popover--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.qr-popover-inner {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.qr-popover-inner img,
+.qr-popover-inner canvas,
+.qr-popover-inner svg {
+    display: block;
+    width: 140px !important;
+    height: 140px !important;
+}
+
+.qr-popover-label {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #888;
+    text-align: center;
+    word-break: break-all;
+    line-height: 1.4;
+    max-height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 非 PC 设备（触屏）不显示二维码浮层 */
+@media (hover: none) {
+    .qr-popover {
+        display: none !important;
+    }
+}

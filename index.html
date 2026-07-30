@@ -7,13 +7,14 @@
     <title>作品集 | 前端&设计 · 作品汇总</title>
     <!-- <title>如何使用agent</title> -->
     <!-- 使用 Inter 字体，干净现代 -->
+     <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
         rel="stylesheet">
     <!-- Swiper CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="index-assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="index-assets/css/layout.css?T=5">
+    <link rel="stylesheet" href="index-assets/css/layout.css?T=7">
 </head>
 
 <body>
@@ -101,7 +102,10 @@
                                         </div>
                                         <div class="right">
                                             <a v-if="item.preview" href="javascript:void(0);"
-                                                @click="handlePreviewClick(item.preview)" class="work-meta-preview-a">
+                                                @click="handlePreviewClick(item.preview)"
+                                                @mouseenter="handleQRHover(item.preview.type === 'link' ? item.preview.href : '', $event)"
+                                                @mouseleave="handleQRLeave"
+                                                class="work-meta-preview-a">
                                                 {{ item.preview.text }}
                                             </a>
                                             <span v-else-if="item.preview && item.preview.type === 'tips'"
@@ -109,7 +113,9 @@
                                                 {{ item.preview.text }}
                                             </span>
                                             <a :href="getProjectLink(item)" class="btn-link" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer"
+                                                @mouseenter="handleQRHover(getProjectLink(item), $event)"
+                                                @mouseleave="handleQRLeave">
                                                 🔗 查看 <span style="font-size:1.05rem;">→</span>
                                             </a>
                                         </div>
@@ -149,6 +155,14 @@
                 <span class="scroll-top-text">顶部</span>
             </button>
         </transition>
+
+        <!-- 二维码悬浮层 -->
+        <div class="qr-popover" :class="{ 'qr-popover--visible': qrVisible }" :style="qrStyle"
+            @mouseenter="handleQRPopoverEnter"
+            @mouseleave="handleQRPopoverLeave">
+            <div class="qr-popover-inner" ref="qrInner"></div>
+            <div class="qr-popover-label">点击链接 / 手机扫码</div>
+        </div>
     </div>
 
     <!-- 图片预览弹窗 -->
@@ -177,7 +191,8 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="index-assets/js/swiper-bundle.min.js"></script>
     <script src="index-assets/works-list.js?T=5" charset="UTF-8"></script>
-    <script src="index-assets/js/index.js?T=5"></script>
+    <script src="index-assets/js/qrcode.min.js"></script>
+    <script src="index-assets/js/index.js?T=7"></script>
 </body>
 
 </html>

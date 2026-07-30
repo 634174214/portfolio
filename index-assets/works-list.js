@@ -178,7 +178,7 @@ const worksData = {
             text: "查看软著证书",
             pictures: [
               {
-                image: "works/infinityfreeapp/xin-card/ruanzhu.jpg",
+                image: "works/local/others/xin-card/ruanzhu.jpg",
                 text: "项目软著证书",
               },
             ]
