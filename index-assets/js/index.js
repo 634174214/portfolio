@@ -57,6 +57,8 @@ new Vue({
     // 检测是否为 PC 设备（支持 hover）
     this.isPc = window.matchMedia('(hover: hover)').matches;
 
+    document.getElementById('first-waiting').style.display = 'none';
+
     // 模拟一个最小加载时长，让骨架屏可见
     setTimeout(() => {
       if (typeof worksData !== "undefined" && worksData.categories) {

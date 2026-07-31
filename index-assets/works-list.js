@@ -436,7 +436,7 @@ const worksData = {
         {
           name: "Vue高仿饿了么",
           technology: ["Vue2", "Stylus", "BetterScroll", "Cube-ui"],
-          link_local: "works/local/h5/myself-vue-elme/?id=123",
+          link_local: "works/local/webapp/myself-vue-elme/?id=123",
           preview: "",
           link_online: "",
           desc: "",
