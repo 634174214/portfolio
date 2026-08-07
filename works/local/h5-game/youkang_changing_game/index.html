@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="你心目中的理想假日长啥样？酷爽夏日，由你定制！|腾讯大浙网"/>
+    <meta name="keywords" content="你心目中的理想假日长啥样？酷爽夏日，由你定制！，腾讯大浙网"/>
+    <title>定制一夏，由你做主！</title>
+
+<!-- <script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
+<script>
+  // 初始化
+  var vConsole = new VConsole();
+  console.log('Hello world');
+</script> -->
+
+
+
+    <script type="text/javascript">
+        (function () {
+            var wr = window.innerWidth / window.innerHeight;
+            var _width;
+            if (wr > 750 / 1208) {
+                _width = Math.floor(wr * 1208);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+        })();
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="css/style.min.css">
+
+    <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}' src="js/pace.min.js" charset="utf-8"></script>
+
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="img/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="img/share.jpg"><!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "https://mat1.gtimg.com/zj/forguo/zwzt/youkang_changing_game/img/share.jpg", /*微信分享显示的缩略图*/
+            "timeLineLink": 'https://zj.qq.com/gov/zwzt/youkang_changing_game.htm',
+            "tTitle": "定制一夏，由你做主！",
+            "tContent": "你心目中的理想假日长啥样？酷爽夏日，由你定制！"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+</head>
+<body>
+<!-- gameBox s-->
+<div id="game" class="abs full game">
+
+    <!-- toolBar s-->
+    <div class="tool-bar abs" id="toolBar">
+        <!-- 保存按钮 -->
+        <div class="cut-btn abs"></div>
+
+        <!-- 向上展开-->
+        <div class="top-tips">
+            <span class="triangle"></span>
+            <p class="txt">向上展开</p>
+        </div>
+
+        <!-- 选择导航栏-->
+        <div class="tool-nav">
+            <div class="nav-btn tool scene"></div><!--场景-->
+            <div class="nav-btn tool gender active"></div><!--性别-->
+            <div class="nav-btn tool pet"></div><!--宠物-->
+            <div class="nav-btn tool furn"></div><!--家具-->
+            <div class="nav-btn tool mood"></div><!--心情-->
+            <div class="nav-btn slide down"></div><!--隐藏按钮-->
+        </div>
+
+        <!-- 操作主区域-->
+        <div class="chose-content">
+
+            <!-- 操作区域 场景 -->
+            <div class="chose-area scene">
+                <div class="scene-list">
+                    <div class="scene-box"></div>
+                    <div class="scene-box"></div>
+                    <div class="scene-box"></div>
+                    <div class="scene-box"></div>
+                </div>
+            </div>
+            <!-- 场景结束-->
+
+            <!-- 性别开始 -->
+            <div class="chose-area gender">
+                <div class="gender-chose">
+                    <div class="gender-box girl" data-gender="Girl"></div>
+                    <div class="gender-box boy" data-gender="Boy"></div>
+                </div>
+                <div class="gender-decor girl">
+                    <div class="decor-nav">
+                        <div class="decor-btn active">
+                        </div>
+                        <div class="decor-btn">
+                        </div>
+                        <div class="decor-btn">
+                        </div>
+                        <div class="decor-btn">
+                        </div>
+                    </div>
+
+                    <!-- 饰品列表 -->
+                    <div class="decor-list">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 性别结束-->
+
+            <!-- 宠物开始-->
+            <div class="chose-area pet other">
+                <div class="pet-list list">
+
+                </div>
+            </div>
+            <!--宠物结束-->
+
+            <!-- 家具开始 -->
+            <div class="chose-area furn other">
+                <div class="furn-list list">
+
+                </div>
+            </div>
+            <!--宠物结束-->
+
+            <!-- 心情开始-->
+            <div class="chose-area mood other">
+                <div class="mood-list list">
+
+                </div>
+            </div>
+            <!-- 心情结束-->
+        </div>
+
+    </div>
+    <!-- toolBar e-->
+</div>
+
+<!-- gameBox e-->
+
+<!-- loading Page s -->
+<div id="loadingPage" class="abs full loading-page">
+    <div class="abs loading-progress" id="loadingProgress">
+        <div class="load-title"></div>
+        <p>说到夏天，你会想到什么？</p>
+        <p>是空调、WiFi和循环的暑期剧， <br>趁冰激凌融化前咬下最后一口的惬意；<br>是满大街的人字拖、吊带衫，<br></p>
+        <p>每个人的生活不尽相同，<br>自成一派才是风格。<br>当“黑爵”与“珍白”摆在你面前，<br>你会搭配出什么样的夏日？</p>
+        <p>点击START，搭配你的夏日元素，<br>酷爽夏日，由你自己定义。</p>
+    </div>
+    <a href="javascript:;" id="start" class="start-btn abs">START</a>
+</div>
+<!-- loading Page e -->
+
+<!-- 结果图 s -->
+<div class="result abs full" id="result">
+    <img id="resultImg" class="result-img" src="" alt="">
+    <div class="camer-lay abs full"></div>
+    <div class="warn abs">长按下图保存您的图片</div>
+    <!-- <p class="abs copy">祐康食品（杭州）有限公司 x 青岛信网</p> -->
+
+</div>
+
+<!-- 结果图 e -->
+
+</body>
+<!-- 工具栏数据文件 -->
+<script charset="utf-8" src="js/data.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/phaser.js"></script>
+
+<!--<script charset="utf-8" type="text/javascript" src="https://mat1.gtimg.com/zj/forguo/common/jquery/jquery-2.1.1.min.js"></script>-->
+<script charset="utf-8" src="js/zepto.min.js" type="text/javascript"></script>
+
+<script charset="utf-8" type="text/javascript" src="js/game.js"></script>
+
+<script charset="UTF-8">
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+    if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+        window.TencentNews.setShareArticleInfo(
+            window.shareData.tTitle,
+            window.shareData.tContent,
+            window.shareData.timeLineLink,
+            window.shareData.imgUrl
+        );
+    }
+</script>
+</html><!--[if !IE]>|xGv00|4928a781a75d0edd077f43d8e07768b4<![endif]-->
