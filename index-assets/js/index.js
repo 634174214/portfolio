@@ -1,4 +1,6 @@
 // ======================= Vue 逻辑 =======================
+const APP_HOME_URL = window.location.href.split('index.html')[0];
+
 function formatDate(dateStr) {
   if (!dateStr) return "待定";
   if (/^\d{4}-\d{1,2}$/.test(dateStr)) {
@@ -27,7 +29,7 @@ function getProjectLink(project) {
   if (project.link_online && project.link_online.trim() !== "") {
     return project.link_online;
   }
-  return project.link_local || "#";
+  return APP_HOME_URL + project.link_local || "#";
 }
 
 // 默认展示行数
