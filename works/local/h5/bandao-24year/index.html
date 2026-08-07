@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>肆意生长 时刻追光</title>
+
+  <link rel="stylesheet" href="style/main.css?v=1.0">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jweixin-1.6.0.js"></script>
+  <script src="js/share.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body>
+  <div class="page">
+    <!-- 场景音乐 -->
+    <audio id="sceneSound" preload="preload" loop src="media/keyword.mp3"> </audio>
+    <!-- 背景音乐 -->
+    <audio id="bgSound" preload="preload" loop src="media/bg.mp3" volume="0.1"> </audio>
+
+    <!-- 电脑开关 -->
+    <div class="group-one group relative">
+      <!-- 开页黑屏 -->
+      <div class="cover-box open-mask" style="z-index:4">
+        <div class="enter-box">
+          <button onclick="openPage()" class="enter-btn hide">
+            <img src="images/anniu.png" alt="" srcset="">
+          </button>
+          <div class="progress-box"></div>
+          <div style="color: transparent;height: 0;overflow: hidden;">字体文件的加载</div>
+        </div>
+      </div>
+      <!-- 亮灯部分 -->
+      <div class="light-group cover-box" style="z-index:3">
+        <!-- 亮灯图片 -->
+        <div class="img-box">
+          <img src="images/liangdeng2.jpg" alt="" srcset="">
+        </div>
+        <!-- 电脑文字 -->
+        <div class="img-box cover-box hide keyword-text">
+          <img src="images/keyword.gif" alt="" srcset="">
+        </div>
+        <!-- <div class="keyword">我想有双明亮的眼睛...</div> -->
+        <!-- 亮灯左上文字, 首页字体文件加载不完,因此使用图片 -->
+        <div class="absolute hide img-box text-container" style="top:0;left:0" id="group-one-text1">
+          <img src="images/index-text1.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+          <img src="images/index-text2.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+          <img src="images/index-text3.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+          <img src="images/index-text4.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+          <img src="images/index-text5.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+        </div>
+        <!-- 触点 -->
+        <button onclick="changePage()" id="click-item" class="hide absolute" style="top: 4.7rem;left: 3.12rem;">
+          <div class="click-item"></div>
+        </button>
+      </div>
+      <!-- 关灯部分 -->
+      <div class="dark-group cover-box" style="z-index:2">
+        <!-- 关灯图片 -->
+        <div class="img-box">
+          <img data-src="images/heiping1.jpg" alt="" srcset="">
+        </div>
+        <!-- 关灯文字 -->
+        <div class="text-container absolute" id="group-one-text2" style="top: 1.7rem;left: 2rem;z-index:3">
+          <div class="text-row">每一次采访，</div>
+          <div class="text-row">都是心灵的重塑。</div>
+          <div class="text-row">你的故事，</div>
+          <div class="text-row">像道道流光，</div>
+          <div class="text-row">凝成琳琅，落入笔尖。</div>
+        </div>
+      </div>
+      <!-- 第一组结页 -->
+      <div class="img-box group-one-img">
+        <div class="img-box">
+          <img data-src="images/guangdenayibian2.jpg" alt="" srcset="">
+        </div>
+        <div class="absolute hide img-box text-container" style="top:0;left:0" id="group-one-end">
+          <img data-src="images/baiguang.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+          <img data-src="images/denayibian2.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+
+    <!-- 开车 -->
+    <div class="group-two hide group relative">
+      <!-- 开灯 -->
+      <div class="cover-box car-light" style="z-index: 10;">
+        <!-- 未开灯 -->
+        <div class="img-box img-cover">
+          <img data-src="images/chedengdise.jpg" alt="" srcset="">
+        </div>
+        <!-- 车灯 -->
+        <div class="cover-box img-box hide car-light-img img-cover" style="z-index: 1">
+          <img data-src="images/car-guang.png" alt="" srcset="">
+        </div>
+        <!-- 文字部分 -->
+        <div class="text-container absolute column-text-con" id="group-two-text1" style="top: .36rem;left: calc(50% - 0.07rem);z-index: 2;color: #00042D;">
+          <div class="text-row column-text">打开车灯 ，</div>
+          <div class="text-row column-text">暗夜中指引着方向 ，</div>
+          <div class="text-row column-text">照亮回家的路 。</div>
+        </div>
+      </div>
+      <!-- 马路行驶 -->
+      <div class="cover-box car-load" style="z-index: 9;">
+        <div class="img-box img-cover">
+          <img data-src="images/car-background.jpg" alt="" srcset="">
+        </div>
+        <div class="cars absolute hide">
+          <img class="absolute" data-src="images/car1.png" alt="" style="top: -2.24rem; left: .2rem;">
+          <img class="absolute" data-src="images/car2.png" alt="" style="top: -2.24rem; left: .2rem;">
+          <img class="absolute" data-src="images/car3.png" alt="" style="bottom: -2.24rem;right: .84rem">
+          <img class="absolute" data-src="images/car4.png" alt="" style="bottom: -2.24rem;right: .1rem">
+        </div>
+        <!-- 文本 -->
+        <div class="text-container absolute column-text-con" id="group-two-text2" style="top: 0.8rem;left: calc(50% - .17rem);">
+          <div class="text-row column-text" style="margin-left: .28rem;">城市中 ，多少人擦肩而过 。</div>
+          <div class="text-row column-text" style="margin-left: -0.5rem;">把生活调到自己喜欢的频道 ，前路徜徉 、各自有光 。</div>
+        </div>
+      </div>
+      <!-- 路灯 -->
+      <div class="load-light" style="z-index: 8;">
+        <div class="img-box img-cover">
+          <img data-src="images/gohome-background.jpg" alt="" srcset="">
+        </div>
+        <div class="absolute hide load-light-list">
+          <img data-src="images/dengguang1.png" style="animation-delay: 1000ms" alt="" srcset="">
+          <img data-src="images/dengguang2.png" style="animation-delay: 1500ms" alt="" srcset="">
+          <img data-src="images/dengguang3.png" style="animation-delay: 2000ms" alt="" srcset="">
+          <img data-src="images/dengguang4.png" style="animation-delay: 2500ms" alt="" srcset="">
+          <img data-src="images/dengguang5.png" style="animation-delay: 3000ms" alt="" srcset="">
+          <img data-src="images/dengguang6.png" style="animation-delay: 3500ms" alt="" srcset="">
+        </div>
+        <!-- 文本 -->
+        <div class="text-container absolute column-text-con" id="group-two-text3" style="top: 0.4rem;left: .8rem;">
+          <div class="text-row column-text" style="margin-left:0rem;">路的尽头 ，是家 。</div>
+          <div class="text-row column-text" style="margin-left: -.4rem;">有 " 家人相伴灯火可亲 " 的幸福 ，</div>
+          <div class="text-row column-text" style="margin-left: -.4rem;">便不惧荆棘风霜 。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 回家 -->
+    <div class="group-three hide group relative" style="color: #fff">
+      <!-- 门锁客厅 -->
+      <div class="cover-box home-index" style="z-index: 6;">
+        <div class="img-box">
+          <img data-src="images/keting.jpg" alt="" srcset="">
+        </div>
+        <!-- 触点 -->
+        <button onclick="changePage()" id="click-item5" class="absolute" style="top: .8rem;left: 1.1rem;z-index:2">
+          <div class="click-item"></div>
+        </button>
+        <!-- 开灯图 -->
+        <div class="absolute hide home-light">
+          <div class="img-box">
+            <img data-src="images/keting-deng.png" alt="" srcset="">
+          </div>
+        </div>
+        <!-- 文字部分 -->
+        <div class="text-container absolute column-text-con" id="group-three-text1" style="top: .43rem;right: .54rem;">
+          <div class="text-row column-text" style="margin-left:0rem;">夜色流淌着温暖的光照 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">家里的微光 ，温暖了一天的疲惫 。</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">赋予这日复一日的生活一份安稳 。</div>
+        </div>
+      </div>
+      <!-- 手机微信 -->
+      <div class="cover-box home-weixin" style="z-index: 5;">
+        <!-- 背景图 -->
+        <div class="img-box img-cover">
+          <img data-src="images/weixin.jpg" alt="" srcset="">
+        </div>
+        <!-- 背景图 光 -->
+        <div class="img-box absolute hide img-cover" id="wxGuang" style="top:0;left:0;z-index: 1;">
+          <img data-src="images/weixin-guang.jpg" alt="" srcset="">
+        </div>
+        <!-- 消息弹窗 -->
+        <div class="msg-img" id="msg2" style="top: 50%;left: 50%;z-index: 2;">
+          <img data-src="images/tangkuang2.png" alt="" srcset="">
+        </div>
+        <div class="msg-img" id="msg1" style="top: 50%;left: 50%;z-index: 2;">
+          <img data-src="images/tankuang1.png" alt="" srcset="">
+        </div>
+        <!-- 文字部分 -->
+        <div class="text-container absolute column-text-con" id="group-three-text2" style="top: .24rem;right: calc(50% - .3rem);z-index: 2;">
+          <div class="text-row column-text" style="margin-left:0rem;">有惦念 、有牵挂 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">享受结束工作后的闲适 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">彼此的相互照亮 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">成就了生命的色彩 。</div>
+        </div>
+      </div>
+      <!-- 生日蛋糕 -->
+      <div class="cover-box home-cake" style="z-index: 4;">
+        <!-- 背景图 -->
+        <div class="img-box">
+          <img data-src="images/shengri.jpg" alt="" srcset="">
+        </div>
+        <!-- 烛光 -->
+        <div class="img-box absolute" id="cakeGuang" style="top:0;left:0;z-index: 1;">
+          <img data-src="images/light.gif" alt="" srcset="">
+        </div>
+        <!-- 文字部分 -->
+        <div class="text-container absolute column-text-con" id="group-three-text3" style="top: .12rem;right: calc(50% - .3rem);z-index: 2;">
+          <div class="text-row column-text" style="margin-left:0rem;">过了点的生日 ，迟到却不遗憾 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">吹灭一直等待的烛光 ：</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">24岁生日快乐 ，要继续努力发光喔 !</div>
+        </div>
+        <!-- 触点 -->
+        <button onclick="changePage()" id="click-item2" class="absolute hide" style="top: 3.8rem;left: calc(50% - 0.16rem);z-index:2">
+          <div class="click-item"></div>
+        </button>
+      </div>
+      <!-- 卧室 -->
+      <div class="cover-box home-bed" style="z-index: 3;">
+        <!-- 开灯 -->
+        <div class="img-box img-cover">
+          <img data-src="images/bed-dark.jpg" alt="" srcset="">
+        </div>
+        <!-- 关灯 -->
+        <div class="img-box absolute img-cover" id="bedLight" style="top: 0;left: 0">
+          <img data-src="images/bed-light.jpg" alt="" srcset="">
+        </div>
+        <!-- 触点 -->
+        <button onclick="changePage()" id="click-item3" class="absolute" style="top: 64%;left: 1.16rem;z-index:2">
+          <div class="click-item"></div>
+        </button>
+        <!-- 文字部分 -->
+        <div class="text-container absolute column-text-con" id="group-three-text4" style="top: .56rem;left: 1.2rem;z-index: 2;">
+          <div class="text-row column-text" style="margin-left:0rem;">黑夜笼罩了世界 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">时光拥抱住了未来 。</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 梦境及结语 -->
+    <div class="group-four hide group relative">
+      <!-- 梦境之前 -->
+      <div class="cover-box last-index" style="z-index: 6;">
+        <div class="text-container absolute column-text-con" id="group-four-text1" style="top: calc(50% - 2.4rem);right: calc(50% - .08rem);z-index: 2;">
+          <div class="text-row column-text" style="margin-left:0rem;">梦中没有现实的束缚 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">我用理想的璎珞编织五彩旖旎 ，沐光而行 。</div>
+        </div>
+      </div>
+      <!-- 梦境 -->
+      <div class="cover-box last-dream" style="z-index: 5;">
+        <div class="open-dream-btn">
+          <img src="images/dream-btn.png" alt="" srcset="">
+        </div>
+        <!-- 触点 -->
+        <button onclick="changePage()" id="click-item6" class="absolute" style="top: calc(50% - .14rem);left: calc(50% - .14rem);z-index: 2">
+          <div class="click-item" style="opacity: .6;"></div>
+        </button>
+        <div class="dream-cycle"></div>
+        <!-- <div class="cover-box hide dream-box">
+          <div class="wave-img"></div>
+          <div class="wave wave5"></div>
+          <div class="wave wave4"></div>
+          <div class="wave wave3"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave0"></div>
+        </div> -->
+      </div>
+      <!-- 太阳 -->
+      <div class="cover-box last-sun" style="z-index: 4;">
+        <div class="img-box img-cover">
+          <img src="images/sun1.jpg" alt="" srcset="">
+        </div>
+        <div class="text-container absolute column-text-con" id="group-four-text2" style="top: .4rem;right: calc(50% - .08rem);z-index: 2;">
+          <div class="text-row column-text" style="margin-left:0rem;">一路追光而行 、一直寻找 ，</div>
+          <div class="text-row column-text" style="margin-left:-.4rem;">光的那边 ，到底是什么呢 ？</div>
+        </div>
+        <!-- 触点 -->
+        <button onclick="changePage()" id="click-item4" class="hide absolute" style="top: 74%;left: calc(50% - .14rem);">
+          <div class="click-item"></div>
+        </button>
+        <!-- 光晕 -->
+        <div class="guangyun hide absolute">
+          <img src="images/guangyun.png" alt="" srcset="">
+        </div>
+      </div>
+      <!-- 光的另一边是希望 -->
+      <div class="img-box group-four-img">
+        <div class="img-box img-cover">
+          <img src="images/yuanlai.jpg" alt="" srcset="">
+        </div>
+        <div class="absolute hide img-box text-container img-cover" style="top:0;left:0" id="group-four-end">
+          <img src="images/hongguang.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+          <img src="images/xiwang1.png" class="absolute text-row" style="top: 0;left: 0" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+
+    <!-- 结尾文本 -->
+    <div class="group-five hide group relative">
+      <div class="cover-box end-img1" style="z-index: 5;">
+        <div class="img-box img-cover ">
+          <img src="images/one.jpg" alt="" srcset="">
+        </div>
+      </div>
+      <div class="cover-box end-img2" style="z-index: 4;">
+        <div class="img-box img-cover">
+          <img src="images/two.jpg" alt="" srcset="">
+        </div>
+      </div>
+      <div class="cover-box" style="z-index: 3;">
+        <div class="img-box">
+          <img src="images/three.jpg" alt="" srcset="">
+          <img src="images/end-text.png" alt="" srcset="" class="absolute" style="display:inline-block;width: 100%;height: 100%;bottom: .2rem;width: 2.72rem;height: .2rem;left: calc(50% - 1.36rem);">
+        </div>
+      </div>
+
+      <!-- <div class="absolute" style="z-index: 2;bottom: .2rem;width: 2.72rem;height: .2rem;left: calc(50% - 1.36rem);">
+        <img data-src="images/end-text.png" alt="" srcset="" style="display:block;width: 100%;height: 100%">
+      </div>
+      <div class="img-box img-cover">
+        <img data-src="images/three.jpg" alt="" srcset="">
+      </div> -->
+    </div>
+
+    <!-- 下一页按钮 -->
+    <button onclick="changePage()" class="next-page-btn hide">
+      <div class="click-item"></div>
+    </button>
+  </div>
+</body>
+</html>
