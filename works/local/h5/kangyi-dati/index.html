@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-1">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="图集, 翻页" />
+        <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+        <link rel="stylesheet" type="text/css" href="css/space.css" />
+    </head>
+    <body>
+    <!--背景音乐-->
+    <audio hidden id="beijing_audio"  preload="auto" loop controls> </audio>
+
+    <div class="audio_play_btn" id="audio_play_btn_id" style="display:none;"></div>
+        <div id="app" style="display:none;">
+            <div class="container">
+                
+                <div id="bb-bookblock" class="bb-bookblock">
+                    <div class="bb-item" v-for="(page, index) in pageArr" :key="index">
+                        <div v-for="(item, index1) in page" :key="index1">
+                            
+                            <!-- 一格 -->
+                            <div v-if="item.rowSpace == 1" class="onePart" style="height: 25vh;" @click="goDetail(item)">
+                                <div class="item-wrap" style="height: calc(25vh - 2.5rem - 1px);">
+                                  <div id="part-l" class="part-l" :style="`width: calc(97% - ${imgWidth}px)`">
+                                    <div id="title" class="title">{{item.title}}</div>
+                                    <div v-if="item.newsId" class="des">{{item.des}}</div>
+                                    <div class="source">
+                                            <div class="source-name" v-if="item.source">{{item.source}}</div>
+                                    </div>
+                                  </div>
+                                  <div class="part-r" :style="`width: ${imgWidth}px`">
+                                    <div class="img">
+                                      <img :src='item.url' :class="[item.isVertical ? 'maxW' : 'maxH']" />
+                                    </div>
+                                    <div class="subject-label"><img v-if="item.type == 23" src='img/subject-icon.png' class="subject-icon" /></div>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 二格 -->
+                            <div v-if="item.rowSpace == 2" class="twoPart" style="height: 50vh;" @click="goDetail(item)">
+                                <div class="img">
+                                    <img class="image" :src='item.url' style="height: 50vh" :class="[item.isVertical ? 'maxW' : 'maxH']" />
+                                </div>
+                                <div class="panel-bgcolor"></div>
+                                <div class="float-part">
+                                    <div class="subject-label"><img v-if="item.type == 23" src='img/subject-icon.png' class="subject-icon" /></div>
+                                    <div class="title">{{item.title}}</div>
+                                    <div class="source">
+                                        <div class="source-name" v-if="item.source">{{item.source}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 三格 -->
+                            <div v-if="item.rowSpace == 3" class="threePart" style="height: 75vh;" @click="goDetail(item)">
+                                <div class="img">
+                                    <img class="image" :src='item.url' style="height: 75vh" :class="[item.isVertical ? 'maxW' : 'maxH']" />
+                                </div>
+                                <div class="panel-bgcolor"></div>
+                                <div class="float-part">
+                                    <div class="subject-label"><img v-if="item.type == 23" src='img/subject-icon.png' class="subject-icon" /></div>
+                                    <div class="title">{{item.title}}</div>
+                                    <div class="source">
+                                        <div class="source-name" v-if="item.source">{{item.source}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 四格 -->
+                            <div v-if="item.rowSpace == 4" class="fourPart" @click="goDetail(item)">
+                                <div class="img">
+                                    <img class="image" :src='item.url' style="height: 100vh" :class="[item.isVertical ? 'maxW' : 'maxH']" />
+                                </div>
+                                <div class="panel-bgcolor"></div>
+                                <div class="float-part">
+                                    <div class="subject-label"><img v-if="item.type == 23" src='img/subject-icon.png' class="subject-icon" /></div>
+                                    <div class="title">{{item.title}}</div>
+                                    <div class="source">
+                                        <div class="source-name" v-if="item.source">{{item.source}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 向下翻-指引按钮 -->
+                <div class="div-btn">
+                    <div class="btn"></div>
+                </div>
+                
+                <!-- 提示信息弹窗 -->
+                <div class="pop"></div>
+                
+            </div>
+        </div>
+        <!-- 依赖 -->
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquerypp.custom.js"></script>
+        <script src="js/jquery.bookblock.js"></script>
+        <script type="text/javascript" src="./js/vue.min.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+        <script type="text/javascript" src="https://g.alicdn.com/dingding/open-develop/1.9.0/dingtalk.js"></script>
+        
+        <!-- JS -->
+        <script src="js/space.js"></script>
+    </body>
+</html>
