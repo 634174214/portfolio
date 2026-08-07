@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>疯狂的糖果机</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="
+    imgs/share.png">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="
+    imgs/share.png">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.png",/*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": "不二家疯狂糖果机",
+            "tContent": "一起来抓糖果吧！"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+</head>
+
+<body>
+    <audio src="imgs/start.mp3" id="startSound" style="display: none"></audio>
+    <div id="gamePage" class="abs game-page"></div>
+
+    <div class="fix full home-page" id="homePage">
+
+        <div class="home-ball hb1"></div>
+        <div class="home-ball hb2"></div>
+        <div class="home-ball hb3"></div>
+        <div class="home-ball hb4"></div>
+        <div class="home-ball hb5"></div>
+        <div class="home-ball hb6"></div>
+        <div class="home-ball hb7"></div>
+        <div class="home-ball hb8"></div>
+        <div class="home-ball hb9"></div>
+        <div class="home-ball hb10"></div>
+        <div class="home-ball hb11"></div>
+        <div class="home-ball hb12"></div>
+
+        <div class="abs full home-inner">
+
+            <img src="imgs/logo.png" class="abs logo" id="logo">
+            <img src="imgs/main-title.png" class="abs main-title" id="mainTitle">
+
+            <div class="abs home-ground" id="homeGround">
+                <img src="imgs/home-machine.png" class="base-img">
+                <img src="imgs/home-girl.png" class="abs home-girl" id="homeGirl">
+                <a href="javascript:;" class="abs start-btn" id="startBtn"></a>
+                <a href="javascript:;" class="abs rules-btn" id="rulesBtn"></a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="fix full info-page" id="infoPage">
+
+        <div class="info-ball hb1"></div>
+        <div class="info-ball hb2"></div>
+        <div class="info-ball hb3"></div>
+        <div class="info-ball hb4"></div>
+        <div class="info-ball hb5"></div>
+        <div class="info-ball hb6"></div>
+        <div class="info-ball hb7"></div>
+        <div class="info-ball hb8"></div>
+        <div class="info-ball hb9"></div>
+        <div class="info-ball hb10"></div>
+        <div class="info-ball hb11"></div>
+        <div class="info-ball hb12"></div>
+
+        <div class="abs info-inner">
+            <img src="imgs/desc-words.png" class="abs desc-words" id="descWords">
+            <a href="javascript:;" class="abs start-btn" id="startBtnInfo"></a>
+        </div>
+
+    </div>
+
+    <div class="fix full end-page" id="endPage">
+
+        <div class="end-ball hb1"></div>
+        <div class="end-ball hb2"></div>
+        <div class="end-ball hb3"></div>
+        <div class="end-ball hb4"></div>
+        <div class="end-ball hb5"></div>
+        <div class="end-ball hb6"></div>
+
+        <div class="abs score-wrap" id="scoreWrap">
+
+            <img src="imgs/result-words-new3.png" class="base-img" id="resultWords">
+            <p class="abs score" id="endScore"></p>
+            <p class="abs max-score" id="lastScore"></p>
+        </div>
+
+        <img src="imgs/second-girl.png" class="abs end-girl" id="endGirl">
+        <div class="abs enter-btn-wrap" id="enterBtnWrap">
+            <img src="imgs/enter-txt.png" class="abs enter-txt" />
+            <img src="imgs/enter-btn.png" class="abs enter-btn" />
+        </div>
+
+    </div>
+    <div id="loadingCover" class="fix full loading-cover"></div>
+    <div class="fix load-bar" id="loadBar">
+        <div class="abs load-inner">
+            <img src="imgs/qq-ball.png" class="abs qq-ball">
+        </div>
+        <div class="abs load-words">0%</div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script charset="utf-8" src="js/phaser.min.js"></script>
+    <script charset="utf-8" src="js/TweenMax.min.js"></script>
+    <script charset="utf-8" src="js/TimelineMax.min.js"></script>
+    <script charset="utf-8" src="js/run.js"></script>
+    <script>
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "320",
+                    "img_height": "320",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        }, false);
+        if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+            window.TencentNews.setShareArticleInfo(
+                window.shareData.tTitle,
+                window.shareData.tContent,
+                window.shareData.timeLineLink,
+                window.shareData.imgUrl
+            );
+        }
+    </script>
+</body>
+
+</html>
