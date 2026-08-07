@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>一介武夫作品集 | 前端&PHP&Python · 作品汇总</title>
-    <!-- <title>如何使用agent</title> -->
+    <title>作品集 | 前端&PHP&Python&JS·作品汇总 By 武彬</title>
     <!-- 使用 Inter 字体，干净现代 -->
      <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon">
     <link
@@ -23,15 +22,29 @@
         <div class="hero">
             <h1>📁 我的开发作品集</h1>
             <!-- <h1>📁 文件夹中的内容</h1> -->
-            <div class="badge">✨ <a href="https://634174214.github.io/resume/" target="_blank">简历：https://634174214.github.io/resume/</a> | ✍ <a href="https://634174214.github.io/"
-                    target="_blank">博客：https://634174214.github.io/</a></div>
-            <p>设计 / 交互 / 视觉 / 代码 / 开发  <br>点击卡片按钮可直达项目演示页面 </p>
+            <div class="badge-wrapper">
+                <div class="badge">
+                    <a href="https://634174214.github.io/resume/" target="_blank">✨ 简历<span class="m-hide">：https://634174214.github.io/resume/</span></a>
+                    <em>|</em>
+                    <a href="https://634174214.github.io/"
+                        target="_blank">✍ 博客<span class="m-hide">：https://634174214.github.io/</span></a>
+                </div>
+            </div>
+            <!-- 联系方式 -->
+            <div class="contact-info">
+                <span>👤 武彬</span>
+                <span class="contact-divider">|</span>
+                <a href="tel:15063973659">📞 150 6397 3659</a>
+                <span class="contact-divider">|</span>
+                <a href="mailto:634174214@qq.com">✉️ 634174214@qq.com</a>
+            </div>
+            <p>设计 / 交互 / 视觉 / 代码 / 开发  <br>点击“查看”按钮可直达项目页面 </p>
         </div>
 
         <!-- 统计栏 -->
         <div class="stats-bar">
             <div class="counter" id="stats-bar-counter">📦 作品总数 <span>{{ totalProjects }}</span> 件</div>
-            <div class="update-tip">💡 提示：① 在线项目账号请与我联系获取；② 网速不佳请刷新重试。</div>
+            <div class="update-tip">💡 提示：① 在线项目账号请与我联系获取；② github国内网速不佳，请刷新重试。</div>
         </div>
 
         <!-- 作品展示：骨架屏占位 -->
@@ -145,7 +158,7 @@
         </div>
 
         <div class="footer-note">
-            🧩 声明：作品均由作者本人独立开发 | 托管于 GitHub Pages + wubin.infinityfreeapp.com
+            🧩 声明：作品均由作者武彬本人独立开发 | 托管于 GitHub Pages + wubin.infinityfreeapp.com
         </div>
 
         <!-- 回到顶部按钮 -->
@@ -187,6 +200,11 @@
 
     <div id="first-waiting"></div>
 
+    <script>
+        if(window.location.href.indexOf('localhost') > -1) {
+            document.title = 'AI Coding';
+        }
+    </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script> -->
     <script src="index-assets/js/vue.js"></script>
     <!-- Swiper JS -->

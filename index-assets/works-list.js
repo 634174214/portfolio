@@ -14,8 +14,8 @@ const worksData = {
       type: "fullstack",
       // 注意事项
       tips: [
-        '项目列表项中凡是带有“<strong>效果演示</strong>”的链接，均为为此项目使用虚拟数据运行的版本，仅供演示使用；',
-        '点击“<strong>查看</strong>”可以直达项目链接的正式地址;'
+        '部分项目部署于内网，外部无法直接访问;',
+        '带有"<strong>效果演示</strong>"的链接为使用虚拟数据运行的演示版本，非正式环境。'
       ],
       projects: [
         {
@@ -384,6 +384,182 @@ const worksData = {
         },
       ]
     },
+     {
+      name: "🟩 APP / 小程序 / 公众号开发",
+      type: "app",
+      tips: [],
+      projects: [
+        {
+          name: "信号新闻App",
+          technology: ["uni-app", "Vue"],
+          link_local: "works/local/web-pages/xinhaoapp/",
+          preview: "",
+          link_online: "",
+          // link_online: "https://github.com/634174214/resume/tree/main/download",
+          desc: "基于uni-app开发，已在苹果App Store上架，搜索“<strong>信号新闻</strong>”即可下载。（华为/应用宝等平台暂时下架）",
+          date: "2022-06",
+        },
+        {
+          name: "信网资讯小程序",
+          technology: ["WXML", "WXSS", "ES6"],
+          link_local: "works/local/wx-xcx/index.html",
+          preview: {
+            type: PREVIEW_TYPES.pictures,
+            text: "扫码查看",
+            pictures: [
+              {
+                image: "works/local/wx-xcx/5-xinnewsmini-qr.jpg",
+                text: "微信小程序二维码",
+                portrait: true
+              },
+              {
+                image: "works/local/wx-xcx/5-xinnewsmini.jpg",
+                text: "效果预览",
+                portrait: false
+              }
+            ],
+          },
+          link_online: "",
+          desc: "",
+          date: "2019-09",
+        },
+        {
+          name: "青岛网络辟谣平台小程序",
+          technology: ["WXML", "WXSS", "ES6"],
+          link_local: "works/local/wx-xcx/index.html",
+          preview: {
+            type: PREVIEW_TYPES.pictures,
+            text: "扫码查看",
+            pictures: [
+              {
+                image: "works/local/wx-xcx/5-piyaomini-qr.jpg",
+                text: "微信小程序二维码",
+                portrait: true
+              },
+              {
+                image: "works/local/wx-xcx/5-piyaomini.jpg",
+                text: "效果预览",
+                portrait: false
+              }
+            ],
+          },
+          link_online: "",
+          desc: "",
+          date: "2020-05",
+        },
+        {
+          name: "微尘公益基金小程序",
+          technology: ["WXML", "WXSS", "ES6"],
+          link_local: "works/local/wx-xcx/index.html",
+          preview: {
+            type: PREVIEW_TYPES.pictures,
+            text: "扫码查看",
+            pictures: [
+              {
+                image: "works/local/wx-xcx/5-weichenmini-qr.jpg",
+                text: "微信小程序二维码",
+                portrait: true
+              },
+              {
+                image: "works/local/wx-xcx/5-weichenmini.jpg",
+                text: "效果预览",
+                portrait: false
+              }
+            ],
+          },
+          link_online: "",
+          desc: "",
+          date: "2019-12",
+        },
+        // {
+        //   name: "瑞源兴微信商城（前后台）",
+        //   technology: ["Jquery", "WE-UI", "HTML", "CSS3"],
+        //   link_local: "",
+        //   preview: "",
+        //   link_online: "http://mp2.qdxin.cn/ps/ryx/index.php",
+        //   desc: "",
+        //   date: "2018",
+        // },
+        {
+          name: "信新相映积分商城",
+          technology: ["Jquery", "HTML", "CSS3", "PHP", "MYSQL"],
+          link_local: "works/local/web-pages/xinxin-xiangying/client/",
+          preview: {
+            type: PREVIEW_TYPES.link,
+            text: "效果演示",
+            href: 'works/local/web-pages/xinxin-xiangying/client/'
+          },
+          // link_online: "http://mp2.qdxin.cn/gongyi/change.php",
+          link_online: "",
+          desc: "信网信新相映公益平台积分兑换业务已关闭。您可通过<strong>效果演示</strong>浏览该功能历史页面效果，演示仅作展示，无法进行积分兑换操作。",
+          date: "2019-06",
+        },
+        {
+          name: "信新相映积分商城（用户后台）",
+          technology: ["Jquery", "WE-UI", "PHP", "MYSQL"],
+          link_local: "",
+          preview: {
+            type: PREVIEW_TYPES.pictures,
+            text: "预览效果截图",
+            pictures: [
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/用户后台主页.jpg?t=1",
+                text: "用户后台主页",
+                // 如果图像是竖幅 带着这个
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名.jpg",
+                text: "用户后台-活动报名",
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名-活动详情.jpg",
+                text: "用户后台-活动报名-活动详情",
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名-个人报名.jpg",
+                text: "用户后台-活动报名-个人报名",
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名-领队报名.jpg",
+                text: "用户后台-活动报名-领队报名",
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/积分记录.jpg",
+                text: "用户后台-积分记录",
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/往期活动.jpg",
+                text: "用户后台-往期活动",
+                portrait: true
+              },
+              {
+                image: "works/local/web-pages/xinxin-xiangying/user-manager/积分规则.jpg",
+                text: "用户后台-积分规则",
+                portrait: true
+              },
+            ],
+          },
+          link_online: "http://mp2.qdxin.cn/gongyi/index.php",
+          desc: "信新相映服务平台为用户邀请制，需要通过系统管理后台赋予用户访问权限。您可以通过<strong>预览效果截图</strong>了解系统功能。",
+          date: "2019-06",
+        },
+        {
+          name: "信新相映积分商城（管理后台）",
+          technology: ["Jquery", "PHP", "MYSQL"],
+          link_local: "works/local/web-pages/xinxin-xiangying/admin/",
+          preview: "",
+          link_online: "",
+          desc: "该管理后台部署于信网内网，外部无法访问。此处为纯前端页面效果，仅供效果演示。",
+          date: "2019-06",
+        },
+      ],
+    },
     {
       name: "📱 H5 / WebAPP",
       type: "frontend",
@@ -701,182 +877,6 @@ const worksData = {
           link_online: "http://vip.qdxin.cn/h5/2018/lshandbook/",
           desc: "",
           date: "2018-07",
-        },
-      ],
-    },
-    {
-      name: "🟩 APP / 小程序 / 公众号开发",
-      type: "app",
-      tips: [],
-      projects: [
-        {
-          name: "信号新闻App",
-          technology: ["uni-app", "Vue"],
-          link_local: "works/local/web-pages/xinhaoapp/",
-          preview: "",
-          link_online: "",
-          // link_online: "https://github.com/634174214/resume/tree/main/download",
-          desc: "",
-          date: "2022-06",
-        },
-        {
-          name: "信网资讯小程序",
-          technology: ["WXML", "WXSS", "ES6"],
-          link_local: "works/local/wx-xcx/index.html",
-          preview: {
-            type: PREVIEW_TYPES.pictures,
-            text: "扫码查看",
-            pictures: [
-              {
-                image: "works/local/wx-xcx/5-xinnewsmini-qr.jpg",
-                text: "微信小程序二维码",
-                portrait: true
-              },
-              {
-                image: "works/local/wx-xcx/5-xinnewsmini.jpg",
-                text: "效果预览",
-                portrait: false
-              }
-            ],
-          },
-          link_online: "",
-          desc: "",
-          date: "2019-09",
-        },
-        {
-          name: "青岛网络辟谣平台小程序",
-          technology: ["WXML", "WXSS", "ES6"],
-          link_local: "works/local/wx-xcx/index.html",
-          preview: {
-            type: PREVIEW_TYPES.pictures,
-            text: "扫码查看",
-            pictures: [
-              {
-                image: "works/local/wx-xcx/5-piyaomini-qr.jpg",
-                text: "微信小程序二维码",
-                portrait: true
-              },
-              {
-                image: "works/local/wx-xcx/5-piyaomini.jpg",
-                text: "效果预览",
-                portrait: false
-              }
-            ],
-          },
-          link_online: "",
-          desc: "",
-          date: "2020-05",
-        },
-        {
-          name: "微尘公益基金小程序",
-          technology: ["WXML", "WXSS", "ES6"],
-          link_local: "works/local/wx-xcx/index.html",
-          preview: {
-            type: PREVIEW_TYPES.pictures,
-            text: "扫码查看",
-            pictures: [
-              {
-                image: "works/local/wx-xcx/5-weichenmini-qr.jpg",
-                text: "微信小程序二维码",
-                portrait: true
-              },
-              {
-                image: "works/local/wx-xcx/5-weichenmini.jpg",
-                text: "效果预览",
-                portrait: false
-              }
-            ],
-          },
-          link_online: "",
-          desc: "",
-          date: "2019-12",
-        },
-        // {
-        //   name: "瑞源兴微信商城（前后台）",
-        //   technology: ["Jquery", "WE-UI", "HTML", "CSS3"],
-        //   link_local: "",
-        //   preview: "",
-        //   link_online: "http://mp2.qdxin.cn/ps/ryx/index.php",
-        //   desc: "",
-        //   date: "2018",
-        // },
-        {
-          name: "信新相映积分商城",
-          technology: ["Jquery", "HTML", "CSS3", "PHP", "MYSQL"],
-          link_local: "works/local/web-pages/xinxin-xiangying/client/",
-          preview: {
-            type: PREVIEW_TYPES.link,
-            text: "效果演示",
-            href: 'works/local/web-pages/xinxin-xiangying/client/'
-          },
-          // link_online: "http://mp2.qdxin.cn/gongyi/change.php",
-          link_online: "",
-          desc: "信网信新相映公益平台积分兑换业务已关闭。您可通过<strong>效果演示</strong>浏览该功能历史页面效果，演示仅作展示，无法进行积分兑换操作。",
-          date: "2019-06",
-        },
-        {
-          name: "信新相映积分商城（用户后台）",
-          technology: ["Jquery", "WE-UI", "PHP", "MYSQL"],
-          link_local: "",
-          preview: {
-            type: PREVIEW_TYPES.pictures,
-            text: "预览效果截图",
-            pictures: [
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/用户后台主页.jpg?t=1",
-                text: "用户后台主页",
-                // 如果图像是竖幅 带着这个
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名.jpg",
-                text: "用户后台-活动报名",
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名-活动详情.jpg",
-                text: "用户后台-活动报名-活动详情",
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名-个人报名.jpg",
-                text: "用户后台-活动报名-个人报名",
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/活动报名-领队报名.jpg",
-                text: "用户后台-活动报名-领队报名",
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/积分记录.jpg",
-                text: "用户后台-积分记录",
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/往期活动.jpg",
-                text: "用户后台-往期活动",
-                portrait: true
-              },
-              {
-                image: "works/local/web-pages/xinxin-xiangying/user-manager/积分规则.jpg",
-                text: "用户后台-积分规则",
-                portrait: true
-              },
-            ],
-          },
-          link_online: "http://mp2.qdxin.cn/gongyi/index.php",
-          desc: "信新相映服务平台为用户邀请制，需要通过系统管理后台赋予用户访问权限。您可以通过<strong>预览效果截图</strong>了解系统功能。",
-          date: "2019-06",
-        },
-        {
-          name: "信新相映积分商城（管理后台）",
-          technology: ["Jquery", "PHP", "MYSQL"],
-          link_local: "works/local/web-pages/xinxin-xiangying/admin/",
-          preview: "",
-          link_online: "",
-          desc: "该管理后台部署于信网内网，外部无法访问。此处为纯前端页面效果，仅供效果演示。",
-          date: "2019-06",
         },
       ],
     },

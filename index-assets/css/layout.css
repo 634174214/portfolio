@@ -13,6 +13,10 @@ body {
     padding: 2rem 1.5rem;
 }
 
+em{
+    font-style: normal;
+}
+
 /* 响应式容器 */
 .container {
     max-width: 1280px;
@@ -48,7 +52,10 @@ body {
     color: #1e40af;
     margin: 0.75rem 0 1rem;
 }
-
+.hero .badge em{
+    display: inline-block;
+    padding: 0 10px;
+}
 .hero .badge a{
     text-decoration: none;
     color: #1e40af;
@@ -60,7 +67,7 @@ body {
 .hero p {
     max-width: 600px;
     margin: 0 auto;
-    color: #334155;
+    color: #9baab9;
     font-size: 1rem;
 }
 
@@ -553,7 +560,7 @@ body {
 
 /* 提示 */
 .update-tip {
-    font-size: 0.75rem;
+    font-size: 12px;
     background: #f1f5f9;
     padding: 0.2rem 0.8rem;
     border-radius: 20px;
@@ -705,7 +712,7 @@ body {
 /* ============ 回到顶部按钮 ============ */
 .scroll-top-btn {
     position: fixed;
-    right: 2rem;
+    right: 40px;
     bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -768,7 +775,7 @@ body {
 /* 响应式：移动端调整按钮位置 */
 @media (max-width: 640px) {
     .scroll-top-btn {
-        right: 1rem;
+        right: 20px;
         bottom: 1rem;
         padding: 0.7rem 1rem;
     }
@@ -853,4 +860,95 @@ body {
     bottom: 0;
     background-color: #fff;
     z-index: 10000;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    margin: 6px 0 10px;
+    font-size: 0.9rem;
+    color: #334155;
+    background: rgba(255,255,255,0.5);
+    padding: 6px 18px;
+    border-radius: 30px;
+    display: inline-flex;
+    backdrop-filter: blur(4px);
+}
+
+.contact-info a {
+    color: #334155;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    color: #6082f3;
+}
+
+.contact-divider {
+    color: #94a3b8;
+    user-select: none;
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+    .contact-info {
+        font-size: 1.1rem;
+        padding: 4px 12px;
+        gap: 2px 6px;
+    }
+    .contact-divider {
+        display: none; /* 移动端用符号或空格代替 */
+    }
+    .contact-info span:not(:last-child)::after {
+        content: " · ";
+        color: #94a3b8;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .m-hide{
+        display: none;
+    }
+    body{
+        padding-top: 2rem;
+    }
+    .hero .badge em{
+        display: none;
+    }
+    .hero .badge{
+        display: inline-flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .hero .badge a{
+        font-size: 18px;
+    }
+    .hero{
+        margin-bottom: 1rem;
+    }
+    .hero p{
+        color: #9baab9;
+    }
+    .stats-bar{
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .update-tip{
+        font-size: 1rem;
+    }
+    .works-tips-ul{
+        font-size: 16px;
+    }
+    .work-desc{
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .work-date{
+        display: none;
+    }
 }
