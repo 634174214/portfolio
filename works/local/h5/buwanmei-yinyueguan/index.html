@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>不完美音乐馆</title>
+    <script>
+        var resize = (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            return resize;
+        })();
+    </script>
+    <link rel="stylesheet" charset="utf-8" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share/dlm.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share/dlm.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share/dlm.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href.split('?')[0],
+            "tTitle": '不完美音乐馆，敬候光临。',
+            "tContent": "不完美音乐馆，敬候光临。"
+        };
+        window.helpThemUrl = 'https://gongyi.sina.com/succor/detail.htm?id=218789'
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        var page = null;
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURIComponent(r[2]);
+            }
+            return null;
+        }
+    </script>
+    <script>
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            // 移动端禁止滑动
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+            window.shareData.tTitle = '【测试】' + window.shareData.tTitle;
+            window.shareData.tContent = '【测试】' + window.shareData.tContent;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="layer-msg">
+        <p>音频加载失败</p>
+    </div>
+    <div class="container" style="opacity: 0">
+        <div class="main-page">
+            <img src="imgs/main_logo.png" alt="" class="main_logo">
+            <div class="main-time">
+                跳过<br />
+                3S
+            </div>
+            <div class="main-logo-con">
+                <img src="imgs/main-yf.png" alt="" class="main_yf">
+                <img src="imgs/main-lb.png" alt="" class="main_lb">
+                <img src="imgs/main-biglogo.png" alt="" class="main_biglogo">
+                <img src="imgs/main_small_logo.png" alt="" class="main_small_logo">
+            </div>
+            <div class="main-preson">
+                <div class="child_width_magnetic_tape">
+                    <img src="imgs/main_earpiece.png" alt="" class="main_earpiece">
+                    <img src="imgs/main_child.png" alt="" class="main_children">
+                    <img src="imgs/main_magnetic_tape.png" alt="" class="main_magnetic_tape">
+                </div>
+                <img src="imgs/main_guitar.png" alt="" class="main_guitar">
+            </div>
+        </div>
+        <div class="detail-page">
+            <div class="virtual_dom" style="left: 0;top: 5.89%;width: 100%;height: 430px;"></div>
+            <div class="abs head-list">
+                <div class="swiper-container" style="overflow: visible">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="head-btn">
+                                <div class="yf_con"></div>
+                                <div class="music-item">
+                                    <img src="imgs/music_banner1.png" alt="" class="music_banner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="head-btn">
+                                <div class="yf_con"></div>
+                                <div class="music-item">
+                                    <img src="imgs/music_banner2.png" alt="" class="music_banner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="head-btn">
+                                <div class="yf_con"></div>
+                                <div class="music-item">
+                                    <img src="imgs/music_banner3.png" alt="" class="music_banner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="head-btn">
+                                <div class="yf_con"></div>
+                                <div class="music-item">
+                                    <img src="imgs/music_banner4.png" alt="" class="music_banner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="head-btn">
+                                <div class="yf_con"></div>
+                                <div class="music-item">
+                                    <img src="imgs/music_banner5.png" alt="" class="music_banner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="head-btn">
+                                <div class="yf_con"></div>
+                                <div class="music-item">
+                                    <img src="imgs/music_banner6.png" alt="" class="music_banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="abs song_text_con">
+                <img src="imgs/song_crf_text.png" alt="" class="abs song_text">
+                <img src="imgs/song_dlm_text.png" alt="" class="abs song_text">
+                <img src="imgs/song_hls_text.png" alt="" class="abs song_text">
+                <img src="imgs/song_zdan_text.png" alt="" class="abs song_text">
+                <img src="imgs/song_znylsf_text.png" alt="" class="abs song_text">
+                <img src="imgs/song_zsdg_text.png" alt="" class="abs song_text">
+            </div>
+            <img src="imgs/all_water.png" alt="" class="all_water" style='opacity: 0;'>
+            <div class="share_text" style="opacity: 0">
+                <img src="imgs/share_text.png" alt="" class="show_text_d">
+                <img src="imgs/yf/yf5.png" alt="" class="piaoyf">
+            </div>
+            <div class="abs change_music_con">
+                <div class="virtual_dom"></div>
+                <div class="swiper-button-prev-xgc"></div>
+                <div class="music_play_load">
+                    <img src="imgs/music_play_banner.png" alt="" class="music_play_banner">
+                    <img src="imgs/music_stop.png" alt="" class="music_stop">
+                    <div class="loading_music"></div>
+                    <img src="imgs/music_play.png" alt="" class="music_play">
+                    <div class="music_btn"></div>
+                </div>
+                <div class="swiper-button-next-xgc"></div>
+            </div>
+            <div class="abs btn_con">
+                <div class="help_them">
+                    帮助Ta们
+                </div>
+                <div class="share_song">
+                    传递歌声
+                </div>
+            </div>
+            <img src="imgs/all_back.png" alt="" class="all_back">
+        </div>
+    </div>
+    <div class="loadanimation-con">
+        <div class="loadanimation">
+        </div>
+        <div class="loadingtext">0%</div>
+    </div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script charset="utf-8" src="js/TweenMax.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/swiper.min.js"></script>
+<script charset="utf-8" src="js/howler.min.js"></script>
+<script charset="utf-8" src="js/index.js"></script>
+<script charset="UTF-8">
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+    if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+        window.TencentNews.setShareArticleInfo(
+            window.shareData.tTitle,
+            window.shareData.tContent,
+            window.shareData.timeLineLink,
+            window.shareData.imgUrl
+        );
+    }
+</script>
+</html>
