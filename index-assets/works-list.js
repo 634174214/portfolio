@@ -942,6 +942,15 @@ const worksData = {
           date: "2019-01",
         },
         {
+          name: "跟着不二家，快乐跑不停",
+          technology: ["Jquery", "Phaser", "TweenMax"],
+          link_local: "works/local/h5-game/runman-buerjia/",
+          preview: "",
+          link_online: "",
+          desc: "",
+          date: "2015-09",
+        },
+        {
           name: "不二家疯狂糖果机",
           technology: ["Jquery", "TimelineMax", "TweenMax"],
           link_local: "works/local/h5-game/buerjia-zhua-tang/",

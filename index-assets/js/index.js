@@ -1,5 +1,19 @@
 // ======================= Vue 逻辑 =======================
-const APP_HOME_URL = window.location.href.split('index.html')[0];
+const APP_HOME_URL = getBaseUrl();
+
+function getBaseUrl() {
+    // 优先使用 origin + pathname
+    let base = window.location.origin + window.location.pathname;
+    // 如果 pathname 以 /index.html 结尾，去掉它
+    if (base.endsWith('/index.html')) {
+        base = base.replace('/index.html', '/');
+    }
+    // 确保以 / 结尾
+    if (!base.endsWith('/')) {
+        base = base + '/';
+    }
+    return base;
+}
 
 function formatDate(dateStr) {
   if (!dateStr) return "待定";
@@ -29,6 +43,7 @@ function getProjectLink(project) {
   if (project.link_online && project.link_online.trim() !== "") {
     return project.link_online;
   }
+  // console.log(APP_HOME_URL)
   return APP_HOME_URL + project.link_local || "#";
 }
 
