@@ -1,0 +1,393 @@
+@font-face {
+    font-family: wenxinFont;
+    src:url('../imgs/myfont.ttf')
+}
+
+.hidediv{
+    font-family: wenxinFont
+}
+div,input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+ input::-webkit-input-placeholder {
+    color: #fff !important;
+  }
+  input:-moz-placeholder {
+    color: #fff !important;
+  }
+  input::-moz-placeholder {
+    color: #fff !important;
+  }
+  input:-ms-input-placeholder {
+    color: #fff !important;
+  }
+#gamepage{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#endpage{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index:10000
+}
+.showToast,.boleanchoose2{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.frcation{
+    margin-top:1rem; 
+    width: 100%;
+    text-align: center
+}
+.userimg-con{
+    display: block;
+    position: relative;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 2.5rem auto 0.5rem
+}
+.userimg{
+    position: absolute;
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    z-index: 2;
+}
+.flash{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:12.4rem;
+    height: 12.4rem;
+}
+.endstate {
+    display: block;
+    margin: 1rem auto 0.5rem; 
+    width: 13.05rem;
+    height: 3.25rem;
+}
+.what{
+    text-align: center;
+    color:#fff;
+    line-height:1.5rem;
+}
+.what >div:nth-child(1){
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-family: wenxinFont
+}
+.what >div:nth-child(2){
+    font-size: 1rem;
+    font-family: wenxinFont
+}
+.what >.normal{
+    font-size: 0.6rem;
+}
+.what >.normal2{
+    font-size: 1rem;
+    font-family: wenxinFont
+}
+.choosegift-con{ 
+    margin: 3.5rem auto 0.5rem;
+    width: 12.04rem;
+    height: 2.575rem;
+    position: relative;
+}
+.choosegift1{
+    position: absolute;
+    width: 12.04rem;
+    height: 2.575rem;
+    bottom: 0;
+    background-image:url('../imgs/lotteryoff.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%
+}
+.choosegift2{
+    position: absolute;
+    width: 12.04rem;
+    height: 2.45rem;
+    bottom: 0;
+    background-image:url('../imgs/lotteryon.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%
+}
+.little-con{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.again-con{
+    width: 5.3rem;
+    height: 2.53rem;
+    position: relative;
+}
+.again1{
+    position: absolute;
+    width: 5.3rem;
+    height: 2.53rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image:url('../imgs/againoff.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%
+}
+.again2{
+    position: absolute;
+    width: 5.3rem;
+    height: 2.45rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image:url('../imgs/againon.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%
+}
+.share-con{
+    position: relative;
+    width: 5.3rem;
+    height: 2.53rem;
+    margin-left: 1.5rem;
+}
+.share1{
+    position: absolute;
+    width: 5.3rem;
+    height: 2.53rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image:url('../imgs/shareoff.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%
+}
+.share2{
+    position: absolute;
+    width: 5.3rem;
+    height: 2.45rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image:url('../imgs/shareon.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%
+}
+.username{
+    text-align: center;
+    color: #fff;
+    font-size: 0.7rem;
+}
+.sharetext{
+    display: none;
+    position: absolute;
+    right: 0.4rem;
+    top: 0.5rem;
+    width: 3.75rem;
+    height: 5.5rem;
+}
+
+.boleanchoose{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll
+}
+.fixdemo{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.giftimg-con{
+    position: relative;
+    margin:0 auto 0 ; 
+    width:10.75rem;
+    height:7.8rem;
+}
+.giftimg-con1 {
+    position: relative;
+    margin: 0 auto;
+    width:10.75rem;
+    height:7.8rem;
+}
+.giftimg-con .getgift,.giftimg-con1 .getgift{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 48%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.giftimg-con .flash2 , .giftimg-con1 .flash2{
+    position: absolute;
+    left: 48%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:12.4rem;
+    height: 12.4rem;
+}
+.wechat{
+    margin: 5% auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px
+}
+.wechat > img{
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+}
+.threetext{
+    text-align: center;
+    margin-left: 0.85rem;
+    color: #fff;
+    line-height: 1.1rem;
+    font-size: 0.6rem;
+}
+.giftinfo{
+    margin: 4% auto 0 ;
+    width: 10rem;
+    height: 3rem;
+    color: #fff;
+    font-size: 0.6rem;
+}
+.giftinfo input{
+    -webkit-appearance: none;
+    border: none !important;
+    padding: 0.4rem 0 0.4rem 0.4rem;
+    margin: 0.4rem 0 0 0;
+    background-color:#74b2ff;
+    color: #fff;
+    font-size: 0.6rem;
+    width: 9.4rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 0.3rem
+}
+.infotext{
+    margin: 4% auto 0 ;
+}
+.infotext div:nth-child(1){
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: wenxinFont;
+    text-align: center
+}
+.infotext div:nth-child(2){
+    margin-top:0.3rem; 
+    color: #e44024;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-family: wenxinFont;
+    text-align: center;
+    font-weight: bold
+}
+
+.putinfo,.giftagain,.againbig,.sharebig{
+    width: 10rem;
+    height: 2.25rem;
+    position: relative;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center
+}
+
+.putinfo {
+    margin: 5% auto 0;
+}
+.putinfo div:nth-child(1),.giftagain div:nth-child(1),.sharebig1,.againbig1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10rem;
+    height: 2.25rem;
+    background-image:url('../imgs/off.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    z-index:2;
+    font-family: wenxinFont;
+    line-height: 2.1rem;
+}
+.putinfo div:nth-child(2),.giftagain div:nth-child(2),.sharebig2,.againbig2{
+    position: absolute;
+    width: 9.95rem;
+    height: 2.2rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image:url('../imgs/on.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    z-index: 1;
+    font-family: wenxinFont;
+    line-height: 2.1rem;
+}
+.againbig{
+    margin-top: 3.5rem
+}
+.sharebig{
+    margin-top:0.7rem 
+}
+.losetext{
+    font-family: wenxinFont;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0rem
+}
+#loading{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #74b2ff;
+    z-index: 999999;
+}
+.loadanimation-con{
+    position: relative;
+    margin: 50vh 20% 0;
+    border: 2px #000 solid; 
+    border-radius:10px; 
+    width: 60%;
+    height: 30px;
+}
+.loadanimation{
+    width: 0%;
+    height: 100%;
+    border-radius:10px; 
+    background-color: #fff
+}
+.loadingtext{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    color: #444;
+    transform: translateX(-50%)
+}
