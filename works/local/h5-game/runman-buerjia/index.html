@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>跟着不二家，快乐跑不停</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="css/index.css">
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": '跟着不二家，快乐跑不停',
+            "tContent": "跟着不二家快乐跑不停，不二家棒棒糖给你带来不一样的甜蜜味道"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script>
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+            window.shareData.tTitle = '【测试】' + window.shareData.tTitle;
+            window.shareData.tContent = '【测试】' + window.shareData.tContent;
+        }
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            font-family: 'microsoft yahei', 'sans-serif', Sans-Serif;
+            overflow: hidden;
+            font-size: 0px;
+            margin: 0;
+            padding: 0;
+        }
+        .music {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            -webkit-background-size: cover;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            right: 20px;
+            top: 20px;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            background-image:  url(imgs/music_pause.png)
+        }
+        .music_start {
+            background-image: url(imgs/music.png);
+        }
+        .xuanzhuan {
+            animation: xuanzhuan 3s linear infinite;
+        }
+        @keyframes xuanzhuan {
+            0% {
+                -webkit-transform:rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -webkit-transform:rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+        .bg-music {
+            display: none;
+        }
+        #loading{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 999999;
+        }
+        .loadanimation-con{
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px #fff solid; 
+            border-radius:4px; 
+            width: 250px;
+            height: 10px;
+            overflow: hidden;
+        }
+        .loadanimation{
+            width: 0%;
+            height: 100%; 
+            background-color: #fff
+        }
+        .loadingtext{
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            color: #444;
+            transform: translateX(-50%)
+        }
+        .firstline{
+            font-family: 'microsoft yahei','sans-serif';
+        }
+    </style>
+    <script>
+        var resize = (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            return resize;
+        })();
+    </script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        window.nickname = '不二家';
+        window.headimg = 'imgs/share.jpg';
+    </script>
+</head>
+
+<body>
+    <!-- 音频dom start -->
+    <div class="music" id="music"></div>
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop">
+        <source src="music/banner.mp3"/>
+    </audio>
+    <!-- 音频dom end -->
+    <div class="loading_con">
+        <div class="loading" id='loading'>
+            <div class="loadanimation-con">
+                <div class="loadanimation">
+                </div>
+                <div class="loadingtext">0%</div>
+            </div>
+        </div>
+    </div>
+    <div style="font-family:fancyFont; position:absolute; left:-1000px; visibility:hidden;">鸡你太美</div>
+    <div class="gamecontainer" id="gamecontainer" style="width: 100%;height:100%"></div>
+    <div class="topMeng">
+        <div class="endpage" style="display: none">
+            <img src="" alt="" class="headImg">
+            <div class="name">这是一个昵称</div>
+            <div class="love_con">
+                <img src="imgs/rampage.png" alt="" class="love rampage">
+                <img src="imgs/unstoppable.png" alt="" class="love unstoppable">
+                <img src="imgs/godlike.png" alt="" class="love godlike">
+                <img src="imgs/dominating.png" alt="" class="love dominating">
+                <img src="imgs/legendary.png" alt="" class="love legendary">
+            </div>
+            <div class="info">
+                <div class="firstline">恭喜XXX</div>
+                <div class="seondline" style="font-size: 40px;">接近暴走了</div>
+                <!-- <div class="thirdline">获得xx分</div> -->
+            </div>
+            <div class="btn_con">
+                <div class="btn_left">不服再战</div>
+                <div class="btn_right">分享甜蜜</div>
+            </div>
+            <div class="text">请凭积分界面咨询工作人员领取奖品（仅限2015年9月12日活动现场）</div>
+        </div>
+        <div class="firstpage">
+            <div class="rule_con" >
+                <img src="imgs/rule_con.png" alt="" class="rule">
+                <div class="text_con" id="text_con" style="width: 100%;">
+                    <div class="text_con_item" style="width:430px;margin: 0 auto;">
+                        小浪Run Man又来了，不二家Peko酱也来和小伙伴们一起跑步，游戏过程小伙伴们需要操控可爱的peko完成赛道挑战，赛道采用跑酷玩法，遇到障碍物时候需要采用左右平移的方式通过，如果不小心碰触到障碍物会受到惩罚的哦，小伙伴们需要加倍小心，过程中还可以收集道具，获取不同的积分奖励，积分规则为：
+                    </div>
+                    <div class="text_detail_item" style="width:430px;margin: 0 auto;">
+                        牛奶糖 1分<br/>
+                        棒棒糖 3分<br/>
+                        千层饼 5分<br/>
+                        巴旦木巧克力 10分<br/>
+                        任意障碍物 -5分
+                    </div>
+                    <div class='text_bottom' style="width:430px;margin: 0 auto;">
+                        让我们一起完成挑战，快乐运动吧，跟着不二家，快乐跑不停！<br/>
+                        （部分素材来自网络，如有侵权请联系我们立刻删除）
+                    </div>
+                </div>
+            </div>
+            <img src="imgs/close.png" alt="" class="close">
+        </div>
+        <div class="sharepage" style="display: none">
+            <img src="imgs/sharep.png" alt="" class="sharep">
+            <img src="imgs/share_text.png" alt="" class="sharetext">
+        </div>
+    </div>
+    <script charset="utf-8" src="js/phaser.min.js"></script>
+    <script charset="utf-8" src="js/TweenMax.min.js"></script>
+    <script charset="utf-8" src="js/index.js"></script>
+    <script>
+        //音乐播放代码
+        var musicFlag = false;
+        var playeraudio = null;
+        $("#music").click(function () {
+            playMusic();
+        });
+        $(document).ready(function () {
+            playMusic();
+        });
+        //音乐播放
+        function playMusic() {
+            playeraudio = $("#bgMusic")[0];
+            if (musicFlag) {
+                $("#music").removeClass("xuanzhuan");
+                $("#music").removeClass("music_start");
+                musicFlag = false;
+                playeraudio.pause();
+            } else {
+                $("#music").addClass("xuanzhuan");
+                $("#music").addClass("music_start");
+                musicFlag = true;
+                playeraudio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    playeraudio.play();
+                }, false);
+            }
+        }
+    </script>
+    <script charset="UTF-8">
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "320",
+                    "img_height": "320",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        }, false);
+        if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+            window.TencentNews.setShareArticleInfo(
+                window.shareData.tTitle,
+                window.shareData.tContent,
+                window.shareData.timeLineLink,
+                window.shareData.imgUrl
+            );
+        }
+    </script>
+</body>
+
+</html>
