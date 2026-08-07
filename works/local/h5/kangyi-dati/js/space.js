@@ -8,7 +8,7 @@ var app = new Vue({
 		thisPort: window.location.host,
 		thisUrl: 'data-json-local.json',
 		linkUrl: "",
-		DETAIL_TYPE_URL: { // 值为shareUrl是直接跳转后台返回的链接（wiki文档地址：http://wiki.bandaoapp.cn/pages/viewpage.action?pageId=2326545）
+		DETAIL_TYPE_URL: { // 值为shareUrl是直接跳转后台返回的链接
 			0: 'tuwen', 1: 'tuwen', 2: 'picture', 3: 'video', 4: 'video', 5: 'video', 
 			6: 'video', 7: 'video', 8: 'live', 9: 'live', 10: 'zhuanti', 11: 'shareUrl',
 			16: 'video', 17: 'read'

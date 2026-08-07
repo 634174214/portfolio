@@ -1,1 +1,158 @@
-{"code":200,"message":"查询成功","result":{"newsId":"698911551624843264","type":2,"title":"互动H5丨疫情防控知识大挑战！这些要点你都掌握了吗？","source":"大众报业·半岛新闻","time":1646805548000,"showStyle":1,"thumb":"images/379809901646799945636.png?x-oss-process=style/thumb_350","img_url":["images/379809901646799945636.png?x-oss-process=style/thumb_350"],"bgMusic":"","description":"","comments":0,"goods":0,"is_good":0,"is_collect":0,"share_url":"","share_icon":"http://config.bandaoapp.com/share.png","share_content":"鼓舞大众 团结大众 服务大众","is_limit_comment":0,"reporterNameList":null,"editorNameList":null,"auditorName":null,"checkerName":null,"personnelDescriptionList":null,"allowAdvert":1,"reporterBannerTop":1,"publishStatus":null,"isCancel":null,"images":[{"img_url":"images/1f4a2ee01646799629811.png?x-oss-process=style/thumb_650","description":"","newsId":null,"newsTitle":null,"rowSpace":4,"newsSource":null,"newsTime":null,"share_url":null,"newsType":null},{"img_url":"images/2181b3b61646799647827.png?x-oss-process=style/thumb_650","description":"","newsId":"698901917337915392","newsTitle":"第一题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805217000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698901917337915392","newsType":1},{"img_url":"images/cd8df1de1646799674029.png?x-oss-process=style/thumb_650","description":"","newsId":"698902192257765376","newsTitle":"第二题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805222000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698902192257765376","newsType":1},{"img_url":"images/13b3a4a11646799686450.png?x-oss-process=style/thumb_650","description":"","newsId":"698902520998924288","newsTitle":"第三题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805220000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698902520998924288","newsType":1},{"img_url":"images/28d6f7591646799696565.png?x-oss-process=style/thumb_650","description":"","newsId":"698902798045286400","newsTitle":"第四题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805225000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698902798045286400","newsType":1},{"img_url":"images/42eac85b1646799706084.png?x-oss-process=style/thumb_650","description":"","newsId":"698903179622092800","newsTitle":"第五题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805228000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698903179622092800","newsType":1},{"img_url":"images/fdf692711646799719754.png?x-oss-process=style/thumb_650","description":"","newsId":"698903472216739840","newsTitle":"第六题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805226000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698903472216739840","newsType":1},{"img_url":"images/9378cd721646803553848.png?x-oss-process=style/thumb_650","description":"","newsId":"698903775137763328","newsTitle":"第七题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805232000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698903775137763328","newsType":1},{"img_url":"images/390d537c1646799748183.png?x-oss-process=style/thumb_650","description":"","newsId":"698904037596336128","newsTitle":"第八题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805234000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698904037596336128","newsType":1},{"img_url":"images/21860ac41646799818102.png?x-oss-process=style/thumb_650","description":"","newsId":"698904300663083008","newsTitle":"第九题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805236000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698904300663083008","newsType":1},{"img_url":"images/7e2170c51646799829688.png?x-oss-process=style/thumb_650","description":"","newsId":"698904563692081152","newsTitle":"第十题","rowSpace":4,"newsSource":"大众报业·半岛新闻","newsTime":1646805238000,"share_url":"https://news.bandaoapp.com/shares/tuwen.html?newsId=698904563692081152","newsType":1}]}}
+{
+  "code": 200,
+  "message": "查询成功",
+  "result": {
+    "newsId": "698911551624843264",
+    "type": 2,
+    "title": "互动H5丨疫情防控知识大挑战！这些要点你都掌握了吗？",
+    "source": "大众报业·半岛新闻",
+    "time": 1646805548000,
+    "showStyle": 1,
+    "thumb": "images/379809901646799945636.png?x-oss-process=style/thumb_350",
+    "img_url": [
+      "images/379809901646799945636.png?x-oss-process=style/thumb_350"
+    ],
+    "bgMusic": "",
+    "description": "",
+    "comments": 0,
+    "goods": 0,
+    "is_good": 0,
+    "is_collect": 0,
+    "share_url": "",
+    "share_icon": "http://config.bandaoapp.com/share.png",
+    "share_content": "鼓舞大众 团结大众 服务大众",
+    "is_limit_comment": 0,
+    "reporterNameList": null,
+    "editorNameList": null,
+    "auditorName": null,
+    "checkerName": null,
+    "personnelDescriptionList": null,
+    "allowAdvert": 1,
+    "reporterBannerTop": 1,
+    "publishStatus": null,
+    "isCancel": null,
+    "images": [
+      {
+        "img_url": "images/1f4a2ee01646799629811.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": null,
+        "newsTitle": null,
+        "rowSpace": 4,
+        "newsSource": null,
+        "newsTime": null,
+        "share_url": null,
+        "newsType": null
+      },
+      {
+        "img_url": "images/2181b3b61646799647827.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "1",
+        "newsTitle": "第一题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805217000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698901917337915392",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/cd8df1de1646799674029.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "2",
+        "newsTitle": "第二题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805222000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698902192257765376",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/13b3a4a11646799686450.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "3",
+        "newsTitle": "第三题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805220000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698902520998924288",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/28d6f7591646799696565.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "4",
+        "newsTitle": "第四题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805225000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698902798045286400",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/42eac85b1646799706084.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "5",
+        "newsTitle": "第五题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805228000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698903179622092800",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/fdf692711646799719754.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "6",
+        "newsTitle": "第六题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805226000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698903472216739840",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/9378cd721646803553848.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "7",
+        "newsTitle": "第七题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805232000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698903775137763328",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/390d537c1646799748183.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "7",
+        "newsTitle": "第八题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805234000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698904037596336128",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/21860ac41646799818102.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "9",
+        "newsTitle": "第九题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805236000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698904300663083008",
+        "newsType": 1
+      },
+      {
+        "img_url": "images/7e2170c51646799829688.png?x-oss-process=style/thumb_650",
+        "description": "",
+        "newsId": "10",
+        "newsTitle": "第十题",
+        "rowSpace": 4,
+        "newsSource": "大众报业·半岛新闻",
+        "newsTime": 1646805238000,
+        "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698904563692081152",
+        "newsType": 1
+      }
+    ]
+  }
+}

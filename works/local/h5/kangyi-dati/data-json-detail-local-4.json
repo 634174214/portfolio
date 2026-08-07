@@ -1,0 +1,40 @@
+{
+  "code": 200,
+  "message": "查询成功",
+  "result": {
+    "newsId": "4",
+    "type": 1,
+    "title": "第四题",
+    "source": "大众报业·半岛新闻",
+    "time": 1646805217000,
+    "showStyle": 1,
+    "thumb": "images/answer-4.png?x-oss-process=style/thumb_350",
+    "img_url": [
+      "images/answer-4.png?x-oss-process=style/thumb_350"
+    ],
+    "bgMusic": null,
+    "description": "",
+    "comments": 0,
+    "goods": 0,
+    "is_good": 0,
+    "is_collect": 0,
+    "share_url": "https://news.bandaoapp.com/shares/tuwen.html?newsId=698901917337915392",
+    "share_icon": "images/share.png",
+    "share_content": "鼓舞大众 团结大众 服务大众",
+    "is_limit_comment": 0,
+    "reporterNameList": null,
+    "editorNameList": ["黄金龙"],
+    "auditorName": "郑成海",
+    "checkerName": null,
+    "personnelDescriptionList": ["编辑： 黄金龙", "审核： 郑成海"],
+    "allowAdvert": 1,
+    "reporterBannerTop": 1,
+    "publishStatus": null,
+    "isCancel": null,
+    "boby": "<p><img src=\"images/answer-4.png?x-oss-process=style/thumb_650\"/></p>",
+    "audioList": null,
+    "audioFail": null,
+    "advertList": [],
+    "reporterList": null
+  }
+}

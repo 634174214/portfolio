@@ -172,7 +172,7 @@
         var thisUrl = "http://" + window.location.hostname + ":8081";
     } else {
         // var thisUrl = "https://bandaoapi.bandaoapp.com";
-        var thisUrl = "data-json-detail-local.json";
+        var thisUrl = `data-json-detail-local-${newsId.newsId}.json`;
     }
     var linkUrl = "./";
     function wx_getshareinfo(){
