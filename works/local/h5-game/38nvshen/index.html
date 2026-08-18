@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>沙雕男友成最强舔狗，awsl！</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <link rel="icon" href="imgs/share.jpg">
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            "timeLineLink": window.location.href,
+            "tTitle": '【测试】沙雕男友成最强舔狗，awsl！',
+            "tContent": "游戏哪有你重要，mua~（还不挂电话！）"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script>
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+        }
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background:  #fff;
+        }
+
+        .audioCon {
+            position: fixed;
+            width: 4rem;
+            height: 4rem;
+            -webkit-background-size: cover;
+            background-size: cover;
+            right: .25rem;
+            top: .25rem;
+            z-index: 99999;
+            -webkit-animation: none;
+            background-image: url(imgs/music_pause.png)
+        }
+
+        .audioCon.playingZ {
+            background-image: url(imgs/music.png);
+            -webkit-animation: audio 2s linear infinite
+        }
+
+        @-webkit-keyframes audio {
+            0% {
+                -webkit-transform: rotate3d(0, 0, 1, -360deg);
+                transform: rotate3d(0, 0, 1, -360deg)
+            }
+            50% {
+                -webkit-transform: rotate3d(0, 0, 1, -180deg);
+                transform: rotate3d(0, 0, 1, -180deg)
+            }
+            100% {
+                -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                transform: rotate3d(0, 0, 1, 0deg)
+            }
+        }
+
+        .audioCon .play-pauseZ {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+
+        .audioCon .scrubberZ,
+        .audioCon .timeZ {
+            display: none
+        }
+    </style>
+    <script>
+        (function() {
+            // var wr = window.innerWidth / window.innerHeight;
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            // var wr = bcr.width / bcr.height;
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1206) {
+                _width = Math.floor(wr * 1206);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr)
+            domEle.style.height = hwr * _width + "px";
+            console.log(hwr * _width + "px")
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function() {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            // window.addEventListener("pageshow", function(b) {
+            //     b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+            // }, false);
+            resize();
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div class="preload hide">
+        <img src="imgs/loading.png" alt="">
+        <img src="imgs/home-bg.jpg" alt="">
+        <img src="imgs/start-btn.png" alt="">
+        <img src="imgs/start-btn-act.png" alt="">
+        <img src="imgs/time-bg.png" alt="">
+        <img src="imgs/score-bg.png" alt="">
+        <img src="imgs/next-btn.png" alt="">
+        <img src="imgs/next-btn-act.png" alt="">
+        <img src="imgs/note1.png" alt="">
+        <img src="imgs/note2.png" alt="">
+        <img src="imgs/note3.png" alt="">
+        <img src="imgs/note4.png" alt="">
+        <img src="imgs/note5.png" alt="">
+        <img src="imgs/again-btn.png" alt="">
+        <img src="imgs/again-btn-act.png" alt="">
+        <img src="imgs/time-bg-red.png" alt="">
+    </div>
+
+    <div class="audioCon">
+        <audio src="music.mp3" id="audio" autoplay loop="loop"></audio>
+        <div class="abs play-pauseZ">
+            <p class="playZ"></p>
+            <p class="pauseZ"></p>
+            <p class="loadingZ"></p>
+        </div>
+        <div class="scrubberZ">
+            <div class="progressZ"></div>
+            <div class="loadedZ"></div>
+        </div>
+        <div class="timeZ">
+            <em class="playedZ"></em>/
+            <strong class="durationZ"></strong>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 加载页s -->
+        <div class="load-page abs full " id="loadPage">
+            <!-- <img class="loading-img abs" src="imgs/loading.png" alt=""> -->
+            <div class="loading-img abs"></div>
+            <p class="load-txt abs">0%</p>
+        </div>
+        <!-- 加载页e -->
+        <!-- 首页s -->
+        <div class="home-page abs full hide" id="homePage">
+            <img class="bg-top abs" src="imgs/bg-top.png" alt="">
+            <img class="bg-bottom abs" src="imgs/bg-bottom.png" alt="">
+            <!-- 主题s -->
+            <div class="theme-box abs">
+                <img class="abs theme1" src="imgs/theme1.png" alt="">
+                <img class="abs logo" src="imgs/logo.png" alt="">
+                <img class="abs theme2" src="imgs/theme2.png" alt="">
+                <img class="abs theme3" src="imgs/theme3.png" alt="">
+            </div>
+            <!-- 主题e -->
+            <img class="text abs" src="imgs/text.png" alt="">
+            <div class="help-box abs">
+                <img class="abs light" src="imgs/light.png" alt="">
+                <img class="abs people" src="imgs/people.png" alt="">
+                <img class="abs help-item1" src="imgs/help-item1.png" alt="">
+                <img class="abs soul" src="imgs/soul.png" alt="">
+            </div>
+            <a href="javascript:;" class="abs start-btn btn" id="startBtn"></a>
+        </div>
+        <!-- 首页e -->
+        <!-- 答题页s -->
+        <div class="answer-page abs full hide" id="answerPage">
+            <img class="bg-top abs" src="imgs/bg-top.png" alt="">
+            <img class="bg-bottom abs" src="imgs/bg-bottom.png" alt="">
+            <div class="time-box abs">
+                <p><span class="time">10</span>s</p>
+            </div>
+            <div class="score-box abs">
+                <p>得分：<span class="score">10</span></p>
+            </div>
+            <div class="answer-box abs show">
+                <img class="abs answer-bg2" src="imgs/answer-bg2.png" alt="">
+                <img class="abs answer-bg1" src="imgs/answer-bg1.png" alt="">
+                <div class="answer abs" id="questionBox">
+                    <!-- <p class="title">15.女友：你说你那么多前女友，而我只 有你一个男朋友......</p>
+                    <div class="options-box abs">
+                        <label class="options-line">
+                            <input type="radio" name="answer" class="options-raido">
+                            <p><span></span>干嘛问这个？让我想想</p>
+                        </label>
+                        <label class="options-line">
+                            <input type="radio" name="answer" class="options-raido">
+                            <p><span></span>前女友啊，我和她们在一起没多久</p>
+                        </label>
+                        <label class="options-line">
+                            <input type="radio" name="answer" class="options-raido">
+                            <p><span></span>什么，我没有前女友，不就你一个吗？</p>
+                        </label>
+                        <label class="options-line">
+                            <input type="radio" name="answer" class="options-raido">
+                            <p><span></span>我找了那么多个，找一个不是你再找 下一个，你怎么那么难找啊！</p>
+                        </label>
+                        
+                    </div> -->
+                </div>
+            </div>
+            <a href="javascript:;" class="next-btn btn abs" id="nextBtn"></a>
+        </div>
+        <!-- 答题页e -->
+        <!-- 结果页s -->
+        <div class="result-page abs full hide" id="resultPage">
+            <img class="bg-top abs" src="imgs/bg-top.png" alt="">
+            <img class="bg-bottom abs" src="imgs/bg-bottom.png" alt="">
+            <div class="result-box abs">
+                <img class="result-show abs" src="imgs/result1.png" alt="">
+                <img class="result-board abs" src="imgs/result-board.png" alt="">
+                <div class="title-box abs">
+                    <p class="title-note">你在本次答题中获得称号:</p>
+                    <img class="title" src="imgs/title1.png" alt="">
+                    <p class="txt-note">什么！你这样的人也配有女友？</p>
+                </div>
+                <div class="show-txt-box abs">
+                    <div class="note1 abs"></div>
+                    <div class="note2 abs"></div>
+                    <div class="note3 abs"></div>
+                    <div class="note4 abs"></div>
+                    <div class="note5 abs"></div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="javascript:;" class="again-btn" id="againBtn"></a>
+                <a href="javascript:;" class="share-btn" id="shareBtn"></a>
+            </div>
+        </div>
+        <!-- 结果页e -->
+        <!-- 分享页s -->
+        <div class="share-page abs full hide" id="sharePage">
+            <img class="share-img abs" src="imgs/share-img.png" alt="">
+        </div>
+        <!-- 分享页e -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script charset="utf-8">
+        var question = [{
+                'id':1,
+                'title':'女友说：算了，你去玩游戏吧。你说：',
+                'options': [{
+                    'txt':'好嘞',
+                    'score': 0
+                }, {
+                    'txt': '乖，就一盘，很快的',
+                    'score': 5
+                }, {
+                    'txt': '你比游戏重要，我不玩了',
+                    'score': 10
+                }]
+            }, {
+                'id': 2,
+                'title': '女友问：游戏重要还是我重要？你说：',
+                'options': [{
+                    'txt': '游戏从来不会这样问我',
+                    'score': 0
+                }, {
+                    'txt': '当然你重要啦，给你充的钱比游戏多多啦',
+                    'score': 0
+                }, {
+                    'txt': '没了你我玩任何游戏都不会觉得快乐',
+                    'score': 5
+                }, {
+                    'txt': '放下游戏手柄抱住女朋友',
+                    'score': 10
+                }]
+            }, {
+                'id': 3,
+                'title': '和女友吵架，她一气之下让你滚。',
+                'options': [{
+                    'txt': '乖乖滚',
+                    'score': 5
+                }, {
+                    'txt': '问她让你滚的理由',
+                    'score': 0
+                }, {
+                    'txt': '先道歉，别的一会儿再说',
+                    'score': 5
+                }, {
+                    'txt': '抱住她说“我滚了，你怎么办？”',
+                    'score': 10
+                }]
+            }, {
+                'id': 4,
+                'title': '女友生气了，你会：',
+                'options': [{
+                    'txt': '不管自己对错，反正她都是对的',
+                    'score': 10
+                }, {
+                    'txt': '据理力争，告诉她你没错，她错了',
+                    'score': 0
+                }, {
+                    'txt': '跟她赌气，不说话',
+                    'score': 0
+                }, {
+                    'txt': '转身离开，分手说不出来',
+                    'score': 0
+                }]
+            }, {
+                'id': 5,
+                'title': '女朋友说让她冷静冷静，莫来找我的意思是：',
+                'options': [{
+                    'txt': '等她冷静下来后找她',
+                    'score': 5
+                }, {
+                    'txt': '还不快哄我',
+                    'score': 10
+                }, {
+                    'txt': '一直找她，打爆她的手机',
+                    'score': 0
+                }]
+            }, {
+                'id': 6,
+                'title': '女友说：我这么胖，你还爱我吗？',
+                'options': [{
+                    'txt': '你变成什么样我都爱',
+                    'score': 10
+                }, {
+                    'txt': '哪个瞎子说你胖了？',
+                    'score': 20
+                }, {
+                    'txt': '我给你买了跑步机',
+                    'score': 5
+                }]
+            }, {
+                'id': 7,
+                'title': '晚饭后，女友说：你看我裤子都起皱了。你说：',
+                'options': [{
+                    'txt': '好，我帮你拉一下',
+                    'score': 0
+                }, {
+                    'txt': '明天给你买新的',
+                    'score': 5
+                }, {
+                    'txt': '亲爱的，你瘦了',
+                    'score': 10
+                }]
+            }, {
+                'id': 8,
+                'title': '女：感觉最近衣服好像变紧了……',
+                'options': [{
+                    'txt': '走，周末带你去买新衣服',
+                    'score': 5
+                }, {
+                    'txt': '那是不正好凸显你曼妙的曲线',
+                    'score': 10
+                }, {
+                    'txt': '衣服质量不行啊，洗一下就缩水了？！',
+                    'score': 20
+                }, {
+                    'txt': '宝宝，你是不是该。。减肥了？',
+                    'score': 0
+                }]
+            }, {
+                'id': 9,
+                'title': '女朋友说：就算胖又怎么样？我胖一点也一样可爱对吧？',
+                'options': [{
+                    'txt': '怎么可能会有人觉得你胖？你在我心里是最美好吗！',
+                    'score': 10
+                }, {
+                    'txt': '就算胖，也是我养的，我不嫌弃',
+                    'score': 5
+                }, {
+                    'txt': '我才不上你的当呢，胖我也不会说的',
+                    'score': 0
+                }]
+            }, {
+                'id': 10,
+                'title': '女朋友说想吃肉。上次你带她去遭拒绝，上上次不让她吃，她说你嫌她胖，这次？',
+                'options': [{
+                    'txt': '走，带你去吃肉，你再胖我也要。',
+                    'score': 5
+                }, {
+                    'txt': '去你也不开心不去你也不开心，你到底想干嘛啊！',
+                    'score': 0
+                }, {
+                    'txt': '为什么不吃？你太瘦了要好好补补！',
+                    'score': 10
+                }]
+            }, {
+                'id': 11,
+                'title': '你和女友在吃大闸蟹，她说：这里只有5只啊。这时你会：',
+                'options': [{
+                    'txt': '说：我前女友从来不在意这些',
+                    'score': 0
+                }, {
+                    'txt': '加快了手上的动作',
+                    'score': 5
+                }, {
+                    'txt': '说：那我们扔掉一只',
+                    'score': 0
+                }, {
+                    'txt': '觉得你吃两只女朋友吃三只刚刚好',
+                    'score': 10
+                }]
+            }, {
+                'id': 12,
+                'title': '和女友爬完山准备坐公交回家，但只剩一个座位，你会：',
+                'options': [{
+                    'txt': '和她猜拳谁赢谁坐',
+                    'score': 5
+                }, {
+                    'txt': '一屁股坐了上去并大笑：哈哈哈比你快',
+                    'score': 5
+                }, {
+                    'txt': '温柔地让她坐下，并站在她身边',
+                    'score': 10
+                }, {
+                    'txt': '赶走一个乘客',
+                    'score': 0
+                }]
+            }, {
+                'id': 13,
+                'title': '你给女友拍了一张照片，想发朋友圈，步骤是什么？',
+                'options': [{
+                    'txt': '打开微信发表图片',
+                    'score': 0
+                }, {
+                    'txt': '发之前用美图软件P一下',
+                    'score': 5
+                }, {
+                    'txt': '把照片交给女朋友，让她自己P完发给你',
+                    'score': 10
+                }]
+            }, {
+                'id': 14,
+                'title': '女友并不好看，还嫌你拍不出她美美的照片，你会？',
+                'options': [{
+                    'txt': '搜索拍照教程，学习简单拍照技能',
+                    'score': 10
+                }, {
+                    'txt': '随便拍。还不满意让她自己想办法',
+                    'score': 5
+                }, {
+                    'txt': '说：你本来就不好看怎么能拍得出美美的照片嘛！',
+                    'score': 0
+                }]
+            }, {
+                'id': 15,
+                'title': '女友：“你说你那么多前女友，而我只有你一个男朋友....”',
+                'options': [{
+                    'txt': '干嘛问这个？让我想想',
+                    'score': 0
+                }, {
+                    'txt': '前女友啊，我和她们在一起没多久',
+                    'score': 0
+                }, {
+                    'txt': '什么，我没有前女友，不就你一个吗？',
+                    'score': 5
+                }, {
+                    'txt': '我找了那么多个，找一个不是你再找下一个，你怎么那么难找啊！',
+                    'score': 10
+                }]
+            }, {
+                'id': 16,
+                'title': '她告诉你等十分钟，10分钟后还没出现，你会？',
+                'options': [{
+                    'txt': '继续等她十分钟',
+                    'score': 5
+                }, {
+                    'txt': '去敲她家的门大喊：“你出来啊”',
+                    'score': 0
+                }, {
+                    'txt': '利用这个时间去看电影或去网吧',
+                    'score': 0
+                }]
+            }, {
+                'id': 17,
+                'title': '电影院里坐你旁边的陌生女孩让你帮她拧瓶盖，你会？',
+                'options': [{
+                    'txt': '展现你男子汉魅力的时候到了，接过水瓶帮她拧开来',
+                    'score': 0
+                }, {
+                    'txt': '怕女朋友生气，拒绝帮助她',
+                    'score': 5
+                }, {
+                    'txt': '把水瓶递给女朋友：“亲爱的，你帮她拧一下。”',
+                    'score': 0
+                }, {
+                    'txt': '打开后还给她，再转身问女友渴不渴',
+                    'score': 10
+                }]
+            }, {
+                'id': 18,
+                'title': '女生问：蹦迪时有女生拼命往你身上蹭，你怎么办？',
+                'options': [{
+                    'txt': '不可能，我从来不去蹦迪',
+                    'score': 10
+                }, {
+                    'txt': '把她推开',
+                    'score': 5
+                }, {
+                    'txt': '告诉她我已经有女朋友了',
+                    'score': 5
+                }, {
+                    'txt': '跟她一起蹦',
+                    'score': 0
+                }]
+            }, {
+                'id': 19,
+                'title': '女朋友问：假如你去参加同学会，会遇到你曾喜欢的女同学，你会？',
+                'options': [{
+                    'txt': '精心打扮一下去参加',
+                    'score': 0
+                }, {
+                    'txt': '不理她',
+                    'score': 5
+                }, {
+                    'txt': '不去没有女朋友参加的聚会',
+                    'score': 10
+                }]
+            }, {
+                'id': 20,
+                'title': '她说：我明天要一个人去打针，厉不厉害。你说：',
+                'options': [{
+                    'txt': '刚刚请了假，明天一起去',
+                    'score': 10
+                }, {
+                    'txt': '哇塞！牛B！666啊',
+                    'score': 0
+                }, {
+                    'txt': '怎么了，你哪儿不舒服？',
+                    'score': 5
+                }]
+            }, {
+                'id': 21,
+                'title': '她说：今天吃药时看到一条超级搞笑的新闻，快笑死我了。你说：',
+                'options': [{
+                    'txt': '什么新闻，笑得那么开心，发给我看看',
+                    'score': 0
+                }, {
+                    'txt': '下来，我给你送粥来',
+                    'score': 10
+                }, {
+                    'txt': '你为什么要吃药？',
+                    'score': 5
+                }]
+            }, {
+                'id': 22,
+                'title': '她说：昨晚没睡好，感觉今天颜值被拉低了',
+                'options': [{
+                    'txt': '没事呀，就低一点点而已',
+                    'score': 5
+                }, {
+                    'txt': '你最近睡太晚了，今晚必须23点前睡，听话！',
+                    'score': 10
+                }, {
+                    'txt': '你再美一点，还让其他人怎么活',
+                    'score': 20
+                }, {
+                    'txt': '我昨天睡得真香，总是梦见你',
+                    'score': 0
+                }]
+            }, {
+                'id': 23,
+                'title': '女朋友不小心将口红掉在了你的新AJ上，你会？',
+                'options': [{
+                    'txt': '火冒三丈，批评她：“你瞎啊？”',
+                    'score': 0
+                }, {
+                    'txt': '立刻狂擦自己的AJ',
+                    'score': 5
+                }, {
+                    'txt': '对内疚的女朋友说：“给你买根新的。”',
+                    'score': 10
+                }, {
+                    'txt': '说：要不给我发个红包？',
+                    'score': 0
+                }]
+            }, {
+                'id': 24,
+                'title': '我好看还是你们公司隔壁组的linda好看？',
+                'options': [{
+                    'txt': '当然是你啦，她眼睛那么小，牙那么大，跟个野鼬鼠似的',
+                    'score': 5
+                }, {
+                    'txt': '她在一般人眼里可能算好看的，但对我来说，我脑子里存满你的照片，没有容量再读取她的脸了',
+                    'score': 10
+                }, {
+                    'txt': '哪个linda？大腿上有纹身的那个吗？',
+                    'score': 0
+                }]
+            }, {
+                'id': 25,
+                'title': '女友把她闺蜜介绍给你认识，回家后她问：“你觉得我这朋友怎么样啊？”',
+                'options': [{
+                    'txt': '“我都没怎么注意她。”',
+                    'score': 5
+                }, {
+                    'txt': '“我觉得她对你挺真诚的，有个这么要好的朋友很难得啊，你要好好珍惜。”',
+                    'score': 10
+                }, {
+                    'txt': '“挺漂亮的。”',
+                    'score': 0
+                }]
+            }, {
+                'id': 26,
+                'title': '女友问：“我和你前女友比起来，谁更好啊？”你说：',
+                'options': [{
+                    'txt': '狠狠地亲她一下或捏她的小脸蛋，说：“下次再问这种无聊的问题，还这么惩罚你。”',
+                    'score': 0
+                }, {
+                    'txt': '废话，当然是你了，要不然干嘛跟你在一起',
+                    'score': 0
+                }, {
+                    'txt': '嗯，怎么说呢，如果让我说实话，各有千秋吧',
+                    'score': 5
+                }]
+            }, {
+                'id': 27,
+                'title': '在餐厅等餐，你闲得无聊拿起手机，女友要查看你手机，你会？',
+                'options': [{
+                    'txt': '尽量拖延时间，餐到了就可以逃过一劫',
+                    'score': 5
+                }, {
+                    'txt': '向她讲解个人隐私保护法',
+                    'score': 0
+                }, {
+                    'txt': '将手机递给她并要求查看她的手机',
+                    'score': 0
+                }, {
+                    'txt': '将手机递给她并主动告诉她密码',
+                    'score': 10
+                }]
+            }, {
+                'id': 28,
+                'title': '女：我刚买了新的爽肤水和精华，开心~',
+                'options': [{
+                    'txt': '花了多少钱？老公给你报销了',
+                    'score': 10
+                }, {
+                    'txt': '你都这么好看了，护肤品还有什么用？',
+                    'score': 20
+                }, {
+                    'txt': '某品牌新出的祛斑精华更适合你的肤质呢',
+                    'score': 0
+                }, {
+                    'txt': '哦',
+                    'score': 0
+                }]
+            }, {
+                'id': 29,
+                'title': '她问你：这两个眼影哪个好看？',
+                'options': [{
+                    'txt': '两个都好',
+                    'score': 0
+                }, {
+                    'txt': '你喜欢就好',
+                    'score': 5
+                }, {
+                    'txt': '你的卡姿兰大眼睛不需要眼影',
+                    'score': 10
+                }]
+            }, {
+                'id': 30,
+                'title': '女生口中所说的MLBB是什么意思？',
+                'options': [{
+                    'txt': '魔力宝贝',
+                    'score': 5
+                }, {
+                    'txt': 'Maybelline美宝莲BB霜',
+                    'score': 10
+                }, {
+                    'txt': '一种自然的口红色',
+                    'score': 20
+                }, {
+                    'txt': '妈了别哔哔了',
+                    'score': 0
+                }]
+            }, {
+                'id': 31,
+                'title': '情侣合吃一张饼，男吃13分之9，女吃13分之3,浪费了13分之1，男比女多花7元，请问这张饼多少钱?',
+                'options': [{
+                    'txt': '7元',
+                    'score': 20
+                }, {
+                    'txt': '15.2元',
+                    'score': 5
+                }, {
+                    'txt': '15.1666667元',
+                    'score': 0
+                }]
+            }]
+    </script>
+    
+    <script charset="utf-8" src="js/run.min.js"></script>
+    <script type="text/javascript" src="js/audio.min.js"></script>
+
+    <script charset="UTF-8">
+
+        audiojs.events.ready(function () {
+            var as = audiojs.create(document.getElementsByTagName("audio")[0], {
+              css: false,
+              createPlayer: {
+                markup: false,
+                playPauseClass: 'play-pauseZ',
+                scrubberClass: 'scrubberZ',
+                progressClass: 'progressZ',
+                loaderClass: 'loadedZ',
+                timeClass: 'timeZ',
+                durationClass: 'durationZ',
+                playedClass: 'playedZ',
+                errorMessageClass: 'error-messageZ',
+                playingClass: 'playingZ'
+              }
+            });
+          });
+
+          document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.invoke('getNetworkType', {},
+              function (e) {
+                document.getElementsByTagName("audio")[0].play();
+              });
+          }, false);
+
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "320",
+                    "img_height": "320",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        }, false);
+    </script>
+</body>
+
+</html>
