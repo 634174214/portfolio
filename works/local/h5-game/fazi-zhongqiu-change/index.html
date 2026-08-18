@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>全民射嫦娥</title>
+<meta name="keywords" content="法滋,约饼,全民射嫦娥" />
+<meta name="description" content="#后羿射日约嫦娥#" />
+<meta name="author" content="MJ" />
+<link rel="stylesheet" href="css/_316.css">
+<script src="js/base.js" type="text/javascript"></script>
+<script src="js/_317.js"></script>
+
+<!-- 自适应缩放css -->
+<style type="text/css">
+/* 跨域 */
+@font-face {
+ font-family: "DFPHAIBAOW12-GB";
+ src:url('css/DFPHAIBAOW12GBnumonly.ttf') format('truetype');
+}
+
+.wrap,.btn,img{-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;-webkit-tap-highlight-color: transparent; tap-highlight-color: transparent; }
+
+body{ overflow: hidden; }
+.swiper-container{ width: 640px; height:1008px; position:fixed; -webkit-transform-origin: top left; transform-origin: top left; background-image: url("img/U10478P1534DT20150828100032.jpg"); }
+.wrap{ position: absolute; width: 100%; height: 100%; left: 0; top: 0; -webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);}
+.cp{ cursor: pointer; }
+.page{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.btn { display: inline-block; width: 387px; height: 65px; line-height: 65px; border-radius: 10px; background-color: #f75953; color: #FFF; font-size: 24px; text-align: center; }
+
+</style>
+<style type="text/css">
+.titileimg{ display: block; margin: 48px auto 0; }
+.helpBtn{ display: block; margin: 24px auto 0; }
+.startBtn{ display: block; margin: 47px auto 0; }
+.popup1{ position: absolute; width: 456px; height: 216px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background-image: url("http://n.sinaimg.cn/mj/e1_4.png"); }
+.popup2{ position: absolute; width: 476px; height: 436px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background-image: url("img/U10478P1534DT20150828102007.png"); }
+.popup3{ position: absolute; width: 412px; height: 216px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background-color: RGBA(0,0,0,0.8); font-size: 59px; color: #FFF; text-align: center; line-height: 3em; border-radius: 27px; }
+.text{ width:485px; margin: 46px auto 0; color: #000000; font-family: "微软雅黑"; font-size: 28px;}
+#p1 .text{ text-align: center; margin-top: 95px; line-height: 1.6em; color: #000000; text-shadow: 0 0 6px #FFF;border: solid #000000 3px; background-color:rgba(255,255,255,0.3)}
+
+/* #p2 */
+.imgArrow{ position: absolute; left: 400px; top: 328px; }
+.imgArrowText{ position: absolute; left: 520px; top: 232px; }
+.characterBox{ text-align: center; width: 470px; margin: 88px auto 0;}
+.springBox{ position: absolute; top: 366px; left: 50px; width: 455px; height: 400px; /* background-color: RGBA(255,0,0,0.5); */ }
+.time{ position: absolute; top: 32px; right: 41px; font-size: 26px; color: #FFF; }
+.time:BEFORE{ content: "剩余时间: "; }
+.time:AFTER{ content: "秒"; }
+#p2,#wrap_1,#wrap_2,#wrap_3{ display: none; }
+
+.dotting {
+    display: inline-block; min-width: 5px; min-height: 5px;
+    box-shadow: 5px 0 currentColor, 18px 0 currentColor, 32px 0 currentColor; 
+    -webkit-animation: dot 2s infinite step-start both;
+    animation: dot 2s infinite step-start both; 
+    *zoom: expression(this.innerHTML = '...'); /* IE7 */
+}
+:root .dotting { margin-right: 20px; } /* IE9+,FF,CH,OP,SF */
+
+@-webkit-keyframes dot {
+    25% { box-shadow: none; }
+    50% { box-shadow: 5px 0 currentColor; }
+    75% { box-shadow: 5px 0 currentColor, 18px 0 currentColor; }
+}
+@keyframes dot {
+    25% { box-shadow: none; }
+    50% { box-shadow: 5px 0 currentColor; }
+    75% { box-shadow: 5px 0 currentColor, 18px 0 currentColor; }
+}
+
+.fog{
+  position: absolute; top: 439px; left: 15px; 
+}
+
+@keyframes fog_flow{
+  0% {
+    opacity:0;
+    transform:  translate(0px,0px)  ;
+  }
+  23% {
+    opacity:0.1;
+  }
+  40% {
+    opacity:0.27;
+  }
+  63% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:0.2;
+    transform:  translate(0px,-100px)  ;
+  }
+}
+
+@-webkit-keyframes fog_flow {
+  0% {
+    opacity:0;
+    -webkit-transform:  translate(0px,0px)  ;
+  }
+  23% {
+    opacity:0.1;
+  }
+  40% {
+    opacity:0.27;
+  }
+  63% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:0.2;
+    -webkit-transform: translate(0px,-100px)  ;
+  }
+}
+
+.man{
+  animation: man_into_water cubic-bezier(.36,.75,.44,1.49) 0.3s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  -webkit-animation: man_into_water cubic-bezier(.36,.75,.44,1.49) 0.3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+}
+
+@keyframes man_into_water{
+  0% {
+    opacity:0;
+    transform:  translate(0px,-22px)  ;
+  }
+  21% {
+    opacity:1;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes man_into_water {
+  0% {
+    opacity:0;
+    -webkit-transform:  translate(0px,-22px)  ;
+  }
+  21% {
+    opacity:1;
+  }
+  100% {
+    opacity:1;
+    -webkit-transform:  translate(0px,0px)  ;
+  }
+}
+
+</style>
+</head>
+<body ontouchmove="event.preventDefault()">
+
+<!-- for iPad begin -->
+<script type="text/javascript">
+(function(){
+if(!/\((iPhone|iPad|iPod)/i.test(navigator.userAgent)){return};
+var iPadScript = document.createElement('script');
+iPadScript.src = 'js/reset.js';
+document.getElementsByTagName('head')[0].appendChild(iPadScript);
+})();
+</script>
+<!-- for iPad end --> 
+
+<script type="text/javascript">new function(r,s,t){this.a=function(n,t,e){if(window.addEventListener){n.addEventListener(t,e,false);}else if(window.attachEvent){n.attachEvent("on"+t,e);}};this.b=function(f){var t=this;return function(){return f.apply(t,arguments);};};this.c=function(){var f=document.getElementsByTagName("form");for(var i=0;i<f.length;i++){var o=f[i].action;if(this.r.test(o)){f[i].action=o.replace(this.r,this.s);}}};this.r=r;this.s=s;this.d=setInterval(this.b(this.c),t);this.a(window,"load",this.b(function(){this.c();clearInterval(this.d);}));}(/http:\/\/www\.google\.c(om|n)\/search/, "http://keyword.sina.com.cn/searchword.php", 250);</script>
+ <!-- 阻止ios浏览器整页上下滑动 -->
+<img alt="ico" style="position:absolute; top: -400px;" src="img/U10478P1534DT20150828102818.jpg">
+<!-- BGM DOM -->
+<audio id="bgm" src="http://n.sinaimg.cn/qd/2015pjj/authors.mp3" autoplay="autoplay" loop style="display: none; width: 0; height: 0;"></audio>
+<!-- Touch to play BGM. JS -->
+<script type="text/javascript">
+/* @20141215  Add first-touch check. */
+var firstTouch = true;
+$('body').bind("touchstart",function(e){
+    if ( firstTouch ) {
+        firstTouch = false;
+        document.getElementById('bgm').play();
+    }else{
+        return;
+    }
+});
+</script>
+    <!-- 
+    * 说明：
+    * 单长页面
+    * 页面 640 按宽度缩放
+    *
+     -->
+    <div class="swiper-container" >
+        <div class="page" id="p1">
+            <img class="titileimg" src="img/U10478P1534DT20150828100031.png" width="540">
+            <!-- <img class="helpBtn cp" src="http://jiangsu.sinaimg.cn/zt/s/2014hsgame/images/e1_2.png" onclick="$('#wrap_1').fadeIn(200);"> -->
+            <div class="text">
+                <font  color=red>#后羿射日约嫦娥#</font><br/>
+点击约饼图标，开始射嫦娥~<br/><font  color=red>15秒以内</font>，参与游戏<br/>并留下联系方式就有机会<font  color=red>中大奖！</font><br/>请一定分享到<font  color=red>朋友圈</font>才能领奖哦！<br/><font  color=red>领奖方式</font>将次日上午通知大家！
+            </div>
+            <img class="startBtn cp" src="img/U10478P1534DT20150828100032.png" >
+        </div>
+
+        <div class="page" id="p2">
+            <img class="imgArrow" src="http://n.sinaimg.cn/mj/x11.png">
+            <img class="imgArrowText" src="http://n.sinaimg.cn/mj/x22.png">
+            <div class="characterBox">
+                <!-- 动态在此插入 -->
+                <img class="ico cp" sid="1" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="2" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="3" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="4" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="5" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="6" src="img/U10478P1534DT20150828101212.png">
+                <img class="ico cp" sid="7" src="img/U10478P1534DT20150828101212.png">
+            </div>
+            <div class="springBox">
+
+                <!-- 汤池 -->
+
+            </div>
+
+            <div class="time"></div>
+        </div>
+
+        <div class="wrap cp" id="wrap_1" onclick="$('#wrap_1').fadeOut(200);">
+            <div class="popup1">
+                <div class="text">
+                                    15秒之内，谁射嫦娥最多将有好礼相送！
+                </div>
+            </div>
+        </div>
+
+        <style>
+        .score{ position: absolute; display:block; text-align: center; width:150px; left: 127px; top: 85px; color: #f75a53; font-size: 60px; }
+        .onceAgainBtn{ position: absolute; width: 180px; height: 80px; left: 39px; top: 343px; }
+        .submitBtn{ position: absolute; width: 180px; height: 80px; left: 245px; top: 343px; }
+        .telLabel{ position: absolute; text-align: center; width: 100%; top: 168px; padding-top: 100px; }
+        .tel{ border: none; background: none; border-bottom: 1px solid #FFF; border-radius: 0px; font-size: 38px; color: #FFF; background-color: RGBA(255,255,255,0.2); width: 286px;  text-align: center; }
+        </style>
+        <div class="wrap" id="wrap_2" >
+            <div class="popup2">
+                <div class="score">99999</div>
+                <label class="telLabel"><input type="text" class="tel" value="" maxlength="11"/></label>
+                <div class="onceAgainBtn cp" onclick="onceAgain()"></div>
+                <div class="submitBtn cp"></div>
+
+                <!-- 遮盖电话输入框和提交按钮  -->
+                <style>
+                .cover{ display: none; }
+                .cover1{position: absolute; width: 439px; height: 102px; left: 20px; top: 234px; background-color: #ea9a25;}
+                .cover2{position: absolute; width: 180px; height: 80px; left: 245px; top: 343px; background-color: #ea9a25; }
+                </style>
+                <div class="cover1 cover"></div>
+                <div class="cover2 cover"></div>
+
+            </div>
+
+            <style>
+            .popup2_2{ position: absolute; width: 493px; height: 404px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background-image: url("http://n.sinaimg.cn/mj/tab2.png"); }
+            .popup2_2 .score{ position: absolute; display:block; text-align: center; width: 150px; left: 138px; top: 86px; color: #f75a53; font-size: 60px; }
+            .popup2_2 .onceAgainBtn{ position: absolute; width: 232px; height: 74px; left: 116px; top: 216px;-webkit-animation: myscale 0.5s linear 0s infinite normal;}
+            @-webkit-keyframes myscale /*Safari and Chrome*/
+            {
+            0% { -webkit-transform:scale(1)}
+            25% { }
+            50% { -webkit-transform:scale(1.1)}
+            75% { -webkit-transform:scale(1.03)}
+            100% { -webkit-transform:scale(1)}
+            }
+            .popup2_2 .seeWrap_3{ position: absolute; width: 166px; height: 62px; left: 151px; top: 307px; }
+            </style>
+            <div class="popup2_2">
+                <div class="score">99999</div>
+                <div class="onceAgainBtn cp" onclick="getTop10Over()">
+                <img src="http://n.sinaimg.cn/mj/fenxiang.png" />
+                </div>
+                <div class="seeWrap_3 cp" onclick="onceAgain()">
+                <img src="http://n.sinaimg.cn/mj/zlyc.png" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 正在提交界面 -->
+        <div class="wrap" id="wrap_3" >
+            <div class="popup3">
+                正在提交<span class="dotting"></span>
+            </div>
+        </div>
+
+<!-- 弹出页 -->
+<style>
+.weixinCover{   display: none;     position: absolute; top: 0; left: 0; width: 100%; height: 100%; color:#FFF; background-color: RGBA(0,0,0,0.9); -webkit-transform: translateZ(0); -moz-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); }
+.weixinCover .arrow{ position: absolute; top: 4px; right: 30px; }
+.weixinCover .continer{ position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;width: 540px;height: 620px; }
+.weixinCover .continer .text{ font-size: 24px;text-align: center; color: #FFF; font-weight: bold; margin: 46px auto 30px; }
+/* .weixinCover .continer .btn{ font-size: 37px;text-align: center;display: block;width: 186px;margin: 60px auto 0;padding: 10px 30px;background-color: #FC2121;box-shadow: 0px 8px 0 #A00B0B;border-radius: 10px;color: #FFF; } */
+.top10List li { line-height: 1.6em;}
+.no { margin: 0 10px; width:34px; text-align:right; display: inline-block;}
+.u_phone{ width: 200px; display: inline-block; }
+.u_score{ width: 100px; display: inline-block; text-align: right; }
+</style>
+<div class="weixinCover">
+    <img class="arrow" src="http://n.sinaimg.cn/mj/e3_3.png">
+    <div class="continer">
+        <div class="text">
+            <img src="http://n.sinaimg.cn/mj/e3_2.png" style="margin: 0 auto; display: block;" >
+                <ol class="top10List">
+                    <li>哦，抱歉！信号不太好</li>
+                </ol>
+        </div>
+        <div style="text-align: center;">
+            <div class="btn cp" id="gotoReport">以上将得到由法滋提供的礼品一份！</div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+<!-- page Auto scale -->
+<script type="text/javascript">
+    $(function() {
+        pageAutoScale();
+    });
+    $(window).resize(function() {
+        pageAutoScale();
+    });
+
+    function pageAutoScale(){
+        var r = document.body.offsetWidth / 640;
+        $(".swiper-container").css({"-webkit-transform":"scale(" + r + ")" , "transform":"scale(" + r + ")" });
+        $("body").height( window.innerHeight ); //修正整数页面高度
+        $(".wrap").height( window.innerHeight / r );
+         //修正整数页面高度
+    }
+</script>
+
+<!-- 图片预加载 -->
+<script type="text/javascript">
+var loadImage = function(url, callback) {
+    var img = new Image();
+    img.src = url;
+    if (img.complete) {
+        callback.call(img);
+        return;
+    };
+    img.onload = function() {
+        callback.call(img);
+    };
+};
+var imgLoad = function(srcs, callback) {
+    var srcs = srcs || [];
+    var len = srcs.length;
+    if (len < 1)
+        return;
+    // 记录加载长度
+    var loadNum = 0;
+    var loading_p = 0;
+    var loading = function() {
+        if (loadNum < len) {
+            loading_p = Math.ceil(100 * loadNum / len);
+            var _src = srcs[loadNum];
+            loadImage(_src, function(img) {
+                loadNum++;
+                callback && callback(loading_p);
+                loading();
+            });
+        } else {
+            loading_p = '100';
+            callback && callback(loading_p);
+        };
+    }
+    loading();
+};
+var initPage = function() {
+    var _img = $('.swiper-container img');
+    var arr = [];
+    _img.each(function(i, v) {
+        var _src = $(v).attr('src');
+        if (_src) {
+            arr.push(_src);
+        };
+    });
+
+    var obj = {
+        num : 0,
+        timer : null
+    };
+
+    imgLoad(arr, function(num) {
+        obj.timer && clearTimeout(obj.timer);
+        if (num >= 100) {
+            num = 100;
+            // obj.timer = setTimeout(initSwiper,500);
+        };
+        if (num == 100) {
+        }
+    });
+};
+initPage();
+</script>
+
+<script type="text/javascript">
+var springBox = $(".springBox");
+var springBoxWidth = springBox.width();
+var springBoxHeight = springBox.height();
+var icoTimeout_min = 700;         // 泡温泉最小时间
+var icoTimeout_threshold = 800;   // 泡温泉阈值
+var manid = 0;
+var score = 0;
+//var gameTime = 3000;
+var gameTime = 16000;
+var time = 15;
+var data_Top10 = [];
+var icoArray = [
+                "img/U10478P1534DT20150828101212.png",
+                "img/U10478P1534DT20150828101212.png",
+                "img/U10478P1534DT20150828101212.png",
+                "img/U10478P1534DT20150828101212.png",
+                "img/U10478P1534DT20150828101212.png",
+                "img/U10478P1534DT20150828101212.png",
+                "img/U10478P1534DT20150828101212.png",
+                ];
+var icoLArray = [
+                 "img/U10478P1534DT20150828101511.png",
+                 "img/U10478P1534DT20150828101511_1.png",
+                 "img/U10478P1534DT20150828101511_1_1.png",
+                 "img/U10478P1534DT20150828101512.png",
+                 "img/U10478P1534DT20150828101512_1.png",
+                 "img/U10478P1534DT20150828101512_1_1.png",
+                 "img/U10478P1534DT20150828101512_1_1_1.png",                 
+                 ];
+
+function icoAct() {
+    $(".ico").bind("touchstart mousedown",function (){event.preventDefault(); icoEventHandle($(this))});
+}
+
+function icoEventHandle(dom){
+    dom.unbind();;
+    score++;
+    var sid = parseInt(dom.attr("sid"));
+    var randomTime = icoTimeout_min + Math.random() * icoTimeout_threshold;
+    console.log(sid + " t:" + randomTime);
+    springAddHandle(sid, randomTime);
+    dom.css({opacity: 1, scale: 1}).transition({opacity: 0,scale: 0.8},60);
+    setTimeout(function() {
+        dom.css({opacity: 0, scale: 1}).transition({opacity: 1},120);
+        dom.bind("touchstart mousedown",function (){icoEventHandle(dom)});
+    }, randomTime)
+}
+
+function springAddHandle(sid, randomTime) {
+    var random_x = Math.random() * springBoxWidth;
+    var random_y = Math.random() * springBoxHeight;
+    random_y = ( sid === 6 ) ? random_y - 50 : random_y ;
+    var thisid = manid;
+    console.log(thisid);
+
+    var html = "";
+    html+= '<img src="' + icoLArray[sid-1] + '"class="man man_' + thisid + '"  style="position:absolute; left:' + random_x + 'px; top:' + random_y + 'px; z-index:' + random_y.toFixed(0) +";";
+    if (Math.random()>0.5) {
+        var scaleX = "-webkit-transform:scaleX(-1); transform:scaleX(-1);";
+        html+= scaleX;
+    }
+    html+= '"/>';
+    springBox.append(html);
+
+    /* Do not remove man in spring */
+    /* 
+    var dom = $(".man_" + thisid);
+    setTimeout(function() {
+            dom.css({opacity: 1}).transition({opacity: 0},400,function(){
+                dom.remove(); //$(".man").remove(dom);
+                console.log(thisid + "removed");
+        });
+    }, randomTime);
+     */
+    manid++;
+}
+
+function reset(){
+    manid = 0;
+    score = 0;
+    time = 16;
+    $(".ico").unbind();
+    $(".man").remove();
+}
+
+function gamestart(){
+    reset();
+    $(".startBtn").unbind();
+    $("#p1").css({x: '0px'}).transition({x: '-640px'},800,"cubic-bezier(.83,-0.26,.28,1.28)",function(){
+        $("#p2").fadeIn();
+    });
+
+    //start
+    icoAct();
+
+    //gametime
+    setTimeout(function () {
+        gameover();
+    }, gameTime);
+
+    startTimer();
+}
+
+function startTimer() {
+    var timeDom = $(".time");
+    t = setInterval(function() {
+        time -= 0.1;
+        if(time <= 0){
+            timeDom.text("0");
+            clearInterval(t);
+            return;
+        }
+        timeDom.text(time.toFixed(0));
+    }, 100);
+}
+
+function gameover() {
+
+    $(".score").text(score);
+    document.title = "土豪我射了" + score + "个嫦娥姐姐，玩“全民射嫦娥”赢中秋“约”会！";
+
+        /* 进入前10 */
+        $(".popup2").show();
+        $(".popup2_2").hide();
+        $(".cover").hide();
+
+    $("#p2").fadeOut();
+    $("#wrap_2").fadeIn();
+    $(".startBtn").unbind().bind("click",function(){
+        gamestart();
+    });
+
+}
+
+function onceAgain() {
+    $('#wrap_2').fadeOut(200);
+    $("#p2").fadeOut(200);
+    $("#p1").css({x: '-640px'}).transition({x: '0px'},800,"cubic-bezier(.83,-0.26,.28,1.28)",function(){
+        $(".cover").hide();
+    });
+}
+
+function getTop10( callback ) {
+    var top10List = $(".top10List");
+    var html = "";
+
+    $.JSONP('http://act.city.sina.com.cn/interface/activity/json_get_user_works.php',{act_id:12535,pcount:9999},function(json){
+        for(var i=0; i<json.count; i++){
+            var phone = json.data[i].form_data.custom_1.value;
+            phone = phone.substr(0,3) + "****" + phone.substr(7,4);
+            var score = parseInt(json.data[i].form_data.custom_2.value);
+            data_Top10[i] = [phone, score];
+        }
+
+        var len = data_Top10.length; 
+        var tmp = [];
+        for(var i = 0; i<len; i++){
+            for(var j=len-1; j>i; j--){
+                if(data_Top10[j][1] > data_Top10[j-1][1]){
+                    tmp = data_Top10[j-1];
+                    data_Top10[j-1] = data_Top10[j];
+                    data_Top10[j] = tmp;
+                }
+            }
+        }
+
+        for (var i = 0; i < 10; i++) {
+            if (data_Top10[i]==null | data_Top10[i] == undefined) {
+                continue;
+            }
+            var no = i + 1;
+            no = (no<=9) ? ("0" + no) : no;
+            html += '<li><span class="no">'+ no +'</span><span class="u_phone">'+ data_Top10[i][0] +'</span><span class="u_score">'+ data_Top10[i][1] +'分</span></li>';
+        }
+
+        top10List.html(html);
+        if(typeof(callback) == 'function'){
+            callback.call();
+        }
+    });
+
+}
+
+$(".startBtn").bind("click", function () {
+    gamestart();
+});
+getTop10();
+</script>
+
+<script type="text/javascript">
+$(".submitBtn").unbind().bind("click",function(){
+    /* 检查电话号码 */
+    var tel = $(".tel").val();
+    /* 是否填写了电话号码 */
+    if (tel == "" | tel == undefined ) {
+        var isDirectGetTop10 = confirm("留空的话没法参加排名了，确定不写么？");
+        if(!isDirectGetTop10){
+            return;
+        }
+        getTop10Over();
+    }
+    /* 检测手机号合法 */
+    if(!isDirectGetTop10){
+        var partten = /^1[3,4,5,8]\d{9}$/;
+        if(!partten.test(tel)){alert("请填写正确的手机号！"); return false;}
+        /* 上传并得到排名 */
+        $("#wrap_3").show();//正在提交...
+
+        //提交
+        try {
+            $.JSONP('http://act.city.sina.com.cn/interface/activity/json_add_signup.php',{
+                act_id:12535,
+                name:name,
+                custom_1:tel,
+                custom_2:score
+            },function(bm){
+                if(bm.error==0){
+                    /* 获取前10名 */
+                    getTop10(function() {
+                        getTop10Over();
+                    });
+                }else{
+                    alert(bm.errmsg);
+                }
+            }); 
+        } catch (e) {
+            alert("网络太不好?再试一次吧");
+            $("#wrap_3").hide();
+        }
+
+    }
+
+});
+function getTop10Over() {
+    $("#wrap_3").hide();//正在提交...
+    $(".cover").show();
+    $(".weixinCover").fadeIn(200,function(){
+        $(".weixinCover").click(function(){
+             $(this).unbind("click").fadeOut();
+        });
+    });
+}
+</script>
+
+</html>
+<!--1534-6-490:2015-08-28 16:55:48-->
