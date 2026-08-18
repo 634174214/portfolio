@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>一起来捉“粽”</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script charset="utf-8" src="js/pace.js"></script>
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <link rel="icon" href="imgs/share.jpg">
+    <script type="text/javascript">
+        window.alert('活动已结束！')
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href.split('?')[0],
+            "tTitle": '一起来捉“粽”',
+            "tContent": "谁的手速比朕快，赐粽300只！"
+        };
+        var imagesPath = 'imgs/';
+        var bgMusic = null;
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script>
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+            window.shareData.tTitle = '【测试】' + window.shareData.tTitle;
+            window.shareData.tContent = '【测试】' + window.shareData.tContent;
+        }
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #79ddb2;
+        }
+
+        .audioCon {
+            position: fixed;
+            width: 5rem;
+            height: 5rem;
+            -webkit-background-size: cover;
+            background-size: cover;
+            right: .25rem;
+            top: .25rem;
+            z-index: 99999;
+            -webkit-animation: none;
+            background-image: url(imgs/music_pause.png)
+        }
+
+        .audioCon.playingZ {
+            background-image: url(imgs/music.png);
+            -webkit-animation: audio 2s linear infinite
+        }
+
+        @-webkit-keyframes audio {
+            0% {
+                -webkit-transform: rotate3d(0, 0, 1, -360deg);
+                transform: rotate3d(0, 0, 1, -360deg)
+            }
+            50% {
+                -webkit-transform: rotate3d(0, 0, 1, -180deg);
+                transform: rotate3d(0, 0, 1, -180deg)
+            }
+            100% {
+                -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                transform: rotate3d(0, 0, 1, 0deg)
+            }
+        }
+
+        .audioCon .play-pauseZ {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+
+        .audioCon .scrubberZ,
+        .audioCon .timeZ {
+            display: none
+        }
+    </style>
+    <script>
+        (function() {
+            // var wr = window.innerWidth / window.innerHeight;
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            // var wr = bcr.width / bcr.height;
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr)
+            domEle.style.height = hwr * _width + "px";
+            console.log(hwr * _width + "px")
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function() {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            // window.addEventListener("pageshow", function(b) {
+            //     b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+            // }, false);
+            resize();
+        })();
+    </script>
+
+    <!--获取链接上的微信token start-->
+    <script type="text/javascript">
+        window.nickname = '';
+        window.headimg = 'imgs/share.jpg';
+        
+    </script>
+    <!--获取链接上的微信token end-->
+</head>
+
+<body>
+
+    <div class="preload hide">
+        <img src="imgs/btn-bg.png" alt="">
+        <img src="imgs/btn-act.png" alt="">
+    </div>
+
+    <div class="layer-msg">
+        <p></p>
+    </div>
+
+    <div class="toast abs full" id="toast">
+        <div class="toast-box abs">
+            <p class="toast-msg"></p>
+            <p class="confirm">确定</p>
+        </div>
+    </div>
+
+    <div class="load-page abs full" id="loadPage"></div>
+
+    <!-- 首页s -->
+    <div class="home-page abs full" id="homePage">
+        <img class="abs logo" src="imgs/logo.png" alt="">
+        <img class="abs theme" src="imgs/theme.png" alt="">
+
+        <a href="javascript:;" class="start-btn abs btn" id="startBtn">点击开抓</a>
+        <a href="javascript:;" class="rule-btn abs btn" id="ruleBtn">游戏锦囊</a>
+
+        <img class="abs mount-right" src="imgs/mount-right.png" alt="">
+        <img class="abs mount-left" src="imgs/mount-left.png" alt="">
+        <img class="zongzi abs" src="imgs/home-zongzi.png" alt="">
+        <img class="dragon abs" src="imgs/dragon.png" alt="">
+        <img class="abs gress" src="imgs/gress.png" alt="">
+    </div>
+    <!-- 首页e -->
+
+    <!-- 规则s -->
+    <div class="rule-page abs full" id="rulePage">
+        <div class="rule-box abs">
+            <div class="txt-wrap">
+                <p class="title">【活动介绍】</p>
+                <p class="txt">“一起来捉‘粽’”H5小游戏是2019年信网端午节线上互动活动，旨在通过轻松、有趣的互动，号召广大网友关注传统文化，热爱传统节日。</p>
+            </div>
+            <div class="txt-wrap">
+                <p class="title">【规则说明】</p>
+                <p class="txt">1.活动时间为2019年6月3日-2019年6月9日；</p>
+                <p class="txt">2.活动期间用户可反复体验小游戏，以获得最佳得分；</p>
+                <p class="txt">3.游戏开始后倒计时30秒，将粽子捉入龙舟内的数量越多，得分越高；</p>
+                <p class="txt">4.其中每捉住一个咸味粽子可得20分，每捉住一个甜味粽子可得10分；</p>
+                <p class="txt">5.游戏结束后可产生本局成绩，可长按保存图片，分享好友进行祝福和PK；</p>
+                <!-- <p class="txt">6.本活动最终解释权归青岛信网所有。</p> -->
+            </div>
+            <img class="close-btn abs" id="closeBtn" src="imgs/close-btn.png" alt="">
+        </div>
+    </div>
+    <!-- 规则e -->
+
+    <!-- 游戏场景s -->
+    <div class="abs full game" id="game">
+        <img src="" class="head abs" alt="">
+        <p class="abs nick"></p>
+        <div class="abs full shadow" id="shadow">
+            <img class="abs tips" src="imgs/tips.png" alt="">
+        </div>
+    </div>
+    <!-- 游戏场景e -->
+
+    <!-- forguo S-->
+    <div class="abs full save-img" id="saveImg">
+        <div class="abs content">
+            <img class="res-img" style="display: block" id="resImg">
+            <div style="display: none">
+                <canvas width="650" height="980" id="resultCanvas"></canvas>
+            </div>
+            <div class="btns">
+                <a href="javascript:;" class="again-btn btn" id="againBtn">再玩一次</a>
+                <a href="javascript:;" class="share-btn btn">我要分享</a>
+            </div>
+            <div class="save-tip">长按可保存图片</div>
+        </div>
+    </div>
+
+    <div class="abs full share" id="sharePage">
+        <img class="abs share-tip" src="imgs/share-tip.png" alt="">
+    </div>
+
+    <!-- forguo E-->
+
+    <div class="audioCon">
+        <audio src="bg.mp3" id="audio" autoplay loop="loop"></audio>
+        <div class="abs play-pauseZ">
+            <p class="playZ"></p>
+            <p class="pauseZ"></p>
+            <p class="loadingZ"></p>
+        </div>
+        <div class="scrubberZ">
+            <div class="progressZ"></div>
+            <div class="loadedZ"></div>
+        </div>
+        <div class="timeZ">
+            <em class="playedZ"></em>/
+            <strong class="durationZ"></strong>
+        </div>
+    </div>
+
+    <script charset="utf-8" src="js/phaser.min.js" ></script>
+    <script charset="utf-8" src="js/TweenMax.min.js"></script>
+    <script charset="utf-8" src="js/data.js"></script>
+    <script charset="utf-8" src="js/run.min.js"></script>
+    <script type="text/javascript" src="js/audio.min.js"></script>
+
+    <script charset="UTF-8">
+        // 解决输入框失去监听，Iphone版本ios12以上，页面上浮后无法回归正常bug
+        $('input').on('blur',function (){
+            if ((/\(i[^;]+;( U;)? CPU.+Mac OS X/).test(navigator.userAgent)) {
+                console.log('change')
+                // alert($('.container .content-box').scrollHeight);
+                // window.document.body.scrollTop = window.document.body.scrollHeight;
+                window.scrollTo(0,window.document.body.scrollTop)
+            }
+        });
+
+        $('#againBtn').on('click',function (){
+            var myDate = new Date();
+            var mytime=myDate.getTime(); 
+            window.location.replace(window.location.href + '?T=' + mytime)
+        })
+
+
+        //音乐播放代码
+        audiojs.events.ready(function () {
+                var as = audiojs.create(document.getElementsByTagName("audio")[0], {
+                    css: false,
+                    createPlayer: {
+                        markup: false,
+                        playPauseClass: 'play-pauseZ',
+                        scrubberClass: 'scrubberZ',
+                        progressClass: 'progressZ',
+                        loaderClass: 'loadedZ',
+                        timeClass: 'timeZ',
+                        durationClass: 'durationZ',
+                        playedClass: 'playedZ',
+                        errorMessageClass: 'error-messageZ',
+                        playingClass: 'playingZ'
+                    }
+                });
+            });
+
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.invoke('getNetworkType', {},
+                    function (e) {
+                        document.getElementsByTagName("audio")[0].play();
+                    });
+            }, false);
+
+
+
+
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        if (typeof WeixinJSBridge !== 'undefined') {
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "640",
+                    "img_height": "640",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        } else {
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                    WeixinJSBridge.invoke('sendAppMessage', {
+                        "img_url": window.shareData.imgUrl,
+                        "link": window.shareData.timeLineLink,
+                        "desc": window.shareData.tContent,
+                        "title": window.shareData.tTitle
+                    }, onShareComplete);
+                });
+                WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                    WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": window.shareData.imgUrl,
+                        "img_width": "640",
+                        "img_height": "640",
+                        "link": window.shareData.timeLineLink,
+                        "desc": window.shareData.tContent,
+                        "title": window.shareData.tTitle
+                    }, onShareComplete);
+                });
+            }, false);
+        }
+    </script>
+</body>
+
+</html>
