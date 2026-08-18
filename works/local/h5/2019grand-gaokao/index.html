@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>决胜高考，点亮梦想</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="css/index.css">
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share5.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share5.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share5.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": '决胜高考，点亮梦想',
+            "tContent": "快来定制专属于你的大学录取通知书"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script>
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+            window.shareData.tTitle = '【测试】' + window.shareData.tTitle;
+            window.shareData.tContent = '【测试】' + window.shareData.tContent;
+        }
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            font-family: 'microsoft yahei', 'sans-serif', Sans-Serif;
+            overflow: hidden;
+            font-size: 0px;
+        }
+        .music {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            -webkit-background-size: cover;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            left: 12px;
+            top: 12px;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            background-image:  url(imgs/music_pause.png)
+        }
+        .music_start {
+            background-image: url(imgs/music.png);
+        }
+        .xuanzhuan {
+            animation: xuanzhuan 3s linear infinite;
+        }
+        @keyframes xuanzhuan {
+            0% {
+                -webkit-transform:rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -webkit-transform:rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+        .bg-music {
+            display: none;
+        }
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            /* -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; */
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            z-index: 2000;
+            position: fixed;
+            margin: auto;
+            top: 12px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .pace .pace-progress {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            display: block;
+            position: absolute;
+            right: 100%;
+            margin-right: 0;
+            width: 100%;
+            top: 0;
+            height: 14px;
+            font-size: 20px;
+            background: #fff;
+            color: #fff;
+            line-height: 60px;
+            font-weight: bold;
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+            -webkit-box-shadow: 120px 0 #000, 240px 0 #000;
+            -ms-box-shadow: 120px 0 #000, 240px 0 #000;
+            box-shadow: 120px 0 #000, 240px 0 #000;
+        }
+        /* .pace .pace-progress:after {
+            content: attr(data-progress-text);
+            display: inline-block;
+            position: absolute;
+            width: 45px;
+            text-align: right;
+            right: 0;
+            padding-right: 16px;
+            top: 4px;
+        } */
+        .pace_jia{
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            /* -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; */
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            z-index: 1999;
+            position: fixed;
+            margin: auto;
+            top: 12px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .pace_jia .pace-progress {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+            display: block;
+            position: absolute;
+            right: 100%;
+            margin-right: 0;
+            width: 100%;
+            top: 0;
+            height: 14px;
+            font-size: 20px;
+            background: #fff;
+            color: #fff;
+            line-height: 60px;
+            font-weight: bold;
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+            -webkit-box-shadow: 120px 0 #000, 240px 0 #000;
+            -ms-box-shadow: 120px 0 #000, 240px 0 #000;
+            box-shadow: 120px 0 #000, 240px 0 #000;
+        }
+
+        .pace .pace-activity {
+            position: absolute;
+            width: 100%;
+            height: 14px;
+            z-index: 2001;
+            box-shadow: inset 0 0 0 2px #fff;
+            /* border-radius: 10px; */
+        }
+        .pace.pace-inactive {
+            display: none;
+        }
+    </style>
+    <script>
+        var resize = (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            return resize;
+        })();
+    </script>
+     <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}' src="js/pace.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <img src="imgs/long1_01.jpg" alt="" style="display: none">
+    <img src="imgs/long1_02.jpg" alt="" style="display: none">
+    <img src="imgs/long1_03.jpg" alt="" style="display: none">
+    <img src="imgs/long1_04_1.jpg" alt="" style="display: none">
+    <img src="imgs/long1_05.jpg" alt="" style="display: none">
+    <img src="imgs/long1_06.jpg" alt="" style="display: none">
+    <img src="imgs/long1_07_2.jpg" alt="" style="display: none">
+    <img src="imgs/long1_08.jpg" alt="" style="display: none">
+    <img src="imgs/long1_09.jpg" alt="" style="display: none">
+    <img src="imgs/long1_10.jpg" alt="" style="display: none">
+    <img src="imgs/long2_01.jpg" alt="" style="display: none">
+    <img src="imgs/long2_02.jpg" alt="" style="display: none">
+    <img src="imgs/long2_03.jpg" alt="" style="display: none">
+    <img src="imgs/long2_04_1.jpg" alt="" style="display: none">
+    <img src="imgs/long2_05.jpg" alt="" style="display: none">
+    <img src="imgs/long2_06_1.jpg" alt="" style="display: none">
+    <img src="imgs/long2_07.jpg" alt="" style="display: none">
+    <img src="imgs/long2_08.jpg" alt="" style="display: none">
+    <img src="imgs/long2_09.jpg" alt="" style="display: none">
+    <img src="imgs/long2_10.jpg" alt="" style="display: none">
+    <img src="imgs/personsprite2.png" alt="" style="display: none">
+    <img src="imgs/treeflower.png" alt="" style="display: none">
+    <img src="imgs/goend.png" alt="" style="display: none">
+    <img src="imgs/airplane.png" alt="" style="display: none">
+    <img src="imgs/water.png" alt="" style="display: none">
+    <img src="imgs/treeone.png" alt="" style="display: none">
+    <div class="music" id="music"></div>
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop">
+        <source src="music/music.mp3"/>
+    </audio>
+    <div class="pace_jia">
+        <div class="pace-progress"></div>
+    </div>
+    <div style="font-family:fancyFont; position:absolute; left:-1000px; visibility:hidden;">高考</div>
+    <div class="gamecontainer" id="gamecontainer" style="opacity: 0"></div>
+    <div class="container" style="opacity: 0">
+        <img src="imgs/first_text3.png" alt="" class="abs first_text">
+        <img src="imgs/tree_hui.png" alt="" class="abs tree_hui"> 
+        <img src="imgs/cloud_01.png" alt="" class="abs cloud1">
+        <div class="grad_con">
+            <img src="imgs/house_open_1.png" alt="" class="abs house_open">
+            <img src="imgs/house_blue_1.png" alt="" class="abs house_blue">
+            <img src="imgs/house_red.png" alt="" class="abs house_red">
+            <img src="imgs/tree_01.png" alt="" class="abs tree1 tree">
+            <img src="imgs/tree_02.png" alt="" class="abs tree2 tree">
+            <img src="imgs/tree_03.png" alt="" class="abs tree3 tree">
+            <img src="imgs/tree_04.png" alt="" class="abs tree4 tree">
+            <img src="imgs/tree_05.png" alt="" class="abs tree5 tree">
+            <img src="imgs/cloud_05.png" alt="" class="abs cloud2">
+            <img src="imgs/cloud_06.png" alt="" class="abs cloud3">
+            <img src="imgs/firstperson2.png" alt="" class="abs person">
+            <img src="imgs/pe.png" alt="" class="grade" style="opacity: 1">
+            <img src="imgs/firstbottom.png" alt="" class="abs firstbottom">
+            <div class="abs btn_go">点击前行</div>
+            <div class="circle abs circle_btn">
+                <img src="imgs/circle_out.png" alt="" class="abs circle_out">
+                <img src="imgs/circle_mid.png" alt="" class="abs circle_mid">
+                <img src="imgs/circle_in.png" alt="" class="circle_in">
+            </div>
+        </div>
+    </div>
+    <div class="endpage" style="opacity: 0;">
+        <img src="imgs/endlogo2.png" alt="" class="endlogo">
+        <div class="abs endtext_con">
+            <img src="imgs/endtext.png" alt="" class="endtext">
+            <img src="imgs/getmyimgtext.png" alt="" class="inputimg">
+            <img src="imgs/endhui.png" alt="" class="abs endhui">
+            <img src="imgs/cloud_05.png" alt="" class="abs cloud4">
+        </div>
+        <div class="grade_con">
+            <img src="imgs/endhouseright.png" alt="" class="abs endhouseright">
+            <img src="imgs/endhouse_left.png" alt="" class="abs endhouseleft">
+            <img src="imgs/endhousered.png" alt="" class="abs endhousered">
+            <img src="imgs/endgrade2.png" alt="" class="grade">
+            <img src="imgs/endperson2.png" alt="" class="abs endperson">
+            <img src="imgs/endcover.png" alt="" class="abs endcover">
+            <img src="imgs/cloud_05.png" alt="" class="abs cloud5">
+            <img src="imgs/cloud_05.png" alt="" class="abs cloud6">
+            <div class="getmygrade">定制我的录取通知书</div>
+        </div>
+        <div class="input_con" style="display: none">
+            <div class="nameInput">
+                <input type="text" name="" id="" placeholder="点击输入姓名" class="">
+            </div>
+            <div class="classInput">
+                <input type="text" name="" id="" placeholder="点击输入梦想专业" class="">
+            </div>
+            <div class="schoolInput">
+                <input type="text" name="" id="" placeholder="点击输入梦想大学" class="">                
+            </div>
+            <div class="getmyImg">生成我的录取通知书</div>
+        </div>
+        <img src="" alt="" class="canvasinimg" style="display: none;opacity: 1;">
+    </div>
+    <div class="loading-box-con">
+        <div class="loading-box">
+            <div class="ball-spin-fade-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="text">生成中</p>
+        </div>
+    </div>
+    <script charset="utf-8" src="js/phaser.min.js"></script>
+    <script charset="utf-8" src="js/TweenMax.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script charset="utf-8" src="js/data.js"></script>
+    <script charset="utf-8" src="js/index.min.js"></script>
+    <script>
+        $('.endpage').css('min-height',window.innerHeight+'px')
+        $('.endpage').on('blur','input',function(){
+            window.scrollTo(0,window.document.body.scrollTop)
+        })
+        //音乐播放代码
+        var musicFlag = false;
+        var playeraudio = null;
+        $("#music").click(function () {
+            playMusic();
+        });
+        $(document).ready(function () {
+            playMusic();
+        });
+        //音乐播放
+        function playMusic() {
+            playeraudio = $("#bgMusic")[0];
+            if (musicFlag) {
+                $("#music").removeClass("xuanzhuan");
+                $("#music").removeClass("music_start");
+                musicFlag = false;
+                playeraudio.pause();
+            } else {
+                $("#music").addClass("xuanzhuan");
+                $("#music").addClass("music_start");
+                musicFlag = true;
+                playeraudio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    playeraudio.play();
+                }, false);
+            }
+        }
+    </script>
+    <script charset="UTF-8">
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "320",
+                    "img_height": "320",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        }, false);
+    </script>
+</body>
+
+</html>
