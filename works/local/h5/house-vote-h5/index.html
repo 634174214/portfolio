@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>星级售楼处评选</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/pace.css"> -->
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+
+    <script charset="utf-8" src="js/pace.js"></script>
+
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": '青岛星级售楼处评选',
+            "tContent": "小编们实地探访了青岛10多个热门楼盘的售楼处，留下了它们最美的剪影，和探访的真实体验，给你喜欢的售楼处投上一票吧！"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script>
+
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+        }
+
+        var activeId = testFlag ? '5164' : '5162';
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        .audioCon {
+            position: fixed;
+            width: 5rem;
+            height: 5rem;
+            -webkit-background-size: cover;
+            background-size: cover;
+            right: .25rem;
+            top: .25rem;
+            z-index: 99999;
+            -webkit-animation: none;
+            background-image: url(imgs/music_pause.png)
+        }
+
+        .audioCon.playingZ {
+            background-image: url(imgs/music.png);
+            -webkit-animation: audio 2s linear infinite
+        }
+
+        @-webkit-keyframes audio {
+            0% {
+                -webkit-transform: rotate3d(0, 0, 1, -360deg);
+                transform: rotate3d(0, 0, 1, -360deg)
+            }
+
+            50% {
+                -webkit-transform: rotate3d(0, 0, 1, -180deg);
+                transform: rotate3d(0, 0, 1, -180deg)
+            }
+
+            100% {
+                -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                transform: rotate3d(0, 0, 1, 0deg)
+            }
+        }
+
+        .audioCon .play-pauseZ {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+
+        .audioCon .scrubberZ,
+        .audioCon .timeZ {
+            display: none
+        }
+    </style>
+    <script>
+        (function () {
+            // var wr = window.innerWidth / window.innerHeight;
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            // var wr = bcr.width / bcr.height;
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1206) {
+                _width = Math.floor(wr * 1206);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr)
+            domEle.style.height = hwr * _width + "px";
+            console.log(hwr * _width + "px")
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            // window.addEventListener("pageshow", function(b) {
+            //     b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+            // }, false);
+            resize();
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="load-page abs" id="loadPage"></div>
+    <div class="main-box" id="mainBox">
+        <div class="home-page" id="homePage">
+            <img class="logo abs" src="imgs/logo2.png" alt="">
+            <img class="house-name abs" src="imgs/hose-name.png" alt="">
+            <img class="theme abs" src="imgs/theme.png" alt="">
+            <p class="txt abs">
+                售楼中心不仅仅是一个卖房子的地方，更是一个生活服务的平台。开发商们总能各显神通，在售楼处拼外观、拼服务、拼科技……为的就是希望能更好的展现楼盘品质、开发商的居住理念，给购房者一个舒适的看房初体验。</p>
+            <p class="txt abs" style="margin-top: 256px">小编们实地探访了青岛10多个热门楼盘的售楼处，留下了它们最美的剪影，和探访的真实体验，一起来品一品吧……</p>
+            <div class="start-btn abs">进入售楼处</div>
+        </div>
+        <div class="content-page" id="contentPage">
+            <div class="layer-box abs" id="layerBox">投票成功!</div>
+            <div class="swiper-container">
+                <img class="top-tip abs" src="imgs/top-tip.png" alt="">
+                <p class="top-note abs">风里雨里！售楼处小哥哥为你遮风挡雨
+                    <span class="name abs">——融创·维多利亚湾</span>
+                </p>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active">
+                        <img class="slide-img" src="imgs/slide-img1.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">4</p>
+                            <div class="vote-btn-wrap abs" vote-id="126158">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/fZRdlZ10OfjgopvpVR5--A">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next">
+                        <img class="slide-img" src="imgs/slide-img2.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">9</p>
+                            <div class="vote-btn-wrap abs" vote-id="126159">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/8LMySmnTvdxFHmXA9obxQA">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img3.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">7</p>
+                            <div class="vote-btn-wrap abs" vote-id="126160">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/1ZgTZOmheOThzmee-ma_wg">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img4.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">5</p>
+                            <div class="vote-btn-wrap abs" vote-id="126161">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/XVWTc6F5Bt4_xg4mPC6Vfw">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img5.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">4</p>
+                            <div class="vote-btn-wrap abs" vote-id="126162">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/TKDZg5G7BZVbPRLEI7TMxg">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img6.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">1</p>
+                            <div class="vote-btn-wrap abs" vote-id="126163">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/2hNlwmo5g9hGpsZAKFi2vQ">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img7.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">0</p>
+                            <div class="vote-btn-wrap abs" vote-id="126164">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/fN-qWH9MgMEe1-IMIkxlxA">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img8.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">11</p>
+                            <div class="vote-btn-wrap abs" vote-id="126165">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/wBOin0hmf3t7xN5sMsCkrg">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img9.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">14</p>
+                            <div class="vote-btn-wrap abs" vote-id="126166">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/0AmzQJ-b1uqvwp7ycZyLZg">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img10.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">0</p>
+                            <div class="vote-btn-wrap abs" vote-id="126167">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/t3DcpoEe6dRZkZb-8xDAFw">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img11.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">9</p>
+                            <div class="vote-btn-wrap abs" vote-id="126168">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/y1wJG2Ipy_k30K1ohpMKlA">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img12.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">20</p>
+                            <div class="vote-btn-wrap abs" vote-id="126169">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/d_XlPUKioSB4G3D8aLzpVg">了解详情&gt;</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="imgs/slide-img13.jpg" alt="">
+                        <div class="vote-wrap abs">
+                            <img src="imgs/icon-vote-num.png" alt="">
+                            <p class="vote-num abs">8</p>
+                            <div class="vote-btn-wrap abs" vote-id="126170">
+                                <img class="vote-icon" src="imgs/icon-vote.png" alt="">
+                                <p class="vote abs">投票</p>
+                            </div>
+                        </div>
+                        <a class="more abs" href="https://mp.weixin.qq.com/s/z7E-6SC-lRpWNPvk25yNBw">了解详情&gt;</a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="desc-wrap abs">
+                    <p class="desc abs">小编、实地考察即将开盘的金茂府售楼处，体验了一把“风里雨里为你遮风挡雨”的感动。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script charset="utf-8" src="js/swiper-3.4.2.min.js"></script>
+    <script charset="utf-8" src="js/run.js"></script>
+    <script type="text/javascript" src="js/audio.min.js"></script>
+    <script charset="utf-8" type="text/javascript">
+        var voteData = [];
+        var data = [{
+            'id': 1,
+            'note': '风里雨里！售楼处小哥哥为你遮风挡雨',
+            'noteTip': '—— 融创·维多利亚湾',
+            'desc': '到访当天恰逢阴雨，案场工作人员贴心接送、全程陪同看房，细致讲解社区规划与海景视野，服务温度让人印象深刻。'
+        }, {
+            'id': 2,
+            'note': '这家售楼处藏着人居新范本',
+            'noteTip': '——保利天珺',
+            'desc': '保利天郡位于市北新都心，临保利天汇和地铁3号线长沙路站，入住后出行非常方便。项目依靠新都心商圈，日常购物便捷。'
+        }, {
+            'id': 3,
+            'note': '初见惊艳，再见会更欢心吗？',
+            'noteTip': '——中欧国际城',
+            'desc': '高新区城市运营大盘，售楼处现代感十足，示范区景观层次丰富。大盘配套兑现力是最大看点，刚需与改善群体都能在这里找到合适房源。'
+        }, {
+            'id': 4,
+            'note': '带了100多位网友闯进这家售楼处，8人竟然当场验资了……',
+            'noteTip': '——海岸·万科城',
+            'desc': '项目自带网红商街与城市公园，社区氛围年轻，户型兼顾刚需家庭，万科物业加持，是西海岸关注度很高的活力住区。'
+        }, {
+            'id': 5,
+            'note': '可能会被关小黑屋的售楼处评星，这一家我想给七星！',
+            'noteTip': '——海信·灵山湾',
+            'desc': '这个楼盘的一丝“用心”。专业、周到，是我们为这个楼盘打上的标签。灵山湾核心区位，山海资源兼备，本土房企品质值得细细品鉴。'
+        }, {
+            'id': 6,
+            'note': '走进崂山这家新中式售楼处，读懂主城改善追求',
+            'noteTip': '——华新园·东宸府',
+            'desc': '扎根崂山浮山后成熟片区，周边名校环绕，交通路网四通八达。售楼处东方美学氛围浓厚，满足主城家庭一步到位的改善需求。'
+        }, {
+            'id': 7,
+            'note': '“斥重金”打造会所！这个售楼处的茶几、沙发我要打包带走！',
+            'noteTip': '——佳源·双子星城',
+            'desc': '作为李沧TOD综合体，紧邻地铁线路，售楼处会所装修质感拉满。集住宅、商业、公园于一体，适合看重通勤便利、向往丰富社区生活的年轻人。'
+        }, {
+            'id': 8,
+            'note': '“大隐隐于市”，',
+            'noteTip': '——大云谷·崂山金茂府',
+            'desc': '近几年，高端改善型楼盘愈发偏爱于中式的建筑，金茂府经典五恒科技系统搭配山水庭院示范区，崂山主城改善标杆名副其实。'
+        }, {
+            'id': 9,
+            'note': '这个恢宏大气的售楼处惊艳了整个西海岸！',
+            'noteTip': '——绿地·凤栖澜玥',
+            'desc': '位于西海岸新区薛家岛板块‌，‌水上美学示范区氛围感拉满，大面宽海景户型是核心亮点，高端精装社区，静享滨海宜居生活。'
+        }, {
+            'id': 10,
+            'note': '母婴室、婴儿车、儿童游乐场……这简直是带娃购房者的梦想之地！',
+            'noteTip': '——保利·红岛湾',
+            'desc': '低密社区尺度开阔，周边生态资源优越，适合追求安静宜居、全家康养的改善家庭。'
+        }, {
+            'id': 11,
+            'note': '这家售楼处到底有什么魔力，竟然让买房的阿姨们“三顾茅庐”',
+            'noteTip': '——保利和府',
+            'desc': '去参观的那天早晨，天空飘着江南细细密密的小雨，驱车到达售楼处后，天也开始放晴，送来温暖和阳光，一如保利和府带给笔者的切身感受。'
+        }, {
+            'id': 12,
+            'note': '“于室内听风观雨，在闲庭沐浴阳光”，这个售楼处从江南走过',
+            'noteTip': '——天泰·桃花源',
+            'desc': '为了给客户打造舒适、尊贵的体验感，天泰·桃花源的实景示范区也着实诚意满满，令人眼前一亮！粉墙黛瓦、小桥流水，复刻江南园林意境。'
+        }, {
+            'id': 13,
+            'note': '寻山向海，邂逅蓝谷健康人居，这座售楼处藏着自然生活答案',
+            'noteTip': '——鲁商·健康城',
+            'desc': '建筑处于安静和躁动之间，需要去思索韵律和平衡。鲁商·健康城是一座山海间的理想之城，从身体、心灵、精神三大层面，守护业主健康。'
+        }];
+
+    </script>
+    <script charset="UTF-8">
+
+        // audiojs.events.ready(function () {
+        //      var as = audiojs.create(document.getElementsByTagName("audio")[0], {
+        //          css: false,
+        //          createPlayer: {
+        //              markup: false,
+        //              playPauseClass: 'play-pauseZ',
+        //              scrubberClass: 'scrubberZ',
+        //              progressClass: 'progressZ',
+        //              loaderClass: 'loadedZ',
+        //              timeClass: 'timeZ',
+        //              durationClass: 'durationZ',
+        //              playedClass: 'playedZ',
+        //              errorMessageClass: 'error-messageZ',
+        //              playingClass: 'playingZ'
+        //          }
+        //      });
+        //  });
+
+        //  document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        //      WeixinJSBridge.invoke('getNetworkType', {},
+        //          function (e) {
+        //              document.getElementsByTagName("audio")[0].play();
+        //          });
+        //  }, false);
+
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "320",
+                    "img_height": "320",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        }, false);
+    </script>
+</body>
+
+</html>
