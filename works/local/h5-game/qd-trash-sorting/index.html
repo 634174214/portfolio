@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="垃圾分类从我做起，资源再用全民行动" />
+    <meta name="keywords" content="垃圾分类,青岛,青岛市文明办" />
+    <title>垃圾分类 青岛在行动</title>
+    <style>
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        (function() {
+            var wr = window.innerWidth / window.innerHeight;
+            var _width;
+            if(wr > 750 / 1208) {
+                _width = Math.floor(wr * 1208);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if(/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if(version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if(/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+        })();
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="css/style2.min.css">
+
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share.jpg"><!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share.jpg" ><!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",/*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": "垃圾分类 青岛在行动 ",
+            "tContent": "垃圾分类从我做起，资源再用全民行动"
+        };
+
+        var imagesPath = 'imgs/';
+
+        var bgMusic = null;
+    </script>
+    <!--微信分享的相关内容 结束-->
+</head>
+<body>
+
+<div id="game" class="abs full game"></div>
+
+<div class="game-info abs full">
+    <img src="imgs/hands.png" class="hands abs">
+    <p class="info-txt abs">滑动垃圾进入对应垃圾桶</p>
+</div>
+
+<!-- 科普知识 开始-->
+<div class="abs full know-layer" id="know">
+    <div class="content">
+        <!-- 垃圾分类 s -->
+        <div class="sort-list">
+            <div class="item recoverable" id="recoverableItem"></div>
+            <div class="item kitchen" id="kitchenItem"></div>
+            <div class="item harmful" id="harmfulItem"></div>
+            <div class="item other" id="otherItem"></div>
+            <!-- 积分卡 s-->
+            <div class="card-btn item" id="knowBard"></div>
+            <!-- 积分卡 e-->
+        </div>
+        <!-- 垃圾分类 e -->
+
+        <!-- 垃圾列表s-->
+        <div class="garbage-box abs reused list-box" style="display: block;">
+            <div class="border-box">
+                <p class="title">可回收垃圾：适宜回收和资源利用的垃圾，包括纸类金属塑料玻璃织物等</p>
+                <div class="garbage-list fn-clear">
+
+                </div>
+            </div>
+            <span class="point abs"></span>
+        </div>
+        <!-- 垃圾列表e-->
+
+        <!-- 厨房列表s-->
+        <div class="garbage-box abs cook list-box">
+            <div class="border-box">
+                <p class="title">餐厨垃圾是指居民日常生活及食品加工饮食服务单位供餐等活动中产生的垃圾。包括丢弃，不用的菜叶剩菜剩饭果皮蛋壳茶渣骨头等。</p>
+                <div class="garbage-list fn-clear">
+
+                </div>
+            </div>
+            <span class="point abs"></span>
+        </div>
+        <!-- 厨房列表e-->
+
+        <!-- 有害s-->
+        <div class="garbage-box abs harm list-box">
+            <div class="border-box">
+                <p class="title">废旧灯管，废旧电池过期药品，其他等详见有害垃圾片。</p>
+                <div class="garbage-list fn-clear">
+
+                </div>
+            </div>
+            <span class="point abs"></span>
+        </div>
+        <!-- 有害列表e-->
+        <!-- 其它列表s-->
+        <div class="garbage-box abs others list-box">
+            <div class="border-box">
+                <p class="title">除可回收物餐厨垃圾和有害垃圾之外的其他垃圾。如废弃卫生纸一次性餐盒烟头陶瓷制品等。</p>
+                <div class="garbage-list fn-clear">
+
+                </div>
+            </div>
+            <span class="point abs"></span>
+        </div>
+        <!-- 其它列表e-->
+
+        <!-- 流程 s -->
+        <div class="schedule abs list-box">
+            <div class="border-box normal">
+                <p>用过的纸巾属于什么垃圾？</p>
+                ✅ 其他垃圾（不是可回收物！）
+                <p>旧书本、旧报纸属于什么垃圾？</p>
+                ✅ 可回收物（保持干燥，不要和湿垃圾混在一起）
+                <p>大棒骨属于什么垃圾？</p>
+                ✅ 其他垃圾（不是厨余垃圾！太硬了堆肥处理不了）
+                <p>剩菜剩饭、果皮果核属于什么垃圾？</p>
+                ✅ 厨余垃圾（投放前记得沥干水分）
+                <p>茶叶渣、咖啡渣属于什么垃圾？</p>
+                ✅ 厨余垃圾
+                <p>大棒骨属于什么垃圾？</p>
+                ✅ 其他垃圾（不是厨余垃圾！太硬了堆肥处理不了）
+                <p>剩菜剩饭、果皮果核属于什么垃圾？</p>
+                ✅ 厨余垃圾（投放前记得沥干水分）
+                <p>茶叶渣、咖啡渣属于什么垃圾？</p>
+                ✅ 厨余垃圾
+                <p>牛奶盒属于什么垃圾？</p>
+                ✅ 可回收物（洗净、压扁后再投放）
+                <p>外卖塑料餐盒属于什么垃圾？</p>
+                ✅ 可回收物（洗净后）／其他垃圾（未洗净）
+                <p>快递纸箱属于什么垃圾？</p>
+                ✅ 可回收物（拆开、压扁后投放，胶带要撕掉扔其他垃圾）
+                <p>烟蒂属于什么垃圾？</p>
+                ✅ 其他垃圾
+                <p>旧衣服、旧床单属于什么垃圾？</p>
+                ✅ 可回收物（干净完好的）／其他垃圾（脏污破损的）
+                <p>废电池、过期药品属于什么垃圾？</p>
+                ✅ 有害垃圾（轻拿轻放，避免破损泄漏）
+                <p>陶瓷碎片属于什么垃圾？</p>
+                ✅ 其他垃圾（不是可回收物！陶瓷无法回收再利用）
+                <p>湿纸巾属于什么垃圾？</p>
+                ✅ 其他垃圾（不是厨余垃圾！也不是可回收物！）
+                <p>一次性纸杯属于什么垃圾？</p>
+                ✅ 其他垃圾（内壁有塑料覆膜，无法回收）
+                <p>鸡蛋壳属于什么垃圾？</p>
+                ✅ 厨余垃圾（易腐，可以堆肥）
+                <p>旧手机属于什么垃圾？</p>
+                ✅ 可回收物（可以回收其中的贵金属，也可以二手流通）
+            </div>
+            <span class="point abs"></span>
+        </div>
+        <!-- 流程 e -->
+
+        <!-- 返回 s-->
+        <div class="back-btn abs" id="knowBack"></div>
+        <!-- 返回 e-->
+
+    </div>
+</div>
+<!-- 科普知识 结束-->
+
+
+<!-- 游戏结果 s-->
+<div class="abs full game-result" id="gameResult">
+    <div class="content abs">
+        <div class="score-box abs">
+            <!-- 小花-->
+            <div class="flowers">
+                <img src="imgs/flower.png" alt="" class="flower">
+                <img src="imgs/flower.png" alt="" class="flower">
+                <img src="imgs/flower.png" alt="" class="flower">
+            </div>
+            <!-- 分数-->
+            <div class="score-txt">
+                <p class="score">0分</p>
+                <p class="title">环保小能手</p>
+            </div>
+
+            <div class="fight abs percent">99%</div>
+            <img src="imgs/women.png" class="women abs">
+        </div>
+        <p class="info abs">垃圾分类从我做起，资源再用全民行动</p>
+        <span class="close-btn abs" id="closeBtn"></span>
+    </div>
+</div>
+<!-- 游戏结果 s-->
+
+<div id="loadingPage" class="abs full loading-page">
+    <div class="broom abs"></div>
+    <div class="abs loading-progress" id="loadingProgress">0%</div>
+</div>
+
+<audio src="mp3/music.mp3" id="audio" autoplay loop="loop" style="display: none"></audio>
+
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/audio.min.js"></script>
+<script charset="utf-8" src="js/phaser.min.js" ></script>
+<script charset="utf-8"  src="js/game_t.min.js" ></script>
+<!-- <script charset="utf-8"  src="js/game_t.js" ></script> -->
+<script type="text/javascript">
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.invoke('getNetworkType', {},
+            function(e) {
+                document.getElementsByTagName("audio")[0].play();
+            });
+    }, false);
+</script>
+
+<script charset="UTF-8">
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+</script>
+</body>
+</html>
