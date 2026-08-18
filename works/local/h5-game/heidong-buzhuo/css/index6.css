@@ -1,0 +1,393 @@
+@media screen and (min-height: 1400px) {
+  .biglogo_con {
+    top: 396px !important;
+  }
+}
+.contair {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+.contair .top_star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.contair .bottom_star {
+  display: block;
+  width: 100%;
+}
+.contair .bottom_star_con {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.contair .bottom_star_con > img {
+  width: 100%;
+}
+.contair .block_circle_con {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -239px;
+  margin-left: -246px;
+}
+.contair .block_circle_con .block_circle {
+  display: block;
+}
+.contair .block_circle_con .threetext {
+  position: absolute;
+  left: 151px;
+  top: 139px;
+  opacity: 1;
+}
+.contair .block_circle_con .twotext {
+  position: absolute;
+  left: 143px;
+  top: 138px;
+  opacity: 0;
+}
+.contair .block_circle_con .onetext {
+  position: absolute;
+  left: 210px;
+  top: 132px;
+  opacity: 0;
+}
+.contair .cloud_con {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.contair .cloud_con .cloud {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.contair .cloud_detail {
+  display: block;
+  position: absolute;
+  opacity: 0;
+}
+.contair .cloud_g_l_t,
+.contair .cloud_w_l_t {
+  left: 0;
+  top: 0;
+}
+.contair .cloud_w_r_t {
+  right: 0;
+  top: 0;
+}
+.contair .cloud_g_l_b,
+.contair .cloud_w_l_b {
+  left: 0;
+  bottom: 0;
+}
+.contair .cloud_g_r_b,
+.contair .cloud_w_r_b {
+  right: 0;
+  bottom: 0;
+}
+.contair .cloud_w_b {
+  left: 0;
+  bottom: 0;
+}
+.contair .secondpage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.contair .secondpage .logo_con {
+  position: absolute;
+  top: 127px;
+  width: 100%;
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contair .secondpage .logo_con > .logo_detail {
+  background-image: url(../imgs/spritelogo.png);
+}
+.contair .secondpage .button,
+.contair .threepage .button {
+  background-image: url(../imgs/btn.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.contair .secondpage .page2_black {
+  display: block;
+  margin: -100px auto 0;
+}
+.contair .secondpage .biglogo_con {
+  position: absolute;
+  top: 296px;
+  width: 100%;
+}
+.contair .secondpage .biglogo_con .biglogo {
+  display: block;
+  margin: 0 auto;
+}
+.contair .secondpage .biglogo_con .page2smalltitle {
+  display: block;
+  margin: 23px auto 0;
+}
+.contair .secondpage .biglogo_con .page2_star {
+  position: absolute;
+  right: 0;
+  top: -86px;
+}
+.contair .secondpage .biglogo_con .page2_star2 {
+  position: absolute;
+  left: 0;
+  top: 116px;
+}
+.contair .secondpage .logo_one {
+  width: 60px;
+  height: 61px;
+  background-position: 0 0;
+}
+.contair .secondpage .logo_two {
+  width: 157px;
+  height: 61px;
+  margin-left: 26px;
+  background-position: -86px 0;
+}
+.contair .secondpage .logo_three {
+  width: 100px;
+  height: 61px;
+  margin-left: 35px;
+  background-position: -278px 0;
+}
+.contair .secondpage .logo_four {
+  width: 146px;
+  height: 61px;
+  margin-left: 31px;
+  background-position: -409px 0;
+}
+.contair .secondpage .page2_w {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.contair .secondpage .button {
+  position: absolute;
+  left: 50%;
+  margin-left: -117px;
+  bottom: 196px;
+  width: 234px;
+  height: 75px;
+  line-height: 75px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+.contair .secondpage .textTip {
+  position: absolute;
+  bottom: 82px;
+  width: 100%;
+  font-size: 30px;
+  line-height: 40px;
+  color: #64faff;
+  text-align: center;
+}
+.contair .threepage .page2_w {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.contair .threepage .smalllogo {
+  position: absolute;
+  right: 66px;
+  top: 71px;
+}
+.contair .threepage .timedeadline {
+  position: absolute;
+  left: 68px;
+  top: 71px;
+  color: #fff;
+  font-size: 33px;
+  font-weight: 900;
+  -webkit-text-stroke: 2px #5c77f6;
+}
+.contair .threepage .page2_black2 {
+  position: absolute;
+  right: -210px;
+  top: -133px;
+}
+.contair .threepage .leida_con {
+  position: absolute;
+  bottom: 172px;
+  height: 287px;
+  width: 100%;
+}
+.contair .threepage .leida_con .leida_di {
+  position: absolute;
+  bottom: -54px;
+  left: 50%;
+  margin-left: -30px;
+}
+.contair .threepage .leida_con .leida_all_con {
+  position: absolute;
+  width: 500px;
+  height: 287px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -250px;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.contair .threepage .leida_con .leida_all {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.contair .threepage .leida_con .light {
+  position: absolute;
+  bottom: -130px;
+  left: -38px;
+}
+.contair .threepage .leida_con .line {
+  position: absolute;
+  bottom: 146px;
+  left: 237px;
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+}
+.contair .threepage .button {
+  position: absolute;
+  left: 50%;
+  bottom: 81px;
+  width: 234px;
+  height: 75px;
+  margin-left: -117px;
+  line-height: 75px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+.contair .threepage .toast {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.contair .threepage .toast .toast_con {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.contair .threepage .toast .toast_con > .toast_img {
+  display: block;
+}
+.contair .threepage .toast .toast_con .resultlogo {
+  position: absolute;
+  top: 128px;
+  left: 106px;
+}
+.contair .threepage .toast .toast_con .text {
+  position: absolute;
+  top: 334px;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 50px;
+  color: #fff;
+}
+.contair .threepage .toast .toast_con .button_con {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contair .threepage .toast .toast_con .button_con .btn_again,
+.contair .threepage .toast .toast_con .button_con .btn_share {
+  width: 234px;
+  height: 75px;
+  line-height: 75px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  background-image: url(../imgs/btn.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.contair .threepage .toast .toast_con .button_con .btn_share {
+  margin-left: 15px;
+}
+.contair .lay {
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  text-align: center;
+  margin-left: -100px;
+  bottom: 500px;
+  color: #64faff;
+  font-size: 32px;
+  opacity: 0;
+  z-index: 2;
+}
+.time_far {
+  position: absolute;
+  display: block;
+  width: 60px;
+  text-align: center;
+  left: 110px;
+  top: 3px;
+}
+.shareText {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 27px;
+  z-index: 10000;
+}
+#gamepage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.endTextLevel,
+.endTextTB {
+  color: red;
+  font-size: 36px;
+}

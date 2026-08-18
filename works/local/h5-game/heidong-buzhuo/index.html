@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>向太空去·黑洞捕捉计划 | 新浪青岛</title>
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": '向太空去·黑洞捕捉计划',
+            "tContent": "4月28日下午14：00，一起来青岛理工大学（市北校区）感受黑洞和脑洞的碰撞"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+            font-family: 'microsoft yahei', 'sans-serif', Sans-Serif;
+        }
+
+        .btn {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+        }
+
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            /* -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; */
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            z-index: 2000;
+            position: fixed;
+            margin: auto;
+            top: 12px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .pace .pace-progress {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            display: block;
+            position: absolute;
+            right: 100%;
+            margin-right: 0;
+            width: 100%;
+            top: 0;
+            height: 14px;
+            font-size: 20px;
+            background: #fff;
+            color: #fff;
+            line-height: 60px;
+            font-weight: bold;
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+            -webkit-box-shadow: 120px 0 #000, 240px 0 #000;
+            -ms-box-shadow: 120px 0 #000, 240px 0 #000;
+            box-shadow: 120px 0 #000, 240px 0 #000;
+        }
+
+        /* .pace .pace-progress:after {
+            content: attr(data-progress-text);
+            display: inline-block;
+            position: absolute;
+            width: 45px;
+            text-align: right;
+            right: 0;
+            padding-right: 16px;
+            top: 4px;
+        } */
+        .pace .pace-activity {
+            position: absolute;
+            width: 100%;
+            height: 14px;
+            z-index: 2001;
+            box-shadow: inset 0 0 0 2px #fff;
+            /* border-radius: 10px; */
+        }
+
+        .pace.pace-inactive {
+            display: none;
+        }
+        .music {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            -webkit-background-size: cover;
+            background-size: cover;
+            width: 4rem;
+            height: 4rem;
+            right: 1.25rem;
+            top: 1.25rem;
+            background-image: url(imgs/music_pause.png)
+        }
+        .music_start {
+            background-image: url(imgs/music.png);
+        }
+        .xuanzhuan {
+            animation: xuanzhuan 3s linear infinite;
+        }
+        @keyframes xuanzhuan {
+            0% {
+                transform: rotate(0)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        .bg-music {
+            display: none;
+        }
+        div,img{
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+        }
+    </style>
+    <script>
+        var resize = (function () {
+            // var wr = window.innerWidth / window.innerHeight;
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            // var wr = bcr.width / bcr.height;
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1206) {
+                _width = Math.floor(wr * 1206);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr)
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            // window.addEventListener("pageshow", function(b) {
+            //     b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+            // }, false);
+            return resize;
+        })();
+
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            // 移动端禁止滑动
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        } else {
+            document.documentElement.className = 'pc-page';
+        }
+    </script>
+    <link rel="stylesheet" href="css/index6.css">
+    <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}'
+        src="js/pace.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="music" id="music"></div>
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop" src="music/music.mp3"></audio>
+    <img src="imgs/spritelogo.png" alt="" style="display:none">
+    <img src="imgs/btn.png" alt="" style="display:none">
+    <div class="contair" style="display:none">
+        <div class="firstpage" style="display:none">
+            <img src="imgs/top_star.png" alt=""
+                class="top_star">
+            <div class="bottom_star_con">
+                <img src="imgs/bottom_star.png" alt=""
+                    class="bottom_star">
+            </div>
+            <div class="cloud_con">
+                <img src="imgs/cloud.png" alt="" class="cloud">
+            </div>
+            <img src="imgs/cloud_g_l_t.png" alt=""
+                class="cloud_g_l_t cloud_detail">
+            <img src="imgs/cloud_w_l_t.png" alt=""
+                class="cloud_w_l_t cloud_detail">
+            <img src="imgs/cloud_w_r_t.png" alt=""
+                class="cloud_w_r_t cloud_detail">
+            <img src="imgs/cloud_g_l_b.png" alt=""
+                class="cloud_g_l_b cloud_detail">
+            <img src="imgs/cloud_w_l_b.png" alt=""
+                class="cloud_w_l_b cloud_detail">
+            <img src="imgs/cloud_g_r_b.png" alt=""
+                class="cloud_g_r_b cloud_detail">
+            <img src="imgs/cloud_w_r_b.png" alt=""
+                class="cloud_w_r_b cloud_detail">
+            <img src="imgs/cloud_w_b.png" alt=""
+                class="cloud_w_b cloud_detail">
+            <div class="block_circle_con">
+                <img src="imgs/black2.png" alt=""
+                    class="block_circle">
+                <img src="imgs/threetext.png" alt=""
+                    class="threetext">
+                <img src="imgs/twotext.png" alt=""
+                    class="twotext">
+                <img src="imgs/onetext.png" alt=""
+                    class="onetext">
+            </div>
+        </div>
+        <div class="secondpage">
+            <img src="imgs/top_star.png" alt=""
+                class="top_star">
+            <div class="bottom_star_con">
+                <img src="imgs/bottom_star.png" alt=""
+                    class="bottom_star">
+            </div>
+            <img src="imgs/page2_l_t.png" alt=""
+                class="page2_w">
+            <div class="biglogo_con">
+                <img src="imgs/biglogo.png" alt=""
+                    class="biglogo">
+                <img src="imgs/page2_star.png" alt=""
+                    class="page2_star">
+                <img src="imgs/page2_star2.png" alt=""
+                    class="page2_star2">
+                <img src="imgs/page2smalltitle.png" alt=""
+                    class="page2smalltitle">
+                <img src="imgs/briquettes.png" alt=""
+                    class="page2_black">
+            </div>
+            <div class="logo_con">
+                <div class="logo_one logo_detail"></div>
+                <div class="logo_two logo_detail"></div>
+                <div class="logo_three logo_detail"></div>
+                <div class="logo_four logo_detail"></div>
+            </div>
+            <div class="button page2start btn" style="font-weight:700">
+                开始探索
+            </div>
+            <div class="textTip">
+                在观测窗口期内点击按钮<br />
+                尽可能多地捕捉数据
+            </div>
+        </div>
+        <div class="threepage" style="display:none">
+            <div class="gamepage" id="gamepage" ></div>
+            <div class="bottom_star_con">
+                <img src="imgs/bottom_star.png" alt=""
+                    class="bottom_star">
+            </div>
+            <img src="imgs/top_star.png" alt=""
+                class="top_star">
+            <img src="imgs/page2_l_t.png" alt=""
+                class="page2_w">
+            <img src="imgs/briquettes.png" alt=""
+                class="page2_black2">
+            <img src="imgs/smalllogo.png" alt=""
+                class="smalllogo">
+            <div class="timedeadline">
+                倒计时：<span class="time_far">10</span> <span style="display:inline-block;margin-left:24px">天</span>
+            </div>
+            <div class="toast" style="display:none">
+                <div class="toast_con">
+                    <img src="imgs/toast.png" alt=""
+                        class="toast_img">
+                    <img src="imgs/resultlogo.png" alt=""
+                        class="resultlogo">
+                    <div class="text">
+                        你成功捕捉到 XXXTB数据，在计划中<br />
+                        打败了95%的人。
+                    </div>
+                    <div class="button_con">
+                        <div class="btn_again btn" style="font-weight:700">
+                            再玩一次
+                        </div>
+                        <div class="btn_share btn" style="font-weight:700">
+                            点击分享
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="imgs/share.png" alt="" class="shareText">
+</body>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    let musicFlag = false;
+    $("#music").click(function () {
+        playMusic();
+    });
+    $(document).ready(function () {
+        playMusic();
+    });
+    //音乐播放
+    function playMusic() {
+        let player = $("#bgMusic")[0];
+        if (musicFlag) {
+            $("#music").removeClass("xuanzhuan");
+            $("#music").removeClass("music_start");
+            musicFlag = false;
+            player.pause();
+        } else {
+            $("#music").addClass("xuanzhuan");
+            $("#music").addClass("music_start");
+            musicFlag = true;
+            player.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                player.play();
+            }, false);
+        }
+    }
+</script>
+<script>
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+</script>
+<script charset="utf-8" src="js/phaser.min.js"></script>
+<script charset="utf-8" src="js/TweenMax.min.js"></script>
+<script charset="utf-8" src="js/index8.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+</html>
