@@ -527,7 +527,7 @@ body {
     height: 72px;
     margin-left: -158px;
     margin-top: -49px;
-    background-image: url(https://mat1.gtimg.com/zj/forguo/educate/anqing_one_billion/img/btn-bg.png);
+    background-image: url(../img/btn-bg.png);
     background-repeat: no-repeat
 }
 
@@ -788,7 +788,7 @@ body {
 }
 
 .result .light {
-    background-image: url(https://mat1.gtimg.com/zj/forguo/educate/anqing_one_billion/img/light.png);
+    background-image: url(../img/light.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 100% 100%
@@ -835,7 +835,7 @@ body {
 .result .fly {
     width: 510px;
     height: 46px;
-    background-image: url(https://mat1.gtimg.com/zj/forguo/educate/anqing_one_billion/img/fly.png);
+    background-image: url(../img/fly.png);
     background-repeat: no-repeat;
     background-position: 100% 50%;
     margin-top: 20px
@@ -863,7 +863,7 @@ body {
     left: 0;
     top: 0;
     background-color: #fff;
-    background-image: url(https://mat1.gtimg.com/zj/forguo/educate/anqing_one_billion/img/game.png);
+    background-image: url(../img/game.png);
     background-size: 100% 100%;
     background-position: 50% 50%;
     z-index: 99
@@ -925,11 +925,11 @@ body {
     top: 25px;
     z-index: 99999;
     -webkit-animation: none;
-    background-image: url(http://mat1.gtimg.com/zj/lyen/zhengwu/xiguajie/imgs/music_pause.png)
+    background-image: url(../imgs/music_pause.png)
 }
 
 .audioCon.playingZ {
-    background-image: url(http://mat1.gtimg.com/zj/lyen/zhengwu/xiguajie/imgs/music.png);
+    background-image: url(../imgs/music.png);
     -webkit-animation: audio 2s linear infinite
 }
 

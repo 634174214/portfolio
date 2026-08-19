@@ -9,7 +9,6 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="email=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <!-- uc强制竖屏 -->
     <meta name="screen-orientation" content="portrait">
     <!-- QQ强制竖屏 -->
     <meta name="x5-orientation" content="portrait">
@@ -162,7 +161,7 @@
             return resize;
         })();
     </script>
-    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script>
         window.nickname = '不二家';
         window.headimg = 'imgs/share.jpg';
@@ -292,14 +291,6 @@
                 }, onShareComplete);
             });
         }, false);
-        if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
-            window.TencentNews.setShareArticleInfo(
-                window.shareData.tTitle,
-                window.shareData.tContent,
-                window.shareData.timeLineLink,
-                window.shareData.imgUrl
-            );
-        }
     </script>
 </body>
 

@@ -10,11 +10,9 @@
 
 
     <!--微信分享的相关内容 开始-->
-    <link rel="shortcut icon" href="
-    imgs/share.png">
+    <link rel="shortcut icon" href="imgs/share.png">
     <!--微信分享显示的缩略图-->
-    <link rel="icon" href="
-    imgs/share.png">
+    <link rel="icon" href="imgs/share.png">
     <!--微信分享显示的缩略图-->
     <script type="text/javascript">
         window.shareData = {
@@ -113,7 +111,7 @@
         </div>
         <div class="abs load-words">0%</div>
     </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script charset="utf-8" src="js/phaser.min.js"></script>
     <script charset="utf-8" src="js/TweenMax.min.js"></script>
     <script charset="utf-8" src="js/TimelineMax.min.js"></script>
@@ -142,14 +140,6 @@
                 }, onShareComplete);
             });
         }, false);
-        if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
-            window.TencentNews.setShareArticleInfo(
-                window.shareData.tTitle,
-                window.shareData.tContent,
-                window.shareData.timeLineLink,
-                window.shareData.imgUrl
-            );
-        }
     </script>
 </body>
 
