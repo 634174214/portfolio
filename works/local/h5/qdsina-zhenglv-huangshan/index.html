@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
+<title>指尖上的黄山</title>
+<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css?v=1">
+<script src="js/zepto.min.js"></script>
+<script src="js/idangerous.swiper.min.js"></script>
+</head>
+
+<body>
+<div id="prebox">
+	<div class="pos_abs loading">
+    	<div class="circle"></div>
+    	<div class="circle1"></div>
+        <p><strong></strong></p>
+        <p>等待加载也是一种人生...</p>
+    </div>
+</div>
+<div class="box ds_none">
+    <div class="swiper-container">
+      <div class="swiper-wrapper"> 
+        <!--First Slide-->
+        <div class="swiper-slide">
+        	<div id="page_index" class="block">
+            	<span class="pos_abs logo_index"><img src="" data-src="images/logo_index.png" width="115"></span>
+                <span class="pos_abs info_text">上划进入黄山</span>
+                <span class="pos_abs info"></span>
+            	<span class="pos_abs bg" style="z-index:3"><img src="" data-src="images/bg01_m.png" width="320"></span>
+            	<span class="pos_abs bg bg_cloud" style="z-index:2;"><img src="" data-src="images/bg01_c.png" width="320"></span>
+                <span class="pos_abs bg bg_cloud2" style="z-index:2;"><img src="" data-src="images/bg01_c.png" width="320"></span>
+            	<span class="pos_abs bg" style="z-index:1;"><img src="" data-src="images/bg01.jpg" width="320"></span>
+            </div>
+        </div>
+        <!--Second Slide-->
+        <div class="swiper-slide">
+        	<div id="page_bw" class="block">
+            	<span class="pos_abs logo_r"><img src="" data-src="images/icon_logo.png" width="31"></span>
+                <span class="pos_abs logo_text01"><img src="" data-src="images/text_jpbdd.png" width="62"></span>
+                <span class="pos_abs text_b"><img src="" data-src="images/text_b2.png" width="51"></span>
+                <span class="pos_abs text_w"><img src="" data-src="images/text_w.png" width="52"></span>
+                <span class="pos_abs text_block01"><img src="" data-src="images/text_block01.png" width="260"></span>
+                <span class="pos_abs info"></span>
+            	<span class="pos_abs bg"><img src="" data-src="images/bg02.jpg" width="320"></span>
+            </div>
+        </div>
+        <!--Third Slide-->
+        <div class="swiper-slide">
+        	<div id="page_gl" class="block">
+            	<span class="pos_abs logo_l"><img src="" data-src="images/icon_logo.png" width="31"></span>
+                <span class="pos_abs logo_text02"><img src="" data-src="images/text_jpbdd.png" width="62"></span>
+                <span class="pos_abs text_g"><img src="" data-src="images/text_g.png" width="57"></span>
+                <span class="pos_abs text_l"><img src="" data-src="images/text_l.png" width="57"></span>
+                <span class="pos_abs text_block02"><img src="" data-src="images/text_block02.png" width="214"></span>
+                <span class="pos_abs icon_sun"><img src="" data-src="images/icon_sun.png" width="204"></span>
+                <span class="pos_abs info"></span>
+            	<span class="pos_abs bg"><img src="" data-src="images/bg03.jpg" width="320"></span>
+            </div>
+        </div>
+        <!--Fourth Slide-->
+        <div class="swiper-slide">
+        	<div id="page_chwl" class="block">
+            	<span class="pos_abs logo_r"><img src="" data-src="images/icon_logo.png" width="31"></span>
+                <span class="pos_abs logo_text03"><img src="" data-src="images/text_jpbdd.png" width="62"></span>
+                <span class="pos_abs text_c"><img src="" data-src="images/text_c.png" width="50"></span>
+                <span class="pos_abs text_h"><img src="" data-src="images/text_h.png" width="50"></span>
+                <span class="pos_abs text_wan"><img src="" data-src="images/text_wan.png" width="53"></span>
+                <span class="pos_abs text_le"><img src="" data-src="images/text_le.png" width="56"></span>
+                <span class="pos_abs text_block01"><img src="" data-src="images/text_block04.png" width="200"></span>
+                <span class="pos_abs info"></span>
+            	<span class="pos_abs bg"><img src="" data-src="images/bg04.jpg?v=2" width="320"></span>
+            </div>
+        </div>
+        <!--Fifth Slide-->
+        <div class="swiper-slide">
+        	<div id="page_last" class="block">
+            	<span class="pos_abs logo_b"><img src="" data-src="images/icon_logo.png" width="31"></span>
+                <span class="pos_abs text_title"><img src="" data-src="images/text_title05.png" width="294"></span>
+                <span class="pos_abs text_bg"><img src="" data-src="images/text_title05_bg.png" width="158"></span>
+                <span class="pos_abs text_block05"><span><img src="" data-src="images/text_block05.png" width="232"></span></span>
+                <span class="pos_abs btn_iconmoving"><img src="" data-src="images/btn_arr.jpg" width="14"></span>
+                <span class="pos_abs btn"><a href="http://ah.sina.com.cn/travel_wap/huangshan/index.html"><span><img src="" data-src="images/btn_arr.jpg" width="14"></span></a></span>
+            	<span class="pos_abs bg"><img src="" data-src="images/bg05.jpg" width="320"></span>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+document.addEventListener("touchmove", function(e) {
+	e.preventDefault();e.returnValue = false;
+	}, false);
+				
+(function(){
+	var fixPagesHeight = function() {
+		var _height = $(window).height();
+		//内容区高度修复
+		$(".swiper-container").height(_height);
+	}
+	$(window).on('resize',function(){
+		fixPagesHeight()
+	});
+	fixPagesHeight();
+	
+	var loadImage = function (url, callback) {
+		var img = new Image(); 
+		img.src = url;
+		if(img.complete) { 
+			callback.call(img);
+			return; 
+		};
+		img.onload = function () {
+			callback.call(img);
+		};
+	};
+	var imgLoad = function(srcs,callback){
+		var srcs = srcs || [];
+		var len = srcs.length;
+		if(len<1) return;
+		//记录加载长度
+		var loadNum = 0;
+		var loading_p = 0;
+		var loading = function(){
+			if(loadNum<len){
+				loading_p = Math.ceil(100*loadNum/len);
+				var _src = srcs[loadNum];
+				loadImage(_src,function(img){
+					loadNum++;
+					callback && callback(loading_p);
+					loading();
+					});
+				
+				}else{
+					loading_p = '100';
+					callback && callback(loading_p);
+					};
+			}
+		loading();
+		};
+	var initSwiper = function(){
+		$('#prebox').addClass('ds_none').html('');
+		$('.box').removeClass('ds_none');
+		$('#page_index').addClass('static');
+		var swiperGallery = $('.swiper-container').swiper({
+			mode : 'vertical',
+			onSlideChangeStart:function(p){
+				var page = p.activeIndex;
+				$('.block').removeClass('static');
+				setTimeout(function(){
+					$('.block').eq(page).addClass('static');
+					},50)
+				}
+			});
+		};
+	var initPage = function(){
+		var _img = $('.swiper-container img');
+		var arr = [];
+		_img.each(function(i,v){
+			var _src = $(v).data('src');
+			if(_src){
+				arr.push(_src);
+				};
+			});
+		
+		if(arr.length<1){
+			initSwiper();
+			return;
+			};
+		
+		var obj = {
+			num : 0,
+			timer:null
+			};
+		imgLoad(arr,function(num){
+			obj.timer && clearTimeout(obj.timer);
+			if(num>=100){
+				num=100;
+				_img.each(function(_i,_v){
+					$(_v).attr('src',$(_v).data('src'));
+					});
+				obj.timer = setTimeout(initSwiper,500);
+				};
+			$('.loading strong:first').html(num + '%');
+			});
+		};
+	initPage();
+	
+	})();
+</script>
+</body>
+</html>
