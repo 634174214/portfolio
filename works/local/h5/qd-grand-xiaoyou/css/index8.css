@@ -1,0 +1,999 @@
+.fourpage, .threepage {
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+.endpage .btn_con .share::after, .fourpage .paper_con .btn_con .left2::after, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right:after, .fourpage .paper_con .table .table_top .table_right::after {
+    clear: both
+}
+input::-webkit-input-placeholder {
+    color: #a0a0a0!important
+}
+input:-moz-placeholder {
+    color: #a0a0a0!important
+}
+input::-moz-placeholder {
+    color: #a0a0a0!important
+}
+input:-ms-input-placeholder {
+    color: #a0a0a0!important
+}
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hide;
+    -webkit-perspective: 800;
+    perspective: 800
+}
+.firstpage, .fourpage, .secondpage, .threepage {
+    overflow: hidden
+}
+.changscene {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1000
+}
+.firstpage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+.firstpage .firstwall {
+    position: absolute;
+    left: 0;
+    top: -128px
+}
+.firstpage .date {
+    position: absolute;
+    left: 0;
+    top: 92px
+}
+.firstpage .note {
+    position: absolute;
+    left: 0;
+    top: 336px
+}
+.firstpage .table_con {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+.firstpage .table_con .table {
+    display: block
+}
+.firstpage .table_con .book {
+    position: absolute;
+    bottom: 100px;
+    right: 0
+}
+.firstpage .table_con .follower {
+    position: absolute;
+    left: 0;
+    top: -280px
+}
+.firstpage .lettercon {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0
+}
+.firstpage .lettercon .letter {
+    display: block;
+    left: 0;
+    bottom: 0
+}
+.firstpage .lettercon .firsttext {
+    position: absolute;
+    right: 6px;
+    top: 110px
+}
+.firstpage .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    margin-left: -25px
+}
+.secondpage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2
+}
+.secondpage .secondtext {
+    display: block;
+    padding-top: 40px;
+    margin: 0 auto
+}
+.secondpage .backboard {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: auto
+}
+.secondpage .backboard .backboardcon {
+    display: block
+}
+.secondpage .backboard .backboardcontent {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.secondpage .podiumcon {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: auto
+}
+.secondpage .podiumcon .podium {
+    display: block;
+    margin: 0 auto
+}
+.secondpage .podiumcon .secondinpodium {
+    position: absolute;
+    left: 50%;
+    top: 11px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.secondpage .board, .secondpage .studentcon .student1 .table1 {
+    left: 0;
+    bottom: 0;
+    position: absolute
+}
+.secondpage .board {
+    display: block;
+    height: 48%
+}
+.secondpage .studentcon .student1 .student1_content {
+    position: absolute;
+    left: 54px;
+    bottom: 310px
+}
+.secondpage .studentcon .student1 .chair1 {
+    position: absolute;
+    left: 83px;
+    bottom: 270px
+}
+.secondpage .studentcon .student2 .table2 {
+    position: absolute;
+    right: 0;
+    bottom: 291px
+}
+.secondpage .studentcon .student2 .student2_content {
+    position: absolute;
+    right: 80px;
+    bottom: 291px
+}
+.secondpage .studentcon .student2 .chair2 {
+    position: absolute;
+    right: 100px;
+    bottom: 271px
+}
+.secondpage .studentcon .student3 .table3 {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+.secondpage .studentcon .student3 .student3_content {
+    position: absolute;
+    left: 0;
+    bottom: 15px
+}
+.secondpage .studentcon .student3 .chair3 {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+.secondpage .studentcon .student4 .table4 {
+    position: absolute;
+    right: 0;
+    bottom: 48px
+}
+.secondpage .studentcon .student4 .student4_content {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+.secondpage .studentcon .student4 .chair4 {
+    position: absolute;
+    right: 0;
+    bottom: 3px
+}
+.secondpage .studentcon .student5 .student5_content, .secondpage .studentcon .student5 .table5 {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+.secondpage .studentcon .student6 .student6_content, .secondpage .studentcon .student6 .table6 {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+.secondpage #treeone {
+    position: absolute;
+    left: -20px;
+    top: 150px;
+    -webkit-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg)
+}
+.secondpage #treetwo {
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    transform: scale(.7)
+}
+.secondpage #treethree {
+    position: absolute;
+    left: 200px;
+    top: 450px;
+    -webkit-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9)
+}
+.secondpage .secondsun1 {
+    position: absolute;
+    left: 0;
+    top: -136px
+}
+.secondpage .secondsun2 {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+.threepage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imgs/threebanner.png);
+    z-index: 3
+}
+.threepage .inwindow {
+    position: relative;
+    width: 100%;
+    height: auto
+}
+.threepage .inwindow .banner {
+    display: block
+}
+.threepage .inwindow .studentcard {
+    position: absolute;
+    left: 49px;
+    bottom: 413px
+}
+.threepage .inwindow .window {
+    position: absolute;
+    left: 0;
+    top: -30px
+}
+.threepage .inwindow .student {
+    position: absolute;
+    left: 0;
+    top: -127px
+}
+.threepage .inwindow .point {
+    position: absolute;
+    left: 227px;
+    bottom: 314px
+}
+.threepage .inwindow .studentcardCon {
+    position: absolute;
+    left: 32px;
+    bottom: 305px;
+    width: 209px;
+    height: 135px;
+    background-image: url(../imgs/studentcardall.png);
+    -webkit-transform: rotate(-25deg) scale(1.2);
+    -ms-transform: rotate(-25deg) scale(1.2);
+    transform: rotate(-25deg) scale(1.2);
+    background-position: -10px 0
+}
+.threepage .inwindow .clickcard {
+    position: absolute;
+    left: 114px;
+    bottom: 312px;
+    width: 153px;
+    height: 165px;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2)
+}
+.fourpage {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imgs//fourbanner.jpg)
+}
+.fourpage .paper_con {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+.fourpage .paper_con .paper {
+    display: block
+}
+.fourpage .paper_con .fourtext2 {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 150px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.fourpage .paper_con .table {
+    position: absolute;
+    left: 50%;
+    top: 274px;
+    margin-left: -330px;
+    width: 660px;
+    height: 617px;
+    border: 2px solid #002f6f;
+    border-radius: 4px
+}
+.fourpage .paper_con .table .table_top {
+    width: 660px;
+    height: 400px
+}
+.fourpage .paper_con .table .table_top .table_left {
+    float: left;
+    width: 365px;
+    height: 400px;
+    border-right: 2px solid #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 132px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .tip {
+    width: 122px;
+    color: #002f6f;
+    font-size: 34px;
+    text-align: center
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .tip div {
+    height: 34px;
+    line-height: 34px
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .tip div:nth-child(2) {
+    margin-top: 16px
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right {
+    height: 100%;
+    width: 241px;
+    border-left: 2px solid #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_year {
+    height: 99px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_year>input {
+    margin-top: 33px;
+    width: 223px;
+    margin-left: 18px;
+    padding: 0;
+    font-size: 28px;
+    background-color: transparent;
+    border: 0
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class {
+    width: 100%;
+    height: 99px
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_left, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_left>input, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right>input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 2
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_left .showradio, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right .showradio {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_left .showradio .checkcircle, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right .showradio .checkcircle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_left .showradio .checkcircle .bulecircle, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right .showradio .checkcircle .bulecircle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_left .showradio .checktext, .fourpage .paper_con .table .table_top .table_left .table_item .graduation_right .graduation_class .radio_right .showradio .checktext {
+    margin-left: 8px;
+    font-size: 28px;
+    color: #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item>input {
+    width: 200px;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 28px;
+    background-color: transparent;
+    border: 0
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .select_con {
+    position: relative;
+    width: 200px;
+    height: 80px;
+    margin-left: 20px
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .select_con #selectclass {
+    width: 100%;
+    height: 100%;
+    opacity: 0
+}
+.fourpage .paper_con .table .table_top .table_left .table_item .select_con .showselect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    line-height: 80px;
+    text-align: left;
+    color: #a0a0a0
+}
+.fourpage .paper_con .table .table_top .table_left .table_item:nth-child(1) {
+    height: 100px
+}
+.fourpage .paper_con .table .table_top .table_left .table_item:nth-child(2) {
+    height: 200px;
+    border-top: 2px solid #002f6f;
+    border-bottom: 2px solid #002f6f
+}
+.fourpage .paper_con .table .table_top .table_left .table_item:nth-child(3) {
+    height: 96px
+}
+.fourpage .paper_con .table .table_top .table_right {
+    float: left;
+    position: relative;
+    width: 293px;
+    height: 400px
+}
+.fourpage .paper_con .table .table_top .table_right .input_img_con {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+.fourpage .paper_con .table .table_top .table_right .input_img_con .photo_tip {
+    position: absolute;
+    height: 26px;
+    line-height: 26px;
+    top: 224px;
+    left: 0;
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+    color: #a0a0a0
+}
+.fourpage .paper_con .table .table_top .table_right .input_img_con .photo_tip2 {
+    position: absolute;
+    height: 26px;
+    line-height: 26px;
+    top: 256px;
+    left: 0;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    color: #a0a0a0
+}
+.fourpage .paper_con .table .table_top .table_right .photo {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0
+}
+.fourpage .paper_con .table .table_top .table_right .ctrl-layer, .fourpage .paper_con .table .table_top .table_right .cut-canvas {
+    display: none;
+    position: absolute;
+    width: 293px;
+    height: 400px;
+    left: 0;
+    top: 0
+}
+.fourpage .paper_con .table .table_top .table_right .showimg {
+    position: absolute;
+    left: 0;
+    right: 0
+}
+.fourpage .paper_con .table .table_top .table_right .input_img_con::after, .fourpage .paper_con .table .table_top .table_right .input_img_con::before {
+    content: '';
+    left: 50%;
+    top: 181px;
+    position: absolute;
+    background-color: #002f6f
+}
+.fourpage .paper_con .table .table_top .table_right .input_img_con::after {
+    width: 52px;
+    height: 3px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+.fourpage .paper_con .table .table_top .table_right .input_img_con::before {
+    width: 3px;
+    height: 52px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+.fourpage .paper_con .table .table_top .table_right .domimgcon {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+.fourpage .paper_con .table .table_top .table_right .domimgcon .domimg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+.endpage, .endpage .swiper_con {
+    top: 0;
+    left: 0;
+    position: absolute
+}
+.fourpage .paper_con .table .table_bottom {
+    width: 100%;
+    height: 215px;
+    border-top: 2px solid #002f6f
+}
+.fourpage .paper_con .table .table_bottom .fourtext {
+    display: block;
+    margin: 79px auto 0
+}
+.fourpage .paper_con .btn_con {
+    position: absolute;
+    bottom: 142px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    font-size: 36px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff
+}
+.fourpage .paper_con .btn_con .left1, .fourpage .paper_con .btn_con .left2 {
+    float: left;
+    margin-left: 50px;
+    width: 300px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #002f6f
+}
+.endpage, .endpage .swiper_con, .endpage .swiper_con .swiper-container, .endpage .swiper_con .swiper-container .swiper-wrapper, .endpage .swiper_con .swiper-container .swiper-wrapper .swiper-slide {
+    height: 100%;
+    width: 100%
+}
+.endpage .swiper_con {
+    z-index: 10
+}
+.endpage .swiper_con .swiper-container .swiper-wrapper .swiper-slide .resbanner1, .endpage .swiper_con .swiper-container .swiper-wrapper .swiper-slide .resbanner2, .endpage .swiper_con .swiper-container .swiper-wrapper .swiper-slide .resbanner3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+.endpage .endtext {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #002f6f;
+    font-size: 50px;
+    text-align: center;
+    z-index: 33
+}
+.endpage .school_logo {
+    position: absolute;
+    display: block;
+    top: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 33
+}
+.endpage .btn_con, .endpage .imgcon {
+    left: 0;
+    width: 100%;
+    position: absolute
+}
+.endpage .imgcon {
+    top: 0;
+    height: 100%;
+    z-index: 30;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+.endpage .imgcon .resultimg {
+    position: absolute;
+    display: block
+}
+.endpage .imgcon .dom_example {
+    display: block;
+    width: 100%;
+    height: 300px
+}
+.endpage .imgcon .full_thing {
+    background-repeat: repeat-y
+}
+.endpage .btn_con {
+    bottom: 106px;
+    height: 80px;
+    z-index: 33
+}
+.endpage .btn_con .generate, .endpage .btn_con .share {
+    float: left;
+    margin-left: 50px;
+    width: 300px;
+    height: 80px;
+    background-color: #002f6f;
+    border-radius: 40px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff
+}
+.endpage .circle_an {
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    width: 45px;
+    height: 45px;
+    z-index: 32
+}
+.endpage .circle_an .circleContent {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff
+}
+.endpage .circle_an .outcircle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -42px;
+    margin-top: -42px;
+    z-index: 1
+}
+.chooseimgCon, .sharecon, .showimgcon {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1000
+}
+.chooseimgCon .shareimg, .sharecon .shareimg, .showimgcon .shareimg {
+    position: absolute;
+    right: 40px;
+    top: 30px
+}
+.chooseimgCon .closechoose, .sharecon .closechoose, .showimgcon .closechoose {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+.chooseimgCon .smallcon, .sharecon .smallcon, .showimgcon .smallcon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 484px;
+    height: 230px
+}
+.chooseimgCon .smallcon .red, .sharecon .smallcon .red, .showimgcon .smallcon .red {
+    position: absolute;
+    left: 0;
+    top: -250px;
+    width: 484px;
+    height: 230px;
+    background-image: url(../imgs/redbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.chooseimgCon .smallcon .green, .sharecon .smallcon .green, .showimgcon .smallcon .green {
+    width: 484px;
+    height: 230px;
+    background-image: url(../imgs/greenbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.chooseimgCon .smallcon .blue, .sharecon .smallcon .blue, .showimgcon .smallcon .blue {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 484px;
+    height: 230px;
+    background-image: url(../imgs/bluebanner.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.chooseimgCon .smallcon .gray1, .chooseimgCon .smallcon .gray2, .chooseimgCon .smallcon .gray3, .sharecon .smallcon .gray1, .sharecon .smallcon .gray2, .sharecon .smallcon .gray3, .showimgcon .smallcon .gray1, .showimgcon .smallcon .gray2, .showimgcon .smallcon .gray3 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5)
+}
+.chooseimgCon .smallcon .gray1, .sharecon .smallcon .gray1, .showimgcon .smallcon .gray1 {
+    display: block
+}
+.chooseimgCon .smallcon .chooseimgtext, .sharecon .smallcon .chooseimgtext, .showimgcon .smallcon .chooseimgtext {
+    position: absolute;
+    left: 0;
+    top: 500px;
+    color: rgba(255, 255, 255, .6);
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    height: 22px;
+    line-height: 22px
+}
+.chooseimgCon .showimg, .sharecon .showimg, .showimgcon .showimg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 80%
+}
+.chooseimgCon .showimg .imgcon, .sharecon .showimg .imgcon, .showimgcon .showimg .imgcon {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 10px
+}
+.chooseimgCon .showimg .imgcon .saveimg, .sharecon .showimg .imgcon .saveimg, .showimgcon .showimg .imgcon .saveimg {
+    display: block;
+    width: 100%
+}
+.chooseimgCon .showimg .showimgtext, .sharecon .showimg .showimgtext, .showimgcon .showimg .showimgtext {
+    position: fixed;
+    left: 50%;
+    bottom: -80px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff
+}
+.chooseimgtip {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 276px;
+    height: 80px;
+    border-radius: 4px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, .8);
+    color: rgba(255, 255, 255, .8);
+    z-index: 2000;
+    text-align: center;
+    line-height: 80px
+}
+.loading-box-con {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000
+}
+.ball-spin-fade-loader {
+    margin-left: -10px;
+    margin-top: -38px
+}
+.loading-box {
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -136px;
+    margin-left: -100px;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 20px
+}
+.text {
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 3px
+}
+@-webkit-keyframes ball-spin-fade-loader {
+    50% {
+        opacity: .6;
+        -webkit-transform: scale(.55);
+        transform: scale(.55)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes ball-spin-fade-loader {
+    50% {
+        opacity: .6;
+        -webkit-transform: scale(.55);
+        transform: scale(.55)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.ball-spin-fade-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+.ball-spin-fade-loader>div:nth-child(1) {
+    top: 18px;
+    left: 0;
+    -webkit-animation: ball-spin-fade-loader 1s 0s infinite linear;
+    animation: ball-spin-fade-loader 1s 0s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(2) {
+    top: 12px;
+    left: 12px;
+    -webkit-animation: ball-spin-fade-loader 1s .12s infinite linear;
+    animation: ball-spin-fade-loader 1s .12s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(3) {
+    top: 0;
+    left: 18px;
+    -webkit-animation: ball-spin-fade-loader 1s .24s infinite linear;
+    animation: ball-spin-fade-loader 1s .24s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(4) {
+    top: -12px;
+    left: 12px;
+    -webkit-animation: ball-spin-fade-loader 1s .36s infinite linear;
+    animation: ball-spin-fade-loader 1s .36s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(5) {
+    top: -18px;
+    left: 0;
+    -webkit-animation: ball-spin-fade-loader 1s .48s infinite linear;
+    animation: ball-spin-fade-loader 1s .48s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(6) {
+    top: -12px;
+    left: -12px;
+    -webkit-animation: ball-spin-fade-loader 1s .6s infinite linear;
+    animation: ball-spin-fade-loader 1s .6s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(7) {
+    top: 0;
+    left: -18px;
+    -webkit-animation: ball-spin-fade-loader 1s .72s infinite linear;
+    animation: ball-spin-fade-loader 1s .72s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(8) {
+    top: 12px;
+    left: -12px;
+    -webkit-animation: ball-spin-fade-loader 1s .84s infinite linear;
+    animation: ball-spin-fade-loader 1s .84s infinite linear
+}
+.ball-spin-fade-loader>div {
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    margin: 10px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute
+}
+/*  |xGv00|610b2cb08b06d6e323b4e6e8b4b9a64e */

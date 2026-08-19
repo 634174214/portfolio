@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>青岛格兰德中学 2019校友会</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'microsoft yahei', 'sans-serif', Sans-Serif;
+        }
+        .container{
+            background-color: #000
+        }
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            /* -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; */
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            z-index: 2000;
+            position: fixed;
+            margin: auto;
+            top: 12px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .pace .pace-progress {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            display: block;
+            position: absolute;
+            right: 100%;
+            margin-right: 0;
+            width: 100%;
+            top: 0;
+            height: 14px;
+            font-size: 20px;
+            background: #fff;
+            color: #fff;
+            line-height: 60px;
+            font-weight: bold;
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+            -webkit-box-shadow: 120px 0 #000, 240px 0 #000;
+            -ms-box-shadow: 120px 0 #000, 240px 0 #000;
+            box-shadow: 120px 0 #000, 240px 0 #000;
+        }
+        /* .pace .pace-progress:after {
+            content: attr(data-progress-text);
+            display: inline-block;
+            position: absolute;
+            width: 45px;
+            text-align: right;
+            right: 0;
+            padding-right: 16px;
+            top: 4px;
+        } */
+        .pace .pace-activity {
+            position: absolute;
+            width: 100%;
+            height: 14px;
+            z-index: 2001;
+            box-shadow: inset 0 0 0 2px #fff;
+            /* border-radius: 10px; */
+        }
+        .pace.pace-inactive {
+            display: none;
+        }
+        .music {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            -webkit-background-size: cover;
+            background-size: cover;
+            width: 4rem;
+            height: 4rem;
+            right: 1.25rem;
+            top: 1.25rem;
+            background-image: url(imgs/music_pause.png)
+        }
+        .music_start {
+            background-image: url(imgs/music.png);
+        }
+        .xuanzhuan {
+            animation: xuanzhuan 3s linear infinite;
+        }
+        @keyframes xuanzhuan {
+            0% {
+                transform: rotate(0)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        .bg-music {
+            display: none;
+        }
+        div,img{
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+        }
+    </style>
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": document.title,
+            "tContent": "5月4日，我们一起回家"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        window.replaceUrl = function (src) {
+            var insrc =src;
+            if(insrc.indexOf('http:')>-1){
+                insrc = insrc.replace('http:','')
+            }
+            if(insrc.indexOf('https:')>-1){
+                insrc = insrc.replace('https:','')
+            }
+            return insrc
+        }
+        var isStop = true,
+            pageParams = {},
+            beginLoading = true;
+            pageParams = {
+                code: -2
+            }
+    </script>
+    <script>
+        var resize = (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            return resize;
+        })();
+
+
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            // 移动端禁止滑动
+            document.addEventListener("touchmove", function (e) {
+                if(isStop){
+                    e.preventDefault()
+                }
+            }, { passive: false })
+        } else {
+            document.documentElement.className = 'pc-page';
+        }
+    </script>
+    <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}' src="js/pace.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/index8.css">
+</head>
+
+<body>
+    <div class="music" id="music"></div>
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop">
+        <source src="music/music_find.mp3">
+    </audio>
+    <div class="container">
+        <img src="imgs/studentcardall.png" alt="" style="display:none">
+        <img src="imgs/fourbanner.jpg" alt="" style="display:none">
+        <img src="imgs/threebanner.png" alt="" style="display:none">
+        <img src="imgs/redbanner.png" alt="" style="display:none">
+        <img src="imgs/greenbanner.png" alt="" style="display:none">
+        <img src="imgs/bluebanner.png" alt="" style="display:none">
+        <div class="changscene"></div>
+        <div class="firstpage" style="display:none">
+            <img src="imgs/firstwall.png" alt="" class="firstwall">
+            <img src="imgs/firstdate.png" alt="" class="date">
+            <img src="imgs/firstnote.png" alt="" class="note">
+            <div class="table_con">
+                <img src="imgs/firsttable.png" alt="" class="table">
+                <img src="imgs/firstbook.png" alt="" class="book">
+                <img src="imgs/firstfollower.png" alt="" class="follower">
+            </div>
+            <div class="lettercon">
+                <img src="imgs/firstletter.png" alt="" class="letter">
+                <img src="imgs/firsttext1.png" style="right: 7px" alt="" class="firsttext">
+            </div>
+            <img src="imgs/arrow.png" alt="" class="arrow">
+        </div>
+        <div class="secondpage" style="display:none">
+            <img src="imgs/secondtext.png" alt="" class="secondtext">
+            <div class="backboard">
+                <img src="imgs/secondbackboardcon.png" alt="" class="backboardcon">
+                <img src="imgs/secondblackboardcontent.png" alt="" class="backboardcontent">
+            </div>
+            <img src="imgs/secondboard.png" alt="" class="board">
+            <div class="podiumcon">
+                <img src="imgs/podium.png" alt="" class="podium">
+                <img src="imgs/secondinpodium.png" alt="" class="secondinpodium">
+            </div>
+            <duv class="studentcon">
+                <div class="student1">
+                    <img src="imgs/secondtable1.png" alt="" class="table1">
+                    <img src="imgs/secondst1.png" alt="" class="student1_content">
+                    <img src="imgs/secondchair1.png" alt="" class="chair1">
+                </div>
+                <div class="student2">
+                    <img src="imgs/secondtable2.png" alt="" class="table2">
+                    <img src="imgs/secondst2.png" alt="" class="student2_content">
+                    <img src="imgs/secondchair2.png" alt="" class="chair2">
+                </div>
+                <div class="student3">
+                    <img src="imgs/secondtable3.png" alt="" class="table3">
+                    <img src="imgs/secondst3.png" alt="" class="student3_content">
+                    <img src="imgs/secondchair3.png" alt="" class="chair3">
+                </div>
+                <div class="student4">
+                    <img src="imgs/secondtable4.png" alt="" class="table4">
+                    <img src="imgs/secondst4.png" alt="" class="student4_content">
+                    <img src="imgs/secondchair4.png" alt="" class="chair4">
+                </div>
+                <div class="student5">
+                    <img src="imgs/secondtable5.png" alt="" class="table5">
+                    <img src="imgs/secondst5.png" alt="" class="student5_content">
+                </div>
+                <div class="student6">
+                    <img src="imgs/secondtable6.png" alt="" class="table6">
+                    <img src="imgs/secondst6.png" alt="" class="student6_content">
+                </div>
+            </duv>
+            <img src="imgs/secondtree.png" alt="" class="secondtree" id='treeone'>
+            <img src="imgs/secondtree.png" alt="" class="secondtree" id='treetwo'>
+            <img src="imgs/secondtree.png" alt="" class="secondtree" id='treethree'>
+            <img src="imgs/secondsun.png" alt="" class="secondsun1">
+            <img src="imgs/secondsun2.png" alt="" class="secondsun2">
+        </div>
+        <div class="threepage" style="display:none">
+            <div class="inwindow">
+                <img src="imgs/threeclassbanner.png" alt="" class="banner">
+                <img src="imgs/threeperson.png" alt="" class="student">
+                <img src="imgs/threewindow.png" alt="" class="window">
+                <div class="studentcardCon">
+
+                </div>
+                <img src="imgs/threepoint.png" alt="" class="point">
+                <div class="clickcard"></div>
+            </div>
+        </div>
+        <div class="fourpage" style="display:none">
+            <div class="paper_con">
+                <img src="imgs/fourpage.png" alt="" class="paper">
+                <img src="imgs/fourtext2.png" alt="" class="fourtext2">
+                <div class="table">
+                    <div class="table_top">
+                        <div class="table_left">
+                            <div class="table_item">
+                                <div class="tip">姓名</div>
+                                <input type="text" placeholder="请填写姓名" id="name">
+                            </div>
+                            <div class="table_item">
+                                <div class="tip">
+                                    <div>毕业</div>
+                                    <div>时间</div>
+                                </div>
+                                <div class="graduation_right">
+                                    <div class="graduation_year">
+                                        <input type="text" placeholder="如：2019" id="graduation" maxlength="4">
+                                    </div>
+                                    <div class="graduation_class">
+                                        <div class="radio_left">
+                                            <div class="showradio">
+                                                <div class="checkcircle">
+                                                    <div class="bulecircle"></div>
+                                                </div>
+                                                <div class="checktext">初中</div>
+                                            </div>
+                                            <input type="radio" name='graduationClass' value="初中" class="radio_input">
+                                        </div>
+                                        <div class="radio_right">
+                                            <div class="showradio">
+                                                <div class="checkcircle">
+                                                    <div class="bulecircle"></div>
+                                                </div>
+                                                <div class="checktext">高中</div>
+                                            </div>
+                                            <input type="radio" name='graduationClass' value="高中" class="radio_input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_item">
+                                <div class="tip">几班</div>
+                                <div class="select_con">
+                                    <div class="showselect">请选择几班</div>
+                                    <select name="" id="selectclass">
+                                        <option value="0"></option>
+                                        <option value="1">1班</option>
+                                        <option value="2">2班</option>
+                                        <option value="3">3班</option>
+                                        <option value="4">4班</option>
+                                        <option value="5">5班</option>
+                                        <option value="6">6班</option>
+                                        <option value="7">7班</option>
+                                        <option value="8">8班</option>
+                                        <option value="9">9班</option>
+                                        <option value="10">10班</option>
+                                        <option value="11">11班</option>
+                                        <option value="12">12班</option>
+                                        <option value="13">13班</option>
+                                        <option value="14">14班</option>
+                                        <option value="15">15班</option>
+                                        <option value="16">16班</option>
+                                        <option value="17">17班</option>
+                                        <option value="18">18班</option>
+                                        <option value="甲">甲班</option>
+                                        <option value="乙">乙班</option>
+                                        <option value="丙">丙班</option>
+                                        <option value="丁">丁班</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table_right">
+                            <div class="input_img_con">
+                                <div class="photo_tip">点击上传个人照片</div>
+                                <div class="photo_tip2">(上传后照片可拖动)</div>
+                            </div>
+                            <input type="file" accept="image/*" class="photo">
+                            <canvas id="cutCanvas" class=" cut-canvas" width="293" height="400"></canvas>
+                            <div class="abs full ctrl-layer" id="ctrlLayer"></div>
+                            <div class="domimgcon">
+                                <img src="" alt="" class="domimg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table_bottom">
+                        <img src="imgs/fourtext.png" alt="" class="fourtext">
+                    </div>
+                </div>
+                <div class="btn_con">
+                    <div class="left1">
+                        重新上传
+                    </div>
+                    <div class="left2">
+                        找班级
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="endpage" style='display: none;'>
+            <div class="imgcon previewImgcon" id="#previewImage">
+                <img alt="" class="school_logo">
+                <div class="endtext">
+                    10 届 1 班
+                </div>
+                <div class="full_thing" id='full_thing'></div>
+            </div>
+            <div class="btn_con">
+                <div class="generate">
+                    生成照片 
+                </div>
+                <div class="share">
+                    转发并分享
+                </div>
+            </div>
+            <div class="circle_an">
+                <div class="circleContent"></div>
+                <img src="imgs/outcircle.png" alt="" class="outcircle">
+            </div>
+        </div>
+        <div class="showimgcon">
+            <div class="showimg">
+                <div class="imgcon">
+                    <img alt="" class="saveimg">
+                </div>
+                <div class="showimgtext">长按可保存到手机相册</div>                
+            </div>
+        </div>
+        <div class="chooseimgCon">
+            <div class="closechoose">
+            </div>
+            <div class="smallcon">
+                <div class="red choose">
+                    <div class="gray1"></div>
+                </div>
+                <div class="green choose">
+                    <div class="gray2"></div>
+                </div>
+                <div class="blue choose">
+                    <div class="gray3"></div>
+                </div>
+                <div class="chooseimgtext">
+                    点击可选择照片背景
+                </div>    
+            </div>
+        </div>
+        <div class="sharecon">
+            <img src="imgs/share_txt.png" alt="" class="shareimg">
+        </div>
+        <div class="chooseimgtip">
+            点击左上角可更换背景
+        </div>
+    </div>
+    <div class="loading-box-con">
+        <div class="loading-box">
+            <div class="ball-spin-fade-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="text">获取信息中</p>
+        </div>
+    </div>
+</body>
+
+
+<script charset="utf-8" src="js/hammer.js"></script>
+<script charset="utf-8" src="js/TweenMax.min.js"></script>
+<script charset="utf-8" src="js/exif.js"></script>
+<script charset="utf-8" src="js/canvas3.js"></script>
+<script charset="utf-8" src="js/jsddk.js"></script>
+<script charset="utf-8" src="js/data5.js"></script>
+<script src="js/index.js"></script>
+<script>
+    let musicFlag = false;
+    $("#music").click(function () {
+        playMusic();
+    });
+    $(document).ready(function () {
+        playMusic();
+    });
+    //音乐播放
+    function playMusic() {
+        let player = $("#bgMusic")[0];
+        if (musicFlag) {
+            $("#music").removeClass("xuanzhuan");
+            $("#music").removeClass("music_start");
+            musicFlag = false;
+            player.pause();
+        } else {
+            $("#music").addClass("xuanzhuan");
+            $("#music").addClass("music_start");
+            musicFlag = true;
+            player.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                player.play();
+            }, false);
+        }
+    }
+</script>
+<script>
+    $('.fourpage').on('blur','input',function(){
+        window.scrollTo(0,window.document.body.scrollTop)
+    })
+    $('.fourpage').on('blur','select',function(){
+        window.scrollTo(0,window.document.body.scrollTop)
+    })
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+</script>
+</html>
