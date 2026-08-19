@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <title>牵妈妈的手</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="./less/index.css"> -->
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="imgs/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.alert('本活动已结束且已去掉用户登录入口，本链接仅为效果演示！');
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": '牵起最美的手，晒出对她的爱',
+            "tContent": "弘扬好家风，传递正能量"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #ffdbcd;
+            font-family: 'microsoft yahei', sans-serif, Sans-Serif;
+        }
+        .contair{
+            background-color: #ffdbcd
+        }
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            /* -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; */
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            z-index: 2000;
+            position: fixed;
+            margin: auto;
+            top: 12px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .pace .pace-progress {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            display: block;
+            position: absolute;
+            right: 100%;
+            margin-right: 0;
+            width: 100%;
+            top: 0;
+            height: 14px;
+            font-size: 20px;
+            background: #fff;
+            color: #fff;
+            line-height: 60px;
+            font-weight: bold;
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+            -webkit-box-shadow: 120px 0 #ffdbcd, 240px 0 #ffdbcd;
+            -ms-box-shadow: 120px 0 #ffdbcd, 240px 0 #ffdbcd;
+            box-shadow: 120px 0 #ffdbcd, 240px 0 #ffdbcd;
+        }
+        /* .pace .pace-progress:after {
+            content: attr(data-progress-text);
+            display: inline-block;
+            position: absolute;
+            width: 45px;
+            text-align: right;
+            right: 0;
+            padding-right: 16px;
+            top: 4px;
+        } */
+        .pace .pace-activity {
+            position: absolute;
+            width: 100%;
+            height: 14px;
+            z-index: 2001;
+            box-shadow: inset 0 0 0 2px #fff;
+            /* border-radius: 10px; */
+        }
+        .pace.pace-inactive {
+            display: none;
+        }
+        /* 音频 */
+        .audioCon {
+            position: fixed;
+            width: 5rem;
+            height: 5rem;
+            -webkit-background-size: cover;
+            background-size: cover;
+            right: .35rem;
+            top: .35rem;
+            z-index: 99999;
+            -webkit-animation: none;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            background-image: url(imgs/music_pause.png)
+        }
+        .audioCon.playingZ {
+            background-image: url(imgs/music.png);
+            -webkit-animation: audio 2s linear infinite
+        }
+        @-webkit-keyframes audio {
+            0% {
+                -webkit-transform: rotate3d(0, 0, 1, -360deg);
+                transform: rotate3d(0, 0, 1, -360deg)
+            }
+            50% {
+                -webkit-transform: rotate3d(0, 0, 1, -180deg);
+                transform: rotate3d(0, 0, 1, -180deg)
+            }
+            100% {
+                -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                transform: rotate3d(0, 0, 1, 0deg)
+            }
+        }
+        .audioCon .play-pauseZ {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+        .audioCon .scrubberZ,
+        .audioCon .timeZ {
+            display: none
+        }
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        var posturl = 'https://ssl.qdxin.cn/h5/2019/qianshou-mom',
+            lottery = null,
+            basedata= null;
+        var gettoken_loading = true;
+        // function getQueryString(name) {
+        //     var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        //     var r = window.location.search.substr(1).match(reg);
+        //     if (r != null) {
+        //         return decodeURIComponent(r[2]);
+        //     }
+        //     return null;
+        // }
+        // function goDrawUrl() {
+        //     // todo
+        //     window.location.replace(posturl);
+        // }
+        // var token = getQueryString('token');
+        // var localToken = window.localStorage.getItem("token");
+        // // console.log(token);
+        // if (!token) {
+        //     if (!localToken) {
+        //         //console.log('a');
+        //         goDrawUrl();
+        //     } else {
+        //         $.ajax({
+        //             url: `${posturl}/view/config.php`,
+        //             type: 'get',
+        //             data: { 'token': localToken },
+        //             dataType: 'json',
+        //             success: function (data) {
+        //                 //console.log(data)
+        //                 if (data.state == "token") {
+        //                     window.location.replace(posturl);
+        //                 }else if (data.state === 'ok'){
+        //                     basedata = data
+        //                     lottery = data.data.lottery
+        //                 }else{
+        //                     gettoken_loading = false
+        //                 }
+        //             },
+        //             error: function () {
+        //                 // console.error('系统错误');
+        //                 gettoken_loading = false
+        //             },
+        //             complete: function () {
+        //                 // that.hideLoading();
+        //             }
+        //         });
+        //     }
+        // } else {
+        //     window.localStorage.setItem("token", token);
+        //     window.location.replace('https://www.qdxin.cn/zhuanti/cehua-index.html');
+        //     // window.location.replace('https://192.168.1.231:9001/dev');
+        // }
+    </script>
+    <link rel="stylesheet" charset="utf-8" href="css/swiper.min.css">
+    <script data-pace-options='{ "ajax": false , "restartOnRequestAfter": false}' src="js/pace.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var resize = (function () {
+            // var wr = window.innerWidth / window.innerHeight;
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            // var wr = bcr.width / bcr.height;
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1106) {
+                _width = Math.floor(wr * 1106);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr)
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            // window.addEventListener("pageshow", function(b) {
+            //     b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+            // }, false);
+            return resize;
+        })();
+        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            // 移动端禁止滑动
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        } else {
+            document.documentElement.className = 'pc-page';
+        }
+    </script>
+</head>
+<body>
+    <div class="audioCon">
+        <audio src="mom_music2.mp3" id="audio" autoplay loop="loop"></audio>
+        <div class="abs play-pauseZ">
+            <p class="playZ"></p>
+            <p class="pauseZ"></p>
+            <p class="loadingZ"></p>
+        </div>
+        <div class="scrubberZ">
+            <div class="progressZ"></div>
+            <div class="loadedZ"></div>
+        </div>
+        <div class="timeZ"><em class="playedZ"></em>/<strong class="durationZ"></strong>
+        </div>
+    </div>
+    <div class="contair" style="display:none">
+        <div class="perload" style="display:none">
+            <img src="imgs/1red1.png" alt="" style="display:none" >
+            <img src="imgs/1red2.png" alt="" style="display:none" >
+            <img src="imgs/1yel1.png" alt="" style="display:none" >
+            <img src="imgs/1whi1.png" alt="" style="display:none" >
+            <img src="imgs/firstprize.png" alt="" style="display:none" >
+            <img src="imgs/secondprize.png" alt="" style="display:none" >
+            <img src="imgs/thirdprize.png" alt="" style="display:none" >
+            <img src="imgs/luckyprize.png" alt="" style="display:none" >
+            <img src="imgs/getcat.png" alt="" style="display:none" >
+            <img src="imgs/losecat.png" alt="" style="display:none" >
+            <img src="imgs/leaf.png" alt="" style="display:none" >
+            <img src="imgs/rule1.png" alt="" style="display:none" >
+        </div>
+        <img src="imgs/toptext.png" alt="" class="toptext">
+        <div class="firstpage">
+            <img src="imgs/wall.png" alt="" class="wall">
+            <img src="imgs/doorflower.png" alt="" class="doorflower">
+            <img src="imgs/bottomright.png" alt="" class="bottomright">
+            <img src="imgs/topic.png" alt="" class="topic">
+            <img src="imgs/bird.png" alt="" class="bird">
+            <img src="imgs/bird2.png" alt="" class="bird2">
+            <img src="imgs/leftmidflower.png" alt="" class="leftmidflower">
+            <img src="imgs/rightmidflower.png" alt="" class="rightmidflower">
+            <img src="imgs/tree.png" alt="" class="tree">
+            <img src="imgs/cat.png" alt="" class="cat">
+            <img src="imgs/mom.png" alt="" class="mom">
+            <img src="imgs/son.png" alt="" class="son">
+            <div class="bottomtext">
+                主办：青岛市文明办&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;承办方：青岛信网 
+            </div>
+            <img src="imgs/arrow.png" alt="" class="arrow show">
+        </div>
+        <div class="secondpage">
+            <img src="imgs/mom2.png" alt="" class="mom2">
+            <img src="imgs/daughter2.png" alt="" class="daughter2">
+            <img src="imgs/tree2.png" alt="" class="tree2">
+            <img src="imgs/seatop.png" alt="" class="seatop">
+            <img src="imgs/sea.png" alt="" class="sea">
+            <img src="imgs/birds.png" alt="" class="birds">
+            <img src="imgs/text2_01.png" alt="" class="text1">
+            <img src="imgs/text2_02.png" alt="" class="text2">
+            <div class="second_btn1">
+                活动规则
+            </div>
+            <div class="second_btn2">
+                我要上传牵手照
+            </div>
+            <div class="rule">
+                <img src="imgs/close.png" alt="" class="close">
+            </div>
+        </div>
+        <div class="thirdpage">
+            <img src="imgs/3-bottom.png" alt="" class="bottom">
+            <img src="imgs/3-top.png" alt="" class="main">
+            <div class="put">
+                <input type="file" accept="image/*" class="photo">
+                <div class="f_style">
+                    <span>点击上传牵手照</span>
+                </div>
+                <div class="getimg">
+                    <img src="" alt="" id="tulip">
+                </div>
+            </div>
+            <div class="name">
+                <span>姓&nbsp;&nbsp;&nbsp;名</span>
+                <input type="text" class="name_value">
+            </div>
+            <div class="tel">
+                <span>手机号</span>
+                <input type="tel" maxlength="11" class="tel_value">
+            </div>
+            <div class="third_btn1">
+                重新上传
+            </div>
+            <div class="third_btn2">
+                生成照片
+            </div>
+        </div>
+        <div class="fourpage">
+            <div class="canvas-con">
+                <div class="text">长按图片保存即可开始抽奖</div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="" alt="" class="resImg1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="" class="resImg2">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <canvas id='rescanvas' width="608" height="815" class="endcanvas" style="opacity:0"></canvas>
+                <div class="gift">
+                    点击抽奖
+                </div>
+            </div>
+            <div class="gift_con">
+                <div class="gift_con2">
+                    <img src="imgs/treasure.png" alt="" class="giftex1">
+                    <img src="imgs/treasure.png" alt="" class="giftex2">
+                    <img src="imgs/treasure.png" alt="" class="giftex3">
+                    <div class="texttip">点击有惊喜</div>
+                </div>
+            </div>
+            <div class="result">
+            </div>
+        </div>
+    </div>
+    <div class="loading-box-con">
+        <div class="loading-box">
+            <div class="ball-spin-fade-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="text">获取信息中</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" charset="utf-8" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/audio.min.js"></script>
+<script charset="utf-8" src="js/TweenMax.min.js"></script>
+<script charset="utf-8"  src="js/exif.js"></script>
+<script charset="utf-8" src="js/database3.js"></script>
+<script charset="utf-8"  src="js/index.min.js"></script>
+<script type="text/javascript">
+    audiojs.events.ready(function () {
+        var as = audiojs.create(document.getElementsByTagName("audio")[0], {
+            css: false,
+            createPlayer: {
+                markup: false,
+                playPauseClass: 'play-pauseZ',
+                scrubberClass: 'scrubberZ',
+                progressClass: 'progressZ',
+                loaderClass: 'loadedZ',
+                timeClass: 'timeZ',
+                durationClass: 'durationZ',
+                playedClass: 'playedZ',
+                errorMessageClass: 'error-messageZ',
+                playingClass: 'playingZ'
+            }
+        });
+    });
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.invoke('getNetworkType', {},
+            function (e) {
+                document.getElementsByTagName("audio")[0].play();
+            });
+    }, false);
+</script>
+<script>
+    
+    $('.thirdpage').on('blur','input',function(){
+        window.document.body.scrollTop = window.document.body.scrollHeight
+    })
+
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+</script>
+
+</html>
