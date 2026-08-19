@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信号新闻APP下载</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/mappcss.css" />
+
+</head>
+
+<body>
+<div class="swiper-container" >
+    <div class="swiper-wrapper" >
+    <!-- slide1 -->
+        <section class="swiper-slide swiper-slide1">
+             <div class="page1-text">
+                <h1>信号新闻客户端</h1>
+                <h2>青岛资讯全天播</h2>
+             </div>
+             <div class="page-phone1">
+                <img src="img/mphone1.png" />
+             </div>
+             <div class="pao-box">
+                <div class="paopao">
+                    
+                </div>
+             </div>
+             <div class="page1-bottom">
+                <div class="bntbox">
+                <a class="apple-down" href=""><div class="apple-btn">ios版下载</div></a>
+                <a class="and-down" href=""><div class="and-btn">安卓版下载</div></a>
+                </div>
+                <div class="page1-bottom-top"></div>
+                <div class="page1-bottom-bot"></div>
+             </div>
+        </section>
+     <!-- slide2   -->
+        <section class="swiper-slide swiper-slide2" >   
+            <div class="page2-text">
+                <h1>信网原创</h1>
+                <h2>报道天下大小事</h2>
+            </div>
+             <div class="page-phone1" >
+                <img src="img/mphone2.png" />
+             </div>
+            <div class="page2-icon">
+                <div class="icon1"></div>
+                <div class="icon2"></div>
+                <div class="icon3"></div>
+                <div class="icon4"></div>
+            </div>
+        </section>
+     <!-- slide3> -->
+        <section class="swiper-slide swiper-slide3">      
+              <div class="page1-text">
+                <h1>青岛辟谣</h1>
+                <h2>青岛市网上辟谣平台</h2>
+             </div> 
+            
+             <div class="page-phone1" >
+                <img src="img/mphone3.png" />
+             </div>
+        </section>
+        <!-- slide4 -->
+        <section class="swiper-slide swiper-slide4">        
+             <div class="page1-text">
+                <h1>信新相映</h1>
+                <h2>青岛新的社会阶层公益平台</h2>
+             </div>
+             <div  class="page-phone1">
+                <img src="img/mphone4.png" />
+             </div>
+              <div class="caise">
+                
+             </div>
+             <div class="page1-bottom">
+                <div class="bntbox">
+                <a class="apple-down" href=""><div class="apple-btn">ios版下载</div></a>
+                <a class="and-down" href=""><div class="and-btn">安卓版下载</div></a>
+                </div>
+                <div class="page1-bottom-top"></div>
+                <div class="page4-bottom-bot2"></div>
+             </div>
+        </section>
+        
+        
+        
+    </div>
+    <!--下翻提示-->
+   <img src="img/arrow.png"  id="array" class="resize"> 
+ 
+</div>
+<script>
+    var ios = 'https://apps.apple.com/cn/app/信号新闻-信网/id6444197756';
+    var and = 'https://sj.qq.com/appdetail/cn.qdxin.qd?g_f=0&from_wxz=1';
+
+    document.querySelectorAll('.apple-down').forEach(function(item) {
+        item.href = ios;
+        item.target = "_blank";
+    });
+    document.querySelectorAll('.and-down').forEach(function(item) {
+        item.href = and;
+        item.target = "_blank";
+    });
+</script>
+<!--rem大小-->
+<script>
+        ;(function (doc, win, undefined) {
+          var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in win? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              if (clientWidth === undefined) return;
+              docEl.style.fontSize =16 * (clientWidth / 320) + 'px';
+            };
+          if (doc.addEventListener === undefined) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+</script>
+
+<script>  
+
+scaleW=window.innerWidth/320;
+scaleH=window.innerHeight/480;
+var resizes = document.querySelectorAll('.resize');
+          for (var j=0; j<resizes.length; j++) {
+           resizes[j].style.width=parseInt(resizes[j].style.width)*scaleW+'px';
+           resizes[j].style.height=parseInt(resizes[j].style.height)*scaleH+'px';
+           resizes[j].style.top=parseInt(resizes[j].style.top)*scaleH+'px';
+           resizes[j].style.left=parseInt(resizes[j].style.left)*scaleW+'px'; 
+          }
+          
+  var mySwiper = new Swiper ('.swiper-container', {
+   direction : 'vertical',
+   pagination: '.swiper-pagination',
+  //virtualTranslate : true,
+   mousewheelControl : true,
+   onInit: function(swiper){
+   swiperAnimateCache(swiper);
+   swiperAnimate(swiper);
+      },
+   onSlideChangeEnd: function(swiper){
+    swiperAnimate(swiper);
+    },
+    onTransitionEnd: function(swiper){
+    swiperAnimate(swiper);
+    },
+    
+    
+    watchSlidesProgress: true,
+
+      onProgress: function(swiper){
+        for (var i = 0; i < swiper.slides.length; i++){
+          var slide = swiper.slides[i];
+          var progress = slide.progress;
+          var translate = progress*swiper.height/4;  
+          scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+          var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+          slide.style.opacity = opacity;
+          es = slide.style;
+          es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+
+        }
+      },
+    
+       onSetTransition: function(swiper, speed) {
+        for (var i = 0; i < swiper.slides.length; i++){
+          es = swiper.slides[i].style;
+          es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+        }
+      },
+    
+    
+    
+       })         
+  </script>
+  
+<script>
+    // AOS.init(/*{
+    //     easing: 'ease-out-in',
+    //     duration: 1000
+    // }*/);
+    
+
+
+        /**
+         * 格式化数字显示
+         */
+        function formatNumber(num, pattern) {
+            var strarr = num ? num.toString().split('.') : [ '0' ];
+            var fmtarr = pattern ? pattern.split('.') : [ '' ];
+            var retstr = '';
+
+            // 整数部分
+            var str = strarr[0];
+            var fmt = fmtarr[0];
+            var i = str.length - 1;
+            var comma = false;
+            for ( var f = fmt.length - 1; f >= 0; f--) {
+                switch (fmt.substr(f, 1)) {
+                case '#':
+                    if (i >= 0)
+                        retstr = str.substr(i--, 1) + retstr;
+                    break;
+                case '0':
+                    if (i >= 0)
+                        retstr = str.substr(i--, 1) + retstr;
+                    else
+                        retstr = '0' + retstr;
+                    break;
+                case ',':
+                    comma = true;
+                    retstr = ',' + retstr;
+                    break;
+                }
+            }
+            if (i >= 0) {
+                if (comma) {
+                    var l = str.length;
+                    for (; i >= 0; i--) {
+                        retstr = str.substr(i, 1) + retstr;
+                        if (i > 0 && ((l - i) % 3) == 0)
+                            retstr = ',' + retstr;
+                    }
+                } else
+                    retstr = str.substr(0, i + 1) + retstr;
+            }
+
+            retstr = retstr + '.';
+            // 处理小数部分
+            str = strarr.length > 1 ? strarr[1] : '';
+            fmt = fmtarr.length > 1 ? fmtarr[1] : '';
+            i = 0;
+            for ( var f = 0; f < fmt.length; f++) {
+                switch (fmt.substr(f, 1)) {
+                case '#':
+                    if (i < str.length)
+                        retstr += str.substr(i++, 1);
+                    break;
+                case '0':
+                    if (i < str.length)
+                        retstr += str.substr(i++, 1);
+                    else
+                        retstr += '0';
+                    break;
+                }
+            }
+            var resultStr = retstr.replace(/^,+/, '').replace(/\.$/, '');
+            if(resultStr.indexOf(",")==0) {
+                resultStr = resultStr.substring(1, resultStr.length);
+            }
+            return resultStr;
+        }
+
+        function changeShow(f){
+            if(f==1){//登陆
+                hideIt($(".tlbox>ul").eq(0));showIt($(".tlbox>ul").eq(1));
+                hideIt($(".trbox>ul").eq(0));showIt($(".trbox>ul").eq(1));
+            }else{
+                showIt($(".tlbox>ul").eq(0));hideIt($(".tlbox>ul").eq(1));
+                showIt($(".trbox>ul").eq(0));hideIt($(".trbox>ul").eq(1));
+            }
+        }
+
+        function showIt(b){
+            $(b).show();
+        }
+
+        function hideIt(b){
+            $(b).hide();
+        }
+        
+        // setUsableAmountTip();
+</script>
+
+
+</body>
+</html>
