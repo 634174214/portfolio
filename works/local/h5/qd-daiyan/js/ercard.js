@@ -1,0 +1,1 @@
+var ercard = 'img/ercardtrue.png';

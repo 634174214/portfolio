@@ -1,0 +1,1 @@
+var resultimg4 = 'img/r-l-4.jpg';

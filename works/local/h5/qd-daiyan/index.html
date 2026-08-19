@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>盐值颜值大PK</title>
+    <link rel="stylesheet" href="css/index2.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .loadanimation-con {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px #fff solid;
+            border-radius: 4px;
+            width: 250px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .loadanimation {
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            background-color: #fff
+        }
+
+        .loadanimation-con .loadingtext {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            color: #444;
+            transform: translateX(-50%)
+        }
+    </style>
+    <!--微信分享的相关内容 开始-->
+    <link rel="shortcut icon" href="img/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <link rel="icon" href="img/share.jpg">
+    <!--微信分享显示的缩略图-->
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "img/share.jpg",
+            /*微信分享显示的缩略图*/
+            "timeLineLink": window.location.href,
+            "tTitle": '盐值颜值大PK',
+            "tContent": "晒出自信颜值，共筑最美盐值！"
+        };
+    </script>
+    <!--微信分享的相关内容 结束-->
+    <script>
+        var resize = (function () {
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1206) {
+                _width = Math.floor(wr * 1206);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr);
+            domEle.style.height = hwr * _width + "px";
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function () {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            return resize;
+        })();
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            // 移动端禁止滑动
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        } else {
+            document.documentElement.className = 'pc-page';
+        }
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+            window.shareData.tTitle = '【测试】' + window.shareData.tTitle;
+            window.shareData.tContent = '【测试】' + window.shareData.tContent;
+        }
+    </script>
+</head>
+
+<body style="font-family: 'microsoft yahei', 'sans-serif', Sans-Serif;">
+    <!-- 音频dom start -->
+    <div class="music" id="music"></div>
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop">
+        <source src="music/face-pk.mp3" />
+    </audio>
+    <!-- 音频dom end -->
+    <div id="app">
+        <div class="loadanimation-con">
+            <div class="loadanimation">
+            </div>
+            <div class="loadingtext">0%</div>
+        </div>
+        <div class="main-con" style="opacity:0">
+            <div class="biglog-con">
+                <img src="img/yellow.png" alt="" class="yellow">
+
+                <div class="bigcon">
+                    <div class="log-line rel"></div>
+                    <img src="img/bigpk.png" alt="" class="biglogo rel">
+                </div>
+
+                <img src="img/longtext.png" alt="" class="rel longtext">
+            </div>
+            <div class="vs-con">
+                <div class="left-circle">
+                    <img src="img/result_left6.png" alt="">
+                </div>
+                <div class="mid-text">
+                    VS
+                </div>
+                <div class="right-circle">
+                    <img src="img/photo.png" alt="" class="photo-static">
+                    <div class="crown-con">
+                        <img src="img/crown.png" alt="" class="crown">
+                        <div class="pointerone"></div>
+                        <div class="pointertwo"></div>
+                        <div class="pointerthree"></div>
+                    </div>
+                </div>
+            </div>
+            <img src="img/muchlogo.png" alt="" class="muchlogo">
+            <img src="img/arrow.png" alt="" class="arrow">
+        </div>
+        <div class="page-intro" style="display: none">
+            <div class="intro-container">
+                <div class="intro-con">
+                    <img src="img/intro.png" alt="" class="intro">
+                    <div class="emoj-con">
+                        <img src="img/sence.png" alt="">
+                        <img src="img/emoj.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <img src="img/arrow.png" alt="" class="arrow">
+        </div>
+        <div class="upload-page" style="display: none">
+            <div class="upload-container">
+                <div class="upload-con">
+                    <img src="img/pld.png" alt="">
+                    <div class="upload-ins">
+                        <img src="img/uploadtip.png" alt="" class="uploadtip">
+                        <input type="file" accept="image/*" class="photo">
+                        <canvas id="cutCanvas" class="cut-canvas" width="520" height="520"></canvas>
+                        <div class="ctrl-layer" id="ctrlLayer"></div>
+                    </div>
+                </div>
+                <div class="upload-btn">
+                    <div class="upload-again btntouch">
+                        重新上传
+                    </div>
+                    <div class="analysis btntouch">
+                        分析照片
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="analysis-page" style="display: none">
+            <div class="analysis-container">
+                <div class="header-con">
+                    <img src="img/head.png" alt="" class="header">
+                    <div class="header-line"></div>
+                </div>
+                <div class="text">
+                    分析中...
+                </div>
+                <div class="analysis-process">
+                    <div class="process"></div>
+                </div>
+            </div>
+        </div>
+        <div class="result-page" style="display: none">
+            <div class="result-container" style="display: none">
+                <div class="result-vs">
+                    <div class="text">
+                        五月的风
+                    </div>
+                    <div class="vs-con">
+                        <div class="left-circle">
+                            <img src="img/result_left6.png" alt="" class="battle-img">
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="right-circle">
+                            <img src="img/result_left1.png" alt="" class="header">
+                            <div class="total">
+                                <img src="img/result-san.png" alt="">
+                                <div class="total-num">88</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-text">
+                        捕捉到一位活力达人！赤诚如你<br>
+                        快为我们的 “风彩” 点赞！
+                    </div>
+                </div>
+                <div class="result-look">
+                    <div class="canvas-text-con">
+                        <img src="img/canvastext.png" alt="">
+                    </div>
+                    <div class="finger-con">
+                        <img src="img/finger.png" alt="" class="finger">
+                        <img src="img/fingerlight.png" alt="" class="fingerlight">
+                    </div>
+                    <img src="img/ercardtrue.png" alt="" class="ercard">
+                </div>
+                <div class="result-btn-con">
+                    <div class="click-save btntouch">
+                        点击保存
+                    </div>
+                    <div class="click-again btntouch">
+                        再玩一次
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-con" style='display: none'>
+                <img alt="" class="canvas-img">
+                <div class="hand-con">
+                    <img src="img/finger2.png" alt="" class="finger">
+                    <img src="img/fingerlight2.png" alt="" class="fingerlight">
+                </div>
+                <div class="text">长按保存图片</div>
+            </div>
+        </div>
+    </div>
+    <div class="loading-box-con">
+        <div class="loading-box">
+            <div class="ball-spin-fade-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="loadingtext">生成照片中</p>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script charset="utf-8" src="js/exif.js"></script>
+<script charset="utf-8" src="js/img-touch-canvas.min.js"></script>
+<script charset="utf-8" src="js/TweenMax.min.js"></script>
+<script charset="utf-8" src="js/ercard.js"></script>
+<script charset="utf-8" src="js/headeremail.js"></script>
+<script charset="utf-8" src="js/resultbanner.js"></script>
+<script charset="utf-8" src="js/resultimg1.js"></script>
+<script charset="utf-8" src="js/resultimg2.js"></script>
+<script charset="utf-8" src="js/resultimg3.js"></script>
+<script charset="utf-8" src="js/resultimg4.js"></script>
+<script charset="utf-8" src="js/resultimg5.js"></script>
+<script charset="utf-8" src="js/resultimg6.js"></script>
+<script charset="utf-8" src="js/resultimg7.js"></script>
+<script charset="utf-8" src="js/resultimg8.js"></script>
+<script charset="utf-8" src="js/index7.js"></script>
+<script>
+    // iOS系统的移动设备, 激活:active状态。
+    document.body.addEventListener('touchstart', function () {
+        // ...空函数即可
+    });
+    $('.btntouch').on('touchstart',function(){
+        $(this).css('opacity',0.6)
+        setTimeout(()=>{
+            $(this).css('opacity',1)
+        },200)
+    })
+</script>
+<script>
+    //音乐播放代码
+    var musicFlag = false;
+    var playeraudio = null;
+    $("#music").click(function () {
+        playMusic();
+    });
+    $(document).ready(function () {
+        playMusic();
+    });
+    //音乐播放
+    function playMusic() {
+        playeraudio = $("#bgMusic")[0];
+        if (musicFlag) {
+            $("#music").removeClass("xuanzhuan");
+            $("#music").removeClass("music_start");
+            musicFlag = false;
+            playeraudio.pause();
+        } else {
+            $("#music").addClass("xuanzhuan");
+            $("#music").addClass("music_start");
+            musicFlag = true;
+            playeraudio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                playeraudio.play();
+            }, false);
+        }
+    }
+</script>
+<script charset="UTF-8">
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+    
+</script>
+
+</html>

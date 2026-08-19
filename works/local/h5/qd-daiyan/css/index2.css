@@ -1,0 +1,745 @@
+#app, body, html {
+    overflow: hidden
+}
+#app .analysis-page, #app .result-page, #app .upload-page, .music {
+    background-size: cover
+}
+@font-face {
+    /* font-family: myFont; */
+    /* src: url(../font/myfont.ttf) */
+}
+.music {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 20px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    background-image: url(../img/music_pause.png)
+}
+#app, #app .main-con, #app .main-con .biglog-con, body, html {
+    width: 100%
+}
+.music_start {
+    background-image: url(../img/music.png)
+}
+.xuanzhuan {
+    -webkit-animation: xuanzhuan 3s linear infinite;
+    animation: xuanzhuan 3s linear infinite
+}
+@-webkit-keyframes xuanzhuan {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes xuanzhuan {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.bg-music {
+    display: none
+}
+#app .main-con, #app .main-con .biglog-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
+}
+@-webkit-keyframes arrowAnm {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: .3
+    }
+    100% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        opacity: 1
+    }
+}
+@keyframes arrowAnm {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: .3
+    }
+    100% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        opacity: 1
+    }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+.rel {
+    position: relative
+}
+#app {
+    height: 100%;
+    background-color: #fbe473
+}
+#app .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    margin-left: -27px;
+    -webkit-animation: arrowAnm 1s ease-in infinite;
+    animation: arrowAnm 1s ease-in infinite
+}
+#app .main-con {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    background-image: url(../img/grid.png);
+    background-repeat: repeat
+}
+#app .main-con .biglog-con {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    max-height: 800px;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 112px;
+    margin-bottom: 10px;
+    -webkit-perspective: 600;
+    perspective: 600
+}
+#app .main-con .biglog-con .bigcon {
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+#app .main-con .biglog-con .bigcon .log-line {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 700px;
+    background-image: url(../img/bigline.png);
+    background-repeat: repeat-y
+}
+#app .main-con .biglog-con .bigcon .biglogo {
+    display: block
+}
+#app .main-con .biglog-con .yellow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+#app .main-con .biglog-con .longtext {
+    margin-top: 40px
+}
+#app .main-con .vs-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    position: relative
+}
+#app .main-con .vs-con .left-circle, #app .main-con .vs-con .right-circle {
+    width: 252px;
+    height: 252px;
+    border-radius: 50%
+}
+#app .main-con .vs-con .mid-text {
+    font-size: 104px;
+    margin: 0 25px
+}
+#app .main-con .vs-con .left-circle {
+    background-color: #ff0
+}
+#app .main-con .vs-con .left-circle>img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+#app .main-con .vs-con .right-circle .photo-static {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+#app .main-con .vs-con .right-circle .crown-con {
+    position: absolute;
+    top: -30px;
+    right: 10px
+}
+#app .main-con .vs-con .right-circle .crown-con .crown {
+    display: block
+}
+#app .main-con .vs-con .right-circle .crown-con .pointerone, #app .main-con .vs-con .right-circle .crown-con .pointerthree, #app .main-con .vs-con .right-circle .crown-con .pointertwo {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 4px solid #333;
+    background-color: #ff0;
+    border-radius: 50%
+}
+#app .main-con .vs-con .right-circle .crown-con .pointerone {
+    left: 10px;
+    top: -20px
+}
+#app .main-con .vs-con .right-circle .crown-con .pointertwo {
+    left: 60px;
+    top: -30px
+}
+#app .main-con .vs-con .right-circle .crown-con .pointerthree {
+    right: 10px;
+    top: -10px
+}
+#app .main-con .muchlogo {
+    margin: 80px 0 30px
+}
+#app .intro-container {
+    position: relative;
+    width: 750px;
+    height: 85%;
+    margin: 0 auto
+}
+#app .page-intro {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+#app .page-intro .intro-con {
+    position: absolute;
+    left: 100px;
+    top: -30%;
+    width: 120%;
+    height: 130%;
+    -webkit-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    background-color: #fff;
+    background-image: url(../img/grid.png);
+    background-repeat: repeat
+}
+#app .page-intro .intro-con .intro {
+    position: absolute;
+    left: 52px;
+    bottom: 265px
+}
+#app .page-intro .intro-con .emoj-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    width: 586px;
+    left: 52px;
+    bottom: 50px
+}
+#app .upload-page {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../img/upload_banner.png)
+}
+#app .upload-page .upload-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+#app .upload-page .upload-container .upload-con {
+    position: relative
+}
+#app .upload-page .upload-container .upload-con .upload-ins {
+    position: absolute;
+    left: 41px;
+    top: 41px;
+    width: 520px;
+    height: 520px;
+    background-color: #fbe473
+}
+#app .upload-page .upload-container .upload-con .upload-ins .photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0
+}
+#app .upload-page .upload-container .upload-con .upload-ins .uploadtip {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+#app .analysis-page .analysis-container, #app .result-page .canvas-con {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+#app .upload-page .upload-container .upload-con .upload-ins .cut-canvas {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+#app .upload-page .upload-container .upload-con .upload-ins .ctrl-layer {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+#app .upload-page .upload-container .upload-btn {
+    margin-top: 46px;
+    font-size: 27px;
+    height: 57px;
+    color: #333
+}
+#app .upload-page .upload-container .upload-btn>div {
+    line-height: 50px;
+    text-align: center;
+    width: 237px;
+    height: 57px;
+    background-image: url(../img/btn.png)
+}
+#app .upload-page .upload-container .upload-btn .upload-again {
+    float: left
+}
+#app .upload-page .upload-container .upload-btn .analysis {
+    float: right
+}
+#app .analysis-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../img/upload_banner.png)
+}
+#app .analysis-page .analysis-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+#app .analysis-page .analysis-container .header-con {
+    position: relative;
+    display: block;
+    margin: 0 auto
+}
+#app .analysis-page .analysis-container .header-con .header {
+    display: block;
+    margin: 0 auto
+}
+#app .analysis-page .analysis-container .header-con .header-line {
+    position: absolute;
+    width: 510px;
+    height: 18px;
+    background-color: #97a5ef;
+    left: 0;
+    bottom: 0
+}
+#app .analysis-page .text {
+    line-height: 50px;
+    margin-top: 132px;
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 42px
+}
+#app .analysis-page .analysis-process {
+    width: 509px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: #fff;
+    overflow: hidden
+}
+#app .analysis-page .analysis-process .process {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    background-color: #0ff;
+    border-bottom-right-radius: 13px;
+    border-top-right-radius: 13px
+}
+#app .result-page {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/resultlight.png);
+    background-repeat: no-repeat;
+    background-origin: 50% 50%
+}
+#app .result-page .canvas-con {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%
+}
+#app .result-page .canvas-con .canvas-img {
+    display: block;
+    margin: 0 auto
+}
+#app .result-page .canvas-con .hand-con {
+    position: relative;
+    width: 50px;
+    height: 68px;
+    margin: 42px auto 10px
+}
+#app .result-page .canvas-con .hand-con .finger {
+    display: block;
+    margin: 0 auto
+}
+#app .result-page .canvas-con .hand-con .fingerlight {
+    position: absolute;
+    left: 0;
+    top: -10px
+}
+#app .result-page .canvas-con .text {
+    color: #333;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center
+}
+#app .result-page .result-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+#app .result-page .result-container .result-vs {
+    width: 594px;
+    height: 745px;
+    background-image: url(../img/resultbanner1.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+#app .result-page .result-container .result-vs .text {
+    color: #333;
+    font-size: 68px;
+    line-height: 68px;
+    font-family: myFont;
+    text-align: center;
+    padding-top: 122px
+}
+#app .result-page .result-container .result-vs .vs-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 50px auto 0
+}
+#app .result-page .result-container .result-vs .vs-con .left-circle {
+    width: 215px;
+    height: 215px
+}
+#app .result-page .result-container .result-vs .vs-con .left-circle>img {
+    width: 100%;
+    height: 100%;
+    display: block
+}
+#app .result-page .result-container .result-vs .vs-con .vs {
+    font-size: 32px;
+    margin: 0 10px
+}
+#app .result-page .result-container .result-vs .vs-con .right-circle {
+    position: relative;
+    width: 215px;
+    height: 215px
+}
+#app .result-page .result-container .result-vs .vs-con .right-circle>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%
+}
+#app .result-page .result-container .result-vs .vs-con .right-circle .total {
+    position: absolute;
+    right: -108px;
+    top: -124px;
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+#app .result-page .result-container .result-vs .vs-con .right-circle .total img {
+    display: block
+}
+#app .result-page .result-container .result-vs .vs-con .right-circle .total .total-num {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 129px;
+    height: 129px;
+    line-height: 129px;
+    text-align: center;
+    border-radius: 50%;
+    color: #9ca8f5;
+    font-size: 60px;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    background-color: #fff;
+    font-weight: 700
+}
+#app .result-page .result-container .result-vs .intro-text {
+    margin: 142px auto 0;
+    font-family: myFont;
+    color: #333;
+    text-align: center;
+    font-size: 38px;
+    line-height: 55px
+}
+#app .result-page .result-container .result-look {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 593px;
+    height: 183px;
+    margin: 30px auto 0;
+    background-color: #fff
+}
+#app .result-page .result-container .result-look .finger-con .finger, #app .result-page .result-container .result-look img {
+    display: block
+}
+#app .result-page .result-container .result-look .canvas-text-con {
+    margin-left: 70px
+}
+#app .result-page .result-container .result-look .finger-con {
+    position: relative;
+    margin: 0 26px 0 22px
+}
+#app .result-page .result-container .result-look .finger-con .fingerlight {
+    position: absolute;
+    right: -16px;
+    top: 2px
+}
+#app .result-page .result-container .result-look .ercard {
+    width: 144px;
+    height: 142px
+}
+#app .result-page .result-container .result-btn-con {
+    margin-top: 46px;
+    font-size: 27px;
+    color: #333;
+    height: 57px
+}
+#app .result-page .result-container .result-btn-con>div {
+    line-height: 50px;
+    text-align: center;
+    width: 237px;
+    height: 57px;
+    background-image: url(../img/btn.png)
+}
+#app .result-page .result-container .result-btn-con .click-save {
+    float: left
+}
+#app .result-page .result-container .result-btn-con .click-again {
+    float: right
+}
+.loading-box-con {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000
+}
+.ball-spin-fade-loader {
+    margin-left: -10px;
+    margin-top: -38px
+}
+.loading-box {
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -136px;
+    margin-left: -100px;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 20px
+}
+.loadingtext {
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 3px
+}
+@-webkit-keyframes ball-spin-fade-loader {
+    50% {
+        opacity: .6;
+        -webkit-transform: scale(.55);
+        transform: scale(.55)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes ball-spin-fade-loader {
+    50% {
+        opacity: .6;
+        -webkit-transform: scale(.55);
+        transform: scale(.55)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.ball-spin-fade-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+.ball-spin-fade-loader>div:nth-child(1) {
+    top: 18px;
+    left: 0;
+    -webkit-animation: ball-spin-fade-loader 1s 0s infinite linear;
+    animation: ball-spin-fade-loader 1s 0s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(2) {
+    top: 12px;
+    left: 12px;
+    -webkit-animation: ball-spin-fade-loader 1s .12s infinite linear;
+    animation: ball-spin-fade-loader 1s .12s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(3) {
+    top: 0;
+    left: 18px;
+    -webkit-animation: ball-spin-fade-loader 1s .24s infinite linear;
+    animation: ball-spin-fade-loader 1s .24s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(4) {
+    top: -12px;
+    left: 12px;
+    -webkit-animation: ball-spin-fade-loader 1s .36s infinite linear;
+    animation: ball-spin-fade-loader 1s .36s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(5) {
+    top: -18px;
+    left: 0;
+    -webkit-animation: ball-spin-fade-loader 1s .48s infinite linear;
+    animation: ball-spin-fade-loader 1s .48s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(6) {
+    top: -12px;
+    left: -12px;
+    -webkit-animation: ball-spin-fade-loader 1s .6s infinite linear;
+    animation: ball-spin-fade-loader 1s .6s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(7) {
+    top: 0;
+    left: -18px;
+    -webkit-animation: ball-spin-fade-loader 1s .72s infinite linear;
+    animation: ball-spin-fade-loader 1s .72s infinite linear
+}
+.ball-spin-fade-loader>div:nth-child(8) {
+    top: 12px;
+    left: -12px;
+    -webkit-animation: ball-spin-fade-loader 1s .84s infinite linear;
+    animation: ball-spin-fade-loader 1s .84s infinite linear
+}
+.ball-spin-fade-loader>div {
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    margin: 10px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute
+}
+/*  |xGv00|0d4857fa4f289e22bbbf1e0d2c34c241 */
