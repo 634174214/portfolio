@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>多彩青岛 新春旅游推荐季</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="css/style-v6.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="preload" href="media/qd-video.mp4" as="video">
+    <link rel="shortcut icon" href="imgs/share.jpg">
+    <link rel="icon" href="imgs/share.jpg">
+    <script type="text/javascript">
+        window.shareData = {
+            "imgUrl": "imgs/share.jpg",
+            "timeLineLink": window.location.href,
+            "tTitle": '多彩青岛 新春旅游推荐季',
+            "tContent": "山海之间，红瓦绿树，共赴新春。带你解锁青岛十区市经典风景，春节去哪玩，青岛有答案。"
+        };
+    </script>
+    <script>
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location.hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+        }
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        .audioCon {
+            position: fixed;
+            width: 5rem;
+            height: 5rem;
+            -webkit-background-size: cover;
+            background-size: cover;
+            right: .25rem;
+            top: .25rem;
+            z-index: 99999;
+            -webkit-animation: none;
+            background-image: url(imgs/music_pause.png)
+        }
+
+        .audioCon.playingZ {
+            background-image: url(imgs/music.png);
+            -webkit-animation: audio 2s linear infinite
+        }
+
+        @-webkit-keyframes audio {
+            0% {
+                -webkit-transform: rotate3d(0, 0, 1, -360deg);
+                transform: rotate3d(0, 0, 1, -360deg)
+            }
+            50% {
+                -webkit-transform: rotate3d(0, 0, 1, -180deg);
+                transform: rotate3d(0, 0, 1, -180deg)
+            }
+            100% {
+                -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                transform: rotate3d(0, 0, 1, 0deg)
+            }
+        }
+
+        .audioCon .play-pauseZ {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+
+        .audioCon .scrubberZ,
+        .audioCon .timeZ {
+            display: none
+        }
+    </style>
+    <script>
+        (function() {
+            // var wr = window.innerWidth / window.innerHeight;
+            var bcr = window.document.documentElement.getBoundingClientRect();
+            // var wr = bcr.width / bcr.height;
+            var wr = (bcr.width / bcr.height < 1) ? (bcr.width / bcr.height) : (bcr.height / bcr.width);
+            var _width;
+            if (wr > 750 / 1206) {
+                _width = Math.floor(wr * 1206);
+            } else {
+                _width = 750;
+            }
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width + ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width + ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+            var domEle = window.document.documentElement;
+            var timeCode;
+            var hwr = wr > 1 ? wr : (1 / wr)
+            domEle.style.height = hwr * _width + "px";
+            console.log(hwr * _width + "px")
+            function resize() {
+                domEle.style.height = hwr * _width + "px";
+            }
+            window.addEventListener("resize", function() {
+                clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+            }, false);
+            // window.addEventListener("pageshow", function(b) {
+            //     b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+            // }, false);
+            resize();
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div class="preload hide">
+        <img src="imgs/video.png" alt="">
+        <img src="imgs/bg.jpg" alt="">
+        <img src="imgs/home-bg.jpg" alt="">
+        <img src="imgs/sn-bg.jpg" alt="">
+        <img src="imgs/sb-bg.jpg" alt="">
+        <img src="imgs/ls-bg.jpg" alt="">
+        <img src="imgs/lc-bg.jpg" alt="">
+        <img src="imgs/cy-bg.jpg" alt="">
+        <img src="imgs/hd-bg.jpg" alt="">
+        <img src="imgs/jz-bg.jpg" alt="">
+        <img src="imgs/lx-bg.jpg" alt="">
+        <img src="imgs/jm-bg.jpg" alt="">
+        <img src="imgs/pd-bg.jpg" alt="">
+        <img src="imgs/save-sn.jpg" alt="">
+        <img src="imgs/save-sb.jpg" alt="">
+        <img src="imgs/save-ls.jpg" alt="">
+        <img src="imgs/save-lc.jpg" alt="">
+        <img src="imgs/save-cy.jpg" alt="">
+        <img src="imgs/save-hd.jpg" alt="">
+        <img src="imgs/save-jz.jpg" alt="">
+        <img src="imgs/save-lx.jpg" alt="">
+        <img src="imgs/save-jm.jpg" alt="">
+        <img src="imgs/save-pd.jpg" alt="">
+    </div>
+
+    <div class="audioCon hide">
+        <audio src="media/music.mp3" id="audio"  loop="loop"></audio>
+        <div class="abs play-pauseZ">
+            <p class="playZ"></p>
+            <p class="pauseZ"></p>
+            <p class="loadingZ"></p>
+        </div>
+        <div class="scrubberZ">
+            <div class="progressZ"></div>
+            <div class="loadedZ"></div>
+        </div>
+        <div class="timeZ">
+            <em class="playedZ"></em>/
+            <strong class="durationZ"></strong>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 加载页 开始 -->
+        <div class="load-page abs full" id="loadPage">
+            <div class="load-img abs"></div>
+        </div>
+        <!-- 加载页 结束 -->
+        <!-- 首页 开始 -->
+        <div class="home-page hide" id="homePage">
+            <img class="abs full" src="imgs/home-shadow.png" alt="">
+            <img class="book abs" src="imgs/book.png" alt="">
+            <img class="clock abs" src="imgs/clock.png" alt="">
+            <div class="video-box abs">
+                <img src="imgs/play-btn.png" class="play-btn abs" alt="">
+                <img class="tip abs" src="imgs/tip.png" alt="">
+                <img class="hand abs" src="imgs/hand.png" alt="">
+            </div>
+        </div>
+        <!-- 首页 结束 -->
+        <!-- 视频页 开始 -->
+        <div class="video-page abs full hide" id="videoPage">
+            <div class="past abs">跳过</div>
+            <video class="video abs " id="video" x-webkit-airplay="true" webkit-playsinline playsinline="true" preload="auto" src="media/qd-video.mp4"></video>
+        </div>
+        <!-- 视频页 结束 -->
+        <!-- 来电信息 开始 -->
+        <div class="message-page abs full hide" id="messagePage">
+            <audio id="phoneBgm" src="media/phone-bgm.mp3"></audio>
+            <img class="book abs" src="imgs/book.png" alt="">
+            <img class="clock abs" src="imgs/clock.png" alt="">
+            <div class="video-box abs">
+                <img class="play-btn abs" src="imgs/play-btn.png" alt="">
+            </div>
+            <img class="people abs" src="imgs/people.png" alt="">
+            <div class="desk-box abs">
+                <img class="desk" src="imgs/desk.png" alt="">
+                <img class="shake-left abs" src="imgs/shake-left.png" alt="">
+                <img class="phone abs" src="imgs/phone.png" alt="">
+                <img class="shake-right abs" src="imgs/shake-right.png" alt="">
+                <img class="abs msg1" src="imgs/mes1.png" alt="">
+                <img class="abs msg2" src="imgs/mes2.png" alt="">
+                <img class="abs hand" src="imgs/hand.png" alt="">
+                <img class="abs tip" src="imgs/tip2.png" alt="">
+            </div>
+        </div>
+        <!-- 来电信息 结束 -->
+        <!-- 聊天页 开始 -->
+        <div class="talk-page abs full hide" id="talkPage">
+           <div class="talk-wrap abs">
+    <div class="talk-item">
+        <img src="imgs/header-mo.jpg" alt="">
+        <div class="msg-box-mo">宝贝，今年春节回青岛吗？</div>
+    </div>
+
+    <div class="talk-item dau">
+        <div class="msg-box-dau">回呀！票都买好了</div>
+        <img src="imgs/header-dau.jpg" alt="">
+    </div>
+
+    <div class="talk-item">
+        <img src="imgs/header-mo.jpg" alt="">
+        <div class="msg-box-mo">太好了，今年青岛可热闹了</div>
+    </div>
+
+    <div class="talk-item">
+        <img src="imgs/header-mo.jpg" alt="">
+        <div class="msg-box-mo">听说春节期间好多活动，栈桥那边海鸥特别多</div>
+    </div>
+
+    <div class="talk-item dau">
+        <div class="msg-box-dau">哈哈，我想去崂山祈福</div>
+        <img src="imgs/header-dau.jpg" alt="">
+    </div>
+
+    <div class="talk-item dau">
+        <div class="msg-box-dau">还有即墨古城，听说春节有庙会</div>
+        <img src="imgs/header-dau.jpg" alt="">
+    </div>
+
+    <div class="talk-item">
+        <img src="imgs/header-mo.jpg" alt="">
+        <div class="msg-box-mo">对对对，咱全家一起去</div>
+    </div>
+
+    <div class="talk-item">
+        <img src="imgs/header-mo.jpg" alt="">
+        <div class="msg-box-mo">你爸还念叨，想带你去胶州转转</div>
+    </div>
+
+    <div class="talk-item dau">
+        <div class="msg-box-dau">行呀！到时候我当导游，带你们玩遍青岛</div>
+        <img src="imgs/header-dau.jpg" alt="">
+    </div>
+
+    <div class="talk-item">
+        <img src="imgs/header-mo.jpg" alt="">
+        <div class="msg-box-mo">好，等你回来，咱一家人好好过个年</div>
+    </div>
+
+    <div class="talk-item dau">
+        <div class="msg-box-dau">嗯！老妈，想你们了</div>
+        <img src="imgs/header-dau.jpg" alt="">
+    </div>
+
+</div>
+            <img class="send-box" src="imgs/send-msg.jpg" alt="">
+            <div class="abs full talk-shadow hide">
+                <p class="txt abs">青岛的年味，就是一家人在一起的味道。</p>
+                <div class="abs go-home-btn">回青岛，过个好年</div>
+            </div>
+        </div>
+        <!-- 聊天页 结束 -->
+        <!-- 选择家乡 开始 -->
+        <div class="choose-page abs full hide" id="choosePage">
+            <div class="sn abs full local-item hide">
+                <img class="abs local-hz" src="imgs/shinan.png" alt="">
+            </div>
+            <div class="sb abs full local-item hide">
+                <img class="abs local-hz" src="imgs/shibei.png" alt="">
+            </div>
+            <div class="ls abs full local-item hide">
+                <img class="abs local-hz" src="imgs/laoshan.png" alt="">
+            </div>
+            <div class="lc abs full local-item hide">
+                <img class="abs local-hz" src="imgs/licang.png" alt="">
+            </div>
+            <div class="cy abs full local-item hide">
+                <img class="abs local-hz" src="imgs/chengyang.png" alt="">
+            </div>
+            <div class="jm abs full local-item hide">
+                <img class="abs local-hz" src="imgs/jimo.png" alt="">
+            </div>
+            <div class="hd abs full local-item hide">
+                <img class="abs local-hz" src="imgs/huangdao.png" alt="">
+            </div>
+            <div class="jz abs full local-item hide">
+                <img class="abs local-hz" src="imgs/jiaozhou.png" alt="">
+            </div>
+            <div class="lx abs full local-item hide">
+                <img class="abs local-hz" src="imgs/laixi.png" alt="">
+            </div>
+            <div class="pd abs full local-item hide">
+                <img class="abs local-hz" src="imgs/pingdu.png" alt="">
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">市南</div>
+                    <div class="swiper-slide">市北</div>
+                    <div class="swiper-slide">崂山</div>
+                    <div class="swiper-slide">李沧</div>
+                    <div class="swiper-slide">城阳</div>
+                    <div class="swiper-slide">即墨</div>
+                    <div class="swiper-slide">西海岸</div>
+                    <div class="swiper-slide">胶州</div>
+                    <div class="swiper-slide">莱西</div>
+                    <div class="swiper-slide">平度</div>
+                </div>
+                <div class="prev-btn abs"></div>
+                <div class="next-btn abs"></div>
+            </div>
+            <div class="confirm-btn abs" data-src="">马上出发</div>
+        </div>
+        <!-- 选择家乡 结束 -->
+        <!-- 保存图片 开始 -->
+        <div class="save-page abs full hide" id="savePage">
+            <img class="save-img abs" src="imgs/save-sn.jpg" alt="">
+        </div>
+        <!-- 保存图片 结束 -->
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script charset="utf-8" src="js/swiper-3.4.2.min.js"></script>
+    <script charset="utf-8" src="js/run-v4.min.js"></script>
+    <script type="text/javascript" src="js/audio.min.js"></script>
+
+    <script charset="UTF-8">
+
+        audiojs.events.ready(function () {
+                var as = audiojs.create(document.getElementsByTagName("audio")[0], {
+                    css: false,
+                    createPlayer: {
+                        markup: false,
+                        playPauseClass: 'play-pauseZ',
+                        scrubberClass: 'scrubberZ',
+                        progressClass: 'progressZ',
+                        loaderClass: 'loadedZ',
+                        timeClass: 'timeZ',
+                        durationClass: 'durationZ',
+                        playedClass: 'playedZ',
+                        errorMessageClass: 'error-messageZ',
+                        playingClass: 'playingZ'
+                    }
+                });
+            });
+
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.invoke('getNetworkType', {},
+                    function (e) {
+                        document.getElementsByTagName("audio")[0].play();
+                        document.getElementsByTagName("video")[0].play();
+                        setTimeout(function () {
+                            document.getElementsByTagName("audio")[0].pause();
+                            document.getElementsByTagName("video")[0].pause();
+                        },0)
+                    });
+            }, false);
+
+        function onShareComplete(res) {
+            //window.location.href='';
+        }
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": window.shareData.imgUrl,
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": window.shareData.imgUrl,
+                    "img_width": "320",
+                    "img_height": "320",
+                    "link": window.shareData.timeLineLink,
+                    "desc": window.shareData.tContent,
+                    "title": window.shareData.tTitle
+                }, onShareComplete);
+            });
+        }, false);
+    </script>
+    
+</body>
+
+</html>
