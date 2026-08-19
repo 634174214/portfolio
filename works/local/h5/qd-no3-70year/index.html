@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>致青岛三中的三行情诗</title>
+    <!-- 定义字体自适应 start -->
+    <script charset="utf-8">
+        function fontSize() {
+            let _html = document.getElementsByTagName("html")[0];
+            let deviceWidth = _html.getBoundingClientRect().width;
+            _html.style.fontSize = deviceWidth / 375 * 100 + 'px';
+        }
+        fontSize();
+        let flag = false;
+        window.onresize = function () {
+            if (flag) return
+            flag = true;
+            setTimeout(() => {
+                flag = false;
+                fontSize();
+            }, 100);
+        };
+    </script>
+    <script charset="utf-8">
+        var testFlag = window.location.href.indexOf('money') >= 0 || (/\d+\.\d+\.\d+\.\d+/.test(window.location
+            .hostname));
+        if (testFlag) {
+            var title = document.title;
+            document.title = '【测试】' + title;
+            // window.shareData.tTitle = '【测试】' + window.shareData.tTitle;
+        }
+        
+        // 检测userAgent
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault()
+            }, { passive: false })
+        }
+        var actid = '5397';
+    </script>
+    <!-- 定义字体自适应 end -->
+    <!-- 引入css文件 start -->
+    <link charset="utf-8" rel="stylesheet" href="css/reset.css">
+    <link charset="utf-8" rel="stylesheet" href="css/swiper.min.css">
+    <link charset="utf-8" rel="stylesheet" href="css/animate.min.css">
+    <link charset="utf-8" rel="stylesheet" href="css/index2.css">
+    <link charset="utf-8" rel="stylesheet" href="css/pace.css">
+    <!-- 引入css  end -->
+    <script charset="utf-8" src="js/pace.js"></script>
+</head>
+
+<body>
+    <!-- 两边固定字体 start -->
+    <img class="fixed slide_img slide_img1 no_copy" src="imgs/slide_txt1.png" alt="">
+    <img class="fixed slide_img slide_img2 no_copy" src="imgs/slide_txt2.png" alt="">
+    <img class="fixed music xuanzhuan no_copy" id="music" src="imgs/music.png" alt="" onClick="playMusic()">
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop">
+        <source src="mp3/music.mp3">
+    </audio>
+    <!-- 两边固定字体 end -->
+    <div class="app swiper-container" style="display: none;">
+        <!-- 分页器 -->
+        <div class="swiper-pagination main-swiper-pagination"></div>
+        <div class="swiper-wrapper">
+            <!-- 第一页 -->
+            <div class="page page1 swiper-slide">
+                <!-- 信封 -->
+                <img class="letter-bottom abs" src="imgs/letter-bottom.png" alt="">
+                <img class="letter-top abs" src="imgs/letter-top.png" alt="">
+                <img src="imgs/letter.png" class="letter abs ani" alt="" swiper-animate-effect="rollIn"
+                    swiper-animate-duration=".8s" swiper-animate-delay=".3s">
+                <img src="imgs/three_rows.png" class="three_rows abs ani" alt="" swiper-animate-effect="bounceIn"
+                    swiper-animate-duration=".8s" swiper-animate-delay="1.2s">
+
+                <!-- 先出现三张照片依次进入 -->
+                <div class="photo-box photo-ani abs ani swiper-slide" swiper-animate-effect="rollIn"
+                    swiper-animate-duration=".8s" swiper-animate-delay=".3s"> <img class="photo abs" src="imgs/1.jpg"
+                        alt=""> </div>
+                <div class="photo-box photo-ani abs ani swiper-slide" swiper-animate-effect="rollIn"
+                    swiper-animate-duration=".8s" swiper-animate-delay="2s"> <img class="photo abs" src="imgs/2.jpg"
+                        alt=""> </div>
+                <div class="photo-box photo-ani abs ani swiper-slide" swiper-animate-effect="rollIn"
+                    swiper-animate-duration=".8s" swiper-animate-delay="3.8s"> <img class="photo abs" src="imgs/3.jpg"
+                        alt=""> </div>
+                <!-- 三张照片swiper -->
+                <div class="swiper-container app2 abs ani" swiper-animate-effect="fadeIn" swiper-animate-duration=".8s"
+                    swiper-animate-delay="5.6s">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="photo-box swiper-slide"> <img class="photo abs" src="imgs/3.jpg" alt=""> </div>
+                        <div class="photo-box swiper-slide"> <img class="photo abs" src="imgs/1.jpg" alt=""> </div>
+                        <div class="photo-box swiper-slide"> <img class="photo abs" src="imgs/2.jpg" alt=""> </div>
+                    </div>
+                </div>
+
+                <div class="songs abs">
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.1s">
+                        <p class="txt">三行诗，母校情</p>
+                        <p class="py">san hang shi，mu xiao qing</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.3s">
+                        <p class="txt">不负漫漫三中行</p>
+                        <p class="py">bu fu man man san zhong xing</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.5s">
+                        <p class="txt">母校建校七十载</p>
+                        <p class="py">mu xiao jian xiao qi shi zai</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.7s">
+                        <p class="txt">送首情诗表达爱</p>
+                        <p class="py">song shou qing shi biao da ai</p>
+                    </div>
+                </div>
+                <div class="btn abs no_copy ani" id="home_btn" swiper-animate-effect="fadeInUp"
+                    swiper-animate-duration="0.3s" swiper-animate-delay="1s">再逛一次母校</div>
+            </div>
+            <!-- 第二页 -->
+            <div class="page page2 swiper-slide">
+                <img class="abs hand no_copy ani" src="imgs/hand1.png" alt="" swiper-animate-effect="fadeInRight"
+                    swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                <div class="songs songs2 abs">
+                    <img src="imgs/one.png" class="one no_copy" alt="">
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.1s">
+                        <p class="txt">我们的母校</p>
+                        <p class="py">wo men de mu xiao</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.3s">
+                        <p class="txt">多少人走进又走出</p>
+                        <p class="py">duo shao ren zou jin you zou chu</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.5s">
+                        <p class="txt">多少故事历历在目</p>
+                        <p class="py">duo shao &nbsp;gu &nbsp;shi &nbsp;li &nbsp;li &nbsp;zai &nbsp;mu</p>
+                    </div>
+                    <img class="more no_copy ani" src="imgs/more.png" swiper-animate-effect="fadeInUp"
+                        swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">
+
+                </div>
+                <img src="imgs/arraw.png" alt="" class="arraw no_copy ani" swiper-animate-effect="fadeInUp"
+                    swiper-animate-duration="1.2s" swiper-animate-delay="0.5s">
+            </div>
+            <!-- 第三页 -->
+            <div class="page page3 swiper-slide">
+                <img class="abs hand no_copy ani" src="imgs/hand22.png" alt="" swiper-animate-effect="fadeInRight"
+                    swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                <div class="songs songs2 abs">
+                    <img src="imgs/two.png" class="one no_copy" alt="">
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.1s">
+                        <p class="txt">学习，互助</p>
+                        <p class="py">xue xi, hu zhu</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.3s">
+                        <p class="txt">讲台下</p>
+                        <p class="py">jiang tai xia</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.5s">
+                        <p class="txt">上课，起立，难忘回忆</p>
+                        <p class="py">shang ke qi li nan wang hui yi</p>
+                    </div>
+                    <img class="more no_copy ani" src="imgs/more.png" swiper-animate-effect="fadeInUp"
+                        swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">
+
+                </div>
+                <img src="imgs/arraw.png" alt="" class="arraw no_copy ani" swiper-animate-effect="fadeInUp"
+                    swiper-animate-duration="1.2s" swiper-animate-delay="0.5s">
+            </div>
+            <!-- 第四页 -->
+            <div class="page page4 swiper-slide">
+                <img class="abs hand no_copy ani" src="imgs/hand33.png" alt="" swiper-animate-effect="fadeInRight"
+                    swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                <div class="songs songs2 abs">
+                    <img src="imgs/three.png" class="one no_copy" alt="">
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.1s">
+                        <p class="txt">运动，健康</p>
+                        <p class="py">yun dong, jian kang</p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.3s">
+                        <p class="txt">你曾年少轻狂，</p>
+                        <p class="py">ni ceng nian shao qing kuang </p>
+                    </div>
+                    <div class="row ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                        swiper-animate-delay="0.5s">
+                        <p class="txt">充满棱角，满怀梦想</p>
+                        <p class="py">chong man leng jiao man huai meng xiang</p>
+                    </div>
+                    <img class="more no_copy ani" src="imgs/more.png" swiper-animate-effect="fadeInUp"
+                        swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">
+                </div>
+                <img src="imgs/arraw.png" alt="" class="arraw no_copy ani" swiper-animate-effect="fadeInUp"
+                    swiper-animate-duration="1.2s" swiper-animate-delay="0.5s">
+            </div>
+            <!-- 第五页 -->
+            <div class="page page5 swiper-slide">
+                <div class="songs-p">
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="0.1s">不知你是否发现，</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay=".8s">当你的思想随着</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="1.5s">这一张张图片转动时，</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="2.2s">你脑海里装满的全是</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="2.9s">青岛三中的那些人那些事， </p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="3.6s">校友对三中的爱和深情</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="4.3s">已经被揉进骨髓， </p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="5s">融入心底，</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="5.7s">在母校建校七十周年来临之际， </p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="6.4s">让我们用三行情诗</p>
+                    <br />
+                    <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s"
+                        swiper-animate-delay="7.1s">对青岛三中诉尽衷肠吧!</p>
+                </div>
+                <div class="btn abs no_copy ani" id="showWritePage" swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="0.3s" swiper-animate-delay="7.8s">去表白母校</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表白母校 S -->
+    <div class="write-song none" id="write-song">
+        <div class="content" id="content">
+            <div class="top-title"></div>
+
+            <div class="envelop">
+                <img src="imgs/envelop-bg-bottom.png" class="abs envelop-bg-bottom" />
+                <div class="envelop-content">
+                    <div class="song-inputs">
+                        <input type="text" placeholder="请输入您的三行情诗（最多15个字）" maxlength="15">
+                        <input type="text" placeholder="请输入您的三行情诗（最多15个字）" maxlength="15">
+                        <input type="text" placeholder="请输入您的三行情诗（最多15个字）" maxlength="15">
+                    </div>
+
+                    <div class="you-info">
+                        <div class="info-field year">
+                            <label>
+                                <span class="field-title">毕业年份</span>
+                                <input type="text" placeholder="如：1960届" maxlength="5">
+                            </label>
+                        </div>
+                        <div class="info-field grade">
+                            <label>
+                                <span class="field-title">班级</span>
+                                <input type="text" placeholder="如：1班" maxlength="5">
+                            </label>
+                        </div>
+                        <div class="info-field name">
+                            <label>
+                                <span class="field-title">姓名</span>
+                                <input type="text" placeholder="输入您的姓名" maxlength="5">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="show-tips">
+                        <p>校友优秀作品将于2015年10月2日</p>
+                        <p>在青岛三中建校七十周年活动中展出</p>
+                        <p>诚邀各位校友重返母校</p>
+                        <p>共贺母校七十华诞~</p>
+                    </div>
+                </div>
+                <img src="imgs/envelop-bg-top.png" class="abs envelop-bg-top" />
+            </div>
+
+            <div class="save-btn">生成海报</div>
+
+        </div>
+
+        <!-- loading s -->
+        <div class="loading-box">
+            <div class="contents">
+                <div class="ball-spin-fade-loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="text">生成中...</p>
+            </div>
+        </div>
+        <!-- loading e -->
+    </div>
+    <!-- 表白母校 E -->
+
+    <!-- 生成海报 S -->
+    <div class="save-song abs none">
+        <div class="abs content">
+            <div class="top-title"></div>
+
+            <div class="envelop">
+                <div class="songs">
+                </div>
+                <div class="info">
+                    <p><span class="field-title">毕业年份</span><span class="year"></span></p>
+                    <p><span class="field-title">班级</span><span class="grade"></span></p>
+                    <p><span class="field-title">姓名</span><span class="name"></span></p>
+                </div>
+                <img src="imgs/songs-code.png" class="code">
+            </div>
+        </div>
+
+        <div class="abs song-canvas none">
+            <canvas id="songCanvas" width="750" height="1206"></canvas>
+        </div>
+        <img src="" alt="" class="abs songs-res-img">
+
+        <div class="abs full save-layer none" id="saveLayer">
+            <img src="imgs/hold-icon.png" class="abs hold-icon">
+        </div>
+    </div>
+    <!-- 生成海报 E -->
+
+</body>
+<!-- 引入js start-->
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script charset="utf-8" src="js/drawSongs.min.js"></script>
+<script charset="utf-8" src="js/index1.min.js"></script>
+<!-- 引入js end -->
+<!--微信分享的相关内容 start-->
+<script charset="utf-8" type="text/javascript">
+    // 微信分享
+    window.shareData = {
+        "imgUrl": "imgs/share.jpg",
+        /*微信分享显示的缩略图*/
+        "timeLineLink": window.location.href,
+        "tTitle": '致青岛三中的三行情诗',
+        "tContent": "以三行情诗，寄你我之情"
+    };
+</script>
+<!--微信分享的相关内容 结束-->
+
+<!-- 微信分享代码 start -->
+<script>
+    function onShareComplete(res) {
+        //window.location.href='';
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "320",
+                "img_height": "320",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+</script>
+<!-- 微信分享代码 end -->
+
+</html>
