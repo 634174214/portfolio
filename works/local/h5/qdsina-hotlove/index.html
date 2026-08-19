@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>【热&bull;爱】“地下工作者”和他们的孩子</title>
+    <meta itemprop="image" content="imgs/110164276.jpg" />
+    <meta name="description" itemprop="description" content="他们热爱这个比我们更热的夏天，<br/>只为真实故事里的那一份坚持。" />
+    <meta name="Keywords" content="高温，真情，劳动者，热爱" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script src="js/idangerous.swiper-2.1.min.js"></script>
+    <script src="js/data.min.js"></script>
+    <!-- <script src="data/data.js"></script> -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <style>
+        .view {
+            display: none;
+        }
+
+        #pic-view {
+            width: 100%;
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            border: 0;
+        }
+
+        #r-button {
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            width: 100px;
+            height: 30px;
+            background: #000;
+            border: 1px solid #ccc;
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            z-index: 1100;
+        }
+
+        #archive-page {
+            height: 55%;
+            margin-bottom: 20px;
+        }
+
+        .w-right {
+            padding: 11% 3% 3% 0;
+        }
+
+        .text-redbar {
+            padding: 0 20px;
+            text-align: center;
+            filter: alpha(opacity=0);
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+            opacity: 0;
+        }
+
+        .red-box {
+            text-align: center;
+            width: 100%;
+            float: left;
+            height: 0px;
+            margin-top: -15px;
+        }
+
+        .last-redbar {
+            filter: alpha(opacity=1);
+            -moz-opacity: 1;
+            -khtml-opacity: 1;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="audio" style="visibility: hidden;">
+        <audio controls="controls" autoplay="autoplay" id="audio" loop="loop">
+            <source src="reai06yy.mp3" type="audio/mpeg" id="audio-source" />
+        </audio>
+    </div>
+
+    <div id="main_content">
+        <div class="swiper-wrapper">
+            <section class="swiper-slide page home-page" id="first-page">
+                <div class="page r-bg"></div>
+                <div class="page light-p"></div>
+                <div class="page real_page">
+                    <img src="imgs/devotion.png" alt="热爱" class="page-title" />
+                    <div class="home-text"></div>
+                    <div class="page-bottom">
+                        <div class="button-box">
+                            <img src="imgs/button-next.png" class="b-next" alt="Next Page" />
+                        </div>
+                        <div class="bottom-text">
+                            新浪青岛新闻中心&nbsp; 产品设计部&nbsp; 2014联合出品
+                        </div>
+                        <div class="white-stick bottom-stick"></div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="swiper-slide page ending-page">
+                <div class="white-stick top-stick"></div>
+                <div class="down-arrow"></div>
+                <div class="page-over">over</div>
+
+                <div id="archive-page">
+                    <div class="swiper-wrapper">
+                        <div id="archive-contents" class="swiper-slide" style="height:700px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-text">
+                    新浪青岛
+                    <br /> 新闻中心&nbsp; 产品设计部&nbsp; 2014联合出品
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <iframe id="pic-view" class="view" src="" style=""></iframe>
+    <a id="r-button" class="view" href="javascript:;">返回</a>
+    <script>
+        (function ($) {
+            //$("#audio-source").attr("src",data.cover.bgMusic);
+            $("#first-page").css("background-image", "url(" + data.cover.homePg + ")");
+            $(".r-bg").css("background-image", "url(" + data.cover.effectPg + ")");
+            $(".home-text").html(data.cover.preface);
+            $(".ending-page").css("background-image", "url(" + data.backCover.backBg + ")");
+            var audio = document.getElementById('audio');
+
+            $(document).ready(function () {
+
+                $('#pageTemplate').tmpl(data.pages).insertAfter('#first-page');
+                $('#archiveTemplate').tmpl(data.backCover).appendTo('#archive-contents');
+
+                $('.content-page').each(function (index) {
+                    if (index < 2) {
+                        preloadBg(this);
+                        preloadImg(this);
+                    }
+                });
+
+                var windowHight = $(window).height() + 1;
+                $('#main_content,.r-bg,.light-p,#pic-view').height(windowHight);
+
+                $(window).resize(function () {
+                    var windowHightNew = $(window).height() + 1;
+                    $('#main_content,.r-bg,.light-p,#pic-view').height(windowHightNew);
+                });
+
+                var total = $('.swiper-slide').length - 2;
+
+                var mySwiper = new Swiper('#main_content', {
+                    mode: 'vertical',
+                    onTouchEnd: function (t) {
+                        preloadImg(t.slides[t.activeIndex + 2]);
+                        preloadBg(t.slides[t.activeIndex + 2]);
+                        setPageNum(t.slides[t.activeIndex], t.activeIndex, total);
+                    }
+                });
+
+                var runSwiper = new Swiper("#archive-page", {
+                    mode: 'vertical',
+                    scrollContainer: true
+                });
+
+                var musicControl = function (obj) {
+                    var classname = $.trim(obj.attr('class'));
+
+                    if (classname == 'on') {
+                        document.getElementById('audio').pause();
+                        obj.removeClass('on').addClass('off');
+                        obj.siblings('span').text('关闭');
+                        $('.pause span').addClass('z-show');
+                        $('.music-icon').removeClass('active');
+
+                        setTimeout(function () {
+                            $('.pause span').removeClass('z-show');
+                        }, 500);
+                    } else if (classname == 'off') {
+                        document.getElementById('audio').play();
+                        obj.removeClass('off').addClass('on');
+                        obj.siblings('span').text('开启');
+                        $('.music-icon').addClass('active');
+                        $('.pause span').addClass('z-show');
+                        setTimeout(function () {
+                            $('.pause span').removeClass('z-show');
+                        }, 500);
+                    };
+                    return false;
+                }
+
+                $('.pause a').click(function () {
+                    musicControl($(this));
+                });
+
+
+
+                $(document).one("touchstart",
+                    function () {
+                        audio.play();
+                    });
+
+                $(".content-image").each(function () {
+                    var osrc = $(this).attr('osrc');
+                    if (osrc) {
+                        $(this).click(function () {
+                            $("#pic-view").attr("src", "https://qd.sina.com.cn/special/recordFacts/006/imageview.php?url=" + osrc);
+                            $(".view").fadeIn();
+                        });
+                    }
+                });
+                $("#r-button").click(function () {
+                    $(".view").fadeOut();
+                });
+            });
+
+            function preloadImg(obj) {
+
+                var __this__ = $(obj).find('.content-image');
+
+                var url = __this__.attr('data');
+
+
+                var src = __this__.attr('src');
+                if (url == '' || url == src)//这里判断如果图片实际地址不存在或者已经加载不处理
+                {
+                    return;
+                }
+                var img = new Image();//实例化一个图片的对象
+                img.src = url;//将要显示的图片加载进来
+                if (img.complete)//如果图片已经加载存在浏览器缓存中直接处理
+                {
+                    __this__.attr('src', url);//将要显示的图片替换过来
+                    return;
+                }
+                img.onload = function () {//要显示的图片加载完成后做处理
+                    __this__.attr('src', url);
+                }
+            };
+
+            function preloadBg(obj) {
+
+                var __this__ = $(obj);
+
+                var url = __this__.attr('data-bg');
+
+                var bg = __this__.css('background-image');
+                if (url == '' || "url(" + url + ")" == bg)//这里判断如果图片实际地址不存在或者已经加载不处理
+                {
+                    return;
+                } else if (url) {
+                    var img = new Image();//实例化一个图片的对象
+                    img.src = url;//将要显示的图片加载进来
+                    if (img.complete)//如果图片已经加载存在浏览器缓存中直接处理
+                    {
+                        __this__.css('background-image', "url(" + url + ")");//将要显示的图片替换过来
+                        return;
+                    }
+                    img.onload = function () {//要显示的图片加载完成后做处理
+                        __this__.css('background-image', "url(" + url + ")");
+                    }
+                }
+            };
+
+            function setPageNum(obj, active, total) {
+                $(obj).find('.page-number').html(active + "/" + total);
+            }
+
+            function setBgPosition(obj, vul) {
+                var __this__ = $(obj);
+                __this__.css("background-position-y", vul);
+            }
+
+        })(jQuery);
+    </script>
+    <script id="pageTemplate" type="text/x-jquery-tmpl">
+<section class="swiper-slide page content-page" data-bg="${bgUrl}"  >
+    <div class="white-stick top-stick"></div>
+    <div class="down-arrow"></div>
+    <div class="page-number"></div>
+     <div class="image-box">
+        {{if imageOsrc}}
+        <img data="${imageUrl}" src="" osrc="${imageOsrc}" class="content-image"/>
+        {{else}}
+        <img data="${imageUrl}" src="" osrc="${imageUrl}"  class="content-image"/>
+        {{/if}}
+    </div>
+    <div class="text-redbar text-clock c-clock">${timeClock}</div>
+    <div class="image-text">
+        <p class="text-begin"><img src="imgs/s-mark.png" /></p>
+        <p class="text-content">${mainWords}</p>
+        <p class="text-end"><img src="imgs/e-mark.png" /></p>
+    </div>
+    <div class="page-bottom">
+        <div class="button-box">
+            <img src="imgs/button-next.png" class="b-next" alt="Next Page" />
+        </div>
+        <div class="white-stick bottom-stick"></div>
+    </div>
+</section>
+</script>
+    <script id="archiveTemplate" type="text/x-jquery-tmpl">
+{{each archives}}
+<div class="position-box">
+    <div class="white-box">
+        <div class="red-box"><span class="text-redbar last-redbar">${phaseNum}</span></div>
+        <div class="w-left"><a class="read-more" href="${arcLink}">点击访问》</a><img src="${arcImg}" /></div>
+        <div class="w-right">
+            <img style="width: 12px;height: 10px;" src="imgs/s-mark.png" />
+            ${arcWords}
+            <img style="width: 12px;height: 10px; float: right;" src="imgs/e-mark.png" />
+        </div>
+    </div>
+</div>
+{{/each}}
+</script>
+    <div class="pause">
+        <a class="on" href="#">
+        </a>
+        <span>开启</span>
+    </div>
+
+</body>
+
+</html>
