@@ -1262,7 +1262,7 @@ const worksData = {
           preview: "",
           link_online: "http://faxian.qdxin.cn/",
           desc: "",
-          date: "2014",
+          date: "2016",
         },
         {
           name: "信网VR频道",
