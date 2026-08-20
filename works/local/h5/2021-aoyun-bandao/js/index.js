@@ -20,13 +20,7 @@ Page = (function() {
 		
 		// 请求接口地址
 		getApiUrl = function() {
-			// if (thisPort.split(".")[0] == "dev-news" || thisPort.split(".")[0] == "dev-home") {
-			// 		thisUrl = 'http://dev-api.bandaoapp.com'
-			// } else if (thisPort.split(".")[0] == "stg-news" || thisPort.split(".")[0] == "stg-home") {
-			// 		thisUrl = 'http://stg-api.bandaoapp.com'
-			// } else {
-			// 		thisUrl = "https://bandaoapi.bandaoapp.com";
-			// }
+			// thisUrl = 'https://ssl.qdxin.cn/h5/2021/aoyun/albumDetail.php';
 			getData()
 		}
 		
@@ -116,9 +110,10 @@ Page = (function() {
 		render = function () {
 			var divs = ''
 			for(var i = 0; i < imgArr.length; i++){
+				var imgsrc = imgArr[i].url + '&t=102356';
 				divs = divs + 
 								`<div class="bb-item">
-									<img src=` + imgArr[i].url + ` alt=` + imgArr[i].des + ` />
+									<img src=` + imgsrc + ` alt=` + imgArr[i].des + ` />
 								</div>`
 			}
 			document.getElementById("bb-bookblock").innerHTML = divs;
