@@ -10360,4 +10360,3 @@ if ( !noGlobal ) {
 
 return jQuery;
 } );
-/*  |xGv00|8352048ba583e12a3f0609405ab6eb8d */
